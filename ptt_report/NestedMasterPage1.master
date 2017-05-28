@@ -1,0 +1,108 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="NestedMasterPage1.master.cs" Inherits="ptt_report.NestedMasterPage1" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <table>
+        <tr>
+            <td>
+                <div>Quarterly Reprot</div>
+                <div>
+                    Year :
+                    <asp:Label ID="lbYear" runat="server" Text="-"></asp:Label>
+                    Quarter :
+                    <asp:Label ID="lbQuarter" runat="server" Text="-"></asp:Label>
+                </div>
+                <div>
+                    <table>
+                        <tr>
+                            <td>
+                                <asp:LinkButton ID="lnkExecut_sum" runat="server" OnClick="lnkExecut_sum_Click" Font-Underline="false">Executive summary</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3rd party Interface
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:LinkButton ID="lnkPatrolling" runat="server" OnClick="lnkPatrolling_Click" Font-Underline="false">Patrolling</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:LinkButton ID="lnkDirectAsset" runat="server" OnClick="lnkDirectAsset_Click" Font-Underline="false">Direct Assessment</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:LinkButton ID="lnkSett" runat="server" OnClick="lnkSett_Click" Font-Underline="false">Settlement Survey</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:LinkButton ID="lnkROV" runat="server" OnClick="lnkROV_Click" Font-Underline="false">ROV</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:LinkButton ID="lnkFreeSpan" runat="server" OnClick="lnkFreeSpan_Click" Font-Underline="false">Free Span</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:LinkButton ID="lnkExternalCorrosion" runat="server" OnClick="lnkExternalCorrosion_Click" Font-Underline="false">External Corrosion</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Internal Corrosion   
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:LinkButton ID="lnkCleaningPIG" runat="server" OnClick="lnkCleaningPIG_Click" Font-Underline="false">Cleaning PIG</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:LinkButton ID="lnkILIPIG" runat="server" OnClick="lnkILIPIG_Click" Font-Underline="false">ILI PIG</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:LinkButton ID="lnkChemicalThreatment" runat="server" OnClick="lnkChemicalThreatment_Click" Font-Underline="false">Chemical Threatment</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:LinkButton ID="lnkPiping" runat="server" OnClick="lnkPiping_Click" Font-Underline="false">Piping</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Offshore 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:LinkButton ID="lnkRBI" runat="server" OnClick="lnkRBI_Click" Font-Underline="false">RBI</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:LinkButton ID="lnkSIM" runat="server" OnClick="lnkSIM_Click" Font-Underline="false">SIM</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:LinkButton ID="lnkOtherProjects" runat="server" OnClick="lnkOtherProjects_Click" Font-Underline="false">Other Projects</asp:LinkButton>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td>
+                 <asp:ContentPlaceHolder ID="ChildContent2" runat="server" />
+            </td>
+        </tr>
+    </table>
+</asp:Content>
