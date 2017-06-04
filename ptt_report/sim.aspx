@@ -1,27 +1,40 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/NestedMasterPage1.master" AutoEventWireup="true" CodeBehind="sim.aspx.cs" Inherits="ptt_report.sim" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="ChildContent2" runat="server">
-     <table>
-        <tr>
-            <td>
-                <div>
-                    Customer Type :
-                    <asp:Label ID="lbCustype" runat="server" Text="-"></asp:Label>
-                    <asp:Button ID="btnExport" runat="server" Text="Export Report" />
-                    <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" />
-                    <asp:Button ID="btnHistory" runat="server" Text="History" />
-                    <asp:Button ID="btnImport" runat="server" Text="Import Data" OnClick="btnImport_Click" />
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>งานประเมินความเสี่ยง และตรวจสภาพโครงสร้างแท่นพัก
-            </td>
-        </tr>
-        <tr>
-            <td>
+    <style>
+        #menuleft13 {
+            background: #0c7fd2;
+        }
+
+        input[type="text" i] {
+            width: 100%;
+        }
+    </style>
+    <div class="bar_qr">
+        Customer Type :
+                   
+        <asp:Label ID="lbCustype" runat="server" Text="-"></asp:Label>
+        <asp:Button ID="btnExport" runat="server" Text="Export Report" class="btn" />
+        <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" />
+        <asp:Button ID="btnHistory" runat="server" Text="History" class="btn" />
+
+    </div>
+
+
+    <div id="thirdPartyInterfaceForm" style="background-color: #FFFFFF">
+        <h3 class="barBlue">SIM
+             <asp:Button ID="btnImport" runat="server" Text="Import Data" OnClick="btnImport_Click" class="btn btn-info" />
+
+
+
+        </h3>
+
+        <div class="info_executive">
+            <h3>งานประเมินความเสี่ยง และตรวจสภาพโครงสร้างแท่นพัก</h3>
+            <div class="info_executive_in">
                 <table>
                     <tr>
-                        <td>แผนงาน :</td>
+                        <td style="width:165px;">แผนงาน :</td>
                         <td>
                             <asp:TextBox ID="txtplanwork" runat="server"></asp:TextBox>
                         </td>
@@ -53,20 +66,17 @@
                     <tr>
                         <td></td>
                         <td>
-                            <asp:Button ID="btnsave" runat="server" Text="Save" OnClick="btnsave_Click" /></td>
+                            <asp:Button ID="btnsave" runat="server" Text="Save" OnClick="btnsave_Click" class="btn" /></td>
                     </tr>
                 </table>
-            </td>
-        </tr>
-        <tr>
-            <td>งานซ่อมคืนสภาพโครงสร้างแท่น
-            </td>
-        </tr>
-        <tr>
-            <td>
+            </div>
+        </div>
+        <div class="info_executive">
+            <h3>งานซ่อมคืนสภาพโครงสร้างแท่น</h3>
+            <div class="info_executive_in">
                 <table>
                     <tr>
-                        <td>แผนงาน :</td>
+                        <td style="width:165px;">แผนงาน :</td>
                         <td>
                             <asp:TextBox ID="txtplanwork2" runat="server"></asp:TextBox>
                         </td>
@@ -98,10 +108,11 @@
                     <tr>
                         <td></td>
                         <td>
-                            <asp:Button ID="btnsave2" runat="server" Text="Save" OnClick="btnsave2_Click" /></td>
+                            <asp:Button ID="btnsave2" runat="server" Text="Save" OnClick="btnsave2_Click" class="btn" /></td>
                     </tr>
                 </table>
-            </td>
-        </tr>
-    </table>
+            </div>
+        </div>
+    </div>
+
 </asp:Content>

@@ -28,6 +28,7 @@ namespace ptt_report
                 }
                 else
                 {
+                    lbCustype.Text = HttpContext.Current.Session["repCustype"].ToString();
                     bind_default();
                     bind_list();
                 }
@@ -99,7 +100,7 @@ namespace ptt_report
             HiddenField hddcustype = (HiddenField)row.FindControl("hddcustype");
 
             HttpContext.Current.Session["repid"] = hddrepid.Value;
-            HttpContext.Current.Session["repYear"] = hddyear.Value ;
+            HttpContext.Current.Session["repYear"] = hddyear.Value;
             HttpContext.Current.Session["repQuar"] = hddquarter.Value;
             HttpContext.Current.Session["repCustype"] = hddcustype.Value;
 
@@ -109,7 +110,7 @@ namespace ptt_report
         protected void PatrollingFormSubmit_Click(object sender, EventArgs e)
         {
             // TODO : insert all of data to DB
-            
+
         }
 
         protected void RovFormSubmit_Click(object sender, EventArgs e)
@@ -165,21 +166,34 @@ namespace ptt_report
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("<table>");
-            sb.Append("<tr><th colspan='2'>Other Project <asp:Button ID='OtherProjectDelete" + index +"' runat='server' Text='Delete'/></th></tr>");
-            sb.Append("<tr><td>ซื้อโครงการ  : </td><td class='auto-style1'><asp:TextBox ID='OtherProjectName" + index +"' runat='server' Width='270px'></asp:TextBox></td></tr>");
-            sb.Append("<tr><td>ความครบถ้วนตามแผนงาน  : </td><td class='auto-style1'><asp:TextBox ID='OtherProjectPercent" + index +"' runat='server' Width='27px'></asp:TextBox> % </td></tr>");
+            sb.Append("<tr><th colspan='2'>Other Project <asp:Button ID='OtherProjectDelete" + index + "' runat='server' Text='Delete'/></th></tr>");
+            sb.Append("<tr><td>ซื้อโครงการ  : </td><td class='auto-style1'><asp:TextBox ID='OtherProjectName" + index + "' runat='server' Width='270px'></asp:TextBox></td></tr>");
+            sb.Append("<tr><td>ความครบถ้วนตามแผนงาน  : </td><td class='auto-style1'><asp:TextBox ID='OtherProjectPercent" + index + "' runat='server' Width='27px'></asp:TextBox> % </td></tr>");
             sb.Append("<tr><td>ผลสรุปวิเคราะห์เบื้องต้น : </td>");
             sb.Append("<td class='auto-style1'>");
-            sb.Append("<textarea id='OtherProjectAnalysis"+ index +"' runat='server' rows='2' aria-multiline='True' aria-multiselectable='False' draggable='false'></textarea>");
+            sb.Append("<textarea id='OtherProjectAnalysis" + index + "' runat='server' rows='2' aria-multiline='True' aria-multiselectable='False' draggable='false'></textarea>");
             sb.Append("</td></tr>");
             sb.Append("<tr><td>ประเด็นปัญหา / อุปสรรค์ : </td><td class='auto-style1'>");
-            sb.Append("<textarea id='OtherProjectObstruction" + index +"' runat='server' aria-multiline='True' aria-multiselectable='False' draggable='false' cols='20' rows='2'></textarea>");
+            sb.Append("<textarea id='OtherProjectObstruction" + index + "' runat='server' aria-multiline='True' aria-multiselectable='False' draggable='false' cols='20' rows='2'></textarea>");
             sb.Append("</td></tr>");
             sb.Append("<tr><td>ความเห็น : </td>");
-            sb.Append("<td class='auto-style1'><textarea cols='20' rows='2' runat='server' id='OtherProjectFeedback" + index +"'></textarea></td></tr>");
-            sb.Append("<tr><td><asp:Button ID='OtherProjectFormSubmit" + index +"' runat='server' Text='Save'/></td><td class='auto-style1'></td></tr>");
+            sb.Append("<td class='auto-style1'><textarea cols='20' rows='2' runat='server' id='OtherProjectFeedback" + index + "'></textarea></td></tr>");
+            sb.Append("<tr><td><asp:Button ID='OtherProjectFormSubmit" + index + "' runat='server' Text='Save'/></td><td class='auto-style1'></td></tr>");
             sb.Append("</table>");
             return sb.ToString();
+        }
+
+        protected void btnImport_Click(object sender, EventArgs e)
+        {
+            patrolingPercent.Text = "24";
+            DigPercent.Text = "55";
+            DigAnalysis.Text  = "แผนงานขุดซ่อม\r\nILI: ขุดแล้ว\r\nDCVG:ขุดแล้ว\r\nอื่นๆ, ขุดแล้ว";
+
+            CPSystemPercent.Text = "28";
+            CIPSPercent.Text = "8";
+            ICCPIGPercent.Text = "41";
+            ICILIPIGPercent.Text = "0";
+            MTPGPercent.Text = "33";
         }
     }
 }

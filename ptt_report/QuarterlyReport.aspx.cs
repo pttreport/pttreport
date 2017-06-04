@@ -171,7 +171,7 @@ namespace ptt_report
             HttpContext.Current.Session["repQuar"] = hddquarter.Value;
             HttpContext.Current.Session["repCustype"] = hddcustype.Value;
 
-            Response.Redirect("~/Execut_sum.aspx");
+            Response.Redirect("~/executivesummary.aspx");
         }
     }
 }

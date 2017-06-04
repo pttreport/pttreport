@@ -13,13 +13,58 @@ namespace ptt_report {
     public partial class directassessment {
         
         /// <summary>
+        /// lbCustype control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbCustype;
+        
+        /// <summary>
+        /// btnExport control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnExport;
+        
+        /// <summary>
+        /// btnSaveVer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSaveVer;
+        
+        /// <summary>
+        /// btnHistory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnHistory;
+        
+        /// <summary>
+        /// btnImport control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnImport;
+        
+        /// <summary>
         /// DADistrictPlanText1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DADistrictPlanText1;
+        protected global::System.Web.UI.WebControls.TextBox DADistrictPlanText1;
         
         /// <summary>
         /// DAPipePositionPlanText1 control.
@@ -28,7 +73,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DAPipePositionPlanText1;
+        protected global::System.Web.UI.WebControls.TextBox DAPipePositionPlanText1;
         
         /// <summary>
         /// DADigPlanText1 control.
@@ -37,7 +82,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DADigPlanText1;
+        protected global::System.Web.UI.WebControls.TextBox DADigPlanText1;
         
         /// <summary>
         /// DALengthPlanText1 control.
@@ -46,7 +91,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DALengthPlanText1;
+        protected global::System.Web.UI.WebControls.TextBox DALengthPlanText1;
         
         /// <summary>
         /// DAActualPlanText1 control.
@@ -55,7 +100,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DAActualPlanText1;
+        protected global::System.Web.UI.WebControls.TextBox DAActualPlanText1;
         
         /// <summary>
         /// DAPlanStatusPlanText1 control.
@@ -64,7 +109,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DAPlanStatusPlanText1;
+        protected global::System.Web.UI.WebControls.TextBox DAPlanStatusPlanText1;
         
         /// <summary>
         /// DADistrictPlanText2 control.
@@ -73,7 +118,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DADistrictPlanText2;
+        protected global::System.Web.UI.WebControls.TextBox DADistrictPlanText2;
         
         /// <summary>
         /// DAPipePositionPlanText2 control.
@@ -82,7 +127,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DAPipePositionPlanText2;
+        protected global::System.Web.UI.WebControls.TextBox DAPipePositionPlanText2;
         
         /// <summary>
         /// DADigPlanText2 control.
@@ -91,7 +136,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DADigPlanText2;
+        protected global::System.Web.UI.WebControls.TextBox DADigPlanText2;
         
         /// <summary>
         /// DALengthPlanText2 control.
@@ -100,7 +145,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DALengthPlanText2;
+        protected global::System.Web.UI.WebControls.TextBox DALengthPlanText2;
         
         /// <summary>
         /// DAActualPlanText2 control.
@@ -109,7 +154,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DAActualPlanText2;
+        protected global::System.Web.UI.WebControls.TextBox DAActualPlanText2;
         
         /// <summary>
         /// DAPlanStatusPlanText2 control.
@@ -118,7 +163,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DAPlanStatusPlanText2;
+        protected global::System.Web.UI.WebControls.TextBox DAPlanStatusPlanText2;
         
         /// <summary>
         /// DADistrictPlanText3 control.
@@ -127,7 +172,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DADistrictPlanText3;
+        protected global::System.Web.UI.WebControls.TextBox DADistrictPlanText3;
         
         /// <summary>
         /// DAPipePositionPlanText3 control.
@@ -136,7 +181,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DAPipePositionPlanText3;
+        protected global::System.Web.UI.WebControls.TextBox DAPipePositionPlanText3;
         
         /// <summary>
         /// DADigPlanText3 control.
@@ -145,7 +190,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DADigPlanText3;
+        protected global::System.Web.UI.WebControls.TextBox DADigPlanText3;
         
         /// <summary>
         /// DALengthPlanText3 control.
@@ -154,7 +199,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DALengthPlanText3;
+        protected global::System.Web.UI.WebControls.TextBox DALengthPlanText3;
         
         /// <summary>
         /// DAActualPlanText3 control.
@@ -163,7 +208,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DAActualPlanText3;
+        protected global::System.Web.UI.WebControls.TextBox DAActualPlanText3;
         
         /// <summary>
         /// DAPlanStatusPlanText3 control.
@@ -172,7 +217,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DAPlanStatusPlanText3;
+        protected global::System.Web.UI.WebControls.TextBox DAPlanStatusPlanText3;
         
         /// <summary>
         /// DADistrictPlanText4 control.
@@ -181,7 +226,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DADistrictPlanText4;
+        protected global::System.Web.UI.WebControls.TextBox DADistrictPlanText4;
         
         /// <summary>
         /// DAPipePositionPlanText4 control.
@@ -190,7 +235,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DAPipePositionPlanText4;
+        protected global::System.Web.UI.WebControls.TextBox DAPipePositionPlanText4;
         
         /// <summary>
         /// DADigPlanText4 control.
@@ -199,7 +244,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DADigPlanText4;
+        protected global::System.Web.UI.WebControls.TextBox DADigPlanText4;
         
         /// <summary>
         /// DALengthPlanText4 control.
@@ -208,7 +253,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DALengthPlanText4;
+        protected global::System.Web.UI.WebControls.TextBox DALengthPlanText4;
         
         /// <summary>
         /// DAActualPlanText4 control.
@@ -217,7 +262,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DAActualPlanText4;
+        protected global::System.Web.UI.WebControls.TextBox DAActualPlanText4;
         
         /// <summary>
         /// DAPlanStatusPlanText4 control.
@@ -226,7 +271,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DAPlanStatusPlanText4;
+        protected global::System.Web.UI.WebControls.TextBox DAPlanStatusPlanText4;
         
         /// <summary>
         /// DADistrictPlanText5 control.
@@ -235,7 +280,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DADistrictPlanText5;
+        protected global::System.Web.UI.WebControls.TextBox DADistrictPlanText5;
         
         /// <summary>
         /// DAPipePositionPlanText5 control.
@@ -244,7 +289,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DAPipePositionPlanText5;
+        protected global::System.Web.UI.WebControls.TextBox DAPipePositionPlanText5;
         
         /// <summary>
         /// DADigPlanText5 control.
@@ -253,7 +298,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DADigPlanText5;
+        protected global::System.Web.UI.WebControls.TextBox DADigPlanText5;
         
         /// <summary>
         /// DALengthPlanText5 control.
@@ -262,7 +307,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DALengthPlanText5;
+        protected global::System.Web.UI.WebControls.TextBox DALengthPlanText5;
         
         /// <summary>
         /// DAActualPlanText5 control.
@@ -271,7 +316,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DAActualPlanText5;
+        protected global::System.Web.UI.WebControls.TextBox DAActualPlanText5;
         
         /// <summary>
         /// DAPlanStatusPlanText5 control.
@@ -280,7 +325,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DAPlanStatusPlanText5;
+        protected global::System.Web.UI.WebControls.TextBox DAPlanStatusPlanText5;
         
         /// <summary>
         /// DADistrictResultText control.
@@ -289,7 +334,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DADistrictResultText;
+        protected global::System.Web.UI.WebControls.TextBox DADistrictResultText;
         
         /// <summary>
         /// DARCResultText control.
@@ -298,7 +343,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DARCResultText;
+        protected global::System.Web.UI.WebControls.TextBox DARCResultText;
         
         /// <summary>
         /// DAHoleResultText control.
@@ -307,7 +352,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DAHoleResultText;
+        protected global::System.Web.UI.WebControls.TextBox DAHoleResultText;
         
         /// <summary>
         /// DANoteResultText control.
@@ -316,7 +361,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DANoteResultText;
+        protected global::System.Web.UI.WebControls.TextBox DANoteResultText;
         
         /// <summary>
         /// DAMonthFutureText control.
@@ -325,7 +370,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DAMonthFutureText;
+        protected global::System.Web.UI.WebControls.TextBox DAMonthFutureText;
         
         /// <summary>
         /// DADistrictFutureText control.
@@ -334,7 +379,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DADistrictFutureText;
+        protected global::System.Web.UI.WebControls.TextBox DADistrictFutureText;
         
         /// <summary>
         /// DARCFutureText control.
@@ -343,7 +388,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DARCFutureText;
+        protected global::System.Web.UI.WebControls.TextBox DARCFutureText;
         
         /// <summary>
         /// DAHoleFutureText control.
@@ -352,7 +397,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DAHoleFutureText;
+        protected global::System.Web.UI.WebControls.TextBox DAHoleFutureText;
         
         /// <summary>
         /// DANoteFutureText control.
@@ -361,7 +406,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DANoteFutureText;
+        protected global::System.Web.UI.WebControls.TextBox DANoteFutureText;
         
         /// <summary>
         /// DAProblem control.
@@ -370,7 +415,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DAProblem;
+        protected global::System.Web.UI.WebControls.TextBox DAProblem;
         
         /// <summary>
         /// DAFormFeedback control.
@@ -379,7 +424,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DAFormFeedback;
+        protected global::System.Web.UI.WebControls.TextBox DAFormFeedback;
         
         /// <summary>
         /// DAFormSaveSubmit control.

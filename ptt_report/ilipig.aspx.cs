@@ -32,7 +32,18 @@ namespace ptt_report
 
         protected void btnImport_Click(object sender, EventArgs e)
         {
+            txtRoutecode.Text = "RC0290";
+            txtDimeter.Text = "24";
+            txtPipeline.Text = "Splan-ERP";
+            txtPlanning.Text = "1 มกราคม 2560";
 
+            txtRoutecode2.Text = "RC0290";
+            txtPipelineSection2.Text = "BKT-ERP";
+
+            txtF_Routecode.Text = "RC0290";
+            txtF_Dimeter.Text = "24";
+            txtF_Pipeline.Text = "Splan-ERP";
+            txtF_Planning.Text = "1 มกราคม 2560";
         }
     }
 }

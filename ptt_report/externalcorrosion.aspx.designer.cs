@@ -13,6 +13,51 @@ namespace ptt_report {
     public partial class externalcorrosion {
         
         /// <summary>
+        /// lbCustype control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbCustype;
+        
+        /// <summary>
+        /// btnExport control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnExport;
+        
+        /// <summary>
+        /// btnSaveVer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSaveVer;
+        
+        /// <summary>
+        /// btnHistory control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnHistory;
+        
+        /// <summary>
+        /// btnImport control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnImport;
+        
+        /// <summary>
         /// ECResult control.
         /// </summary>
         /// <remarks>
@@ -73,7 +118,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea ECCRMonthText1;
+        protected global::System.Web.UI.WebControls.TextBox ECCRMonthText1;
         
         /// <summary>
         /// ECCRInspectionTypeText1 control.
@@ -82,7 +127,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea ECCRInspectionTypeText1;
+        protected global::System.Web.UI.WebControls.TextBox ECCRInspectionTypeText1;
         
         /// <summary>
         /// ECCRRegionText1 control.
@@ -91,7 +136,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea ECCRRegionText1;
+        protected global::System.Web.UI.WebControls.TextBox ECCRRegionText1;
         
         /// <summary>
         /// ECCRProgressText1 control.
@@ -100,16 +145,16 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea ECCRProgressText1;
+        protected global::System.Web.UI.WebControls.TextBox ECCRProgressText1;
         
         /// <summary>
-        /// ECCRManage1 control.
+        /// btnDelCathodic control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea ECCRManage1;
+        protected global::System.Web.UI.WebControls.Button btnDelCathodic;
         
         /// <summary>
         /// ECCDSSCreate control.
@@ -127,7 +172,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea ECCDSSRouteCodeText1;
+        protected global::System.Web.UI.WebControls.TextBox ECCDSSRouteCodeText1;
         
         /// <summary>
         /// ECCDSSPipelineNameText1 control.
@@ -136,7 +181,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea ECCDSSPipelineNameText1;
+        protected global::System.Web.UI.WebControls.TextBox ECCDSSPipelineNameText1;
         
         /// <summary>
         /// ECCDSSStatusText1 control.
@@ -145,16 +190,16 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea ECCDSSStatusText1;
+        protected global::System.Web.UI.WebControls.TextBox ECCDSSStatusText1;
         
         /// <summary>
-        /// ECCDSSManage1 control.
+        /// btnDelSurvey control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea ECCDSSManage1;
+        protected global::System.Web.UI.WebControls.Button btnDelSurvey;
         
         /// <summary>
         /// ECECRFileUpload control.

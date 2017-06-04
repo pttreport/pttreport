@@ -778,13 +778,13 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.TextBox txtPipeSup;
         
         /// <summary>
-        /// txtStatus3 control.
+        /// txtstation3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtStatus3;
+        protected global::System.Web.UI.WebControls.TextBox txtstation3;
         
         /// <summary>
         /// btnDel3 control.
@@ -832,13 +832,13 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.TextBox txtCoating4;
         
         /// <summary>
-        /// txtStatus4 control.
+        /// txtstation4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtStatus4;
+        protected global::System.Web.UI.WebControls.TextBox txtstation4;
         
         /// <summary>
         /// btnDel4 control.
@@ -886,13 +886,13 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.TextBox txtInsulation;
         
         /// <summary>
-        /// txtStatus5 control.
+        /// txtstation5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtStatus5;
+        protected global::System.Web.UI.WebControls.TextBox txtstation5;
         
         /// <summary>
         /// btnDel5 control.

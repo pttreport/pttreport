@@ -58,6 +58,15 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.LinkButton lnkDirectAsset;
         
         /// <summary>
+        /// lnkSoilErosion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnkSoilErosion;
+        
+        /// <summary>
         /// lnkSett control.
         /// </summary>
         /// <remarks>

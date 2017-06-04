@@ -1,11 +1,17 @@
-C:\Users\ajn_1\Documents\Visual Studio 2015\Projects\ptt_report\ptt_report\bin\ptt_report.dll.config
-C:\Users\ajn_1\Documents\Visual Studio 2015\Projects\ptt_report\ptt_report\bin\ptt_report.dll
-C:\Users\ajn_1\Documents\Visual Studio 2015\Projects\ptt_report\ptt_report\bin\ptt_report.pdb
-C:\Users\ajn_1\Documents\Visual Studio 2015\Projects\ptt_report\ptt_report\obj\Debug\ptt_report.dll
-C:\Users\ajn_1\Documents\Visual Studio 2015\Projects\ptt_report\ptt_report\obj\Debug\ptt_report.pdb
 C:\Users\ken_1\Desktop\PTT project\ptt_report\ptt_report\bin\ptt_report.dll.config
 C:\Users\ken_1\Desktop\PTT project\ptt_report\ptt_report\bin\ptt_report.dll
 C:\Users\ken_1\Desktop\PTT project\ptt_report\ptt_report\bin\ptt_report.pdb
 C:\Users\ken_1\Desktop\PTT project\ptt_report\ptt_report\obj\Debug\ptt_report.csprojResolveAssemblyReference.cache
 C:\Users\ken_1\Desktop\PTT project\ptt_report\ptt_report\obj\Debug\ptt_report.dll
 C:\Users\ken_1\Desktop\PTT project\ptt_report\ptt_report\obj\Debug\ptt_report.pdb
+C:\Users\ajn_1\Documents\DEV\ptt_report\code\pttreport-master\pttreport-master\ptt_report\bin\ptt_report.dll.config
+C:\Users\ajn_1\Documents\DEV\ptt_report\code\pttreport-master\pttreport-master\ptt_report\bin\ptt_report.dll
+C:\Users\ajn_1\Documents\DEV\ptt_report\code\pttreport-master\pttreport-master\ptt_report\bin\ptt_report.pdb
+C:\Users\ajn_1\Documents\DEV\ptt_report\code\pttreport-master\pttreport-master\ptt_report\obj\Debug\ptt_report.csprojResolveAssemblyReference.cache
+C:\Users\ajn_1\Documents\DEV\ptt_report\code\pttreport-master\pttreport-master\ptt_report\obj\Debug\ptt_report.dll
+C:\Users\ajn_1\Documents\DEV\ptt_report\code\pttreport-master\pttreport-master\ptt_report\obj\Debug\ptt_report.pdb
+C:\Users\ajn_1\Documents\Visual Studio 2015\Projects\ptt_report\ptt_report\bin\ptt_report.dll.config
+C:\Users\ajn_1\Documents\Visual Studio 2015\Projects\ptt_report\ptt_report\bin\ptt_report.dll
+C:\Users\ajn_1\Documents\Visual Studio 2015\Projects\ptt_report\ptt_report\bin\ptt_report.pdb
+C:\Users\ajn_1\Documents\Visual Studio 2015\Projects\ptt_report\ptt_report\obj\Debug\ptt_report.dll
+C:\Users\ajn_1\Documents\Visual Studio 2015\Projects\ptt_report\ptt_report\obj\Debug\ptt_report.pdb

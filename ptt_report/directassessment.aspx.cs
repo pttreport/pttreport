@@ -28,6 +28,7 @@ namespace ptt_report
                 }
                 else
                 {
+                    lbCustype.Text = HttpContext.Current.Session["repCustype"].ToString();
                     bind_default();
                     bind_list();
                 }
@@ -109,6 +110,48 @@ namespace ptt_report
         protected void DAFormSaveSubmit_Click(object sender, EventArgs e)
         {
 
+        }
+
+        protected void btnImport_Click(object sender, EventArgs e)
+        {
+            DADistrictPlanText1.Text = "5";
+            DADistrictPlanText2.Text = "5";
+            DADistrictPlanText3.Text = "5";
+            DADistrictPlanText4.Text = "5";
+            DADistrictPlanText5.Text = "5";
+
+            DAPipePositionPlanText1.Text = "RC4000, KP.217+318";
+            DAPipePositionPlanText2.Text = "RC4000, KP.217+318";
+            DAPipePositionPlanText3.Text = "RC4000, KP.217+318";
+            DAPipePositionPlanText4.Text = "RC4000, KP.217+318";
+            DAPipePositionPlanText5.Text = "RC4000, KP.217+318";
+
+            DADigPlanText1.Text = "Bistering defect";
+            DADigPlanText2.Text = "Bistering defect";
+            DADigPlanText3.Text = "Bistering defect";
+            DADigPlanText4.Text = "Bistering defect";
+            DADigPlanText5.Text = "Bistering defect";
+
+            DALengthPlanText1.Text = "5";
+            DALengthPlanText2.Text = "5";
+            DALengthPlanText3.Text = "5";
+            DALengthPlanText4.Text = "5";
+            DALengthPlanText5.Text = "5";
+
+            DAActualPlanText1.Text = "60";
+            DAActualPlanText2.Text = "60";
+            DAActualPlanText3.Text = "60";
+            DAActualPlanText4.Text = "60";
+            DAActualPlanText5.Text = "60";
+
+            DADistrictResultText.Text = "5";
+            DARCResultText.Text = "RC4000";
+            DAHoleResultText.Text = "12";
+            DANoteResultText.Text = "ดำเนินการจัดจ้างเสร็จแล้ว";
+
+            DAMonthFutureText.Text = "เมษายน";
+            DARCFutureText.Text = "RC4000";
+            DAHoleFutureText.Text = "10";
         }
     }
 }

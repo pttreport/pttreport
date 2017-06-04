@@ -370,7 +370,7 @@
                                 <tr>
                                     <td>Region</td>
                                     <td>Criteria</td>
-                                    <td>Status</td>
+                                    <td>Station</td>
                                     <td>Management</td>
                                 </tr>
                                 <tr>
@@ -382,7 +382,7 @@
                                         <asp:TextBox ID="txtPipeSup" runat="server"></asp:TextBox>
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="txtStatus3" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="txtstation3" runat="server"></asp:TextBox>
                                     </td>
                                     <td>
                                         <asp:Button ID="btnDel3" runat="server" Text="Delete" /></td>
@@ -413,7 +413,7 @@
                                 <tr>
                                     <td>Region</td>
                                     <td>Criteria</td>
-                                    <td>Status</td>
+                                    <td>Station</td>
                                     <td>Management</td>
                                 </tr>
                                 <tr>
@@ -425,7 +425,7 @@
                                         <asp:TextBox ID="txtCoating4" runat="server"></asp:TextBox>
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="txtStatus4" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="txtstation4" runat="server"></asp:TextBox>
                                     </td>
                                     <td>
                                         <asp:Button ID="btnDel4" runat="server" Text="Delete" /></td>
@@ -456,7 +456,7 @@
                                 <tr>
                                     <td>Region</td>
                                     <td>Criteria</td>
-                                    <td>Status</td>
+                                    <td>Station</td>
                                     <td>Management</td>
                                 </tr>
                                 <tr>
@@ -468,7 +468,7 @@
                                         <asp:TextBox ID="txtInsulation" runat="server"></asp:TextBox>
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="txtStatus5" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="txtstation5" runat="server"></asp:TextBox>
                                     </td>
                                     <td>
                                         <asp:Button ID="btnDel5" runat="server" Text="Delete" /></td>

@@ -1,30 +1,37 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/NestedMasterPage1.master" AutoEventWireup="true" CodeBehind="CleaningPIG.aspx.cs" Inherits="ptt_report.CleaningPIG" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ChildContent2" runat="server">
-    <table>
-        <tr>
-            <td>
-                <div>
-                    Customer Type :
+    <style>
+        #menuleft08 {
+            background: #0c7fd2;
+        }
+    </style>
+    <div class="bar_qr">
+        Customer Type :
+                   
                     <asp:Label ID="lbCustype" runat="server" Text="-"></asp:Label>
-                    <asp:Button ID="btnExport" runat="server" Text="Export Report" />
-                    <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" />
-                    <asp:Button ID="btnHistory" runat="server" Text="History" />
-                    <asp:Button ID="btnImport" runat="server" Text="Import Data" OnClick="btnImport_Click" />
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>
+        <asp:Button ID="btnExport" runat="server" Text="Export Report" class="btn" />
+        <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" />
+        <asp:Button ID="btnHistory" runat="server" Text="History" class="btn" />
+
+    </div>
+
+    <div id="thirdPartyInterfaceForm" style="background-color: #FFFFFF">
+        <h3 class="barBlue">Cleaning PIG
+        <asp:Button ID="btnImport" runat="server" Text="Import Data" OnClick="btnImport_Click" class="btn btn-info" />
+
+
+        </h3>
+
+        <div class="info_executive">
+            <h3>
                 <asp:LinkButton ID="lnkBack" runat="server" OnClick="lnkBack_Click">Inaternal Corrosion</asp:LinkButton>
-                > Cleaning PIG
-            </td>
-        </tr>
-        <tr>
-            <td>
+                > Cleaning PIG</h3>
+            <div class="info_executive_in">
+
                 <table>
                     <tr>
-                        <td>แผนงาน :</td>
+                        <td style="width:165px;">แผนงาน :</td>
                         <td>
                             <asp:TextBox ID="txtworkplan" runat="server"></asp:TextBox>
                         </td>
@@ -32,7 +39,7 @@
                     <tr>
                         <td></td>
                         <td>
-                            <table>
+                            <table class="table_da1">
                                 <tr>
                                     <td>Routecode</td>
                                     <td>Dimeter</td>
@@ -61,15 +68,15 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>ผลการดำเนินงาน :</td>
+                        <td style="vertical-align:top">ผลการดำเนินงาน :</td>
                         <td>
-                            <asp:TextBox ID="txtResult_work" runat="server" BackColor="#99ff99"></asp:TextBox>
+                            <asp:TextBox ID="txtResult_work" TextMode="MultiLine" runat="server" BackColor="#99ff99"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
                         <td>Pigging Result :</td>
                         <td>
-                            <asp:Button ID="btnCreate" runat="server" Text="Create" />
+                            <asp:Button ID="btnCreate" runat="server" Text="Create" class="btn btn-info" />
                         </td>
                     </tr>
                     <tr>
@@ -113,7 +120,7 @@
                     <tr>
                         <td>การดำเนินงานในอนาคต :</td>
                         <td>
-                            <table>
+                            <table class="table_da1">
                                 <tr>
                                     <td>Routecode</td>
                                     <td>Dimeter</td>
@@ -150,7 +157,7 @@
                     <tr>
                         <td>Re-Plan :</td>
                         <td>
-                            <asp:Button ID="btnCreate2" runat="server" Text="Create" />
+                            <asp:Button ID="btnCreate2" runat="server" Text="Create" class="btn btn-info" />
                         </td>
                     </tr>
                     <tr>
@@ -194,11 +201,12 @@
                     <tr>
                         <td></td>
                         <td>
-                            <asp:Button ID="btnSave" runat="server" Text="Save" />
+                            <asp:Button ID="btnSave" runat="server" Text="Save" class="btn" />
                         </td>
                     </tr>
                 </table>
-            </td>
-        </tr>
-    </table>
+
+            </div>
+        </div>
+    </div>
 </asp:Content>

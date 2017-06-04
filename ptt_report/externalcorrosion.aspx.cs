@@ -28,6 +28,7 @@ namespace ptt_report
                 }
                 else
                 {
+                    lbCustype.Text = HttpContext.Current.Session["repCustype"].ToString();
                     bind_default();
                     bind_list();
                 }
@@ -109,6 +110,13 @@ namespace ptt_report
         protected void ECFormSaveSubmit_Click(object sender, EventArgs e)
         {
 
+        }
+
+        protected void btnImport_Click(object sender, EventArgs e)
+        {
+            ECCDSSRouteCodeText1.Text = "RC4000, KP.217+318";
+            ECCDSSPipelineNameText1.Text = "GSP LR Station (DPCU) - OCS#4 (LNG)";
+            ECCDSSStatusText1.Text = "ระหว่างดำเนินการ";
         }
     }
 }

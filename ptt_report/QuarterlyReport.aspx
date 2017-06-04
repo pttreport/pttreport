@@ -38,7 +38,7 @@
     <div>
         <asp:GridView ID="GridView_rep_list" runat="server" AutoGenerateColumns="false" AllowPaging="true"
             OnPageIndexChanging="GridView_rep_list_PageIndexChanging"
-            ShowFooter="false" PageSize="1" class="tb_red">
+            ShowFooter="false" PageSize="3" class="tb_red">
             <Columns>
 
                 <asp:BoundField DataField="year" HeaderText="Year" />

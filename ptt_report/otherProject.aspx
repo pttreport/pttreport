@@ -1,23 +1,37 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/NestedMasterPage1.master" AutoEventWireup="true" CodeBehind="otherProject.aspx.cs" Inherits="ptt_report.otherProject" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ChildContent2" runat="server">
-    <table>
-        <tr>
-            <td>
-                <div>
-                    Customer Type :
-                    <asp:Label ID="lbCustype" runat="server" Text="-"></asp:Label>
-                    <asp:Button ID="btnExport" runat="server" Text="Export Report" />
-                    <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" />
-                    <asp:Button ID="btnHistory" runat="server" Text="History" />
-                    <asp:Button ID="btnImport" runat="server" Text="Import Data" OnClick="btnImport_Click" />
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <%--Multi other Project--%>
-                <div id="divOther1" runat="server" visible="true">
+    <style>
+        #menuleft14 {
+            background: #0c7fd2;
+        }
+
+        input[type="text" i] {
+            width: 100%;
+        }
+    </style>
+
+    <div class="bar_qr">
+        Customer Type :
+                   
+        <asp:Label ID="lbCustype" runat="server" Text="-"></asp:Label>
+        <asp:Button ID="btnExport" runat="server" Text="Export Report" class="btn" />
+        <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" />
+        <asp:Button ID="btnHistory" runat="server" Text="History" class="btn" />
+
+    </div>
+    <div id="thirdPartyInterfaceForm" style="background-color: #FFFFFF">
+        <h3 class="barBlue">Other Project
+             <asp:Button ID="btnImport" runat="server" Text="Import Data" OnClick="btnImport_Click" class="btn btn-info" />
+
+
+
+        </h3>
+        <div id="divOther1" runat="server" visible="true">
+        <div class="info_executive">
+            <h3>Other Project</h3>
+            <div class="info_executive_in">
+                
                     <table>
                         <tr>
                             <td colspan="2">Other Project</td>
@@ -65,7 +79,15 @@
                         </tr>
                     </table>
                 </div>
-                <div id="divOther2" runat="server" visible="false">
+            </div>
+        </div>
+
+
+        <div id="divOther2" runat="server" visible="false">
+        <div class="info_executive">
+            <h3>Other Project</h3>
+            <div class="info_executive_in">
+                
                     <table>
                         <tr>
                             <td colspan="2">Other Project</td>
@@ -113,7 +135,14 @@
                         </tr>
                     </table>
                 </div>
-                <div id="divOther3" runat="server" visible="false">
+            </div>
+        </div>
+
+        <div id="divOther3" runat="server" visible="false">
+        <div class="info_executive">
+            <h3>Other Project</h3>
+            <div class="info_executive_in">
+                
                     <table>
                         <tr>
                             <td colspan="2">Other Project</td>
@@ -161,7 +190,14 @@
                         </tr>
                     </table>
                 </div>
-                <div id="divOther4" runat="server" visible="false">
+            </div>
+        </div>
+
+        <div id="divOther4" runat="server" visible="false">
+        <div class="info_executive">
+            <h3>Other Project</h3>
+            <div class="info_executive_in">
+                
                     <table>
                         <tr>
                             <td colspan="2">Other Project</td>
@@ -209,7 +245,14 @@
                         </tr>
                     </table>
                 </div>
-                <div id="divOther5" runat="server" visible="false">
+            </div>
+        </div>
+
+        <div id="divOther5" runat="server" visible="false">
+        <div class="info_executive">
+            <h3>Other Project</h3>
+            <div class="info_executive_in">
+                
                     <table>
                         <tr>
                             <td colspan="2">Other Project</td>
@@ -257,10 +300,14 @@
                         </tr>
                     </table>
                 </div>
-                <asp:Button ID="btnAddOtherPro" runat="server" Text="Add Other Project" OnClick="btnAddOtherPro_Click" />
-                <asp:Button ID="btnSave" runat="server" Text="Save" />
-            </td>
-        </tr>
+            </div>
+        </div>
+    
 
-    </table>
+
+        <asp:Button ID="btnAddOtherPro" runat="server" Text="Add Other Project" OnClick="btnAddOtherPro_Click" />
+                <asp:Button ID="btnSave" runat="server" Text="Save" />
+
+    </div>
+
 </asp:Content>

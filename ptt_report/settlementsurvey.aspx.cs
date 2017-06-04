@@ -28,6 +28,7 @@ namespace ptt_report
                 }
                 else
                 {
+                    lbCustype.Text = HttpContext.Current.Session["repCustype"].ToString();
                     bind_default();
                     bind_list();
                 }
@@ -109,6 +110,15 @@ namespace ptt_report
         protected void SSFormSaveSubmit_Click(object sender, EventArgs e)
         {
 
+        }
+
+        protected void btnImport_Click(object sender, EventArgs e)
+        {
+            SSWorkPlanDistrict.Text = "1";
+            SSWorkPlanPipePosition.Text = "RC400";
+            SSWorkPlanDigMaintance.Text = "BV6-BV11";
+            SSWorkPlanLength.Text = "NOV";
+            SSWorkPlanActual.Text = "0%";
         }
     }
 }

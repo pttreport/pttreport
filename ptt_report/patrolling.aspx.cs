@@ -28,6 +28,7 @@ namespace ptt_report
                 }
                 else
                 {
+                    lbCustype.Text = HttpContext.Current.Session["repCustype"].ToString();
                     bind_default();
                     bind_list();
                 }
@@ -109,6 +110,13 @@ namespace ptt_report
         protected void PatrollingFormSaveSubmit_Click1(object sender, EventArgs e)
         {
             // TODO : save Patrolling
+        }
+
+        protected void btnImport_Click(object sender, EventArgs e)
+        {
+            PatrollingAerialResult.Text = "ในไตรมาศที่ 1 นั้นยังไม่มีแผนการบินลาดตระเวนตามแนวท่อก๊าซธรรมชาติ ซึ่งมีแผน 2 ครั้งต่อปี สำหรับปี พ.ศ. 2559 มีแผนสำรวจในช่วงเดือนมิ.ย. และช่วงเดือน พ.ย. ในพื้นที่เขต 1,2,3,5,6,8,9,10 และ 11";
+
+            PatrollingNote.Text = "สำหรับเขตพื้นที่ 4 และ 7 และบาง Zone ที่ไม่สามารถบินสำรวจได้ จะใช้ผลการตรวจ Ground Patrolling เพื่อสำรวจก๊าซรั่วไหลแทน";
         }
     }
 }

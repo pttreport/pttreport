@@ -25,38 +25,43 @@ namespace ptt_report
 
         protected void lnkExecut_sum_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Execut_sum.aspx");
+            Response.Redirect("~/executivesummary.aspx");
         }
 
         protected void lnkPatrolling_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/ilipig.aspx");
+            Response.Redirect("~/patrolling.aspx");
 
         }
 
         protected void lnkDirectAsset_Click(object sender, EventArgs e)
         {
+            Response.Redirect("~/directassessment.aspx");
+        }
 
+        protected void lnkSoilErosion_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/soilerosion.aspx");
         }
 
         protected void lnkSett_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/settlementsurvey.aspx");
         }
 
         protected void lnkROV_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/rov.aspx");
         }
 
         protected void lnkFreeSpan_Click(object sender, EventArgs e)
-        {
-
+        {          
+            Response.Redirect("~/freespan.aspx");
         }
 
         protected void lnkExternalCorrosion_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/externalcorrosion.aspx");
         }
 
         protected void lnkCleaningPIG_Click(object sender, EventArgs e)
@@ -93,5 +98,7 @@ namespace ptt_report
         {
             Response.Redirect("~/otherProject.aspx");
         }
+
+       
     }
 }

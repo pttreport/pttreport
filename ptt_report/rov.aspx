@@ -1,28 +1,42 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="rov.aspx.cs" Inherits="ptt_report.rov" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/NestedMasterPage1.Master" AutoEventWireup="true" CodeBehind="rov.aspx.cs" Inherits="ptt_report.rov" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style type="text/css">
-        .auto-style1 {
-            width: 474px;
-        }
-        #TextArea1 {
-            width: 459px;
-        }
-        #BasicAnalysis {
-            width: 445px;
-        }
-        </style>
-</asp:Content>
 
-<asp:Content ID="es_form" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+<asp:Content ID="es_form" ContentPlaceHolderID="ChildContent2" runat="server">
+      <style>
+        #menuleft06 {
+            background: #0c7fd2;
+        }
+    </style>
+
+    <div class="bar_qr">
+                    Customer Type :
+                    <asp:Label ID="lbCustype" runat="server" Text="-"></asp:Label>
+                    <asp:Button ID="btnExport" runat="server" Text="Export Report" class="btn" />
+                    <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" />
+                    <asp:Button ID="btnHistory" runat="server" Text="History" class="btn" />
+                    
+                </div>
+    <table>
+        <tr>
+            <td>
+                
+            </td>
+        </tr>
+    </table>
     <div id="thirdPartyInterfaceForm" style="background-color: #FFFFFF">
         <div id="patrolFormTable">
-            patrolForm
+             <h3 class="barBlue">ROV
+                 <asp:Button ID="btnImport" runat="server" Text="Import Data" OnClick="btnImport_Click" class="btn btn-info" />
+ 
+            </h3>
+            <div class="info_executive">
+                <h3>3rd party Interface > ROV</h3>
+                <div class="info_executive_in">
             <table>
 
                 <tr>
-                    <th colspan="2">3rd party Interface > ROV</th>
+                    <th colspan="2"></th>
                 </tr>
 
                 <tr>
@@ -59,11 +73,13 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:Button ID="ROVFormSaveSubmit" runat="server" Text="Save" OnClick="ROVFormSaveSubmit_Click" /></td>
-                    <td class="auto-style1"></td>
+                       </td>
+                    <td class="auto-style1"> <asp:Button ID="ROVFormSaveSubmit" runat="server" Text="Save" OnClick="ROVFormSaveSubmit_Click" class="btn" /></td>
                 </tr>
 
             </table>
+                    </div>
+                </div>
         </div>
     </div>
 

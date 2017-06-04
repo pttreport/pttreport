@@ -41,6 +41,7 @@ body {
     padding: 5px 10px;
     color: #fff;
     height: 25px;
+    width: 195px;
 }
 .icomeu {
     margin-top: -5px;
@@ -212,7 +213,7 @@ body {
 /*------------- button ----------------*/
 .btn {
     display: inline-block;
-    padding: 4px 15px;
+    padding: 1px 8px;
     margin-bottom: 0;
     font-size: 13px;
     font-weight: 400;
@@ -318,4 +319,133 @@ body {
 .serchRed
 {
     background: #f0dbd8;
+}
+
+
+
+.master1 {
+    width:100%;
+
+}.master1 td {vertical-align: top; }
+
+.bar_qr {
+     float: right;
+    margin-top: -36px;
+
+}
+
+#thirdPartyInterfaceForm {
+    padding:15px;
+}
+
+.barBlue {
+    width:100%;
+    border-bottom:1px solid #ccc;
+    padding-bottom:15px;
+}
+
+    .barBlue input[type="submit"] {
+        float:right;
+    }
+.info_executive_in {
+    border:1px solid #ccc;
+    padding:15px;
+    margin-bottom:10px;
+}
+.info_executive h3 {
+    font-size:14px;
+    background:#0c7fd2;
+    color:#fff;
+    padding:7px 5px;
+    margin-bottom:0px;
+
+}
+.info_executive h3 a {
+    color:#fff;
+}
+.info_executive_in table {
+    width:100%;
+}
+    .info_executive_in table td:first-child {
+        text-align:right;
+        font-weight:bold;
+    }
+
+.info_executive_in textarea {
+    width: 500px;
+    height: 150px;
+    border: 1px solid #ccc;
+}
+.info_executive_in input[type="submit"] {
+    float:left;
+}
+
+
+.menu_left {
+    background: #46a4e6;
+    padding-top: 15px;
+    color:#fff;
+    
+}
+    .menu_left a {
+        color:#fff;
+    }
+    .menu_left ul {
+         margin-left: -39px;
+    }
+    .menu_left li {
+        list-style:none;
+        padding: 6px 10px;
+        border-bottom:1px solid #2e91d6;
+    }
+    .menu_left ul li ul {
+         margin-left: 0px;
+    }
+
+        .menu_left ul li ul li:last-child {
+            border:none;
+        }
+
+.table_da1 td,
+.table_da2 td,
+.table_da3 td {
+    border:1px solid #ccc;
+    text-align:center !important;
+}
+.table_da1 th,
+.table_da2 th,
+.table_da3 th {
+    border: 1px solid #ccc;
+    text-align: center !important;
+    background: #0c7fd2;
+    color: #fff;
+    padding: 3px;
+}
+
+
+.table_da1 input[type="text" i],
+.table_da2 input[type="text" i],
+.table_da3 input[type="text" i] {
+    width:85%;
+}
+
+#ContentPlaceHolder1_ChildContent2_DAProblem,
+#ContentPlaceHolder1_ChildContent2_DAFormFeedback {
+    width:100%;
+}
+
+
+
+.table_da1 textarea {
+    width: 148px;
+}
+#ContentPlaceHolder1_ChildContent2_txtworkplan,
+#ContentPlaceHolder1_ChildContent2_txtProblem,
+#ContentPlaceHolder1_ChildContent2_txtRemark {
+    width:100%;
+}
+
+#ContentPlaceHolder1_gridview_rep_tmp {
+    background: #fff;
+    width:100%;
 }

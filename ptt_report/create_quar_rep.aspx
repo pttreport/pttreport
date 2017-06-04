@@ -3,24 +3,28 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <h3 class="mini_head2">Create Quarterly Report
+    </h3>
     <div>
-        <table>
-            <tr>
-                <td>year : 
+        <div class="serchRed">
+            <table>
+                <tr>
+                    <td>year : 
                 </td>
-                <td>
-                    <asp:DropDownList ID="ddlyear" runat="server"></asp:DropDownList>
+                    <td>
+                        <asp:DropDownList ID="ddlyear" runat="server"></asp:DropDownList>
+                    </td>
+                    <td>Quarter : 
                 </td>
-                <td>Quarter : 
-                </td>
-                <td>
-                    <asp:DropDownList ID="ddlquarter" runat="server"></asp:DropDownList>
-                </td>
-                <td>
-                    <asp:Button ID="btnselect" runat="server" Text="Select" OnClick="btnselect_Click" />
-                </td>
-            </tr>
-        </table>
+                    <td>
+                        <asp:DropDownList ID="ddlquarter" runat="server"></asp:DropDownList>
+                    </td>
+                    <td>
+                        <asp:Button ID="btnselect" runat="server" Text="Select" OnClick="btnselect_Click" />
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
     <div id="divRep_listfull" runat="server" visible="false">
         <asp:Label ID="lbno" runat="server" Text="-" ForeColor="Red"></asp:Label>

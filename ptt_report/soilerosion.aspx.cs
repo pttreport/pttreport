@@ -28,6 +28,7 @@ namespace ptt_report
                 }
                 else
                 {
+                    lbCustype.Text = HttpContext.Current.Session["repCustype"].ToString();
                     bind_default();
                     bind_list();
                 }
@@ -107,6 +108,11 @@ namespace ptt_report
         }
 
         protected void SEFormSaveSubmit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnImport_Click(object sender, EventArgs e)
         {
 
         }
