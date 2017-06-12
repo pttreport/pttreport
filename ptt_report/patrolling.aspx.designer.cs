@@ -49,6 +49,33 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button btnHistory;
         
         /// <summary>
+        /// hddpatolling_id control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hddpatolling_id;
+        
+        /// <summary>
+        /// hddfile_path control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hddfile_path;
+        
+        /// <summary>
+        /// hddmas_rep_id control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hddmas_rep_id;
+        
+        /// <summary>
         /// btnImport control.
         /// </summary>
         /// <remarks>
@@ -91,7 +118,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea PatrollingProblem;
+        protected global::System.Web.UI.WebControls.TextBox PatrollingProblem;
         
         /// <summary>
         /// PatrollingFormFeedback control.
@@ -100,7 +127,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea PatrollingFormFeedback;
+        protected global::System.Web.UI.WebControls.TextBox PatrollingFormFeedback;
         
         /// <summary>
         /// PatrollingFormSaveSubmit control.
@@ -110,5 +137,14 @@ namespace ptt_report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button PatrollingFormSaveSubmit;
+        
+        /// <summary>
+        /// btnApprove control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnApprove;
     }
 }

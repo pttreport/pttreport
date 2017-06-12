@@ -49,6 +49,33 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button btnHistory;
         
         /// <summary>
+        /// hddcp_id control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hddcp_id;
+        
+        /// <summary>
+        /// hddmas_rep_id control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hddmas_rep_id;
+        
+        /// <summary>
+        /// hddfile_path control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hddfile_path;
+        
+        /// <summary>
         /// btnImport control.
         /// </summary>
         /// <remarks>
@@ -139,13 +166,13 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button btnCreate;
         
         /// <summary>
-        /// GridView_rep_list control.
+        /// gvPigResult control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView_rep_list;
+        protected global::System.Web.UI.WebControls.GridView gvPigResult;
         
         /// <summary>
         /// txtRemark control.
@@ -220,13 +247,13 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button btnCreate2;
         
         /// <summary>
-        /// GridView1 control.
+        /// gvReplan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView gvReplan;
         
         /// <summary>
         /// txtComment control.

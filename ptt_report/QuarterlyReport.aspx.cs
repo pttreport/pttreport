@@ -167,11 +167,42 @@ namespace ptt_report
             HiddenField hddcustype = (HiddenField)row.FindControl("hddcustype");
 
             HttpContext.Current.Session["repid"] = hddrepid.Value;
-            HttpContext.Current.Session["repYear"] = hddyear.Value ;
+            HttpContext.Current.Session["repYear"] = hddyear.Value;
             HttpContext.Current.Session["repQuar"] = hddquarter.Value;
             HttpContext.Current.Session["repCustype"] = hddcustype.Value;
-
+            
             Response.Redirect("~/executivesummary.aspx");
+        }
+
+        protected void GridView_rep_list_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                Button btnmanage = (Button)(e.Row.FindControl("btnmanage"));
+                Button btndownload = (Button)(e.Row.FindControl("btndownload"));
+                Button btndelete = (Button)(e.Row.FindControl("btndelete"));
+
+                if(HttpContext.Current.Session["assetdownload"].ToString() == "y")
+                {
+                    btndownload.Visible = true;
+                }
+                else
+                {
+                    btndownload.Visible = false;
+                }
+
+                if (HttpContext.Current.Session["assetmanagement"].ToString() == "y")
+                {
+                    btnmanage.Visible = true;
+                    btndelete.Visible = true;
+                }
+                else
+                {
+                    btnmanage.Visible = false;
+                    btndelete.Visible = false;
+                }
+
+            }
         }
     }
 }

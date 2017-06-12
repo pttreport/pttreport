@@ -17,6 +17,10 @@
         <asp:Button ID="btnExport" runat="server" Text="Export Report" class="btn" />
         <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" />
         <asp:Button ID="btnHistory" runat="server" Text="History" class="btn" />
+
+        <asp:HiddenField ID="hddct_id" runat="server" />
+        <asp:HiddenField ID="hddmas_rep_id" runat="server" />
+        <asp:HiddenField ID="hddfile_path" runat="server" />
         
     </div>
     <div id="thirdPartyInterfaceForm" style="background-color: #FFFFFF">
@@ -49,7 +53,7 @@
                     <tr>
                         <td></td>
                         <td>
-                            <asp:Button ID="btnSave" runat="server" Text="Save" class="btn" />
+                            <asp:Button ID="btnSave" runat="server" Text="Save" class="btn" OnClick="btnSave_Click" />
                         </td>
                     </tr>
                 </table>

@@ -13,10 +13,14 @@
     <div class="bar_qr">
         Customer Type :
                    
-                    <asp:label id="lbCustype" runat="server" text="-"></asp:label>
+        <asp:label id="lbCustype" runat="server" text="-"></asp:label>
         <asp:button id="btnExport" runat="server" text="Export Report" class="btn" />
         <asp:button id="btnSaveVer" runat="server" text="Save Version" class="btn" />
         <asp:button id="btnHistory" runat="server" text="History" class="btn"/>
+
+        <asp:HiddenField ID="hddss_id" runat="server" />
+        <asp:HiddenField ID="hddmas_rep_id" runat="server" />
+        <asp:HiddenField ID="hddfile_path" runat="server" />
 
     </div>
 
@@ -38,42 +42,58 @@
                                 <table class="table_da1">
 
                                     <tr>
-                                        <td colspan="7">
-                                            <asp:button id="SSWorkPlanAddNewPlan" runat="server" text="Create"  class="btn btn-info" />
+                                        <td>
+                                            <asp:button id="SSWorkPlanAddNewPlan" runat="server" text="Create"  class="btn btn-info" OnClick="SSWorkPlanAddNewPlan_Click" />
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>เขต</td>
-                                        <td>เส้นท่อ</td>
-                                        <td>สถานี</td>
-                                        <td>Action</td>
-                                        <td>Progress</td>
-                                        <td>Remark</td>
-                                        <td>Manage</td>
+                                        <td>
+
+                                          <asp:GridView Width="100%" DataKeyNames="id" AutoGenerateColumns="false" runat="server" ID="gv" ShowFooter="false" OnSelectedIndexChanged="gv_SelectedIndexChanged">
+                                                <Columns>
+                                                    <asp:TemplateField HeaderText="เขต">
+                                                        <ItemTemplate>
+                                                            <asp:HiddenField ID="hddid" runat="server" Value='<%# Eval("id") %>' />
+                                                            <asp:TextBox ID="subarea" runat="server" Text='<%# Eval("area") %>'></asp:TextBox>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="เส้นท่อ">
+                                                        <ItemTemplate>
+                                                            <asp:TextBox ID="subpipe" runat="server" Text='<%# Eval("pipe") %>'></asp:TextBox>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="สถานี">
+                                                        <ItemTemplate>
+                                                            <asp:TextBox ID="substation" runat="server" Text='<%# Eval("station") %>'></asp:TextBox>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="Action">
+                                                        <ItemTemplate>
+                                                            <asp:TextBox ID="subaction" runat="server" Text='<%# Eval("action") %>'></asp:TextBox>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="Progress">
+                                                        <ItemTemplate>
+                                                            <asp:TextBox ID="subprogress" runat="server" Text='<%# Eval("progress") %>'></asp:TextBox>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="Remark">
+                                                        <ItemTemplate>
+                                                            <asp:TextBox ID="subremark" runat="server" Text='<%# Eval("remark") %>'></asp:TextBox>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="Manage">
+                                                        <ItemTemplate>
+                                                            <asp:Button ID="btndal" runat="server" Text="Delete" OnClick="btndal_Click" />
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                </Columns>
+                                            </asp:GridView>
+
+                                        </td>
+
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            <asp:textbox id="SSWorkPlanDistrict" backcolor="#99ff99" runat="server"></asp:textbox>
-                                        </td>
-                                        <td>
-                                            <asp:textbox id="SSWorkPlanPipePosition" backcolor="#99ff99" runat="server"></asp:textbox>
-                                        </td>
-                                        <td>
-                                            <asp:textbox id="SSWorkPlanDigMaintance" backcolor="#99ff99" runat="server"></asp:textbox>
-                                        </td>
-                                        <td>
-                                            <asp:textbox id="SSWorkPlanLength" backcolor="#99ff99" runat="server"></asp:textbox>
-                                        </td>
-                                        <td>
-                                            <asp:textbox id="SSWorkPlanActual" backcolor="#99ff99" runat="server"></asp:textbox>
-                                        </td>
-                                        <td>
-                                            <asp:textbox id="SSWorkPlanStatus" runat="server"></asp:textbox>
-                                        </td>
-                                        <td>
-                                            <asp:button id="SSWorkPlanDelete" runat="server" text="Delete"   class="btn btn-danger"/>
-                                        </td>
-                                    </tr>
+
                                 </table>
 
                             </td>
@@ -82,7 +102,7 @@
                             <td>ผลการดำเนินงาน : </td>
                             <td class="auto-style1">
 
-                                <textarea cols="20" rows="2" runat="server" id="SSResult"></textarea>
+                                <asp:TextBox TextMode="MultiLine" runat="server" id="SSResultBox"></asp:TextBox>
 
                             </td>
                         </tr>
@@ -96,12 +116,12 @@
                         <tr>
                             <td>ปัญหาอุปสรรค (ถ้ามี) : </td>
                             <td class="auto-style1">
-                                <textarea cols="20" rows="2" runat="server" id="SSProblem"></textarea></td>
+                                <asp:textbox runat="server" id="SSProblemBox"></asp:textbox></td>
                         </tr>
                         <tr>
                             <td>ความเห็น : </td>
                             <td class="auto-style1">
-                                <textarea cols="20" rows="2" runat="server" id="SSFormFeedback"></textarea></td>
+                                <asp:textbox runat="server" id="SSFormFeedbackBox"></asp:textbox></td>
                         </tr>
                         <tr>
                             <td>

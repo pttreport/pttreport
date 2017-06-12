@@ -49,6 +49,33 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button btnHistory;
         
         /// <summary>
+        /// hddsoil_id control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hddsoil_id;
+        
+        /// <summary>
+        /// hddfile_path control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hddfile_path;
+        
+        /// <summary>
+        /// hddmas_rep_id control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hddmas_rep_id;
+        
+        /// <summary>
         /// btnImport control.
         /// </summary>
         /// <remarks>
@@ -58,22 +85,22 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button btnImport;
         
         /// <summary>
-        /// SEProjectDetail control.
+        /// txtd1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea SEProjectDetail;
+        protected global::System.Web.UI.WebControls.TextBox txtd1;
         
         /// <summary>
-        /// SEWorkPlan control.
+        /// txtd2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea SEWorkPlan;
+        protected global::System.Web.UI.WebControls.TextBox txtd2;
         
         /// <summary>
         /// SEWorkPlanAddNewPlan control.
@@ -85,103 +112,49 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button SEWorkPlanAddNewPlan;
         
         /// <summary>
-        /// SEWorkPlanDistrict control.
+        /// gv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SEWorkPlanDistrict;
+        protected global::System.Web.UI.WebControls.GridView gv;
         
         /// <summary>
-        /// SEWorkPlanPipePosition control.
+        /// txtd9 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SEWorkPlanPipePosition;
+        protected global::System.Web.UI.WebControls.TextBox txtd9;
         
         /// <summary>
-        /// SEWorkPlanDigMaintance control.
+        /// txtd10 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SEWorkPlanDigMaintance;
+        protected global::System.Web.UI.WebControls.TextBox txtd10;
         
         /// <summary>
-        /// SEWorkPlanLength control.
+        /// txtd11 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SEWorkPlanLength;
+        protected global::System.Web.UI.WebControls.TextBox txtd11;
         
         /// <summary>
-        /// SEWorkPlanActual control.
+        /// txtd12 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SEWorkPlanActual;
-        
-        /// <summary>
-        /// SEWorkPlanStatus control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SEWorkPlanStatus;
-        
-        /// <summary>
-        /// SEWorkPlanDelete control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SEWorkPlanDelete;
-        
-        /// <summary>
-        /// SEResult control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea SEResult;
-        
-        /// <summary>
-        /// SEFuturePlan control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea SEFuturePlan;
-        
-        /// <summary>
-        /// SEProblem control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea SEProblem;
-        
-        /// <summary>
-        /// SEFormFeedback control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea SEFormFeedback;
+        protected global::System.Web.UI.WebControls.TextBox txtd12;
         
         /// <summary>
         /// SEFormSaveSubmit control.
@@ -191,5 +164,14 @@ namespace ptt_report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button SEFormSaveSubmit;
+        
+        /// <summary>
+        /// btnApprove control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnApprove;
     }
 }

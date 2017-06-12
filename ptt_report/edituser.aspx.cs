@@ -53,7 +53,7 @@ namespace ptt_report
             if (hddusername.Value != "")
             {
                 txtusername.Enabled = false;
-                var u = Serv.GetUserBASByUsername(hddusername.Value);
+                var u = Serv.GetUserBASByUsername2(hddusername.Value);
                 if (u.Rows.Count != 0)
                 {
                     txtemail.Text = u.Rows[0]["email"].ToString();

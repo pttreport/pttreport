@@ -10,13 +10,16 @@
     </style>
 
     <div class="bar_qr">
-                    Customer Type :
-                    <asp:Label ID="lbCustype" runat="server" Text="-"></asp:Label>
-                    <asp:Button ID="btnExport" runat="server" Text="Export Report" class="btn" />
-                    <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" />
-                    <asp:Button ID="btnHistory" runat="server" Text="History" class="btn" />
+        Customer Type :
+        <asp:Label ID="lbCustype" runat="server" Text="-"></asp:Label>
+        <asp:Button ID="btnExport" runat="server" Text="Export Report" class="btn" />
+        <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" />
+        <asp:Button ID="btnHistory" runat="server" Text="History" class="btn" />
                     
-                </div>
+        <asp:HiddenField ID="hddrov_id" runat="server" />
+        <asp:HiddenField ID="hddmas_rep_id" runat="server" />
+        <asp:HiddenField ID="hddfile_path" runat="server" />
+     </div>
     <table>
         <tr>
             <td>
@@ -43,7 +46,7 @@
                     <td>แผนงาน: </td>
                     <td class="auto-style1">
 
-                        <textarea cols="20" rows="2" runat="server" id="ROVWorkPlan"></textarea>
+                        <asp:TextBox cols="20" rows="2" TextMode="MultiLine" runat="server" id="ROVWorkPlanBox"></asp:TextBox>
 
                     </td>
                 </tr>
@@ -51,7 +54,7 @@
                     <td>ผลการดำเนินงาน : </td>
                     <td class="auto-style1">
 
-                        <textarea cols="20" rows="2" runat="server" id="ROVResult"></textarea>
+                        <asp:TextBox cols="20" rows="2" TextMode="MultiLine" runat="server" id="ROVResultBox"></asp:TextBox>
 
                     </td>
                 </tr>
@@ -59,17 +62,23 @@
                     <td>การดำเนินงานในอนาคต : </td>
                     <td class="auto-style1">
 
-                       <textarea cols="20" rows="2" runat="server" id="ROVFuturePlan"></textarea>
+                       <asp:TextBox cols="20" rows="2" TextMode="MultiLine" runat="server" id="ROVFuturePlanBox"></asp:TextBox>
 
                     </td>
                 </tr>
                 <tr>
                     <td>ปัญหาอุปสรรค (ถ้ามี) : </td>
-                    <td class="auto-style1"><textarea cols="20" rows="2" runat="server" id="ROVProblem"></textarea></td>
+                    <td class="auto-style1">
+
+                        <asp:TextBox cols="20" rows="2" TextMode="MultiLine" runat="server" id="ROVProblemBox"></asp:TextBox>
+
+                    </td>
                 </tr>
                 <tr>
                     <td>ความเห็น : </td>
-                    <td class="auto-style1"><textarea cols="20" rows="2" runat="server" id="ROVFormFeedback"></textarea></td>
+                    <td class="auto-style1">
+                        <asp:TextBox cols="20" rows="2" TextMode="MultiLine" runat="server" id="ROVFormFeedbackBox"></asp:TextBox>
+                    </td>
                 </tr>
                 <tr>
                     <td>

@@ -49,6 +49,33 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button btnHistory;
         
         /// <summary>
+        /// hddexecutivesummary_id control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hddexecutivesummary_id;
+        
+        /// <summary>
+        /// hddmas_rep_id control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hddmas_rep_id;
+        
+        /// <summary>
+        /// hddfile_path control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hddfile_path;
+        
+        /// <summary>
         /// btnImport control.
         /// </summary>
         /// <remarks>
@@ -73,7 +100,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea BasicAnalysis;
+        protected global::System.Web.UI.WebControls.TextBox BasicAnalysis;
         
         /// <summary>
         /// PatrollingObstruction control.
@@ -82,7 +109,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea PatrollingObstruction;
+        protected global::System.Web.UI.WebControls.TextBox PatrollingObstruction;
         
         /// <summary>
         /// PatrollingFeedback control.
@@ -91,7 +118,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea PatrollingFeedback;
+        protected global::System.Web.UI.WebControls.TextBox PatrollingFeedback;
         
         /// <summary>
         /// PatrollingFormSubmit control.
@@ -118,7 +145,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea RovAnalysis;
+        protected global::System.Web.UI.WebControls.TextBox RovAnalysis;
         
         /// <summary>
         /// RovObstruction control.
@@ -127,7 +154,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea RovObstruction;
+        protected global::System.Web.UI.WebControls.TextBox RovObstruction;
         
         /// <summary>
         /// RovFeedback control.
@@ -136,7 +163,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea RovFeedback;
+        protected global::System.Web.UI.WebControls.TextBox RovFeedback;
         
         /// <summary>
         /// RovFormSubmit control.
@@ -172,7 +199,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DigObstruction;
+        protected global::System.Web.UI.WebControls.TextBox DigObstruction;
         
         /// <summary>
         /// DigFeedback control.
@@ -181,7 +208,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea DigFeedback;
+        protected global::System.Web.UI.WebControls.TextBox DigFeedback;
         
         /// <summary>
         /// DigFormSubmit control.
@@ -208,7 +235,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea ErosionAnalysis;
+        protected global::System.Web.UI.WebControls.TextBox ErosionAnalysis;
         
         /// <summary>
         /// ErosionObstruction control.
@@ -217,7 +244,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea ErosionObstruction;
+        protected global::System.Web.UI.WebControls.TextBox ErosionObstruction;
         
         /// <summary>
         /// ErosionFeedback control.
@@ -226,7 +253,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea ErosionFeedback;
+        protected global::System.Web.UI.WebControls.TextBox ErosionFeedback;
         
         /// <summary>
         /// ErosionFormSubmit control.
@@ -253,7 +280,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea SubsideAnalysis;
+        protected global::System.Web.UI.WebControls.TextBox SubsideAnalysis;
         
         /// <summary>
         /// SubsideObstruction control.
@@ -262,7 +289,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea SubsideObstruction;
+        protected global::System.Web.UI.WebControls.TextBox SubsideObstruction;
         
         /// <summary>
         /// SubsideFeedback control.
@@ -271,7 +298,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea SubsideFeedback;
+        protected global::System.Web.UI.WebControls.TextBox SubsideFeedback;
         
         /// <summary>
         /// SubsideFormSubmit control.
@@ -307,7 +334,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea ECAnalysis;
+        protected global::System.Web.UI.WebControls.TextBox ECAnalysis;
         
         /// <summary>
         /// ECObstruction control.
@@ -316,7 +343,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea ECObstruction;
+        protected global::System.Web.UI.WebControls.TextBox ECObstruction;
         
         /// <summary>
         /// ECFeedback control.
@@ -325,7 +352,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea ECFeedback;
+        protected global::System.Web.UI.WebControls.TextBox ECFeedback;
         
         /// <summary>
         /// ECFormSubmit control.
@@ -361,7 +388,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea ICAnalysis;
+        protected global::System.Web.UI.WebControls.TextBox ICAnalysis;
         
         /// <summary>
         /// ICObstruction control.
@@ -370,7 +397,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea ICObstruction;
+        protected global::System.Web.UI.WebControls.TextBox ICObstruction;
         
         /// <summary>
         /// ICFeedback control.
@@ -379,7 +406,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea ICFeedback;
+        protected global::System.Web.UI.WebControls.TextBox ICFeedback;
         
         /// <summary>
         /// ICFormSubmit control.
@@ -406,7 +433,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea MTPGAnalysis;
+        protected global::System.Web.UI.WebControls.TextBox MTPGAnalysis;
         
         /// <summary>
         /// MTPGObstruction control.
@@ -415,7 +442,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea MTPGObstruction;
+        protected global::System.Web.UI.WebControls.TextBox MTPGObstruction;
         
         /// <summary>
         /// MTPGFeedback control.
@@ -424,7 +451,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea MTPGFeedback;
+        protected global::System.Web.UI.WebControls.TextBox MTPGFeedback;
         
         /// <summary>
         /// MTPGFormSubmit control.
@@ -451,7 +478,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea OffShorePipeAnalysis;
+        protected global::System.Web.UI.WebControls.TextBox OffShorePipeAnalysis;
         
         /// <summary>
         /// OffShorePipeObstruction control.
@@ -460,7 +487,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea OffShorePipeObstruction;
+        protected global::System.Web.UI.WebControls.TextBox OffShorePipeObstruction;
         
         /// <summary>
         /// OffShorePipeFeedback control.
@@ -469,7 +496,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea OffShorePipeFeedback;
+        protected global::System.Web.UI.WebControls.TextBox OffShorePipeFeedback;
         
         /// <summary>
         /// OffShorePipeFormSubmit control.
@@ -479,6 +506,15 @@ namespace ptt_report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button OffShorePipeFormSubmit;
+        
+        /// <summary>
+        /// OffShorePipeFormTable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl OffShorePipeFormTable;
         
         /// <summary>
         /// OffShoreBasePercent control.
@@ -496,7 +532,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea OffShoreBaseAnalysis;
+        protected global::System.Web.UI.WebControls.TextBox OffShoreBaseAnalysis;
         
         /// <summary>
         /// OffShoreBaseObstruction control.
@@ -505,7 +541,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea OffShoreBaseObstruction;
+        protected global::System.Web.UI.WebControls.TextBox OffShoreBaseObstruction;
         
         /// <summary>
         /// OffShoreBaseFeedback control.
@@ -514,7 +550,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea OffShoreBaseFeedback;
+        protected global::System.Web.UI.WebControls.TextBox OffShoreBaseFeedback;
         
         /// <summary>
         /// OffShoreBaseFormSubmit control.
@@ -526,13 +562,409 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button OffShoreBaseFormSubmit;
         
         /// <summary>
-        /// OtherProjectList control.
+        /// OtherProjectFormTable1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table OtherProjectList;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl OtherProjectFormTable1;
+        
+        /// <summary>
+        /// btndelother1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btndelother1;
+        
+        /// <summary>
+        /// hdd_idother1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdd_idother1;
+        
+        /// <summary>
+        /// txtother_info1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtother_info1;
+        
+        /// <summary>
+        /// txtother_info2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtother_info2;
+        
+        /// <summary>
+        /// txtother_info3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtother_info3;
+        
+        /// <summary>
+        /// txtother_info4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtother_info4;
+        
+        /// <summary>
+        /// txtother_info5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtother_info5;
+        
+        /// <summary>
+        /// btnSaveOther1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSaveOther1;
+        
+        /// <summary>
+        /// OtherProjectFormTable2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl OtherProjectFormTable2;
+        
+        /// <summary>
+        /// btndelother2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btndelother2;
+        
+        /// <summary>
+        /// hdd_idother2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdd_idother2;
+        
+        /// <summary>
+        /// txtother_info12 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtother_info12;
+        
+        /// <summary>
+        /// txtother_info22 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtother_info22;
+        
+        /// <summary>
+        /// txtother_info32 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtother_info32;
+        
+        /// <summary>
+        /// txtother_info42 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtother_info42;
+        
+        /// <summary>
+        /// txtother_info52 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtother_info52;
+        
+        /// <summary>
+        /// btnSaveOther2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSaveOther2;
+        
+        /// <summary>
+        /// OtherProjectFormTable3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl OtherProjectFormTable3;
+        
+        /// <summary>
+        /// btndelother3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btndelother3;
+        
+        /// <summary>
+        /// hdd_idother3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdd_idother3;
+        
+        /// <summary>
+        /// txtother_info13 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtother_info13;
+        
+        /// <summary>
+        /// txtother_info23 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtother_info23;
+        
+        /// <summary>
+        /// txtother_info33 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtother_info33;
+        
+        /// <summary>
+        /// txtother_info43 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtother_info43;
+        
+        /// <summary>
+        /// txtother_info53 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtother_info53;
+        
+        /// <summary>
+        /// btnSaveOther3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSaveOther3;
+        
+        /// <summary>
+        /// OtherProjectFormTable4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl OtherProjectFormTable4;
+        
+        /// <summary>
+        /// btndelother4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btndelother4;
+        
+        /// <summary>
+        /// hdd_idother4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdd_idother4;
+        
+        /// <summary>
+        /// txtother_info14 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtother_info14;
+        
+        /// <summary>
+        /// txtother_info24 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtother_info24;
+        
+        /// <summary>
+        /// txtother_info34 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtother_info34;
+        
+        /// <summary>
+        /// txtother_info44 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtother_info44;
+        
+        /// <summary>
+        /// txtother_info54 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtother_info54;
+        
+        /// <summary>
+        /// btnSaveOther4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSaveOther4;
+        
+        /// <summary>
+        /// OtherProjectFormTable5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl OtherProjectFormTable5;
+        
+        /// <summary>
+        /// btndelother5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btndelother5;
+        
+        /// <summary>
+        /// hdd_idother5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdd_idother5;
+        
+        /// <summary>
+        /// txtother_info15 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtother_info15;
+        
+        /// <summary>
+        /// txtother_info25 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtother_info25;
+        
+        /// <summary>
+        /// txtother_info35 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtother_info35;
+        
+        /// <summary>
+        /// txtother_info45 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtother_info45;
+        
+        /// <summary>
+        /// txtother_info55 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtother_info55;
+        
+        /// <summary>
+        /// btnSaveOther5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSaveOther5;
         
         /// <summary>
         /// AddOtherProject control.
@@ -542,5 +974,14 @@ namespace ptt_report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button AddOtherProject;
+        
+        /// <summary>
+        /// btnApprove control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnApprove;
     }
 }

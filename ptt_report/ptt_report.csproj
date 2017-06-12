@@ -40,6 +40,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -66,17 +71,19 @@
     <Content Include="default.aspx" />
     <Content Include="externalcorrosion.aspx" />
     <Content Include="freespan.aspx" />
-    <Content Include="permitappendixI.aspx" />
-    <Content Include="permitappendixH.aspx" />
-    <Content Include="permitappendixD.aspx" />
+    <Content Include="history_1.aspx" />
+    <Content Include="permit.aspx" />
     <Content Include="permitappendixB.aspx" />
+    <Content Include="permitappendixD.aspx" />
+    <Content Include="permitappendixH.aspx" />
+    <Content Include="permitappendixI.aspx" />
+    <Content Include="permitcp.aspx" />
+    <Content Include="permitexecutivesummary.aspx" />
+    <Content Include="permitilipig.aspx" />
+    <Content Include="permitpatrolling.aspx" />
     <Content Include="permitproject.aspx" />
     <Content Include="permitwallthickness.aspx" />
-    <Content Include="permitilipig.aspx" />
-    <Content Include="permitcp.aspx" />
-    <Content Include="permitpatrolling.aspx" />
-    <Content Include="permitexecutivesummary.aspx" />
-    <Content Include="permit.aspx" />
+    <Content Include="reptmp_add.aspx" />
     <Content Include="rov.aspx" />
     <Content Include="settlementsurvey.aspx" />
     <Content Include="soilerosion.aspx" />
@@ -100,10 +107,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\callmail.cs" />
+    <Compile Include="App_Code\chemicaltreatmentDLL.cs" />
+    <Compile Include="App_Code\cleaningPigDLL.cs" />
     <Compile Include="App_Code\create_quar_repDLL.cs" />
     <Compile Include="App_Code\defaultDLL.cs" />
+    <Compile Include="App_Code\directassessmentDLL.cs" />
+    <Compile Include="App_Code\executivesummaryDLL.cs" />
+    <Compile Include="App_Code\externalcorrosionDLL.cs" />
+    <Compile Include="App_Code\FreeSpanDLL.cs" />
+    <Compile Include="App_Code\history_1DLL.cs" />
+    <Compile Include="App_Code\ilipigDLL.cs" />
+    <Compile Include="App_Code\otherprojectsDLL.cs" />
+    <Compile Include="App_Code\patrollingDLL.cs" />
     <Compile Include="App_Code\QuarterlyReportDLL.cs" />
+    <Compile Include="App_Code\rbiDLL.cs" />
     <Compile Include="App_Code\reptmpDLL.cs" />
+    <Compile Include="App_Code\rovDLL.cs" />
+    <Compile Include="App_Code\settlementsurveyDLL.cs" />
+    <Compile Include="App_Code\simDLL.cs" />
+    <Compile Include="App_Code\soilerosionDLL.cs" />
     <Compile Include="App_Code\usermanagementDLL.cs" />
     <Compile Include="changePassword.aspx.cs">
       <DependentUpon>changePassword.aspx</DependentUpon>
@@ -154,6 +176,13 @@
     <Compile Include="freespan.aspx.designer.cs">
       <DependentUpon>freespan.aspx</DependentUpon>
     </Compile>
+    <Compile Include="history_1.aspx.cs">
+      <DependentUpon>history_1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="history_1.aspx.designer.cs">
+      <DependentUpon>history_1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="NestedMasterPage2.master.cs">
       <DependentUpon>NestedMasterPage2.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -161,19 +190,19 @@
     <Compile Include="NestedMasterPage2.master.designer.cs">
       <DependentUpon>NestedMasterPage2.master</DependentUpon>
     </Compile>
-    <Compile Include="permitappendixI.aspx.cs">
-      <DependentUpon>permitappendixI.aspx</DependentUpon>
+    <Compile Include="permit.aspx.cs">
+      <DependentUpon>permit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="permitappendixI.aspx.designer.cs">
-      <DependentUpon>permitappendixI.aspx</DependentUpon>
+    <Compile Include="permit.aspx.designer.cs">
+      <DependentUpon>permit.aspx</DependentUpon>
     </Compile>
-    <Compile Include="permitappendixH.aspx.cs">
-      <DependentUpon>permitappendixH.aspx</DependentUpon>
+    <Compile Include="permitappendixB.aspx.cs">
+      <DependentUpon>permitappendixB.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="permitappendixH.aspx.designer.cs">
-      <DependentUpon>permitappendixH.aspx</DependentUpon>
+    <Compile Include="permitappendixB.aspx.designer.cs">
+      <DependentUpon>permitappendixB.aspx</DependentUpon>
     </Compile>
     <Compile Include="permitappendixD.aspx.cs">
       <DependentUpon>permitappendixD.aspx</DependentUpon>
@@ -182,12 +211,47 @@
     <Compile Include="permitappendixD.aspx.designer.cs">
       <DependentUpon>permitappendixD.aspx</DependentUpon>
     </Compile>
-    <Compile Include="permitappendixB.aspx.cs">
-      <DependentUpon>permitappendixB.aspx</DependentUpon>
+    <Compile Include="permitappendixH.aspx.cs">
+      <DependentUpon>permitappendixH.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="permitappendixB.aspx.designer.cs">
-      <DependentUpon>permitappendixB.aspx</DependentUpon>
+    <Compile Include="permitappendixH.aspx.designer.cs">
+      <DependentUpon>permitappendixH.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="permitappendixI.aspx.cs">
+      <DependentUpon>permitappendixI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="permitappendixI.aspx.designer.cs">
+      <DependentUpon>permitappendixI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="permitcp.aspx.cs">
+      <DependentUpon>permitcp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="permitcp.aspx.designer.cs">
+      <DependentUpon>permitcp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="permitexecutivesummary.aspx.cs">
+      <DependentUpon>permitexecutivesummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="permitexecutivesummary.aspx.designer.cs">
+      <DependentUpon>permitexecutivesummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="permitilipig.aspx.cs">
+      <DependentUpon>permitilipig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="permitilipig.aspx.designer.cs">
+      <DependentUpon>permitilipig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="permitpatrolling.aspx.cs">
+      <DependentUpon>permitpatrolling.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="permitpatrolling.aspx.designer.cs">
+      <DependentUpon>permitpatrolling.aspx</DependentUpon>
     </Compile>
     <Compile Include="permitproject.aspx.cs">
       <DependentUpon>permitproject.aspx</DependentUpon>
@@ -203,40 +267,12 @@
     <Compile Include="permitwallthickness.aspx.designer.cs">
       <DependentUpon>permitwallthickness.aspx</DependentUpon>
     </Compile>
-    <Compile Include="permitilipig.aspx.cs">
-      <DependentUpon>permitilipig.aspx</DependentUpon>
+    <Compile Include="reptmp_add.aspx.cs">
+      <DependentUpon>reptmp_add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="permitilipig.aspx.designer.cs">
-      <DependentUpon>permitilipig.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="permitcp.aspx.cs">
-      <DependentUpon>permitcp.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="permitcp.aspx.designer.cs">
-      <DependentUpon>permitcp.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="permitpatrolling.aspx.cs">
-      <DependentUpon>permitpatrolling.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="permitpatrolling.aspx.designer.cs">
-      <DependentUpon>permitpatrolling.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="permitexecutivesummary.aspx.cs">
-      <DependentUpon>permitexecutivesummary.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="permitexecutivesummary.aspx.designer.cs">
-      <DependentUpon>permitexecutivesummary.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="permit.aspx.cs">
-      <DependentUpon>permit.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="permit.aspx.designer.cs">
-      <DependentUpon>permit.aspx</DependentUpon>
+    <Compile Include="reptmp_add.aspx.designer.cs">
+      <DependentUpon>reptmp_add.aspx</DependentUpon>
     </Compile>
     <Compile Include="rov.aspx.cs">
       <DependentUpon>rov.aspx</DependentUpon>
@@ -377,6 +413,8 @@
     <Content Include="Site1.Master" />
     <Content Include="NestedMasterPage1.master" />
     <Content Include="NestedMasterPage2.master" />
+    <Content Include="tmp_rep\Quaterly_report.dotx" />
+    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -386,11 +424,61 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="gen_1\" />
+    <Folder Include="gen_2\" />
+    <Folder Include="img_rep\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />

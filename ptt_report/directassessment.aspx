@@ -6,15 +6,18 @@
         #menuleft03 {
             background: #0c7fd2;
         }
-        
     </style>
     <div class="bar_qr">
         Customer Type :
                    
                     <asp:Label ID="lbCustype" runat="server" Text="-"></asp:Label>
-        <asp:Button ID="btnExport" runat="server" Text="Export Report" CssClass="btn" />
-        <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" CssClass="btn" />
-        <asp:Button ID="btnHistory" runat="server" Text="History" CssClass="btn" />
+        <asp:Button ID="btnExport" runat="server" Text="Export Report" CssClass="btn" OnClick="btnExport_Click" />
+        <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" CssClass="btn" OnClick="btnSaveVer_Click" />
+        <asp:Button ID="btnHistory" runat="server" Text="History" CssClass="btn" OnClick="btnHistory_Click" />
+
+        <asp:HiddenField ID="hddda_id" runat="server" />
+        <asp:HiddenField ID="hddmas_rep_id" runat="server" />
+        <asp:HiddenField ID="hddfile_path" runat="server" />
 
     </div>
 
@@ -191,9 +194,11 @@
                                 <asp:TextBox ID="DAFormFeedback" runat="server"></asp:TextBox></td>
                         </tr>
                         <tr>
-                            <td>
-                                </td>
-                            <td class="auto-style1"><asp:Button ID="DAFormSaveSubmit" runat="server" Text="Save" OnClick="DAFormSaveSubmit_Click" CssClass="btn" /></td>
+                            <td></td>
+                            <td class="auto-style1">
+                                <asp:Button ID="DAFormSaveSubmit" runat="server" Text="Save" OnClick="DAFormSaveSubmit_Click" CssClass="btn" />
+                                <asp:Button ID="btnApprove" runat="server" Text="Approve Report" OnClick="btnApprove_Click" CssClass="btn" />
+                            </td>
                         </tr>
 
                     </table>

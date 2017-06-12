@@ -37,7 +37,7 @@
     </div>
     <div>
         <asp:GridView ID="GridView_rep_list" runat="server" AutoGenerateColumns="false" AllowPaging="true"
-            OnPageIndexChanging="GridView_rep_list_PageIndexChanging"
+            OnPageIndexChanging="GridView_rep_list_PageIndexChanging" OnRowDataBound="GridView_rep_list_RowDataBound"
             ShowFooter="false" PageSize="3" class="tb_red">
             <Columns>
 
@@ -60,9 +60,9 @@
                         <asp:HiddenField ID="hddquarter" runat="server" Value='<%# Eval("quarter") %>' />
                         <asp:HiddenField ID="hddcustype" runat="server" Value='<%# Eval("cus_type") %>' />
 
-                        <asp:Button ID="btnmanage" runat="server" Text="Manage" OnClick="btnmanage_Click" />
-                        <asp:Button ID="btndownload" runat="server" Text="Download" />
-                        <asp:Button ID="btndelete" runat="server" Text="Delete" OnClick="btndelete_Click" />
+                        <asp:Button ID="btnmanage" runat="server" Text="Manage" OnClick="btnmanage_Click" Visible="false" />
+                        <asp:Button ID="btndownload" runat="server" Text="Download"  Visible="false"/>
+                        <asp:Button ID="btndelete" runat="server" Text="Delete" OnClick="btndelete_Click" Visible="false" />
                     </ItemTemplate>
                 </asp:TemplateField>
 

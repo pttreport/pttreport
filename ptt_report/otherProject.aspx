@@ -19,6 +19,10 @@
         <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" />
         <asp:Button ID="btnHistory" runat="server" Text="History" class="btn" />
 
+        <asp:HiddenField ID="hddop_id" runat="server" />
+        <asp:HiddenField ID="hddmas_rep_id" runat="server" />
+        <asp:HiddenField ID="hddfile_path" runat="server" />
+
     </div>
     <div id="thirdPartyInterfaceForm" style="background-color: #FFFFFF">
         <h3 class="barBlue">Other Project
@@ -39,6 +43,7 @@
                         <tr>
                             <td>ชื่อโครงการ :</td>
                             <td>
+                                <asp:HiddenField ID="op1" runat="server"  />
                                 <asp:TextBox ID="txtProjectName1" runat="server"></asp:TextBox>
                             </td>
                         </tr>
@@ -95,6 +100,7 @@
                         <tr>
                             <td>ชื่อโครงการ :</td>
                             <td>
+                                <asp:HiddenField ID="op2" runat="server"  />
                                 <asp:TextBox ID="txtProjectName2" runat="server"></asp:TextBox>
                             </td>
                         </tr>
@@ -150,6 +156,7 @@
                         <tr>
                             <td>ชื่อโครงการ :</td>
                             <td>
+                                <asp:HiddenField ID="op3" runat="server"  />
                                 <asp:TextBox ID="txtProjectName3" runat="server"></asp:TextBox>
                             </td>
                         </tr>
@@ -205,6 +212,7 @@
                         <tr>
                             <td>ชื่อโครงการ :</td>
                             <td>
+                                 <asp:HiddenField ID="op4" runat="server"  />
                                 <asp:TextBox ID="txtProjectName4" runat="server"></asp:TextBox>
                             </td>
                         </tr>
@@ -260,6 +268,7 @@
                         <tr>
                             <td>ชื่อโครงการ :</td>
                             <td>
+                                 <asp:HiddenField ID="op5" runat="server"  />
                                 <asp:TextBox ID="txtProjectName5" runat="server"></asp:TextBox>
                             </td>
                         </tr>

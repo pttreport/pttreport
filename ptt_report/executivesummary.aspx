@@ -5,19 +5,22 @@
 <asp:Content ID="es_form" ContentPlaceHolderID="ChildContent2" runat="server">
     <style>
         #menuleft01 {
-            background:#0c7fd2;
+            background: #0c7fd2;
         }
     </style>
     <div class="bar_qr">
         Customer Type :
                    
       <asp:Label ID="lbCustype" runat="server" Text="-"></asp:Label>
-        <asp:Button ID="btnExport" runat="server" Text="Export Report" CssClass="btn" />
-        <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" CssClass="btn" />
-        <asp:Button ID="btnHistory" runat="server" Text="History" CssClass="btn" />
+        <asp:Button ID="btnExport" runat="server" Text="Export Report" CssClass="btn" OnClick="btnExport_Click" />
+        <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" CssClass="btn" OnClick="btnSaveVer_Click" />
+        <asp:Button ID="btnHistory" runat="server" Text="History" CssClass="btn" OnClick="btnHistory_Click" />
 
     </div>
 
+    <asp:HiddenField ID="hddexecutivesummary_id" runat="server" />
+    <asp:HiddenField ID="hddmas_rep_id" runat="server" />
+    <asp:HiddenField ID="hddfile_path" runat="server" />
 
     <div id="thirdPartyInterfaceForm" style="background-color: #FFFFFF">
         <div id="patrolFormTable">
@@ -38,17 +41,17 @@
                         <tr>
                             <td>ผลสรุปวิเคราะห์เบื้องต้น : </td>
                             <td class="auto-style1">
-                                <textarea id="BasicAnalysis" rows="2" runat="server" aria-multiline="True" aria-multiselectable="False" draggable="false"></textarea></td>
+                                <asp:TextBox ID="BasicAnalysis" TextMode="MultiLine" runat="server" ></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td>ประเด็นปัญหา / อุปสรรค์ : </td>
                             <td class="auto-style1">
-                                <textarea id="PatrollingObstruction" runat="server" aria-multiline="True" aria-multiselectable="False" draggable="false" cols="20" rows="2"></textarea></td>
+                                <asp:TextBox ID="PatrollingObstruction" TextMode="MultiLine" runat="server" ></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td>ความเห็น : </td>
                             <td class="auto-style1">
-                                <textarea cols="20" rows="2" runat="server" id="PatrollingFeedback"></textarea></td>
+                                <asp:TextBox ID="PatrollingFeedback" TextMode="MultiLine" runat="server" ></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td>
@@ -68,17 +71,17 @@
                         <tr>
                             <td>ผลสรุปวิเคราะห์เบื้องต้น : </td>
                             <td class="auto-style1">
-                                <textarea id="RovAnalysis" runat="server" rows="2" aria-multiline="True" aria-multiselectable="False" draggable="false"></textarea></td>
+                                <asp:TextBox ID="RovAnalysis" TextMode="MultiLine" runat="server" ></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td>ประเด็นปัญหา / อุปสรรค์ : </td>
                             <td class="auto-style1">
-                                <textarea id="RovObstruction" runat="server" aria-multiline="True" aria-multiselectable="False" draggable="false" cols="20" rows="2"></textarea></td>
+                                <asp:TextBox ID="RovObstruction" TextMode="MultiLine" runat="server" ></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td>ความเห็น : </td>
                             <td class="auto-style1">
-                                <textarea cols="20" rows="2" runat="server" id="RovFeedback"></textarea></td>
+                                <asp:TextBox ID="RovFeedback" TextMode="MultiLine" runat="server" ></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td>
@@ -105,12 +108,12 @@
                         <tr>
                             <td>ประเด็นปัญหา / อุปสรรค์ : </td>
                             <td class="auto-style1">
-                                <textarea id="DigObstruction" runat="server" aria-multiline="True" aria-multiselectable="False" draggable="false" cols="20" rows="2"></textarea></td>
+                                <asp:TextBox ID="DigObstruction" TextMode="MultiLine" runat="server" ></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td>ความเห็น : </td>
                             <td class="auto-style1">
-                                <textarea cols="20" rows="2" runat="server" id="DigFeedback"></textarea></td>
+                                <asp:TextBox ID="DigFeedback" TextMode="MultiLine" runat="server" ></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td>
@@ -130,17 +133,17 @@
                         <tr>
                             <td>ผลสรุปวิเคราะห์เบื้องต้น : </td>
                             <td class="auto-style1">
-                                <textarea id="ErosionAnalysis" runat="server" rows="2" aria-multiline="True" aria-multiselectable="False" draggable="false"></textarea></td>
+                                <asp:TextBox ID="ErosionAnalysis" TextMode="MultiLine" runat="server" ></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td>ประเด็นปัญหา / อุปสรรค์ : </td>
                             <td class="auto-style1">
-                                <textarea id="ErosionObstruction" runat="server" aria-multiline="True" aria-multiselectable="False" draggable="false" cols="20" rows="2"></textarea></td>
+                                <asp:TextBox ID="ErosionObstruction" TextMode="MultiLine" runat="server" ></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td>ความเห็น : </td>
                             <td class="auto-style1">
-                                <textarea cols="20" rows="2" runat="server" id="ErosionFeedback"></textarea></td>
+                                <asp:TextBox ID="ErosionFeedback" TextMode="MultiLine" runat="server" ></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td>
@@ -161,17 +164,17 @@
                         <tr>
                             <td>ผลสรุปวิเคราะห์เบื้องต้น : </td>
                             <td class="auto-style1">
-                                <textarea id="SubsideAnalysis" runat="server" rows="2" aria-multiline="True" aria-multiselectable="False" draggable="false"></textarea></td>
+                                <asp:TextBox ID="SubsideAnalysis" TextMode="MultiLine" runat="server" ></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td>ประเด็นปัญหา / อุปสรรค์ : </td>
                             <td class="auto-style1">
-                                <textarea id="SubsideObstruction" runat="server" aria-multiline="True" aria-multiselectable="False" draggable="false" cols="20" rows="2"></textarea></td>
+                                <asp:TextBox ID="SubsideObstruction" TextMode="MultiLine" runat="server" ></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td>ความเห็น : </td>
                             <td class="auto-style1">
-                                <textarea cols="20" rows="2" runat="server" id="SubsideFeedback"></textarea></td>
+                                <asp:TextBox ID="SubsideFeedback" TextMode="MultiLine" runat="server" ></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td>
@@ -219,17 +222,17 @@
                         <tr>
                             <td>ผลสรุปวิเคราะห์เบื้องต้น : </td>
                             <td class="auto-style1">
-                                <textarea id="ECAnalysis" runat="server" rows="2" aria-multiline="True" aria-multiselectable="False" draggable="false"></textarea></td>
+                                <asp:TextBox ID="ECAnalysis" TextMode="MultiLine" runat="server" ></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td>ประเด็นปัญหา / อุปสรรค์ : </td>
                             <td class="auto-style1">
-                                <textarea id="ECObstruction" runat="server" aria-multiline="True" aria-multiselectable="False" draggable="false" cols="20" rows="2"></textarea></td>
+                                <asp:TextBox ID="ECObstruction" TextMode="MultiLine" runat="server" ></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td>ความเห็น : </td>
                             <td class="auto-style1">
-                                <textarea cols="20" rows="2" runat="server" id="ECFeedback"></textarea></td>
+                                <asp:TextBox ID="ECFeedback" TextMode="MultiLine" runat="server" ></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td>
@@ -266,17 +269,17 @@
                         <tr>
                             <td>ผลสรุปวิเคราะห์เบื้องต้น : </td>
                             <td class="auto-style1">
-                                <textarea id="ICAnalysis" runat="server" rows="2" aria-multiline="True" aria-multiselectable="False" draggable="false"></textarea></td>
+                                <asp:TextBox ID="ICAnalysis" TextMode="MultiLine" runat="server" ></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td>ประเด็นปัญหา / อุปสรรค์ : </td>
                             <td class="auto-style1">
-                                <textarea id="ICObstruction" runat="server" aria-multiline="True" aria-multiselectable="False" draggable="false" cols="20" rows="2"></textarea></td>
+                                <asp:TextBox ID="ICObstruction" TextMode="MultiLine" runat="server" ></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td>ความเห็น : </td>
                             <td class="auto-style1">
-                                <textarea cols="20" rows="2" runat="server" id="ICFeedback"></textarea></td>
+                                <asp:TextBox ID="ICFeedback" TextMode="MultiLine" runat="server" ></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td>
@@ -305,17 +308,17 @@
                         <tr>
                             <td>ผลสรุปวิเคราะห์เบื้องต้น : </td>
                             <td class="auto-style1">
-                                <textarea id="MTPGAnalysis" runat="server" rows="2" aria-multiline="True" aria-multiselectable="False" draggable="false"></textarea></td>
+                                <asp:TextBox ID="MTPGAnalysis" TextMode="MultiLine" runat="server" ></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td>ประเด็นปัญหา / อุปสรรค์ : </td>
                             <td class="auto-style1">
-                                <textarea id="MTPGObstruction" runat="server" aria-multiline="True" aria-multiselectable="False" draggable="false" cols="20" rows="2"></textarea></td>
+                                <asp:TextBox ID="MTPGObstruction" TextMode="MultiLine" runat="server" ></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td>ความเห็น : </td>
                             <td class="auto-style1">
-                                <textarea cols="20" rows="2" runat="server" id="MTPGFeedback"></textarea></td>
+                                <asp:TextBox ID="MTPGFeedback" TextMode="MultiLine" runat="server" ></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td>
@@ -346,21 +349,21 @@
                         <tr>
                             <td>ผลสรุปวิเคราะห์เบื้องต้น : </td>
                             <td class="auto-style1">
-                                <textarea id="OffShorePipeAnalysis" runat="server" rows="2" aria-multiline="True" aria-multiselectable="False" draggable="false"></textarea></td>
+                                <asp:TextBox ID="OffShorePipeAnalysis" TextMode="MultiLine" runat="server" ></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td>ประเด็นปัญหา / อุปสรรค์ : </td>
                             <td class="auto-style1">
-                                <textarea id="OffShorePipeObstruction" runat="server" aria-multiline="True" aria-multiselectable="False" draggable="false" cols="20" rows="2"></textarea></td>
+                                <asp:TextBox ID="OffShorePipeObstruction" TextMode="MultiLine" runat="server" ></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td>ความเห็น : </td>
                             <td class="auto-style1">
-                                <textarea cols="20" rows="2" runat="server" id="OffShorePipeFeedback"></textarea></td>
+                                <asp:TextBox ID="OffShorePipeFeedback" TextMode="MultiLine" runat="server" ></asp:TextBox></td>
                         </tr>
                         <tr>
                             <td>
-                                <asp:Button ID="OffShorePipeFormSubmit" runat="server" Text="Save Offshore Part" CssClass="btn" /></td>
+                                <asp:Button ID="OffShorePipeFormSubmit" runat="server" OnClick="OffShorePipeFormSubmit_Click" Text="Save Offshore Part" CssClass="btn" /></td>
                             <td class="auto-style1"></td>
                         </tr>
                     </table>
@@ -371,7 +374,7 @@
 
     <div id="OffShoreBaseForm" style="background-color: #FFFFFF">
         <div id="OffShoreBaseFormTable">
-            <div id="OffShorePipeFormTable">
+            <div id="OffShorePipeFormTable" runat="server">
                 <div class="info_executive">
                     <h3>งานบำรุงรักษาโครงสร้างแท่นพักของท่อในทะเล</h3>
                     <div class="info_executive_in">
@@ -386,21 +389,21 @@
                             <tr>
                                 <td>ผลสรุปวิเคราะห์เบื้องต้น : </td>
                                 <td class="auto-style1">
-                                    <textarea id="OffShoreBaseAnalysis" runat="server" rows="2" aria-multiline="True" aria-multiselectable="False" draggable="false"></textarea></td>
+                                    <asp:TextBox ID="OffShoreBaseAnalysis" TextMode="MultiLine" runat="server" ></asp:TextBox></td>
                             </tr>
                             <tr>
                                 <td>ประเด็นปัญหา / อุปสรรค์ : </td>
                                 <td class="auto-style1">
-                                    <textarea id="OffShoreBaseObstruction" runat="server" aria-multiline="True" aria-multiselectable="False" draggable="false" cols="20" rows="2"></textarea></td>
+                                    <asp:TextBox ID="OffShoreBaseObstruction" TextMode="MultiLine" runat="server" ></asp:TextBox></td>
                             </tr>
                             <tr>
                                 <td>ความเห็น : </td>
                                 <td class="auto-style1">
-                                    <textarea cols="20" rows="2" runat="server" id="OffShoreBaseFeedback"></textarea></td>
+                                    <asp:TextBox ID="OffShoreBaseFeedback" TextMode="MultiLine" runat="server" ></asp:TextBox></td>
                             </tr>
                             <tr>
                                 <td>
-                                    <asp:Button ID="OffShoreBaseFormSubmit" runat="server" Text="Save Offshore Part" CssClass="btn" /></td>
+                                    <asp:Button ID="OffShoreBaseFormSubmit" OnClick="OffShoreBaseFormSubmit_Click" runat="server" Text="Save Offshore Part" CssClass="btn" /></td>
                                 <td class="auto-style1"></td>
                             </tr>
                         </table>
@@ -411,18 +414,228 @@
     </div>
 
     <div id="OtherProjectForm" style="background-color: #FFFFFF">
-        <div id="OtherProjectFormTable">
+        <div id="OtherProjectFormTable1" runat="server" visible="false">
             <div class="info_executive">
-
+                <h3>Other Project </h3>
+                <asp:Button ID="btndelother1" runat="server" Text="Delete" OnClick="btndelother1_Click" />
+                <asp:HiddenField ID="hdd_idother1" runat="server" />
                 <div class="info_executive_in">
-                    <asp:Table ID="OtherProjectList" runat="server" Style="height: 22px">
-                    </asp:Table>
+                    <table>
+                        <tr>
+                            <td>ชื่อโครงการ :</td>
+                            <td>
+                                <asp:TextBox ID="txtother_info1" runat="server"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td>ความครบถ้วนตามแผนงาน : </td>
+                            <td>
+                                <asp:TextBox ID="txtother_info2" runat="server"></asp:TextBox>
+                                %</td>
+                        </tr>
+                        <tr>
+                            <td>ผลสรุปและวิเคราะห์เบื้องต้น :</td>
+                            <td>
+                                <asp:TextBox ID="txtother_info3" runat="server" TextMode="MultiLine"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td>ประเด็นปัญหา/อุปสรรค :</td>
+                            <td>
+                                <asp:TextBox ID="txtother_info4" runat="server" TextMode="MultiLine"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td>ความเห็น :</td>
+                            <td>
+                                <asp:TextBox ID="txtother_info5" runat="server" TextMode="MultiLine"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <asp:Button ID="btnSaveOther1" runat="server" Text="Save" OnClick="btnSaveOther1_Click" />
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
+        </div>
 
+        <div id="OtherProjectFormTable2" runat="server" visible="false">
+            <div class="info_executive">
+                <h3>Other Project </h3>
+                <asp:Button ID="btndelother2" runat="server" Text="Delete" OnClick="btndelother2_Click" />
+                <asp:HiddenField ID="hdd_idother2" runat="server" />
+                <div class="info_executive_in">
+                    <table>
+                        <tr>
+                            <td>ชื่อโครงการ :</td>
+                            <td>
+                                <asp:TextBox ID="txtother_info12" runat="server"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td>ความครบถ้วนตามแผนงาน : </td>
+                            <td>
+                                <asp:TextBox ID="txtother_info22" runat="server"></asp:TextBox>
+                                %</td>
+                        </tr>
+                        <tr>
+                            <td>ผลสรุปและวิเคราะห์เบื้องต้น :</td>
+                            <td>
+                                <asp:TextBox ID="txtother_info32" runat="server" TextMode="MultiLine"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td>ประเด็นปัญหา/อุปสรรค :</td>
+                            <td>
+                                <asp:TextBox ID="txtother_info42" runat="server" TextMode="MultiLine"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td>ความเห็น :</td>
+                            <td>
+                                <asp:TextBox ID="txtother_info52" runat="server" TextMode="MultiLine"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <asp:Button ID="btnSaveOther2" runat="server" Text="Save" OnClick="btnSaveOther2_Click" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="OtherProjectFormTable3" runat="server" visible="false">
+            <div class="info_executive">
+                <h3>Other Project </h3>
+                <asp:Button ID="btndelother3" runat="server" Text="Delete" OnClick="btndelother3_Click" />
+                <asp:HiddenField ID="hdd_idother3" runat="server" />
+                <div class="info_executive_in">
+                    <table>
+                        <tr>
+                            <td>ชื่อโครงการ :</td>
+                            <td>
+                                <asp:TextBox ID="txtother_info13" runat="server"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td>ความครบถ้วนตามแผนงาน : </td>
+                            <td>
+                                <asp:TextBox ID="txtother_info23" runat="server"></asp:TextBox>
+                                %</td>
+                        </tr>
+                        <tr>
+                            <td>ผลสรุปและวิเคราะห์เบื้องต้น :</td>
+                            <td>
+                                <asp:TextBox ID="txtother_info33" runat="server" TextMode="MultiLine"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td>ประเด็นปัญหา/อุปสรรค :</td>
+                            <td>
+                                <asp:TextBox ID="txtother_info43" runat="server" TextMode="MultiLine"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td>ความเห็น :</td>
+                            <td>
+                                <asp:TextBox ID="txtother_info53" runat="server" TextMode="MultiLine"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <asp:Button ID="btnSaveOther3" runat="server" Text="Save" OnClick="btnSaveOther3_Click" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="OtherProjectFormTable4" runat="server" visible="false">
+            <div class="info_executive">
+                <h3>Other Project </h3>
+                <asp:Button ID="btndelother4" runat="server" Text="Delete" OnClick="btndelother4_Click" />
+                <asp:HiddenField ID="hdd_idother4" runat="server" />
+                <div class="info_executive_in">
+                    <table>
+                        <tr>
+                            <td>ชื่อโครงการ :</td>
+                            <td>
+                                <asp:TextBox ID="txtother_info14" runat="server"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td>ความครบถ้วนตามแผนงาน : </td>
+                            <td>
+                                <asp:TextBox ID="txtother_info24" runat="server"></asp:TextBox>
+                                %</td>
+                        </tr>
+                        <tr>
+                            <td>ผลสรุปและวิเคราะห์เบื้องต้น :</td>
+                            <td>
+                                <asp:TextBox ID="txtother_info34" runat="server" TextMode="MultiLine"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td>ประเด็นปัญหา/อุปสรรค :</td>
+                            <td>
+                                <asp:TextBox ID="txtother_info44" runat="server" TextMode="MultiLine"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td>ความเห็น :</td>
+                            <td>
+                                <asp:TextBox ID="txtother_info54" runat="server" TextMode="MultiLine"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <asp:Button ID="btnSaveOther4" runat="server" Text="Save" OnClick="btnSaveOther4_Click" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="OtherProjectFormTable5" runat="server" visible="false">
+            <div class="info_executive">
+                <h3>Other Project </h3>
+                <asp:Button ID="btndelother5" runat="server" Text="Delete" OnClick="btndelother5_Click" />
+                <asp:HiddenField ID="hdd_idother5" runat="server" />
+                <div class="info_executive_in">
+                    <table>
+                        <tr>
+                            <td>ชื่อโครงการ :</td>
+                            <td>
+                                <asp:TextBox ID="txtother_info15" runat="server"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td>ความครบถ้วนตามแผนงาน : </td>
+                            <td>
+                                <asp:TextBox ID="txtother_info25" runat="server"></asp:TextBox>
+                                %</td>
+                        </tr>
+                        <tr>
+                            <td>ผลสรุปและวิเคราะห์เบื้องต้น :</td>
+                            <td>
+                                <asp:TextBox ID="txtother_info35" runat="server" TextMode="MultiLine"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td>ประเด็นปัญหา/อุปสรรค :</td>
+                            <td>
+                                <asp:TextBox ID="txtother_info45" runat="server" TextMode="MultiLine"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td>ความเห็น :</td>
+                            <td>
+                                <asp:TextBox ID="txtother_info55" runat="server" TextMode="MultiLine"></asp:TextBox></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <asp:Button ID="btnSaveOther5" runat="server" Text="Save" OnClick="btnSaveOther5_Click" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
         <div id="OtherProjectAddButton">
             <asp:Button ID="AddOtherProject" runat="server" Text="Add Other Project" OnClick="AddOtherProject_Click" CssClass="btn" />
+            <asp:Button ID="btnApprove" runat="server" Text="Approve Report" OnClick="btnApprove_Click" CssClass="btn" />
         </div>
     </div>
 </asp:Content>

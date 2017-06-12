@@ -29,7 +29,17 @@ namespace ptt_report
                 else
                 {
                     lnkChange_Password.Visible = true;
+                }
 
+                if (HttpContext.Current.Session["assetsysmanage"].ToString() == "y")
+                {
+                    mas_menu1.Visible = true;
+                    mas_menu2.Visible = true;
+                }
+                else
+                {
+                    mas_menu1.Visible = false;
+                    mas_menu2.Visible = false;
                 }
             }
         }
@@ -60,6 +70,11 @@ namespace ptt_report
         protected void btnRepTem_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/reptmp.aspx");
+        }
+
+        protected void btnTPReport_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/permit.aspx");
         }
     }
 }

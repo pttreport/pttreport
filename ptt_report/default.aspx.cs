@@ -57,7 +57,45 @@ namespace ptt_report
                             HttpContext.Current.Session["assetposision"] = "";
                             HttpContext.Current.Session["asset_who"] = "local";
 
+                            HttpContext.Current.Session["assetposision"] = "";
+
                             HttpContext.Current.Session["assetrole"] = user.Rows[0]["rolename"].ToString();
+
+                            if (user.Rows[0]["authorize1"].ToString() == "y" || user.Rows[0]["authorize2"].ToString() == "y" || user.Rows[0]["authorize3"].ToString() == "y" || user.Rows[0]["authorize4"].ToString() == "y")
+                            {
+                                HttpContext.Current.Session["assetdownload"] = "y";
+                            }
+                            else
+                            {
+                                HttpContext.Current.Session["assetdownload"] = "n";
+                            }
+
+                            if (user.Rows[0]["authorize2"].ToString() == "y" || user.Rows[0]["authorize3"].ToString() == "y" || user.Rows[0]["authorize4"].ToString() == "y")
+                            {
+                                HttpContext.Current.Session["assetmanagement"] = "y";
+                            }
+                            else
+                            {
+                                HttpContext.Current.Session["assetmanagement"] = "n";
+                            }
+
+                            if (user.Rows[0]["authorize3"].ToString() == "y" || user.Rows[0]["authorize4"].ToString() == "y")
+                            {
+                                HttpContext.Current.Session["assetapprove"] = "y";
+                            }
+                            else
+                            {
+                                HttpContext.Current.Session["assetapprove"] = "n";
+                            }
+
+                            if (user.Rows[0]["authorize4"].ToString() == "y")
+                            {
+                                HttpContext.Current.Session["assetsysmanage"] = "y";
+                            }
+                            else
+                            {
+                                HttpContext.Current.Session["assetsysmanage"] = "n";
+                            }
 
                             Response.Redirect("~/home.aspx");
                         }

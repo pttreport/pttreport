@@ -14,6 +14,12 @@
         <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" />
         <asp:Button ID="btnHistory" runat="server" Text="History" class="btn" />
 
+
+        <asp:HiddenField ID="hddip_id" runat="server" />
+        <asp:HiddenField ID="hddmas_rep_id" runat="server" />
+        <asp:HiddenField ID="hddfile_path" runat="server" />
+
+
     </div>
 
 
@@ -136,7 +142,7 @@
                     <tr>
                         <td></td>
                         <td>
-                            <asp:Button ID="btnSave" runat="server" Text="Save" class="btn" />
+                            <asp:Button ID="btnSave" runat="server" Text="Save" class="btn" OnClick="btnSave_Click" />
                         </td>
                     </tr>
                 </table>

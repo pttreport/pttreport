@@ -17,9 +17,7 @@
                 <div class="menu_left">
                     <ul>
                         <li id="menuleft01">
-                            <asp:LinkButton ID="lnkExecut_sum" runat="server" OnClick="lnkExecut_sum_Click" Font-Underline="false">Executive summary</asp:LinkButton>
-
-                        </li>
+                            <asp:LinkButton ID="lnkExecut_sum" runat="server" OnClick="lnkExecut_sum_Click" Font-Underline="false">Executive summary</asp:LinkButton></li>
                         <li>
                             3rd party Interface
                             

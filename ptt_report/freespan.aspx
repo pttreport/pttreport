@@ -12,10 +12,14 @@
 
     <div class="bar_qr">
         Customer Type :
-                    <asp:label id="lbCustype" runat="server" text="-"></asp:label>
+        <asp:label id="lbCustype" runat="server" text="-"></asp:label>
         <asp:button id="btnExport" runat="server" text="Export Report" class="btn" />
         <asp:button id="btnSaveVer" runat="server" text="Save Version" class="btn" />
         <asp:button id="btnHistory" runat="server" text="History" class="btn" />
+
+        <asp:HiddenField ID="hddfreespan_id" runat="server" />
+        <asp:HiddenField ID="hddmas_rep_id" runat="server" />
+        <asp:HiddenField ID="hddfile_path" runat="server" />
 
     </div>
 
@@ -34,7 +38,7 @@
                     <td>แผนงาน: </td>
                     <td class="auto-style1">
 
-                        <textarea cols="20" rows="2" runat="server" id="FSWorkPlan"></textarea>
+                        <asp:TextBox cols="20" TextMode="MultiLine" rows="2" runat="server" id="FSWorkPlanBox"></asp:TextBox>
 
                     </td>
                 </tr>
@@ -42,7 +46,7 @@
                     <td>ผลการดำเนินงาน : </td>
                     <td class="auto-style1">
 
-                        <textarea cols="20" rows="2" runat="server" id="FSResult"></textarea>
+                        <asp:TextBox cols="20" TextMode="MultiLine" rows="2" runat="server" id="FSResultBox"></asp:TextBox>
 
                     </td>
                 </tr>
@@ -50,19 +54,19 @@
                     <td>การดำเนินงานในอนาคต : </td>
                     <td class="auto-style1">
 
-                        <textarea cols="20" rows="2" runat="server" id="FSFuturePlan"></textarea>
+                        <asp:TextBox cols="20" TextMode="MultiLine" rows="2" runat="server" id="FSFuturePlanBox"></asp:TextBox>
 
                     </td>
                 </tr>
                 <tr>
                     <td>ปัญหาอุปสรรค (ถ้ามี) : </td>
                     <td class="auto-style1">
-                        <textarea cols="20" rows="2" runat="server" id="FSProblem"></textarea></td>
+                        <asp:TextBox cols="20" TextMode="MultiLine" rows="2" runat="server" id="FSProblemBox"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td>ความเห็น : </td>
                     <td class="auto-style1">
-                        <textarea cols="20" rows="2" runat="server" id="FSFormFeedback"></textarea></td>
+                        <asp:TextBox cols="20" TextMode="MultiLine" rows="2" runat="server" id="FSFormFeedbackBox"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td>

@@ -49,6 +49,33 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button btnHistory;
         
         /// <summary>
+        /// hddfreespan_id control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hddfreespan_id;
+        
+        /// <summary>
+        /// hddmas_rep_id control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hddmas_rep_id;
+        
+        /// <summary>
+        /// hddfile_path control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hddfile_path;
+        
+        /// <summary>
         /// btnImport control.
         /// </summary>
         /// <remarks>
@@ -58,49 +85,49 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button btnImport;
         
         /// <summary>
-        /// FSWorkPlan control.
+        /// FSWorkPlanBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea FSWorkPlan;
+        protected global::System.Web.UI.WebControls.TextBox FSWorkPlanBox;
         
         /// <summary>
-        /// FSResult control.
+        /// FSResultBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea FSResult;
+        protected global::System.Web.UI.WebControls.TextBox FSResultBox;
         
         /// <summary>
-        /// FSFuturePlan control.
+        /// FSFuturePlanBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea FSFuturePlan;
+        protected global::System.Web.UI.WebControls.TextBox FSFuturePlanBox;
         
         /// <summary>
-        /// FSProblem control.
+        /// FSProblemBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea FSProblem;
+        protected global::System.Web.UI.WebControls.TextBox FSProblemBox;
         
         /// <summary>
-        /// FSFormFeedback control.
+        /// FSFormFeedbackBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea FSFormFeedback;
+        protected global::System.Web.UI.WebControls.TextBox FSFormFeedbackBox;
         
         /// <summary>
         /// FSFormSaveSubmit control.

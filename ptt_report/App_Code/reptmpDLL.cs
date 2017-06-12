@@ -97,7 +97,7 @@ namespace ptt_report.App_Code
             return dt;
         }
 
-        public DataTable GetRep_tmp()
+        public DataTable GetRep_tmp(string report_type)
         {
             SqlConnection objConn = new SqlConnection();
             SqlCommand objCmd = new SqlCommand();
@@ -107,7 +107,7 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = " select top(1) * from tbl_tem_file where flag_active = 'y' order by  version desc ; ";
+            strSQL = " select top(1) * from tbl_tem_file where flag_active = 'y' and report_type = '" + report_type + "' order by  version desc ; ";
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
             var _with1 = objCmd;

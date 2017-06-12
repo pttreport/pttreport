@@ -58,6 +58,15 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button btnPIReport;
         
         /// <summary>
+        /// mas_menu1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl mas_menu1;
+        
+        /// <summary>
         /// btnusermanage control.
         /// </summary>
         /// <remarks>
@@ -65,6 +74,15 @@ namespace ptt_report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnusermanage;
+        
+        /// <summary>
+        /// mas_menu2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl mas_menu2;
         
         /// <summary>
         /// btnRepTem control.
@@ -128,6 +146,5 @@ namespace ptt_report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
-     
     }
 }

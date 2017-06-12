@@ -37,8 +37,8 @@ namespace ptt_report
 
         protected void bind_default()
         {
-            var x = Serv.GetRep_tmp();
-            if(x.Rows.Count != 0)
+            var x = Serv.GetRep_tmp(ddlRepType.SelectedValue);
+            if (x.Rows.Count != 0)
             {
                 hddTmpid.Value = x.Rows[0]["id"].ToString();
                 lbFileName.Text = x.Rows[0]["report_name"].ToString();
@@ -62,12 +62,12 @@ namespace ptt_report
 
             if (FileUpload1.HasFile)
             {
-                string filename = Path.GetFileName(FileUpload1.FileName);
-                FileUpload1.SaveAs(Server.MapPath("~/doc_tmp/") + filename);
+                string filename = DateTime.Now.ToString("yyMMddHHsss") + Path.GetFileName(FileUpload1.FileName);
+                FileUpload1.SaveAs(Server.MapPath("~/tmp_rep/") + filename);
 
                 Serv.Update_TMP_REP();
 
-                Serv.Insert_TMP_REP(ddlRepType.SelectedValue, ddlRepType.SelectedItem.Text + " Template V." + version, Server.MapPath("~/doc_tmp/") + filename, "~/doc_tmp/" + filename, HttpContext.Current.Session["assetusername"].ToString(),
+                Serv.Insert_TMP_REP(ddlRepType.SelectedValue, ddlRepType.SelectedItem.Text + " Template V." + version, Server.MapPath("~/tmp_rep/") + filename, "~/tmp_rep/" + filename, HttpContext.Current.Session["assetusername"].ToString(),
                     DateTime.Now.ToString("yyyy-MM-dd", EngCI), HttpContext.Current.Session["assetusername"].ToString(), Convert.ToString(version), "y");
 
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('บันทึกเรียบร้อย');window.location ='reptmp.aspx';", true);

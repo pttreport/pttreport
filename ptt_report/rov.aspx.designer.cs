@@ -49,6 +49,33 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button btnHistory;
         
         /// <summary>
+        /// hddrov_id control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hddrov_id;
+        
+        /// <summary>
+        /// hddmas_rep_id control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hddmas_rep_id;
+        
+        /// <summary>
+        /// hddfile_path control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hddfile_path;
+        
+        /// <summary>
         /// btnImport control.
         /// </summary>
         /// <remarks>
@@ -58,49 +85,49 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button btnImport;
         
         /// <summary>
-        /// ROVWorkPlan control.
+        /// ROVWorkPlanBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea ROVWorkPlan;
+        protected global::System.Web.UI.WebControls.TextBox ROVWorkPlanBox;
         
         /// <summary>
-        /// ROVResult control.
+        /// ROVResultBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea ROVResult;
+        protected global::System.Web.UI.WebControls.TextBox ROVResultBox;
         
         /// <summary>
-        /// ROVFuturePlan control.
+        /// ROVFuturePlanBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea ROVFuturePlan;
+        protected global::System.Web.UI.WebControls.TextBox ROVFuturePlanBox;
         
         /// <summary>
-        /// ROVProblem control.
+        /// ROVProblemBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea ROVProblem;
+        protected global::System.Web.UI.WebControls.TextBox ROVProblemBox;
         
         /// <summary>
-        /// ROVFormFeedback control.
+        /// ROVFormFeedbackBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea ROVFormFeedback;
+        protected global::System.Web.UI.WebControls.TextBox ROVFormFeedbackBox;
         
         /// <summary>
         /// ROVFormSaveSubmit control.

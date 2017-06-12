@@ -18,6 +18,10 @@
         <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" />
         <asp:Button ID="btnHistory" runat="server" Text="History" class="btn" />
 
+        <asp:HiddenField ID="hddsim_id" runat="server" />
+        <asp:HiddenField ID="hddmas_rep_id" runat="server" />
+        <asp:HiddenField ID="hddfile_path" runat="server" />
+
     </div>
 
 

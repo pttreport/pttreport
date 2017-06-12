@@ -18,8 +18,8 @@ namespace ptt_report
             }
             else
             {
-                lbYear.Text = HttpContext.Current.Session["repYear"].ToString();
-                lbQuarter.Text = HttpContext.Current.Session["repQuar"].ToString();
+                //lbYear.Text = HttpContext.Current.Session["repYear"].ToString();
+                //lbQuarter.Text = HttpContext.Current.Session["repQuar"].ToString();
             }
         }
 
