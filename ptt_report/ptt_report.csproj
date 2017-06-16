@@ -72,6 +72,9 @@
     <Content Include="externalcorrosion.aspx" />
     <Content Include="freespan.aspx" />
     <Content Include="history_1.aspx" />
+    <Content Include="piroffshorepig.aspx" />
+    <Content Include="pironshorepig.aspx" />
+    <Content Include="pironshoreunpig.aspx" />
     <Content Include="permit.aspx" />
     <Content Include="permitappendixB.aspx" />
     <Content Include="permitappendixD.aspx" />
@@ -119,6 +122,7 @@
     <Compile Include="App_Code\ilipigDLL.cs" />
     <Compile Include="App_Code\otherprojectsDLL.cs" />
     <Compile Include="App_Code\patrollingDLL.cs" />
+    <Compile Include="App_Code\pironsuDLL.cs" />
     <Compile Include="App_Code\QuarterlyReportDLL.cs" />
     <Compile Include="App_Code\rbiDLL.cs" />
     <Compile Include="App_Code\reptmpDLL.cs" />
@@ -189,6 +193,34 @@
     </Compile>
     <Compile Include="NestedMasterPage2.master.designer.cs">
       <DependentUpon>NestedMasterPage2.master</DependentUpon>
+    </Compile>
+    <Compile Include="NestedMasterPagePIR.master.cs">
+      <DependentUpon>NestedMasterPagePIR.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NestedMasterPagePIR.master.designer.cs">
+      <DependentUpon>NestedMasterPagePIR.master</DependentUpon>
+    </Compile>
+    <Compile Include="piroffshorepig.aspx.cs">
+      <DependentUpon>piroffshorepig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="piroffshorepig.aspx.designer.cs">
+      <DependentUpon>piroffshorepig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pironshorepig.aspx.cs">
+      <DependentUpon>pironshorepig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pironshorepig.aspx.designer.cs">
+      <DependentUpon>pironshorepig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pironshoreunpig.aspx.cs">
+      <DependentUpon>pironshoreunpig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pironshoreunpig.aspx.designer.cs">
+      <DependentUpon>pironshoreunpig.aspx</DependentUpon>
     </Compile>
     <Compile Include="permit.aspx.cs">
       <DependentUpon>permit.aspx</DependentUpon>
@@ -415,6 +447,7 @@
     <Content Include="NestedMasterPage2.master" />
     <Content Include="tmp_rep\Quaterly_report.dotx" />
     <Content Include="packages.config" />
+    <Content Include="NestedMasterPagePIR.master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
