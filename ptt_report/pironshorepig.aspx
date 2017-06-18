@@ -1064,7 +1064,7 @@
                         <tr>
                             <td>ความเห็น :</td>
                             <td>
-                                <asp:TextBox cols="20" rows="2" TextMode="MultiLine" runat="server" id="opinionmd" OnTextChanged="opinionmd_TextChanged"></asp:TextBox>
+                                <asp:TextBox cols="20" rows="2" TextMode="MultiLine" runat="server" id="opinionmd"></asp:TextBox>
                             </td>
                         </tr>
 
@@ -1117,7 +1117,7 @@
                         <tr>
                             <td>ความเห็น :</td>
                             <td>
-                                <asp:TextBox cols="20" rows="2" TextMode="MultiLine" runat="server" id="opiniontpi" OnTextChanged="opiniontpi_TextChanged"></asp:TextBox>
+                                <asp:TextBox cols="20" rows="2" TextMode="MultiLine" runat="server" id="opiniontpi" ></asp:TextBox>
                             </td>
                         </tr>
 

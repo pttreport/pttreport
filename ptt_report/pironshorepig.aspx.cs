@@ -393,7 +393,7 @@ namespace ptt_report
             }
             else
             {
-                Serv.Insertpironsu_md(hddmas_rep_id.Value, "", "", "", "", "", "");
+                Serv.Insertpironsu_md(hddmas_rep_id.Value, "", "", "","","", "", "", "");
 
                 var mdNew = Serv.GetPIRonSPMechanical(hddmas_rep_id.Value);
 
@@ -737,11 +737,6 @@ namespace ptt_report
         protected void Button5_Click(object sender, EventArgs e)
         {
             Serv.Updatepironsp_icra(hddmas_rep_id.Value, sumicraValue.Value, wcmicraValue.Value, dewecraValue.Value, co2icra.Value,h2sicraValue.Value,icdmpValue.Value,icrpicraValue.Value,detailicra.Text,opinioniccs.Text, icra_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
-        }
-
-        protected void opinionmd_TextChanged(object sender, EventArgs e)
-        {
-            Serv.Updatepironsp_md(hddmas_rep_id.Value, summdValue.Value, ccdmdValue.Value, dentmdValue.Value, detailmd.Text, "", opinionmd.Text, md_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
         }
 
         protected void Button7_Click(object sender, EventArgs e)

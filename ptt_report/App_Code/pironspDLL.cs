@@ -516,7 +516,7 @@ namespace ptt_report.App_Code
         }
 
 
-        public DataTable Insertpironsp_icra(string pir_id, string sumresult, string wcm, string dew, string co2, string h2s, string ismp, string icrp, string detail, string opinion)
+        public DataTable Insertpironsp_icra(string pir_id, string sumresult, string wcm, string dew, string co2, string h2s, string isdmp, string icrp, string detail, string opinion)
         {
             SqlConnection objConn = new SqlConnection();
             SqlCommand objCmd = new SqlCommand();
@@ -526,7 +526,7 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = " insert into pironsp_icra(pir_id,sumresult,wcm,dew,co2,h2s,ismp, icrp,detail,opinion) " +
+            strSQL = " insert into pironsp_icra(pir_id,sumresult,wcm,dew,co2,h2s,isdmp, icrp,detail,opinion) " +
                     " values('" +
 
                     pir_id + "','"
@@ -535,7 +535,7 @@ namespace ptt_report.App_Code
                     + dew + "','"
                     + co2 + "','"
                     + h2s + "','"
-                    + ismp + "','"
+                    + isdmp + "','"
                     + icrp + "','"
                     + detail + "','"
                     + opinion +
@@ -628,7 +628,7 @@ namespace ptt_report.App_Code
         }
 
 
-        public DataTable Insertpironsu_md(string pir_id, string summaryresult, string ccd, string dent, string detail, string manualdetail, string opinion)
+        public DataTable Insertpironsu_md(string pir_id, string sumresult, string ccd, string dent, string al, string rowcondition, string detail, string manualdetail, string opinion)
         {
             SqlConnection objConn = new SqlConnection();
             SqlCommand objCmd = new SqlCommand();
@@ -638,13 +638,15 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = " insert into pironsp_md(pir_id,summaryresult,ccd,activitylevel,detail, opinion) " +
+            strSQL = " insert into pironsp_md(pir_id,sumresult,ccd,dent,al,rowcondition,detail, manualdetail,opinion) " +
                     " values('" +
 
                     pir_id + "','"
-                    + summaryresult + "','"
+                    + sumresult + "','"
                     + ccd + "','"
                     + dent + "','"
+                    + al + "','"
+                    + rowcondition + "','"
                     + detail + "','"
                     + manualdetail + "','"
                     + opinion +
@@ -670,7 +672,7 @@ namespace ptt_report.App_Code
         }
 
 
-        public void Updatepironsp_md(string pir_id, string summaryresult, string ccd, string dent, string detail, string manualdetail, string opinion, string id, string update_id)
+        public void Updatepironsp_md(string pir_id, string sumresult, string ccd, string dent, string al, string rowcondition, string detail, string manualdetail, string opinion, string id, string update_id)
         {
             SqlConnection objConn = new SqlConnection();
             SqlCommand objCmd = new SqlCommand();
@@ -680,9 +682,11 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = " update pironsp_md set summaryresult = '" + summaryresult +
+            strSQL = " update pironsp_md set sumresult = '" + sumresult +
                 "',ccd = '" + ccd +
                 "',dent = '" + dent +
+                "',al = '" + al +
+                "',rowcondition = '" + rowcondition +
                 "',detail = '" + detail +
                 "',manualdetail = '" + manualdetail +
                 "',opinion = '" + opinion +
