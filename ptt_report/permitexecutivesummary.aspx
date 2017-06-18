@@ -27,6 +27,10 @@
         <asp:Button ID="btnExport" runat="server" Text="Export Report" class="btn" />
         <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" />
         <asp:Button ID="Button1" runat="server" Text="History" class="btn" />
+
+        <asp:HiddenField ID="hddtpexecutivesummary_id" runat="server" />
+        <asp:HiddenField ID="hddfile_path" runat="server" />
+        <asp:HiddenField ID="hddmas_rep_id" runat="server" />
         
     </div>
 
@@ -46,7 +50,8 @@
                         <tr>
                             <td class="auto-style1"  style="text-align: center;">
 
-                                <textarea id="PermitExecutiveSummary" runat="server" cols="20" rows="40"></textarea>
+
+                                <asp:TextBox cols="20" rows="2" TextMode="MultiLine" runat="server" id="PermitExecutiveSummaryBox"></asp:TextBox>
 
                             </td>
                         </tr>

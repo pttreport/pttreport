@@ -15,7 +15,7 @@ namespace ptt_report
     {
         CultureInfo ThCI = new System.Globalization.CultureInfo("th-TH");
         CultureInfo EngCI = new System.Globalization.CultureInfo("en-US");
-        QuarterlyReportDLL Serv = new QuarterlyReportDLL();
+        tpreportDLL Serv = new tpreportDLL();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -29,6 +29,7 @@ namespace ptt_report
                 else
                 {
                     //lbCustype.Text = HttpContext.Current.Session["repCustype"].ToString();
+                    hddmas_rep_id.Value = "99";
                     bind_default();
                     bind_list();
                 }
@@ -37,7 +38,24 @@ namespace ptt_report
 
         protected void bind_default()
         {
+            var es = Serv.GetTPExecutiveSummary(hddmas_rep_id.Value);
 
+            if (es.Rows.Count != 0)
+            {
+                hddtpexecutivesummary_id.Value = es.Rows[0]["id"].ToString();
+
+                PermitExecutiveSummaryBox.Text = es.Rows[0]["detail"].ToString();
+
+            }
+            else {
+                Serv.Inserttpexecutivesummary(hddmas_rep_id.Value,"");
+
+                var esNew = Serv.GetTPExecutiveSummary(hddmas_rep_id.Value);
+
+                if (esNew.Rows.Count != 0)
+                    hddtpexecutivesummary_id.Value = esNew.Rows[0]["id"].ToString();
+
+            }
         }
 
         protected void bind_list()
@@ -90,6 +108,15 @@ namespace ptt_report
 
         }
 
+        private void POPUPMSG(string msg)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("alert(\'");
+            sb.Append(msg.Replace("\n", "\\n").Replace("\r", "").Replace("\'", "\\\'"));
+            sb.Append("\');");
+            ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "showalert", sb.ToString(), true);
+        }
+
         protected void btnmanage_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
@@ -114,7 +141,8 @@ namespace ptt_report
 
         protected void PermitExecutiveSumFormSaveSubmit_Click(object sender, EventArgs e)
         {
-
+            Serv.Updatetpexecutivesummary(hddmas_rep_id.Value, PermitExecutiveSummaryBox.Text, hddtpexecutivesummary_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
+            POPUPMSG("บันทึกเรียบร้อย");
         }
     }
 }
