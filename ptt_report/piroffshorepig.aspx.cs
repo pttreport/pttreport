@@ -790,17 +790,17 @@ namespace ptt_report
 
         protected void Button9_Click(object sender, EventArgs e)
         {
-            Serv.Updatepiroffsp_prh(hddmas_rep_id.Value,sumprh.Value, detailprh.Text, opinionprh.Text, prh_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
+            Serv.Updatepiroffsp_prh(hddmas_rep_id.Value, sumprhValue.Value, detailprh.Text, opinionprh.Text, prh_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
         }
 
         protected void sumprh1_CheckedChanged(object sender, EventArgs e)
         {
-            sumprh.Value = "1";
+            sumprhValue.Value = "1";
         }
 
         protected void sumprh2_CheckedChanged(object sender, EventArgs e)
         {
-            sumprh.Value = "2";
+            sumprhValue.Value = "2";
         }
 
         protected void Button10_Click(object sender, EventArgs e)

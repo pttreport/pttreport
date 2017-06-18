@@ -1228,7 +1228,7 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = " select * from pironsp_tpi where pir_id =  '" + pir_id + "' ";
+            strSQL = " select * from pironsp_lgs where pir_id =  '" + pir_id + "' ";
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
             var _with1 = objCmd;
@@ -1300,7 +1300,7 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = " update pironsp_tpi set sumresult = '" + sumresult +
+            strSQL = " update pironsp_lgs set sumresult = '" + sumresult +
                                              "',eps = '" + eps +
                              "',fs = '" + fs +
                              "',ss = '" + ss +

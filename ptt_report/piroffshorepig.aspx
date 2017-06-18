@@ -1018,7 +1018,7 @@
                         <tr>
                             <td>
                                 Summary result
-                                <asp:HiddenField ID="sumprh" runat="server" />
+                                <asp:HiddenField ID="sumprhValue" runat="server" />
                             </td>
                             <td></td>
                         </tr>

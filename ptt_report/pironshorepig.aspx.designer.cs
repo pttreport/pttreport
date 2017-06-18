@@ -949,13 +949,13 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.RadioButton dewecra4;
         
         /// <summary>
-        /// co2icra control.
+        /// co2icraValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField co2icra;
+        protected global::System.Web.UI.WebControls.HiddenField co2icraValue;
         
         /// <summary>
         /// co2icra1 control.
@@ -1253,6 +1253,15 @@ namespace ptt_report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton al4;
+        
+        /// <summary>
+        /// rowmdValue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField rowmdValue;
         
         /// <summary>
         /// rowmd1 control.

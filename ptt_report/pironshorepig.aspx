@@ -9,6 +9,9 @@
         .auto-style1 {
             height: 20px;
         }
+        .auto-style2 {
+            height: 24px;
+        }
     </style>
     <div class="bar_qr">
         Customer Type :
@@ -230,7 +233,7 @@
                         </tr>
                         <tr>
                             <td class="auto-style1">
-                                <asp:RadioButton ID="ciiccs1" GroupName="ciiccs" runat="server" />
+                                <asp:RadioButton ID="ciiccs1" GroupName="ciiccs" runat="server" OnCheckedChanged="ciiccs1_CheckedChanged" />
                             </td>
                             <td class="auto-style1">
                                 Yes
@@ -238,7 +241,7 @@
                         </tr>
                         <tr>
                             <td> 
-                                <asp:RadioButton ID="ciiccs2" GroupName="ciiccs" runat="server" />
+                                <asp:RadioButton ID="ciiccs2" GroupName="ciiccs" runat="server" OnCheckedChanged="ciiccs2_CheckedChanged" />
                             </td>
                             <td>
                                 No
@@ -253,7 +256,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:RadioButton ID="cciccs1" GroupName="cciccs" runat="server" />
+                                <asp:RadioButton ID="cciccs1" GroupName="cciccs" runat="server" OnCheckedChanged="cciccs1_CheckedChanged" />
                             </td>
                             <td>
                                 Yes
@@ -262,7 +265,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:RadioButton ID="cciccs2" GroupName="cciccs" runat="server" />
+                                <asp:RadioButton ID="cciccs2" GroupName="cciccs" runat="server" OnCheckedChanged="cciccs2_CheckedChanged" />
                             </td>
                             <td>
                                 No
@@ -278,7 +281,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:RadioButton ID="cpiccs1" GroupName="cpiccs" runat="server" />
+                                <asp:RadioButton ID="cpiccs1" GroupName="cpiccs" runat="server" OnCheckedChanged="cpiccs1_CheckedChanged" />
                             </td>
                             <td>
                                 Yes
@@ -287,7 +290,7 @@
                         </tr>
                         <tr>
                             <td> 
-                                <asp:RadioButton ID="cpiccs2" GroupName="cpiccs" runat="server" />
+                                <asp:RadioButton ID="cpiccs2" GroupName="cpiccs" runat="server" OnCheckedChanged="cpiccs2_CheckedChanged" />
                             </td>
                             <td>
                                 No
@@ -653,7 +656,7 @@
                         </tr>
                         <tr>
                             <td class="auto-style1">
-                                <asp:RadioButton ID="sumicra1" GroupName="sumicra" runat="server" />
+                                <asp:RadioButton ID="sumicra1" GroupName="sumicra" runat="server" OnCheckedChanged="sumicra1_CheckedChanged" />
                             </td>
                             <td class="auto-style1">
                                 Low Risk
@@ -661,7 +664,7 @@
                         </tr>
                         <tr>
                             <td> 
-                                <asp:RadioButton ID="sumicra2" GroupName="sumicra" runat="server" />
+                                <asp:RadioButton ID="sumicra2" GroupName="sumicra" runat="server" OnCheckedChanged="sumicra2_CheckedChanged" />
                             </td>
                             <td>
                                 High Risk
@@ -676,14 +679,14 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:RadioButton ID="wcmicra1" GroupName="wcmicra" runat="server" />
+                                <asp:RadioButton ID="wcmicra1" GroupName="wcmicra" runat="server" OnCheckedChanged="wcmicra1_CheckedChanged" />
                             </td>
                             <td>
                                 &lt;7 lb/MMscfd</td>
                         </tr>
                         <tr>
                             <td> 
-                                <asp:RadioButton ID="wcmicra2" GroupName="wcmicra" runat="server" />
+                                <asp:RadioButton ID="wcmicra2" GroupName="wcmicra" runat="server" OnCheckedChanged="wcmicra2_CheckedChanged" />
                             </td>
                             <td>
                                 &gt; 7 lb/MMscfd</td>
@@ -698,28 +701,28 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:RadioButton ID="dewecra1" GroupName="dewecra" runat="server" />
+                                <asp:RadioButton ID="dewecra1" GroupName="dewecra" runat="server" OnCheckedChanged="dewecra1_CheckedChanged" />
                             </td>
                             <td>
                                 <span style="color: rgb(0, 0, 0); font-family: arial, sans, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">Min Operating Temperature &gt; Dew Point</span></td>
                         </tr>
                         <tr>
                             <td>
-                                 <asp:RadioButton ID="dewecra2" GroupName="dewecra" runat="server" />
+                                 <asp:RadioButton ID="dewecra2" GroupName="dewecra" runat="server" OnCheckedChanged="dewecra2_CheckedChanged" />
                             </td>
                             <td>
                                 <span style="color: rgb(0, 0, 0); font-family: arial, sans, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">Min Operating Temperature &lt; Dew Point (≤ 7 days per year)</span></td>
                         </tr>
                         <tr>
                             <td>
-                                 <asp:RadioButton ID="dewecra3" GroupName="dewecra" runat="server" />
+                                 <asp:RadioButton ID="dewecra3" GroupName="dewecra" runat="server" OnCheckedChanged="dewecra3_CheckedChanged" />
                             </td>
                             <td>
                                 <span style="color: rgb(0, 0, 0); font-family: arial, sans, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">Min Operating Temperature &lt; Dew Point (≤ 30 days per year)</span></td>
                         </tr>
                         <tr>
                             <td>
-                                 <asp:RadioButton ID="dewecra4" GroupName="dewecra" runat="server" />
+                                 <asp:RadioButton ID="dewecra4" GroupName="dewecra" runat="server" OnCheckedChanged="dewecra4_CheckedChanged" />
                             </td>
                             <td>
                                 <span style="color: rgb(0, 0, 0); font-family: arial, sans, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">Min Operating Temperature &lt; Dew Point (&gt; 30 days per year)<br />
@@ -731,20 +734,20 @@
                         <tr>
                             <td>
                                 <span style="color: rgb(0, 0, 0); font-family: arial, sans, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">CO2 content:</span>
-                                <asp:HiddenField ID="co2icra" runat="server" />
+                                <asp:HiddenField ID="co2icraValue" runat="server" />
                             </td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>
-                                 <asp:RadioButton ID="co2icra1" GroupName="co2icra" runat="server" />
+                                 <asp:RadioButton ID="co2icra1" GroupName="co2icra" runat="server" OnCheckedChanged="co2icra1_CheckedChanged" />
                             </td>
                             <td>
                                 <span style="color: rgb(0, 0, 0); font-family: arial, sans, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">CO2 %mol &lt;=2</span></td>
                         </tr>
                         <tr>
                             <td class="auto-style1">
-                                <asp:RadioButton ID="co2icra2" GroupName="co2icra" runat="server" />
+                                <asp:RadioButton ID="co2icra2" GroupName="co2icra" runat="server" OnCheckedChanged="co2icra2_CheckedChanged" />
                             </td>
                             <td class="auto-style1">
                                 <span style="color: rgb(0, 0, 0); font-family: arial, sans, sans-serif; font-size: 13px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: pre-wrap; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">CO2 %mol &gt;2</span></td>
@@ -769,7 +772,7 @@
                         </tr>
                         <tr>
                             <td class="auto-style1">
-                                <asp:RadioButton ID="h2sicra1" GroupName="h2sicra" runat="server" />
+                                <asp:RadioButton ID="h2sicra1" GroupName="h2sicra" runat="server" OnCheckedChanged="h2sicra1_CheckedChanged" />
                             </td>
                             <td class="auto-style1">
                                Partial pressure H2S <= 0.05
@@ -777,7 +780,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:RadioButton ID="h2sicra2" GroupName="h2sicra" runat="server" />
+                                <asp:RadioButton ID="h2sicra2" GroupName="h2sicra" runat="server" OnCheckedChanged="h2sicra2_CheckedChanged" />
                             </td>
                             <td>
                                 Partial pressure H2S > 0.05
@@ -798,7 +801,7 @@
                         </tr>
                         <tr>
                             <td class="auto-style1">
-                                <asp:RadioButton ID="icdmp1" GroupName="icdmp" runat="server" />
+                                <asp:RadioButton ID="icdmp1" GroupName="icdmp" runat="server" OnCheckedChanged="icdmp1_CheckedChanged" />
                             </td>
                             <td class="auto-style1">
                                depth > 60% w.t.
@@ -806,7 +809,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:RadioButton ID="icdmp2" GroupName="icdmp" runat="server" />
+                                <asp:RadioButton ID="icdmp2" GroupName="icdmp" runat="server" OnCheckedChanged="icdmp2_CheckedChanged" />
                             </td>
                             <td>
                                 40 % w.t. < depth < 60 %w.t.
@@ -814,7 +817,7 @@
                         </tr>
                                                 <tr>
                             <td class="auto-style1">
-                                <asp:RadioButton ID="icdmp3" GroupName="icdmp" runat="server" />
+                                <asp:RadioButton ID="icdmp3" GroupName="icdmp" runat="server" OnCheckedChanged="icdmp3_CheckedChanged" />
                             </td>
                             <td class="auto-style1">
                                20 % w.t. < depth < 40 %w.t. 
@@ -822,7 +825,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:RadioButton ID="icdmp4" GroupName="icdmp" runat="server" />
+                                <asp:RadioButton ID="icdmp4" GroupName="icdmp" runat="server" OnCheckedChanged="icdmp4_CheckedChanged" />
                             </td>
                             <td>
                                 depth < 20 % w.t. 
@@ -843,7 +846,7 @@
                         </tr>
                         <tr>
                             <td class="auto-style1">
-                                <asp:RadioButton ID="icrpicra1" GroupName="icrpicra" runat="server" />
+                                <asp:RadioButton ID="icrpicra1" GroupName="icrpicra" runat="server" OnCheckedChanged="icrpicra1_CheckedChanged" />
                             </td>
                             <td class="auto-style1">
                                < 0.13 mm / yr
@@ -851,7 +854,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:RadioButton ID="icrpicra2" GroupName="icrpicra" runat="server" />
+                                <asp:RadioButton ID="icrpicra2" GroupName="icrpicra" runat="server" OnCheckedChanged="icrpicra2_CheckedChanged" />
                             </td>
                             <td>
                                 0.13 – 0.2 mm / yr
@@ -859,7 +862,7 @@
                         </tr>
                                                 <tr>
                             <td class="auto-style1">
-                                <asp:RadioButton ID="icrpicra3" GroupName="icrpicra" runat="server" />
+                                <asp:RadioButton ID="icrpicra3" GroupName="icrpicra" runat="server" OnCheckedChanged="icrpicra3_CheckedChanged" />
                             </td>
                             <td class="auto-style1">
                                0.21 – 0.38 mm / yr 
@@ -867,7 +870,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:RadioButton ID="icrpicra4" GroupName="icrpicra" runat="server" />
+                                <asp:RadioButton ID="icrpicra4" GroupName="icrpicra" runat="server" OnCheckedChanged="icrpicra4_CheckedChanged" />
                             </td>
                             <td>
                                 > 0.38 mm/yr 
@@ -915,7 +918,7 @@
                         </tr>
                         <tr>
                             <td class="auto-style1">
-                                <asp:RadioButton ID="summd1" GroupName="summd" runat="server" />
+                                <asp:RadioButton ID="summd1" GroupName="summd" runat="server" OnCheckedChanged="summd1_CheckedChanged" />
                             </td>
                             <td class="auto-style1">
                                 Low Risk
@@ -923,7 +926,7 @@
                         </tr>
                         <tr>
                             <td> 
-                                <asp:RadioButton ID="summd2" GroupName="summd" runat="server" />
+                                <asp:RadioButton ID="summd2" GroupName="summd" runat="server" OnCheckedChanged="summd2_CheckedChanged" />
                             </td>
                             <td>
                                 High Risk
@@ -938,16 +941,16 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:RadioButton ID="ccdmd1" GroupName="ccdmd" runat="server" />
+                                <asp:RadioButton ID="ccdmd1" GroupName="ccdmd" runat="server" OnCheckedChanged="ccdmd1_CheckedChanged" />
                             </td>
                             <td>
                                 yes</td>
                         </tr>
                         <tr>
-                            <td>
-                                <asp:RadioButton ID="ccdmd2" GroupName="ccdmd" runat="server" />
+                            <td class="auto-style2">
+                                <asp:RadioButton ID="ccdmd2" GroupName="ccdmd" runat="server" OnCheckedChanged="ccdmd2_CheckedChanged" />
                             </td>
-                            <td>
+                            <td class="auto-style2">
                                 No    
                             </td>
                         </tr>
@@ -961,14 +964,14 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:RadioButton ID="dentmd1" GroupName="dentmd" runat="server" />
+                                <asp:RadioButton ID="dentmd1" GroupName="dentmd" runat="server" OnCheckedChanged="dentmd1_CheckedChanged" />
                             </td>
                             <td>
                                 yes</td>
                         </tr>
                         <tr>
                             <td>
-                                <asp:RadioButton ID="dentmd2" GroupName="dentmd" runat="server" />
+                                <asp:RadioButton ID="dentmd2" GroupName="dentmd" runat="server" OnCheckedChanged="dentmd2_CheckedChanged" />
                             </td>
                             <td>
                                 No    
@@ -984,7 +987,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:RadioButton ID="al1" GroupName="al" runat="server" />
+                                <asp:RadioButton ID="al1" GroupName="al" runat="server" OnCheckedChanged="al1_CheckedChanged" />
                             </td>
                             <td>
                                 High activity level
@@ -992,7 +995,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:RadioButton ID="al2" GroupName="al" runat="server" />
+                                <asp:RadioButton ID="al2" GroupName="al" runat="server" OnCheckedChanged="al2_CheckedChanged" />
                             </td>
                             <td>
                                 Medium activity level
@@ -1000,7 +1003,7 @@
                         </tr>
                         <tr>
                             <td> 
-                                <asp:RadioButton ID="al3" GroupName="al" runat="server" />
+                                <asp:RadioButton ID="al3" GroupName="al" runat="server" OnCheckedChanged="al3_CheckedChanged" />
                             </td>
                             <td>
                                 Low activity level
@@ -1008,7 +1011,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:RadioButton ID="al4" GroupName="al" runat="server" />
+                                <asp:RadioButton ID="al4" GroupName="al" runat="server" OnCheckedChanged="al4_CheckedChanged" />
                             </td>
                             <td>
                                 Non
@@ -1018,12 +1021,13 @@
                         <tr>
                             <td>
                                 ROW condition:
+                                <asp:HiddenField ID="rowmdValue" runat="server" />
                             </td>
                             <td></td>
                         </tr>
                         <tr>
                             <td>
-                                <asp:RadioButton ID="rowmd1" GroupName="rowmd" runat="server" />
+                                <asp:RadioButton ID="rowmd1" GroupName="rowmd" runat="server" OnCheckedChanged="rowmd1_CheckedChanged" />
                             </td>
                             <td>
                                 poor
@@ -1031,7 +1035,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:RadioButton ID="rowmd2" GroupName="rowmd" runat="server" />
+                                <asp:RadioButton ID="rowmd2" GroupName="rowmd" runat="server" OnCheckedChanged="rowmd2_CheckedChanged" />
                             </td>
                             <td>
                                 average
@@ -1039,7 +1043,7 @@
                         </tr>
                         <tr>
                             <td> 
-                                <asp:RadioButton ID="rowmd3" GroupName="rowmd" runat="server" />
+                                <asp:RadioButton ID="rowmd3" GroupName="rowmd" runat="server" OnCheckedChanged="rowmd3_CheckedChanged" />
                             </td>
                             <td>
                                 good
@@ -1047,7 +1051,7 @@
                         </tr>
                         <tr>
                             <td> 
-                                <asp:RadioButton ID="rowmd4" GroupName="rowmd" runat="server" />
+                                <asp:RadioButton ID="rowmd4" GroupName="rowmd" runat="server" OnCheckedChanged="rowmd4_CheckedChanged" />
                             </td>
                             <td>
                                 excellent
@@ -1070,7 +1074,7 @@
 
                         <tr>
                             <td></td>
-                            <td><asp:Button ID="Button6" runat="server" Text="Save"  /></td>
+                            <td><asp:Button ID="Button6" runat="server" Text="Save" OnClick="Button6_Click"  /></td>
                         </tr>
 
                     </table>
@@ -1093,7 +1097,7 @@
                         </tr>
                         <tr>
                             <td class="auto-style1">
-                                <asp:RadioButton ID="sumtpi1" GroupName="sumtpi" runat="server" />
+                                <asp:RadioButton ID="sumtpi1" GroupName="sumtpi" runat="server" OnCheckedChanged="sumtpi1_CheckedChanged" />
                             </td>
                             <td class="auto-style1">
                                 Low Risk
@@ -1101,7 +1105,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:RadioButton ID="sumtpi2" GroupName="sumtpi" runat="server" />
+                                <asp:RadioButton ID="sumtpi2" GroupName="sumtpi" runat="server" OnCheckedChanged="sumtpi2_CheckedChanged" />
                             </td>
                             <td>
                                 High Risk
@@ -1147,7 +1151,7 @@
                         </tr>
                         <tr>
                             <td class="auto-style1">
-                                <asp:RadioButton ID="lgssum1" GroupName="lgssum" runat="server" />
+                                <asp:RadioButton ID="lgssum1" GroupName="lgssum" runat="server" OnCheckedChanged="lgssum1_CheckedChanged" />
                             </td>
                             <td class="auto-style1">
                                 Yes
@@ -1155,7 +1159,7 @@
                         </tr>
                         <tr>
                             <td> 
-                                <asp:RadioButton ID="lgssum2" GroupName="lgssum" runat="server" />
+                                <asp:RadioButton ID="lgssum2" GroupName="lgssum" runat="server" OnCheckedChanged="lgssum2_CheckedChanged" />
                             </td>
                             <td>
                                 No
@@ -1171,7 +1175,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:RadioButton ID="eps1" GroupName="eps" runat="server" />
+                                <asp:RadioButton ID="eps1" GroupName="eps" runat="server" OnCheckedChanged="eps1_CheckedChanged" />
                             </td>
                             <td>
                                 All buried
@@ -1180,7 +1184,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:RadioButton ID="eps2" GroupName="eps" runat="server" />
+                                <asp:RadioButton ID="eps2" GroupName="eps" runat="server" OnCheckedChanged="eps2_CheckedChanged" />
                             </td>
                             <td>
                                 Some Areas Exposed
@@ -1188,7 +1192,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:RadioButton ID="eps3" GroupName="eps" runat="server" />
+                                <asp:RadioButton ID="eps3" GroupName="eps" runat="server" OnCheckedChanged="eps3_CheckedChanged" />
                             </td>
                             <td>
                                 Many Areas Exposed
@@ -1196,7 +1200,7 @@
                         </tr>
                         <tr>
                             <td> 
-                                <asp:RadioButton ID="eps4" GroupName="eps" runat="server" />
+                                <asp:RadioButton ID="eps4" GroupName="eps" runat="server" OnCheckedChanged="eps4_CheckedChanged" />
                             </td>
                             <td>
                                 All Areas Exposed
@@ -1213,7 +1217,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:RadioButton ID="fs1" GroupName="fs" runat="server" />
+                                <asp:RadioButton ID="fs1" GroupName="fs" runat="server" OnCheckedChanged="fs1_CheckedChanged" />
                             </td>
                             <td>
                                 Never
@@ -1222,7 +1226,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:RadioButton ID="fs2" GroupName="fs" runat="server" />
+                                <asp:RadioButton ID="fs2" GroupName="fs" runat="server" OnCheckedChanged="fs2_CheckedChanged" />
                             </td>
                             <td>
                                 possible
@@ -1230,7 +1234,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:RadioButton ID="fs3" GroupName="fs" runat="server" />
+                                <asp:RadioButton ID="fs3" GroupName="fs" runat="server" OnCheckedChanged="fs3_CheckedChanged" />
                             </td>
                             <td>
                                 yes
@@ -1247,7 +1251,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:RadioButton ID="ss1" GroupName="ss" runat="server" />
+                                <asp:RadioButton ID="ss1" GroupName="ss" runat="server" OnCheckedChanged="ss1_CheckedChanged" />
                             </td>
                             <td>
                                 Stable
@@ -1256,7 +1260,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:RadioButton ID="ss2" GroupName="ss" runat="server" />
+                                <asp:RadioButton ID="ss2" GroupName="ss" runat="server" OnCheckedChanged="ss2_CheckedChanged" />
                             </td>
                             <td>
                                 Land movement possible
@@ -1264,7 +1268,7 @@
                         </tr>
                         <tr>
                             <td> 
-                                <asp:RadioButton ID="ss3" GroupName="ss" runat="server" />
+                                <asp:RadioButton ID="ss3" GroupName="ss" runat="server" OnCheckedChanged="ss3_CheckedChanged" />
                             </td>
                             <td>
                                 Measure strain increase
@@ -1272,7 +1276,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:RadioButton ID="ss4" GroupName="ss" runat="server" />
+                                <asp:RadioButton ID="ss4" GroupName="ss" runat="server" OnCheckedChanged="ss4_CheckedChanged" />
                             </td>
                             <td>
                                 Land movement record
@@ -1317,7 +1321,7 @@
                         </tr>
                         <tr>
                             <td class="auto-style1">
-                                <asp:RadioButton ID="sumprh1" GroupName="sumprh" runat="server" />
+                                <asp:RadioButton ID="sumprh1" GroupName="sumprh" runat="server" OnCheckedChanged="sumprh1_CheckedChanged" />
                             </td>
                             <td class="auto-style1">
                                 Yes, see more in detail
@@ -1325,7 +1329,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <asp:RadioButton ID="sumprh2" GroupName="sumprh" runat="server" />
+                                <asp:RadioButton ID="sumprh2" GroupName="sumprh" runat="server" OnCheckedChanged="sumprh2_CheckedChanged" />
                             </td>
                             <td>
                                 No

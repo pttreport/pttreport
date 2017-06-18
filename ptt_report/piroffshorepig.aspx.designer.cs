@@ -1273,13 +1273,13 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.HiddenField prh_id;
         
         /// <summary>
-        /// sumprh control.
+        /// sumprhValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField sumprh;
+        protected global::System.Web.UI.WebControls.HiddenField sumprhValue;
         
         /// <summary>
         /// sumprh1 control.

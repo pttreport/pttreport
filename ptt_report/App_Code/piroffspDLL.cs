@@ -884,7 +884,7 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = " update pironsu_prh set sumresult = '" + sumresult +
+            strSQL = " update piroffsp_leakage set sumresult = '" + sumresult +
                         "',lsp = '" + lsp +
                         "',lplem = '" + lplem +
                         "',llr = '" + llr +

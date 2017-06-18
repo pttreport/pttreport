@@ -736,7 +736,7 @@ namespace ptt_report
 
         protected void Button5_Click(object sender, EventArgs e)
         {
-            Serv.Updatepironsp_icra(hddmas_rep_id.Value, sumicraValue.Value, wcmicraValue.Value, dewecraValue.Value, co2icra.Value,h2sicraValue.Value,icdmpValue.Value,icrpicraValue.Value,detailicra.Text,opinioniccs.Text, icra_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
+            Serv.Updatepironsp_icra(hddmas_rep_id.Value, sumicraValue.Value, wcmicraValue.Value, dewecraValue.Value, co2icraValue.Value,h2sicraValue.Value,icdmpValue.Value,icrpicraValue.Value,detailicra.Text,opinioniccs.Text, icra_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
         }
 
         protected void Button7_Click(object sender, EventArgs e)
@@ -757,6 +757,296 @@ namespace ptt_report
         protected void Button9_Click(object sender, EventArgs e)
         {
             Serv.Updatepironsp_comment(hddmas_rep_id.Value, detailcomment.Text, opinioncomment.Text, comment_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
+        }
+
+        protected void ciiccs1_CheckedChanged(object sender, EventArgs e)
+        {
+            ciiccsValue.Value = "1";
+        }
+
+        protected void ciiccs2_CheckedChanged(object sender, EventArgs e)
+        {
+            ciiccsValue.Value = "2";
+        }
+
+        protected void cciccs1_CheckedChanged(object sender, EventArgs e)
+        {
+            ccciccValue.Value = "1";
+        }
+
+        protected void cciccs2_CheckedChanged(object sender, EventArgs e)
+        {
+            ccciccValue.Value = "2";
+        }
+
+        protected void cpiccs1_CheckedChanged(object sender, EventArgs e)
+        {
+            cpiccs.Value = "1";
+        }
+
+        protected void cpiccs2_CheckedChanged(object sender, EventArgs e)
+        {
+            cpiccs.Value = "2";
+        }
+
+        protected void sumicra1_CheckedChanged(object sender, EventArgs e)
+        {
+            sumicraValue.Value = "1";
+        }
+
+        protected void sumicra2_CheckedChanged(object sender, EventArgs e)
+        {
+            sumicraValue.Value = "2";
+        }
+
+        protected void wcmicra1_CheckedChanged(object sender, EventArgs e)
+        {
+            wcmicraValue.Value = "1";
+        }
+
+        protected void wcmicra2_CheckedChanged(object sender, EventArgs e)
+        {
+            wcmicraValue.Value = "2";
+        }
+
+        protected void dewecra1_CheckedChanged(object sender, EventArgs e)
+        {
+            dewecraValue.Value = "1";
+        }
+
+        protected void dewecra2_CheckedChanged(object sender, EventArgs e)
+        {
+            dewecraValue.Value = "2";
+        }
+
+        protected void dewecra3_CheckedChanged(object sender, EventArgs e)
+        {
+            dewecraValue.Value = "3";
+        }
+
+        protected void dewecra4_CheckedChanged(object sender, EventArgs e)
+        {
+            dewecraValue.Value = "4";
+        }
+
+        protected void co2icra1_CheckedChanged(object sender, EventArgs e)
+        {
+            co2icraValue.Value = "1";
+        }
+
+        protected void co2icra2_CheckedChanged(object sender, EventArgs e)
+        {
+            co2icraValue.Value = "2";
+        }
+
+        protected void h2sicra1_CheckedChanged(object sender, EventArgs e)
+        {
+            h2sicraValue.Value = "1";
+        }
+
+        protected void h2sicra2_CheckedChanged(object sender, EventArgs e)
+        {
+            h2sicraValue.Value = "2";
+        }
+
+        protected void icdmp1_CheckedChanged(object sender, EventArgs e)
+        {
+            icdmpValue.Value = "1";
+        }
+
+        protected void icdmp2_CheckedChanged(object sender, EventArgs e)
+        {
+            icdmpValue.Value = "2";
+        }
+
+        protected void icdmp3_CheckedChanged(object sender, EventArgs e)
+        {
+            icdmpValue.Value = "3";
+        }
+
+        protected void icdmp4_CheckedChanged(object sender, EventArgs e)
+        {
+            icdmpValue.Value = "4";
+        }
+
+        protected void icrpicra1_CheckedChanged(object sender, EventArgs e)
+        {
+            icrpicraValue.Value = "1";
+        }
+
+        protected void icrpicra2_CheckedChanged(object sender, EventArgs e)
+        {
+            icrpicraValue.Value = "2";
+        }
+
+        protected void icrpicra3_CheckedChanged(object sender, EventArgs e)
+        {
+            icrpicraValue.Value = "3";
+        }
+
+        protected void icrpicra4_CheckedChanged(object sender, EventArgs e)
+        {
+            icrpicraValue.Value = "4";
+        }
+
+        protected void summd1_CheckedChanged(object sender, EventArgs e)
+        {
+            summdValue.Value = "1";
+        }
+
+        protected void summd2_CheckedChanged(object sender, EventArgs e)
+        {
+            summdValue.Value = "2";
+        }
+
+        protected void ccdmd1_CheckedChanged(object sender, EventArgs e)
+        {
+            ccdmdValue.Value = "1";
+        }
+
+        protected void ccdmd2_CheckedChanged(object sender, EventArgs e)
+        {
+            ccdmdValue.Value = "2";
+        }
+
+        protected void dentmd1_CheckedChanged(object sender, EventArgs e)
+        {
+            dentmdValue.Value = "1";
+        }
+
+        protected void dentmd2_CheckedChanged(object sender, EventArgs e)
+        {
+            dentmdValue.Value = "2";
+        }
+
+        protected void al1_CheckedChanged(object sender, EventArgs e)
+        {
+            almdValue.Value = "1";
+        }
+
+        protected void al2_CheckedChanged(object sender, EventArgs e)
+        {
+            almdValue.Value = "2";
+        }
+
+        protected void al3_CheckedChanged(object sender, EventArgs e)
+        {
+            almdValue.Value = "3";
+        }
+
+        protected void al4_CheckedChanged(object sender, EventArgs e)
+        {
+            almdValue.Value = "4";
+        }
+
+        protected void rowmd1_CheckedChanged(object sender, EventArgs e)
+        {
+            rowmdValue.Value = "1";
+        }
+
+        protected void rowmd2_CheckedChanged(object sender, EventArgs e)
+        {
+            rowmdValue.Value = "2";
+        }
+
+        protected void rowmd3_CheckedChanged(object sender, EventArgs e)
+        {
+            rowmdValue.Value = "3";
+        }
+
+        protected void rowmd4_CheckedChanged(object sender, EventArgs e)
+        {
+            rowmdValue.Value = "4";
+        }
+
+        protected void sumtpi1_CheckedChanged(object sender, EventArgs e)
+        {
+            sumtpiValue.Value = "1";
+        }
+
+        protected void sumtpi2_CheckedChanged(object sender, EventArgs e)
+        {
+            sumtpiValue.Value = "2";
+        }
+
+        protected void lgssum1_CheckedChanged(object sender, EventArgs e)
+        {
+            sumlgsValue.Value = "1";
+        }
+
+        protected void lgssum2_CheckedChanged(object sender, EventArgs e)
+        {
+            sumlgsValue.Value = "2";
+        }
+
+        protected void eps1_CheckedChanged(object sender, EventArgs e)
+        {
+            epslgsValue.Value = "1";
+        }
+
+        protected void eps2_CheckedChanged(object sender, EventArgs e)
+        {
+            epslgsValue.Value = "2";
+        }
+
+        protected void eps3_CheckedChanged(object sender, EventArgs e)
+        {
+            epslgsValue.Value = "3";
+        }
+
+        protected void eps4_CheckedChanged(object sender, EventArgs e)
+        {
+            epslgsValue.Value = "4";
+        }
+
+        protected void fs1_CheckedChanged(object sender, EventArgs e)
+        {
+            fslgsValue.Value = "1";
+        }
+
+        protected void fs2_CheckedChanged(object sender, EventArgs e)
+        {
+            fslgsValue.Value = "2";
+        }
+
+        protected void fs3_CheckedChanged(object sender, EventArgs e)
+        {
+            fslgsValue.Value = "3";
+        }
+
+        protected void ss1_CheckedChanged(object sender, EventArgs e)
+        {
+            sslgsValue.Value = "1";
+        }
+
+        protected void ss2_CheckedChanged(object sender, EventArgs e)
+        {
+            sslgsValue.Value = "2";
+        }
+
+        protected void ss3_CheckedChanged(object sender, EventArgs e)
+        {
+            sslgsValue.Value = "3";
+        }
+
+        protected void ss4_CheckedChanged(object sender, EventArgs e)
+        {
+            sslgsValue.Value = "4";
+        }
+
+        protected void sumprh1_CheckedChanged(object sender, EventArgs e)
+        {
+            sumprhValue.Value = "1";
+        }
+
+        protected void sumprh2_CheckedChanged(object sender, EventArgs e)
+        {
+            sumprhValue.Value = "2";
+        }
+
+        protected void Button6_Click(object sender, EventArgs e)
+        {
+            Serv.Updatepironsp_md(hddmas_rep_id.Value, summdValue.Value, ccdmdValue.Value, dentmdValue.Value,almdValue.Value, rowmdValue.Value,detailmd.Text, "",opinionmd.Text, md_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
         }
     }
 }
