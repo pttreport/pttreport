@@ -71,8 +71,6 @@ namespace ptt_report
                 TextBox26.Text = pipeline.Rows[0]["overallremainlife"].ToString();
                 TextBox27.Text = pipeline.Rows[0]["remainlife"].ToString();
 
-
-
             }
             else
             {
@@ -438,6 +436,27 @@ namespace ptt_report
 
             }
 
+            var comment = Serv.GetPIROffSPRecommedation(hddmas_rep_id.Value);
+
+            if (comment.Rows.Count != 0)
+            {
+                comment_id.Value = comment.Rows[0]["id"].ToString();
+
+                detailcomment.Text = comment.Rows[0]["detail"].ToString();
+                opinioncomment.Text = comment.Rows[0]["opinion"].ToString();
+            }
+            else {
+                Serv.Insertpiroffsp_comment(hddmas_rep_id.Value,"","");
+
+                var commentNew = Serv.GetPIROffSPRecommedation(hddmas_rep_id.Value);
+
+                if (commentNew.Rows.Count != 0)
+                {
+                    comment_id.Value = commentNew.Rows[0]["id"].ToString();
+                }
+
+            }
+
         }
 
 
@@ -771,7 +790,22 @@ namespace ptt_report
 
         protected void Button9_Click(object sender, EventArgs e)
         {
-            Serv.Updatepiroffsp_leakage(hddmas_rep_id.Value, sumleakageValue.Value, lspleakageValue.Value, lplemleakageValue.Value, llrleakageValue.Value, detailleakage.Text, opinionleakage.Text, leakage_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
+            Serv.Updatepiroffsp_prh(hddmas_rep_id.Value,sumprh.Value, detailprh.Text, opinionprh.Text, prh_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
+        }
+
+        protected void sumprh1_CheckedChanged(object sender, EventArgs e)
+        {
+            sumprh.Value = "1";
+        }
+
+        protected void sumprh2_CheckedChanged(object sender, EventArgs e)
+        {
+            sumprh.Value = "2";
+        }
+
+        protected void Button10_Click(object sender, EventArgs e)
+        {
+            Serv.Updatepiroffsp_comment(hddmas_rep_id.Value, detailcomment.Text, opinioncomment.Text, comment_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
         }
     }
 }

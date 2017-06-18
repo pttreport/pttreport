@@ -85,6 +85,15 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button btnImport;
         
         /// <summary>
+        /// pipeline_id control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField pipeline_id;
+        
+        /// <summary>
         /// TextBox1 control.
         /// </summary>
         /// <remarks>
@@ -256,6 +265,24 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.TextBox TextBox19;
         
         /// <summary>
+        /// TextBox26 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox26;
+        
+        /// <summary>
+        /// TextBox27 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox27;
+        
+        /// <summary>
         /// TextBox20 control.
         /// </summary>
         /// <remarks>
@@ -310,94 +337,112 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.TextBox TextBox25;
         
         /// <summary>
-        /// TextBox26 control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox26;
+        protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// TextBox27 control.
+        /// iccs_id control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox27;
+        protected global::System.Web.UI.WebControls.HiddenField iccs_id;
         
         /// <summary>
-        /// Button2 control.
+        /// ciiccsValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.HiddenField ciiccsValue;
         
         /// <summary>
-        /// summaryLow control.
+        /// ciiccs1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton summaryLow;
+        protected global::System.Web.UI.WebControls.RadioButton ciiccs1;
         
         /// <summary>
-        /// RadioButton1 control.
+        /// ciiccs2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton1;
+        protected global::System.Web.UI.WebControls.RadioButton ciiccs2;
         
         /// <summary>
-        /// RadioButton2 control.
+        /// ccciccValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton2;
+        protected global::System.Web.UI.WebControls.HiddenField ccciccValue;
         
         /// <summary>
-        /// RadioButton3 control.
+        /// cciccs1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton3;
+        protected global::System.Web.UI.WebControls.RadioButton cciccs1;
         
         /// <summary>
-        /// RadioButton4 control.
+        /// cciccs2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton4;
+        protected global::System.Web.UI.WebControls.RadioButton cciccs2;
         
         /// <summary>
-        /// RadioButton5 control.
+        /// cpiccs control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton5;
+        protected global::System.Web.UI.WebControls.HiddenField cpiccs;
         
         /// <summary>
-        /// TextBox28 control.
+        /// cpiccs1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox28;
+        protected global::System.Web.UI.WebControls.RadioButton cpiccs1;
+        
+        /// <summary>
+        /// cpiccs2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton cpiccs2;
+        
+        /// <summary>
+        /// opinioniccs control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox opinioniccs;
         
         /// <summary>
         /// Button3 control.
@@ -409,283 +454,382 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button Button3;
         
         /// <summary>
-        /// TextBox29 control.
+        /// lma_id control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox29;
+        protected global::System.Web.UI.WebControls.HiddenField lma_id;
         
         /// <summary>
-        /// TextBox30 control.
+        /// lmacips control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox30;
+        protected global::System.Web.UI.WebControls.TextBox lmacips;
         
         /// <summary>
-        /// TextBox31 control.
+        /// lmamfl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox31;
+        protected global::System.Web.UI.WebControls.TextBox lmamfl;
         
         /// <summary>
-        /// TextBox32 control.
+        /// lmageo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox32;
+        protected global::System.Web.UI.WebControls.TextBox lmageo;
         
         /// <summary>
-        /// RadioButton6 control.
+        /// lmaopinion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton6;
+        protected global::System.Web.UI.WebControls.TextBox lmaopinion;
         
         /// <summary>
-        /// RadioButton7 control.
+        /// Button2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton7;
+        protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
-        /// RadioButton8 control.
+        /// ecra_id control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton8;
+        protected global::System.Web.UI.WebControls.HiddenField ecra_id;
         
         /// <summary>
-        /// RadioButton9 control.
+        /// sumecraValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton9;
+        protected global::System.Web.UI.WebControls.HiddenField sumecraValue;
         
         /// <summary>
-        /// RadioButton10 control.
+        /// sumecra1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton10;
+        protected global::System.Web.UI.WebControls.RadioButton sumecra1;
         
         /// <summary>
-        /// RadioButton11 control.
+        /// sumecra2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton11;
+        protected global::System.Web.UI.WebControls.RadioButton sumecra2;
         
         /// <summary>
-        /// RadioButton12 control.
+        /// cpecraValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton12;
+        protected global::System.Web.UI.WebControls.HiddenField cpecraValue;
         
         /// <summary>
-        /// RadioButton13 control.
+        /// cpecra1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton13;
+        protected global::System.Web.UI.WebControls.RadioButton cpecra1;
         
         /// <summary>
-        /// RadioButton14 control.
+        /// cpecra2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton14;
+        protected global::System.Web.UI.WebControls.RadioButton cpecra2;
         
         /// <summary>
-        /// RadioButton15 control.
+        /// nscpecraValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton15;
+        protected global::System.Web.UI.WebControls.HiddenField nscpecraValue;
         
         /// <summary>
-        /// RadioButton16 control.
+        /// nscpecra1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton16;
+        protected global::System.Web.UI.WebControls.RadioButton nscpecra1;
         
         /// <summary>
-        /// RadioButton17 control.
+        /// nscpecra2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton17;
+        protected global::System.Web.UI.WebControls.RadioButton nscpecra2;
         
         /// <summary>
-        /// RadioButton18 control.
+        /// nscpecra3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton18;
+        protected global::System.Web.UI.WebControls.RadioButton nscpecra3;
         
         /// <summary>
-        /// RadioButton19 control.
+        /// nscpecra4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton19;
+        protected global::System.Web.UI.WebControls.RadioButton nscpecra4;
         
         /// <summary>
-        /// RadioButton20 control.
+        /// cdsecraValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton20;
+        protected global::System.Web.UI.WebControls.HiddenField cdsecraValue;
         
         /// <summary>
-        /// RadioButton21 control.
+        /// cdsecra1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton21;
+        protected global::System.Web.UI.WebControls.RadioButton cdsecra1;
         
         /// <summary>
-        /// RadioButton22 control.
+        /// cdsecra2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton22;
+        protected global::System.Web.UI.WebControls.RadioButton cdsecra2;
         
         /// <summary>
-        /// RadioButton23 control.
+        /// cdsecra3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton23;
+        protected global::System.Web.UI.WebControls.RadioButton cdsecra3;
         
         /// <summary>
-        /// RadioButton24 control.
+        /// cdsecra4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton24;
+        protected global::System.Web.UI.WebControls.RadioButton cdsecra4;
         
         /// <summary>
-        /// RadioButton25 control.
+        /// cdsecra5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton25;
+        protected global::System.Web.UI.WebControls.RadioButton cdsecra5;
         
         /// <summary>
-        /// RadioButton26 control.
+        /// cdsecra6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton26;
+        protected global::System.Web.UI.WebControls.RadioButton cdsecra6;
         
         /// <summary>
-        /// RadioButton27 control.
+        /// acecraValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton27;
+        protected global::System.Web.UI.WebControls.HiddenField acecraValue;
         
         /// <summary>
-        /// RadioButton28 control.
+        /// ac1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton28;
+        protected global::System.Web.UI.WebControls.RadioButton ac1;
         
         /// <summary>
-        /// RadioButton29 control.
+        /// ac2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton29;
+        protected global::System.Web.UI.WebControls.RadioButton ac2;
         
         /// <summary>
-        /// RadioButton30 control.
+        /// ac3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton30;
+        protected global::System.Web.UI.WebControls.RadioButton ac3;
         
         /// <summary>
-        /// RadioButton31 control.
+        /// ac4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton31;
+        protected global::System.Web.UI.WebControls.RadioButton ac4;
         
         /// <summary>
-        /// TextBox33 control.
+        /// ecdmpecraValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox33;
+        protected global::System.Web.UI.WebControls.HiddenField ecdmpecraValue;
+        
+        /// <summary>
+        /// ecdmpecra1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton ecdmpecra1;
+        
+        /// <summary>
+        /// ecdmpecra2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton ecdmpecra2;
+        
+        /// <summary>
+        /// ecdmpecra3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton ecdmpecra3;
+        
+        /// <summary>
+        /// ecdmpecra4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton ecdmpecra4;
+        
+        /// <summary>
+        /// ecraecrpValue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField ecraecrpValue;
+        
+        /// <summary>
+        /// ecrpecra1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton ecrpecra1;
+        
+        /// <summary>
+        /// ecrpecra2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton ecrpecra2;
+        
+        /// <summary>
+        /// ecrpecra3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton ecrpecra3;
+        
+        /// <summary>
+        /// ecrpecra4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton ecrpecra4;
+        
+        /// <summary>
+        /// detailecra control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox detailecra;
+        
+        /// <summary>
+        /// opinionecra control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox opinionecra;
         
         /// <summary>
         /// Button4 control.
@@ -697,130 +841,274 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button Button4;
         
         /// <summary>
-        /// RadioButton32 control.
+        /// icra_id control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton32;
+        protected global::System.Web.UI.WebControls.HiddenField icra_id;
         
         /// <summary>
-        /// RadioButton33 control.
+        /// sumicraValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton33;
+        protected global::System.Web.UI.WebControls.HiddenField sumicraValue;
         
         /// <summary>
-        /// RadioButton34 control.
+        /// sumicra1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton34;
+        protected global::System.Web.UI.WebControls.RadioButton sumicra1;
         
         /// <summary>
-        /// RadioButton35 control.
+        /// sumicra2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton35;
+        protected global::System.Web.UI.WebControls.RadioButton sumicra2;
         
         /// <summary>
-        /// RadioButton36 control.
+        /// wcmicraValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton36;
+        protected global::System.Web.UI.WebControls.HiddenField wcmicraValue;
         
         /// <summary>
-        /// RadioButton37 control.
+        /// wcmicra1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton37;
+        protected global::System.Web.UI.WebControls.RadioButton wcmicra1;
         
         /// <summary>
-        /// RadioButton38 control.
+        /// wcmicra2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton38;
+        protected global::System.Web.UI.WebControls.RadioButton wcmicra2;
         
         /// <summary>
-        /// RadioButton39 control.
+        /// dewecraValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton39;
+        protected global::System.Web.UI.WebControls.HiddenField dewecraValue;
         
         /// <summary>
-        /// RadioButton40 control.
+        /// dewecra1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton40;
+        protected global::System.Web.UI.WebControls.RadioButton dewecra1;
         
         /// <summary>
-        /// RadioButton41 control.
+        /// dewecra2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton41;
+        protected global::System.Web.UI.WebControls.RadioButton dewecra2;
         
         /// <summary>
-        /// RadioButton42 control.
+        /// dewecra3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton42;
+        protected global::System.Web.UI.WebControls.RadioButton dewecra3;
         
         /// <summary>
-        /// RadioButton43 control.
+        /// dewecra4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton43;
+        protected global::System.Web.UI.WebControls.RadioButton dewecra4;
         
         /// <summary>
-        /// TextBox34 control.
+        /// co2icra control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox34;
+        protected global::System.Web.UI.WebControls.HiddenField co2icra;
         
         /// <summary>
-        /// TextBox35 control.
+        /// co2icra1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox35;
+        protected global::System.Web.UI.WebControls.RadioButton co2icra1;
+        
+        /// <summary>
+        /// co2icra2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton co2icra2;
+        
+        /// <summary>
+        /// h2sicraValue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField h2sicraValue;
+        
+        /// <summary>
+        /// h2sicra1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton h2sicra1;
+        
+        /// <summary>
+        /// h2sicra2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton h2sicra2;
+        
+        /// <summary>
+        /// icdmpValue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField icdmpValue;
+        
+        /// <summary>
+        /// icdmp1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton icdmp1;
+        
+        /// <summary>
+        /// icdmp2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton icdmp2;
+        
+        /// <summary>
+        /// icdmp3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton icdmp3;
+        
+        /// <summary>
+        /// icdmp4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton icdmp4;
+        
+        /// <summary>
+        /// icrpicraValue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField icrpicraValue;
+        
+        /// <summary>
+        /// icrpicra1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton icrpicra1;
+        
+        /// <summary>
+        /// icrpicra2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton icrpicra2;
+        
+        /// <summary>
+        /// icrpicra3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton icrpicra3;
+        
+        /// <summary>
+        /// icrpicra4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton icrpicra4;
+        
+        /// <summary>
+        /// detailicra control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox detailicra;
+        
+        /// <summary>
+        /// opinionicra control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox opinionicra;
         
         /// <summary>
         /// Button5 control.
@@ -832,148 +1120,193 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button Button5;
         
         /// <summary>
-        /// RadioButton44 control.
+        /// md_id control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton44;
+        protected global::System.Web.UI.WebControls.HiddenField md_id;
         
         /// <summary>
-        /// RadioButton45 control.
+        /// summdValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton45;
+        protected global::System.Web.UI.WebControls.HiddenField summdValue;
         
         /// <summary>
-        /// RadioButton46 control.
+        /// summd1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton46;
+        protected global::System.Web.UI.WebControls.RadioButton summd1;
         
         /// <summary>
-        /// RadioButton47 control.
+        /// summd2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton47;
+        protected global::System.Web.UI.WebControls.RadioButton summd2;
         
         /// <summary>
-        /// RadioButton48 control.
+        /// ccdmdValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton48;
+        protected global::System.Web.UI.WebControls.HiddenField ccdmdValue;
         
         /// <summary>
-        /// RadioButton49 control.
+        /// ccdmd1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton49;
+        protected global::System.Web.UI.WebControls.RadioButton ccdmd1;
         
         /// <summary>
-        /// RadioButton50 control.
+        /// ccdmd2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton50;
+        protected global::System.Web.UI.WebControls.RadioButton ccdmd2;
         
         /// <summary>
-        /// RadioButton51 control.
+        /// dentmdValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton51;
+        protected global::System.Web.UI.WebControls.HiddenField dentmdValue;
         
         /// <summary>
-        /// RadioButton52 control.
+        /// dentmd1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton52;
+        protected global::System.Web.UI.WebControls.RadioButton dentmd1;
         
         /// <summary>
-        /// RadioButton53 control.
+        /// dentmd2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton53;
+        protected global::System.Web.UI.WebControls.RadioButton dentmd2;
         
         /// <summary>
-        /// RadioButton54 control.
+        /// almdValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton54;
+        protected global::System.Web.UI.WebControls.HiddenField almdValue;
         
         /// <summary>
-        /// RadioButton55 control.
+        /// al1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton55;
+        protected global::System.Web.UI.WebControls.RadioButton al1;
         
         /// <summary>
-        /// RadioButton56 control.
+        /// al2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton56;
+        protected global::System.Web.UI.WebControls.RadioButton al2;
         
         /// <summary>
-        /// RadioButton57 control.
+        /// al3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton57;
+        protected global::System.Web.UI.WebControls.RadioButton al3;
         
         /// <summary>
-        /// TextBox36 control.
+        /// al4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox36;
+        protected global::System.Web.UI.WebControls.RadioButton al4;
         
         /// <summary>
-        /// TextBox37 control.
+        /// rowmd1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox37;
+        protected global::System.Web.UI.WebControls.RadioButton rowmd1;
+        
+        /// <summary>
+        /// rowmd2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rowmd2;
+        
+        /// <summary>
+        /// rowmd3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rowmd3;
+        
+        /// <summary>
+        /// rowmd4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton rowmd4;
+        
+        /// <summary>
+        /// detailmd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox detailmd;
+        
+        /// <summary>
+        /// opinionmd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox opinionmd;
         
         /// <summary>
         /// Button6 control.
@@ -985,40 +1318,58 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button Button6;
         
         /// <summary>
-        /// RadioButton58 control.
+        /// tpi_id control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton58;
+        protected global::System.Web.UI.WebControls.HiddenField tpi_id;
         
         /// <summary>
-        /// RadioButton59 control.
+        /// sumtpiValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton59;
+        protected global::System.Web.UI.WebControls.HiddenField sumtpiValue;
         
         /// <summary>
-        /// TextBox38 control.
+        /// sumtpi1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox38;
+        protected global::System.Web.UI.WebControls.RadioButton sumtpi1;
         
         /// <summary>
-        /// TextBox39 control.
+        /// sumtpi2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox39;
+        protected global::System.Web.UI.WebControls.RadioButton sumtpi2;
+        
+        /// <summary>
+        /// detailtpi control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox detailtpi;
+        
+        /// <summary>
+        /// opiniontpi control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox opiniontpi;
         
         /// <summary>
         /// Button7 control.
@@ -1030,139 +1381,184 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button Button7;
         
         /// <summary>
-        /// RadioButton60 control.
+        /// lgs_id control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton60;
+        protected global::System.Web.UI.WebControls.HiddenField lgs_id;
         
         /// <summary>
-        /// RadioButton61 control.
+        /// sumlgsValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton61;
+        protected global::System.Web.UI.WebControls.HiddenField sumlgsValue;
         
         /// <summary>
-        /// RadioButton62 control.
+        /// lgssum1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton62;
+        protected global::System.Web.UI.WebControls.RadioButton lgssum1;
         
         /// <summary>
-        /// RadioButton63 control.
+        /// lgssum2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton63;
+        protected global::System.Web.UI.WebControls.RadioButton lgssum2;
         
         /// <summary>
-        /// RadioButton64 control.
+        /// epslgsValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton64;
+        protected global::System.Web.UI.WebControls.HiddenField epslgsValue;
         
         /// <summary>
-        /// RadioButton65 control.
+        /// eps1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton65;
+        protected global::System.Web.UI.WebControls.RadioButton eps1;
         
         /// <summary>
-        /// RadioButton66 control.
+        /// eps2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton66;
+        protected global::System.Web.UI.WebControls.RadioButton eps2;
         
         /// <summary>
-        /// RadioButton67 control.
+        /// eps3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton67;
+        protected global::System.Web.UI.WebControls.RadioButton eps3;
         
         /// <summary>
-        /// RadioButton68 control.
+        /// eps4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton68;
+        protected global::System.Web.UI.WebControls.RadioButton eps4;
         
         /// <summary>
-        /// RadioButton69 control.
+        /// fslgsValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton69;
+        protected global::System.Web.UI.WebControls.HiddenField fslgsValue;
         
         /// <summary>
-        /// RadioButton70 control.
+        /// fs1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton70;
+        protected global::System.Web.UI.WebControls.RadioButton fs1;
         
         /// <summary>
-        /// RadioButton71 control.
+        /// fs2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton71;
+        protected global::System.Web.UI.WebControls.RadioButton fs2;
         
         /// <summary>
-        /// RadioButton72 control.
+        /// fs3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton72;
+        protected global::System.Web.UI.WebControls.RadioButton fs3;
         
         /// <summary>
-        /// TextBox40 control.
+        /// sslgsValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox40;
+        protected global::System.Web.UI.WebControls.HiddenField sslgsValue;
         
         /// <summary>
-        /// TextBox41 control.
+        /// ss1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox41;
+        protected global::System.Web.UI.WebControls.RadioButton ss1;
+        
+        /// <summary>
+        /// ss2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton ss2;
+        
+        /// <summary>
+        /// ss3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton ss3;
+        
+        /// <summary>
+        /// ss4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton ss4;
+        
+        /// <summary>
+        /// detaillgs control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox detaillgs;
+        
+        /// <summary>
+        /// opinionlgs control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox opinionlgs;
         
         /// <summary>
         /// Button8 control.
@@ -1174,40 +1570,58 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button Button8;
         
         /// <summary>
-        /// RadioButton73 control.
+        /// prh_id control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton73;
+        protected global::System.Web.UI.WebControls.HiddenField prh_id;
         
         /// <summary>
-        /// RadioButton74 control.
+        /// sumprhValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton RadioButton74;
+        protected global::System.Web.UI.WebControls.HiddenField sumprhValue;
         
         /// <summary>
-        /// TextBox42 control.
+        /// sumprh1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox42;
+        protected global::System.Web.UI.WebControls.RadioButton sumprh1;
         
         /// <summary>
-        /// TextBox43 control.
+        /// sumprh2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox43;
+        protected global::System.Web.UI.WebControls.RadioButton sumprh2;
+        
+        /// <summary>
+        /// detailprh control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox detailprh;
+        
+        /// <summary>
+        /// opinionprh control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox opinionprh;
         
         /// <summary>
         /// Button10 control.
@@ -1219,22 +1633,31 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button Button10;
         
         /// <summary>
-        /// TextBox44 control.
+        /// comment_id control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox44;
+        protected global::System.Web.UI.WebControls.HiddenField comment_id;
         
         /// <summary>
-        /// TextBox45 control.
+        /// detailcomment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox45;
+        protected global::System.Web.UI.WebControls.TextBox detailcomment;
+        
+        /// <summary>
+        /// opinioncomment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox opinioncomment;
         
         /// <summary>
         /// Button9 control.

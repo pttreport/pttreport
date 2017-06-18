@@ -1024,7 +1024,7 @@
                         </tr>
                         <tr>
                             <td class="auto-style1">
-                                <asp:RadioButton ID="sumprh1" GroupName="sumprh" runat="server" />
+                                <asp:RadioButton ID="sumprh1" GroupName="sumprh" runat="server" OnCheckedChanged="sumprh1_CheckedChanged" />
                             </td>
                             <td class="auto-style1">
                                 Yes, see more in detail
@@ -1032,7 +1032,7 @@
                         </tr>
                         <tr>
                             <td> 
-                                <asp:RadioButton ID="sumprh2" GroupName="sumprh" runat="server" />
+                                <asp:RadioButton ID="sumprh2" GroupName="sumprh" runat="server" OnCheckedChanged="sumprh2_CheckedChanged" />
                             </td>
                             <td>
                                 No
@@ -1063,6 +1063,8 @@
 
             <div class="info_executive">
                 <h3>Recommendation</h3>
+                <asp:HiddenField ID="comment_id" runat="server" />
+
                 <div class="info_executive_in">
                     <table>
                         <tr>
@@ -1081,7 +1083,7 @@
 
                         <tr>
                             <td></td>
-                            <td><asp:Button ID="Button10" runat="server" Text="Button" OnClick="Button9_Click" /></td>
+                            <td><asp:Button ID="Button10" runat="server" Text="Button" OnClick="Button10_Click"/></td>
                         </tr>
 
                     </table>
