@@ -220,6 +220,24 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
+        /// ecra_id control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField ecra_id;
+        
+        /// <summary>
+        /// ecrasumValue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField ecrasumValue;
+        
+        /// <summary>
         /// summaryLow control.
         /// </summary>
         /// <remarks>
@@ -238,6 +256,15 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.RadioButton summaryHigh;
         
         /// <summary>
+        /// cplevelValue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField cplevelValue;
+        
+        /// <summary>
         /// cp1 control.
         /// </summary>
         /// <remarks>
@@ -254,6 +281,15 @@ namespace ptt_report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton cp2;
+        
+        /// <summary>
+        /// nscpValue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField nscpValue;
         
         /// <summary>
         /// nscp1 control.
@@ -290,6 +326,15 @@ namespace ptt_report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton nscp4;
+        
+        /// <summary>
+        /// cdsValue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField cdsValue;
         
         /// <summary>
         /// cds1 control.
@@ -344,6 +389,15 @@ namespace ptt_report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton cds6;
+        
+        /// <summary>
+        /// acValue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField acValue;
         
         /// <summary>
         /// ac1 control.
@@ -409,6 +463,24 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
+        /// icra_id control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField icra_id;
+        
+        /// <summary>
+        /// sumicraValue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField sumicraValue;
+        
+        /// <summary>
         /// lowicra control.
         /// </summary>
         /// <remarks>
@@ -427,22 +499,40 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.RadioButton highicra;
         
         /// <summary>
-        /// lessseven control.
+        /// wcmValue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton lessseven;
+        protected global::System.Web.UI.WebControls.HiddenField wcmValue;
         
         /// <summary>
-        /// moreseven control.
+        /// wcm1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton moreseven;
+        protected global::System.Web.UI.WebControls.RadioButton wcm1;
+        
+        /// <summary>
+        /// wcm2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton wcm2;
+        
+        /// <summary>
+        /// dpuValue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField dpuValue;
         
         /// <summary>
         /// dewicra1 control.
@@ -481,6 +571,15 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.RadioButton dewicra4;
         
         /// <summary>
+        /// coValue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField coValue;
+        
+        /// <summary>
         /// co1 control.
         /// </summary>
         /// <remarks>
@@ -497,6 +596,15 @@ namespace ptt_report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton co2;
+        
+        /// <summary>
+        /// h2sValue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField h2sValue;
         
         /// <summary>
         /// h2s1 control.
@@ -544,6 +652,24 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button Button3;
         
         /// <summary>
+        /// md_id control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField md_id;
+        
+        /// <summary>
+        /// summdValue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField summdValue;
+        
+        /// <summary>
         /// md1 control.
         /// </summary>
         /// <remarks>
@@ -562,6 +688,15 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.RadioButton md2;
         
         /// <summary>
+        /// ccdValue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField ccdValue;
+        
+        /// <summary>
         /// ccdyes control.
         /// </summary>
         /// <remarks>
@@ -578,6 +713,15 @@ namespace ptt_report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton ccdno;
+        
+        /// <summary>
+        /// alValue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField alValue;
         
         /// <summary>
         /// al1 control.
@@ -634,6 +778,24 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button Button4;
         
         /// <summary>
+        /// lgs_id control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField lgs_id;
+        
+        /// <summary>
+        /// sumlgsValue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField sumlgsValue;
+        
+        /// <summary>
         /// lgsyes control.
         /// </summary>
         /// <remarks>
@@ -650,6 +812,15 @@ namespace ptt_report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButton lgsno;
+        
+        /// <summary>
+        /// epsValue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField epsValue;
         
         /// <summary>
         /// eps1 control.
@@ -715,6 +886,24 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button Button5;
         
         /// <summary>
+        /// prh_id control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField prh_id;
+        
+        /// <summary>
+        /// prhsumValue control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField prhsumValue;
+        
+        /// <summary>
         /// prhyes control.
         /// </summary>
         /// <remarks>
@@ -733,22 +922,22 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.RadioButton prhno;
         
         /// <summary>
-        /// TextBox14 control.
+        /// detailprh control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox14;
+        protected global::System.Web.UI.WebControls.TextBox detailprh;
         
         /// <summary>
-        /// TextBox15 control.
+        /// opinionprh control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox15;
+        protected global::System.Web.UI.WebControls.TextBox opinionprh;
         
         /// <summary>
         /// Button6 control.
@@ -760,21 +949,39 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button Button6;
         
         /// <summary>
-        /// TextBox17 control.
+        /// rc_id control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox17;
+        protected global::System.Web.UI.WebControls.HiddenField rc_id;
         
         /// <summary>
-        /// TextBox16 control.
+        /// detailrc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox16;
+        protected global::System.Web.UI.WebControls.TextBox detailrc;
+        
+        /// <summary>
+        /// opinionrc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox opinionrc;
+        
+        /// <summary>
+        /// Button7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button7;
     }
 }

@@ -145,20 +145,11 @@
                             </td>
                         </tr>
 
-                        <tr>
-                            <td></td>
-                            <td>
-                                <asp:Button ID="Button1" runat="server" Text="Save" />
-                            </td>
-                        </tr>
-
                     </table>
-
-
 
                     <table>
                         <tr>
-                            <th colspan="2">
+                            <th colspan="4">
                                 INTEGRITY ASSESSMENT RESULTS
                             </th>
                         </tr>

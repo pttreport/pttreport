@@ -122,6 +122,8 @@
     <Compile Include="App_Code\ilipigDLL.cs" />
     <Compile Include="App_Code\otherprojectsDLL.cs" />
     <Compile Include="App_Code\patrollingDLL.cs" />
+    <Compile Include="App_Code\pironspDLL.cs" />
+    <Compile Include="App_Code\piroffspDLL.cs" />
     <Compile Include="App_Code\pironsuDLL.cs" />
     <Compile Include="App_Code\QuarterlyReportDLL.cs" />
     <Compile Include="App_Code\rbiDLL.cs" />
