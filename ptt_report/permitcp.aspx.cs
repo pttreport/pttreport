@@ -15,7 +15,7 @@ namespace ptt_report
     {
         CultureInfo ThCI = new System.Globalization.CultureInfo("th-TH");
         CultureInfo EngCI = new System.Globalization.CultureInfo("en-US");
-        QuarterlyReportDLL Serv = new QuarterlyReportDLL();
+        tpreportDLL Serv = new tpreportDLL();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -29,6 +29,7 @@ namespace ptt_report
                 else
                 {
                     //lbCustype.Text = HttpContext.Current.Session["repCustype"].ToString();
+                    hddmas_rep_id.Value = "99";
                     bind_default();
                     bind_list();
                 }
@@ -37,6 +38,32 @@ namespace ptt_report
 
         protected void bind_default()
         {
+
+            var cp = Serv.GetTPCP(hddmas_rep_id.Value);
+
+            if (cp.Rows.Count != 0)
+            {
+                hddtpcp_id.Value = cp.Rows[0]["id"].ToString();
+                PermitCPCIPSDetailBox.Text = cp.Rows[0]["cipsdetail"].ToString();
+                PermitCPCIPSNoteBox.Text = cp.Rows[0]["cipsopinion"].ToString();
+                PermitCPDCVGDetailBox.Text = cp.Rows[0]["dcvgdetail"].ToString();
+                PermitCPDCVGNoteBox.Text = cp.Rows[0]["dcvgopinion"].ToString();
+                PermitCPPTSDetailBox.Text = cp.Rows[0]["ptsdetail"].ToString();
+                PermitCPPTSNoteBox.Text = cp.Rows[0]["ptsopinion"].ToString();
+                PermitCPROVDetailBox.Text = cp.Rows[0]["rovdetail"].ToString();
+                PermitCPROVNoteBox.Text = cp.Rows[0]["rovopinion"].ToString();
+
+            }
+            else
+            {
+                Serv.InserttpCP(hddmas_rep_id.Value, "","","","","","","","");
+
+                var cpNew = Serv.GetTPCP(hddmas_rep_id.Value);
+
+                if (cpNew.Rows.Count != 0)
+                    hddtpcp_id.Value = cpNew.Rows[0]["id"].ToString();
+            }
+            
 
         }
 
@@ -115,6 +142,29 @@ namespace ptt_report
         protected void PermitFormSaveSubmit_Click(object sender, EventArgs e)
         {
 
+        }
+
+        protected void PermitCPFormSaveSubmit_Click(object sender, EventArgs e)
+        {
+            Serv.UpdatetpCP(hddmas_rep_id.Value, PermitCPCIPSDetailBox.Text,
+                            PermitCPCIPSNoteBox.Text,
+                            PermitCPDCVGDetailBox.Text,
+                            PermitCPDCVGNoteBox.Text,
+                            PermitCPPTSDetailBox.Text,
+                            PermitCPPTSNoteBox.Text,
+                            PermitCPROVDetailBox.Text,
+                            PermitCPROVNoteBox.Text,
+                            hddtpcp_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
+            POPUPMSG("บันทึกเรียบร้อย");
+        }
+
+        private void POPUPMSG(string msg)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("alert(\'");
+            sb.Append(msg.Replace("\n", "\\n").Replace("\r", "").Replace("\'", "\\\'"));
+            sb.Append("\');");
+            ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "showalert", sb.ToString(), true);
         }
     }
 }

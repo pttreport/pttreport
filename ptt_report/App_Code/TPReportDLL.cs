@@ -517,5 +517,118 @@ namespace ptt_report.App_Code
         }
 
 
+        public DataTable GetTPCP(string tp_id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " select * from tpcp where tp_rep_id =  '" + tp_id + "' ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+        }
+
+        public DataTable InserttpCP(string tp_rep_id, string cipsdetail, string cipsopinion, string dcvgdetail, string dcvgopinion, string ptsdetail, string ptsopinion, string rovdetail, string rovopinion)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " insert into tpcp(tp_rep_id,cipsdetail,cipsopinion,dcvgdetail,dcvgopinion,ptsdetail,ptsopinion,rovdetail,rovopinion) " +
+                    " values('"
+
+                    + tp_rep_id + "','"
+                    + cipsdetail + "','"
+                    + cipsopinion + "','"
+                    + dcvgdetail + "','"
+                    + dcvgopinion + "','"
+                    + ptsdetail + "','"
+                    + ptsopinion + "','"
+                    + rovdetail + "','"
+                    + rovopinion +
+
+                    "'); select @@IDENTITY as id; ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+        }
+
+        public void UpdatetpCP(string tp_rep_id, string cipsdetail, string cipsopinion, string dcvgdetail, string dcvgopinion, string ptsdetail, string ptsopinion, string rovdetail, string rovopinion, string id, string update_id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " update tpcp set cipsdetail = '" + cipsdetail +
+
+                "',cipsopinion = '" + cipsopinion +
+                "',dcvgdetail = '" + dcvgdetail +
+                "',dcvgopinion = '" + dcvgopinion +
+
+                                "',ptsdetail = '" + ptsdetail +
+                "',ptsopinion = '" + ptsopinion +
+                "',rovdetail = '" + rovdetail +
+
+                                "',rovopinion = '" + rovopinion +
+
+                "' " +
+                " where tp_rep_id = '" + tp_rep_id + "' and id = '" + id + "'; ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            objConn.Open();
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+
+            objCmd.ExecuteNonQuery();
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+        }
+
+
     }
 }
