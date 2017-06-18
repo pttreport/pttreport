@@ -27,6 +27,10 @@
         <asp:Button ID="btnExport" runat="server" Text="Export Report" class="btn" />
         <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" />
         <asp:Button ID="Button1" runat="server" Text="History" class="btn" />
+
+        <asp:HiddenField ID="hddtpprotrolling_id" runat="server" />
+        <asp:HiddenField ID="hddfile_path" runat="server" />
+        <asp:HiddenField ID="hddmas_rep_id" runat="server" />
         
     </div>
 
@@ -130,7 +134,7 @@
                         </table>
                     </div>
                     <div>
-                        <asp:Button ID="PermitPatrolFormSaveSubmit" runat="server" Text="Save" class="btn" />
+                        <asp:Button ID="PermitPatrolFormSaveSubmit" runat="server" Text="Save" class="btn" OnClick="PermitPatrolFormSaveSubmit_Click" />
                     </div>
             </div>
         </div>

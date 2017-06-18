@@ -15,7 +15,7 @@ namespace ptt_report
     {
         CultureInfo ThCI = new System.Globalization.CultureInfo("th-TH");
         CultureInfo EngCI = new System.Globalization.CultureInfo("en-US");
-        QuarterlyReportDLL Serv = new QuarterlyReportDLL();
+        tpreportDLL Serv = new tpreportDLL();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -29,6 +29,7 @@ namespace ptt_report
                 else
                 {
                     //lbCustype.Text = HttpContext.Current.Session["repCustype"].ToString();
+                    hddmas_rep_id.Value = "99";
                     bind_default();
                     bind_list();
                 }
@@ -37,6 +38,41 @@ namespace ptt_report
 
         protected void bind_default()
         {
+            var patrolling = Serv.GetTPPatrolling(hddmas_rep_id.Value);
+
+            if (patrolling.Rows.Count != 0)
+            {
+                hddtpprotrolling_id.Value = patrolling.Rows[0]["id"].ToString();
+
+                PermitPatrolGasDetector.Text = patrolling.Rows[0]["gasdetector"].ToString();
+                PermitPatrolWorkNearPipe.Text = patrolling.Rows[0]["gassiteamount"].ToString();
+                PermitPatrolWorkNearPipeNote.Text = patrolling.Rows[0]["gassitedetail"].ToString();
+                PermitPatrolNotiLabelAmount.Text = patrolling.Rows[0]["labelandstealamount"].ToString();
+                PermitPatrolNotiLabelNote.Text = patrolling.Rows[0]["labelandstealdetail"].ToString();
+                PermitPatrolTestPostAmount.Text = patrolling.Rows[0]["testpostdamageamount"].ToString();
+                PermitPatrolTestPostNote.Text = patrolling.Rows[0]["testpostdamagedetail"].ToString();
+
+
+                PermitPatrolAreaScourPipeAmount.Text = patrolling.Rows[0]["scourareaamount"].ToString();
+                PermitPatrolAreadScourNote.Text = patrolling.Rows[0]["scourareadetail"].ToString();
+                PermitPatrolPoachAmount.Text = patrolling.Rows[0]["buildingpipepathamount"].ToString();
+                PermitPatrolPoachNote.Text = patrolling.Rows[0]["buildingpipepathdetail"].ToString();
+                PermitPatrolROVAmount.Text = patrolling.Rows[0]["rovfreespanamount"].ToString();
+                PermitPatrolROVNote.Text = patrolling.Rows[0]["rovfreespandetail"].ToString();
+                PermitPatrolFeedback.Text = patrolling.Rows[0]["opinion"].ToString();
+
+            }
+            else
+            {
+                Serv.InserttpPatrolling(hddmas_rep_id.Value,"","","","","","","","","","","","","","");
+
+                var protrollingNew = Serv.GetTPPatrolling(hddmas_rep_id.Value);
+
+                if (protrollingNew.Rows.Count != 0)
+                    hddtpprotrolling_id.Value = protrollingNew.Rows[0]["id"].ToString();
+
+            }
+
 
         }
 
@@ -122,6 +158,11 @@ namespace ptt_report
         protected void PermitFormSaveSubmit_Click(object sender, EventArgs e)
         {
 
+        }
+
+        protected void PermitPatrolFormSaveSubmit_Click(object sender, EventArgs e)
+        {
+            Serv.UpdatetpPatrolling(hddmas_rep_id.Value, PermitPatrolGasDetector.Text, PermitPatrolWorkNearPipe.Text, PermitPatrolWorkNearPipeNote.Text, PermitPatrolNotiLabelAmount.Text, PermitPatrolNotiLabelNote.Text, PermitPatrolTestPostAmount.Text, PermitPatrolTestPostNote.Text, PermitPatrolAreaScourPipeAmount.Text, PermitPatrolAreadScourNote.Text, PermitPatrolPoachAmount.Text, PermitPatrolPoachNote.Text, PermitPatrolROVAmount.Text, PermitPatrolROVNote.Text, PermitPatrolFeedback.Text, hddtpprotrolling_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
         }
     }
 }

@@ -390,6 +390,132 @@ namespace ptt_report.App_Code
 
         }
 
+        public DataTable GetTPPatrolling(string tp_id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " select * from tppatrolling where tp_rep_id =  '" + tp_id + "' ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+        }
+
+        public DataTable InserttpPatrolling(string tp_rep_id, string gasdetector, string gassiteamount, string gassitedetail, string labelandstealamount, string labelandstealdetail, string testpostdamageamount, string testpostdamagedetail, string scourareaamount, string scourareadetail, string buildingpipepathamount, string buildingpipepathdetail, string rovfreespanamount, string rovfreespandetail, string opinion)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " insert into tppatrolling(tp_rep_id,gasdetector,gassiteamount,gassitedetail,labelandstealamount,labelandstealdetail,testpostdamageamount,testpostdamagedetail,scourareaamount,scourareadetail,buildingpipepathamount,buildingpipepathdetail,rovfreespanamount,rovfreespandetail,opinion) " +
+                    " values('" 
+                    
+                    + tp_rep_id + "','"
+                    + gasdetector + "','"
+                    + gassiteamount + "','"
+                    + gassitedetail + "','"
+                    + labelandstealamount + "','"
+                    + labelandstealdetail + "','"
+                    + testpostdamageamount + "','"
+                    + testpostdamagedetail + "','"
+                    + scourareaamount + "','"
+                    + scourareadetail + "','"
+                    + buildingpipepathamount + "','"
+                    + buildingpipepathdetail + "','"
+                    + rovfreespanamount + "','"
+                    + rovfreespandetail + "','"
+                    + opinion +
+
+                    "'); select @@IDENTITY as id; ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+        }
+
+        public void UpdatetpPatrolling(string tp_rep_id, string gasdetector, string gassiteamount, string gassitedetail, string labelandstealamount, string labelandstealdetail, string testpostdamageamount, string testpostdamagedetail, string scourareaamount, string scourareadetail, string buildingpipepathamount, string buildingpipepathdetail, string rovfreespanamount, string rovfreespandetail, string opinion, string id, string update_id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " update tppatrolling set gasdetector = '" + gasdetector +
+
+                "',gassiteamount = '" + gassiteamount +
+                "',gassitedetail = '" + gassitedetail +
+                "',labelandstealamount = '" + labelandstealamount +
+
+                                "',labelandstealdetail = '" + labelandstealdetail +
+                "',testpostdamageamount = '" + testpostdamageamount +
+                "',testpostdamagedetail = '" + testpostdamagedetail +
+
+                                "',scourareaamount = '" + scourareaamount +
+                "',scourareadetail = '" + scourareadetail +
+                "',buildingpipepathamount = '" + buildingpipepathamount +
+
+                                "',buildingpipepathdetail = '" + buildingpipepathdetail +
+                "',rovfreespanamount = '" + rovfreespanamount +
+                "',rovfreespandetail = '" + rovfreespandetail +
+
+
+                                "',opinion = '" + opinion +
+                "' " +
+                " where tp_rep_id = '" + tp_rep_id + "' and id = '" + id + "'; ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            objConn.Open();
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+
+            objCmd.ExecuteNonQuery();
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+        }
+
 
     }
 }
