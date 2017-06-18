@@ -28,6 +28,10 @@
         <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" />
         <asp:Button ID="Button1" runat="server" Text="History" class="btn" />
         
+        <asp:HiddenField ID="hddtppermit_id" runat="server" />
+        <asp:HiddenField ID="hddfile_path" runat="server" />
+        <asp:HiddenField ID="hddmas_rep_id" runat="server" />
+
     </div>
 
     <div id="thirdPartyInterfaceForm" style="background-color: #FFFFFF">

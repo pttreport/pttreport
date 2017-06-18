@@ -15,7 +15,7 @@ namespace ptt_report
     {
         CultureInfo ThCI = new System.Globalization.CultureInfo("th-TH");
         CultureInfo EngCI = new System.Globalization.CultureInfo("en-US");
-        QuarterlyReportDLL Serv = new QuarterlyReportDLL();
+        tpreportDLL Serv = new tpreportDLL();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -29,6 +29,7 @@ namespace ptt_report
                 else
                 {
                     //lbCustype.Text = HttpContext.Current.Session["repCustype"].ToString();
+                    hddmas_rep_id.Value = "99";
                     bind_default();
                     bind_list();
                 }
@@ -37,7 +38,27 @@ namespace ptt_report
 
         protected void bind_default()
         {
+            var permit = Serv.GetTPPermit(hddmas_rep_id.Value);
+            if (permit.Rows.Count != 0)
+            {
+                hddtppermit_id.Value = permit.Rows[0]["id"].ToString();
+                PermitGas.Text = permit.Rows[0]["gaspipemaintain"].ToString();
+                PermitProjectName.Text = permit.Rows[0]["projectname"].ToString();
+                PermitPipeLine.Text = permit.Rows[0]["pipepath"].ToString();
+                PermitCerfNumber.Text = permit.Rows[0]["cerfno"].ToString();
+            }
+            else
+            {
+                Serv.Inserttppermit(hddmas_rep_id.Value,"","","","");
 
+                var permitNew = Serv.GetTPPermit(hddmas_rep_id.Value);
+
+                if (permitNew.Rows.Count != 0)
+                {
+                    hddtppermit_id.Value = permitNew.Rows[0]["id"].ToString();
+                }
+
+            }
         }
 
         protected void bind_list()
@@ -116,7 +137,17 @@ namespace ptt_report
 
         protected void PermitFormSaveSubmit_Click(object sender, EventArgs e)
         {
+            Serv.Updatetppermit(hddmas_rep_id.Value, PermitGas.Text, PermitProjectName.Text, PermitPipeLine.Text, PermitCerfNumber.Text, hddtppermit_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
+            POPUPMSG("บันทึกเรียบร้อย");
+        }
 
+        private void POPUPMSG(string msg)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("alert(\'");
+            sb.Append(msg.Replace("\n", "\\n").Replace("\r", "").Replace("\'", "\\\'"));
+            sb.Append("\');");
+            ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "showalert", sb.ToString(), true);
         }
     }
 }
