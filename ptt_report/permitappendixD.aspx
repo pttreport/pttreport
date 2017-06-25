@@ -27,6 +27,10 @@
         <asp:Button ID="btnExport" runat="server" Text="Export Report" class="btn" />
         <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" />
         <asp:Button ID="Button1" runat="server" Text="History" class="btn" />
+
+        <asp:HiddenField ID="hddapdd_id" runat="server" />
+        <asp:HiddenField ID="hddmas_rep_id" runat="server" />
+        <asp:HiddenField ID="hddfile_path" runat="server" />
         
     </div>
 
@@ -46,23 +50,33 @@
                                 <table>
                                     <tr>
                                         <td class="auto-style1" style="text-align:right;" colspan="3">
-                                            <asp:Button ID="Button3" runat="server" Text="Create" />
+                                            <asp:Button ID="Button3" runat="server" Text="Create" OnClick="Button3_Click" />
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>Route Code</th>
-                                        <th>CIPS and DCVG Survey</th>
-                                        <th>Manage</th>
-                                    </tr>    
-                                    <tr>
                                         <td>
-                                            <asp:TextBox ID="PermitAppendixDRouteCode" runat="server" BackColor="#99FF99"></asp:TextBox>
-                                        </td>
-                                        <td>
-                                            <asp:FileUpload ID="PermitAppendixDFileUpload1" runat="server" BackColor="#99FF99" />
-                                        </td>
-                                        <td>
-                                            <asp:Button ID="Button2" runat="server" Text="Delete"  class="btn btn-danger" />
+
+                                            <asp:GridView Width="100%" DataKeyNames="id" AutoGenerateColumns="false" runat="server" ID="gv" ShowFooter="false" >
+                                                <Columns>
+                                                    <asp:TemplateField HeaderText="Route Code">
+                                                        <ItemTemplate>
+                                                            <asp:HiddenField ID="hddid" runat="server" Value='<%# Eval("id") %>' />
+                                                            <asp:TextBox ID="subroutecode" runat="server" Text='<%# Eval("routecode") %>'></asp:TextBox>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="CIPS and DCVG Survey">
+                                                        <ItemTemplate>
+                                                            <asp:FileUpload ID="subsurvey" runat="server" />
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="Manage">
+                                                        <ItemTemplate>
+                                                            <asp:Button ID="btndal" runat="server" Text="Delete" />
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                </Columns>
+                                            </asp:GridView>
+
                                         </td>
                                     </tr>
                                 </table>
@@ -72,7 +86,7 @@
                             <td>ความเห็น : </td>
                             <td class="auto-style1">
 
-                                <asp:TextBox ID="PermitCerfNumber" runat="server" Columns="60"></asp:TextBox>
+                                <asp:TextBox ID="AdppOpinion" runat="server" Columns="60"></asp:TextBox>
 
                             </td>
                         </tr>

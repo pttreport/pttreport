@@ -27,6 +27,10 @@
         <asp:Button ID="btnExport" runat="server" Text="Export Report" class="btn" />
         <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" />
         <asp:Button ID="Button1" runat="server" Text="History" class="btn" />
+
+        <asp:HiddenField ID="hddapdh_id" runat="server" />
+        <asp:HiddenField ID="hddmas_rep_id" runat="server" />
+        <asp:HiddenField ID="hddfile_path" runat="server" />
         
     </div>
 
@@ -46,27 +50,38 @@
                                 <table>
                                     <tr>
                                         <td class="auto-style1" style="text-align:right;" colspan="2">
-                                            <asp:Button ID="Button3" runat="server" Text="Create" />
+                                            <asp:Button ID="Button3" runat="server" Text="Create" OnClick="Button3_Click" />
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>RouteCode</th>
-                                        <th>2 nd half year</th>
-                                        <th>1 st half year</th>
-                                        <th>Manage</th>
-                                    </tr>    
-                                    <tr>
                                         <td>
-                                            <asp:TextBox ID="PermitAppendixHRouteCode" runat="server" BackColor="#99FF99"></asp:TextBox>
-                                        </td>
-                                        <td>
-                                            <asp:FileUpload ID="FileUpload1" runat="server" BackColor="#99FF99" />
-                                        </td>
-                                        <td>
-                                            <asp:FileUpload ID="FileUpload2" runat="server" BackColor="#99FF99" />
-                                        </td>
-                                        <td>
-                                            <asp:Button ID="Button2" runat="server" Text="Delete"  class="btn btn-danger" />
+
+                                            <asp:GridView Width="100%" DataKeyNames="id" AutoGenerateColumns="false" runat="server" ID="gv" ShowFooter="false" >
+                                                <Columns>
+                                                    <asp:TemplateField HeaderText="Route Code">
+                                                        <ItemTemplate>
+                                                            <asp:HiddenField ID="hddid" runat="server" Value='<%# Eval("id") %>' />
+                                                            <asp:TextBox ID="subroutecode" runat="server" Text='<%# Eval("routecode") %>'></asp:TextBox>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="2 nd half year">
+                                                        <ItemTemplate>
+                                                            <asp:FileUpload ID="subsecondhalfyear" runat="server" />
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="1 st half year">
+                                                        <ItemTemplate>
+                                                            <asp:FileUpload ID="subfirsthalfyear" runat="server" />
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="Manage">
+                                                        <ItemTemplate>
+                                                            <asp:Button ID="btndal" runat="server" Text="Delete" />
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                </Columns>
+                                            </asp:GridView>
+
                                         </td>
                                     </tr>
                                 </table>
@@ -76,7 +91,7 @@
                             <td>ความเห็น : </td>
                             <td class="auto-style1">
 
-                                <asp:TextBox ID="PermitCerfNumber" runat="server" Columns="60"></asp:TextBox>
+                                <asp:TextBox ID="AdphOpinion" runat="server" Columns="60"></asp:TextBox>
 
                             </td>
                         </tr>

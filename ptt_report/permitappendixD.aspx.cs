@@ -15,7 +15,7 @@ namespace ptt_report
     {
         CultureInfo ThCI = new System.Globalization.CultureInfo("th-TH");
         CultureInfo EngCI = new System.Globalization.CultureInfo("en-US");
-        QuarterlyReportDLL Serv = new QuarterlyReportDLL();
+        tpreportDLL Serv = new tpreportDLL();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -29,6 +29,7 @@ namespace ptt_report
                 else
                 {
                     //lbCustype.Text = HttpContext.Current.Session["repCustype"].ToString();
+                    hddmas_rep_id.Value = "99";
                     bind_default();
                     bind_list();
                 }
@@ -37,6 +38,54 @@ namespace ptt_report
 
         protected void bind_default()
         {
+            var apdd = Serv.GetTPAppendixD(hddmas_rep_id.Value);
+
+            if (apdd.Rows.Count != 0)
+            {
+                hddapdd_id.Value = apdd.Rows[0]["id"].ToString();
+                AdppOpinion.Text = apdd.Rows[0]["opinion"].ToString();
+
+
+                var sub = Serv.GetTPAppendixD_sub(hddapdd_id.Value);
+
+                if (sub.Rows.Count != 0)
+                {
+                    gv.DataSource = sub;
+                    gv.DataBind();
+                }
+                else
+                {
+                    gv.DataSource = null;
+                    gv.DataBind();
+                }
+
+            }
+            else
+            {
+                Serv.InsertTPAppendixD(hddmas_rep_id.Value, "");
+
+                var apddNew = Serv.GetTPAppendixD(hddmas_rep_id.Value);
+
+                if (apddNew.Rows.Count != 0)
+                {
+                    hddapdd_id.Value = apddNew.Rows[0]["id"].ToString();
+
+                    Serv.InsertTPAppendixD_sub(hddapdd_id.Value, "", "");
+
+                    var subNew = Serv.GetTPAppendixB_sub(hddapdd_id.Value);
+
+                    if (subNew.Rows.Count != 0)
+                    {
+                        gv.DataSource = subNew;
+                        gv.DataBind();
+                    }
+                    else
+                    {
+                        gv.DataSource = null;
+                        gv.DataBind();
+                    }
+                }
+            }
 
         }
 
@@ -109,12 +158,43 @@ namespace ptt_report
 
         protected void btnImport_Click(object sender, EventArgs e)
         {
-            PermitAppendixDRouteCode.Text = "RC5100";
         }
 
         protected void PermitFormSaveSubmit_Click(object sender, EventArgs e)
         {
+            foreach (GridViewRow row in gv.Rows)
+            {
+                if (row.RowType == DataControlRowType.DataRow)
+                {
+                    HiddenField hddid = (HiddenField)row.FindControl("hddid");
 
+                    TextBox subroutecode = (TextBox)row.FindControl("subroutecode");
+
+                    FileUpload subsurvey = (FileUpload)row.FindControl("subsurvey");
+
+                    Serv.UpdateTPAppendixD_sub(hddapdd_id.Value, subroutecode.Text, subsurvey.FileName, hddid.Value);
+
+                }
+            }
+
+            Serv.UpdateTPAppendixD(hddmas_rep_id.Value, AdppOpinion.Text,hddapdd_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Serv.InsertTPAppendixD_sub(hddapdd_id.Value, "", "");
+
+            var sub = Serv.GetTPAppendixD_sub(hddapdd_id.Value);
+            if (sub.Rows.Count != 0)
+            {
+                gv.DataSource = sub;
+                gv.DataBind();
+            }
+            else
+            {
+                gv.DataSource = null;
+                gv.DataBind();
+            }
         }
     }
 }

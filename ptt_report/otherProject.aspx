@@ -27,10 +27,8 @@
     <div id="thirdPartyInterfaceForm" style="background-color: #FFFFFF">
         <h3 class="barBlue">Other Project
              <asp:Button ID="btnImport" runat="server" Text="Import Data" OnClick="btnImport_Click" class="btn btn-info" />
-
-
-
         </h3>
+
         <div id="divOther1" runat="server" visible="true">
         <div class="info_executive">
             <h3>Other Project</h3>
