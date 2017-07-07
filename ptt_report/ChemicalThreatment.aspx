@@ -14,9 +14,9 @@
         Customer Type :
                    
         <asp:Label ID="lbCustype" runat="server" Text="-"></asp:Label>
-        <asp:Button ID="btnExport" runat="server" Text="Export Report" class="btn" />
-        <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" />
-        <asp:Button ID="btnHistory" runat="server" Text="History" class="btn" />
+        <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" OnClick="btnSaveVer_Click" />
+        <asp:Button ID="btnExport" runat="server" Text="Export Report" class="btn" OnClick="btnExport_Click" />
+        <asp:Button ID="btnHistory" runat="server" Text="History" class="btn" OnClick="btnHistory_Click" />
 
         <asp:HiddenField ID="hddct_id" runat="server" />
         <asp:HiddenField ID="hddmas_rep_id" runat="server" />
@@ -25,8 +25,6 @@
     </div>
     <div id="thirdPartyInterfaceForm" style="background-color: #FFFFFF">
         <h3 class="barBlue">Chemical Treatment
-            <asp:Button ID="btnImport" runat="server" Text="Import Data" OnClick="btnImport_Click" class="btn btn-info" />
-
 
 
         </h3>
@@ -54,6 +52,7 @@
                         <td></td>
                         <td>
                             <asp:Button ID="btnSave" runat="server" Text="Save" class="btn" OnClick="btnSave_Click" />
+                            <asp:Button ID="btnApprove" runat="server" Text="Approve Report" OnClick="btnApprove_Click" CssClass="btn" />
                         </td>
                     </tr>
                 </table>

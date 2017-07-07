@@ -12,10 +12,11 @@
 
     <div class="bar_qr">
         Customer Type :
-                    <asp:label id="lbCustype" runat="server" text="-"></asp:label>
-        <asp:button id="btnExport" runat="server" text="Export Report" class="btn" />
-        <asp:button id="btnSaveVer" runat="server" text="Save Version" class="btn" />
-        <asp:button id="btnHistory" runat="server" text="History" class="btn" />
+                   
+        <asp:Label ID="lbCustype" runat="server" Text="-"></asp:Label>
+        <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" OnClick="btnSaveVer_Click" />
+        <asp:Button ID="btnExport" runat="server" Text="Export Report" class="btn" OnClick="btnExport_Click" />
+        <asp:Button ID="btnHistory" runat="server" Text="History" class="btn" OnClick="btnHistory_Click" />
 
         <asp:HiddenField ID="hddec_id" runat="server" />
         <asp:HiddenField ID="hddmas_rep_id" runat="server" />
@@ -30,7 +31,8 @@
     <div id="thirdPartyInterfaceForm" style="background-color: #FFFFFF">
         <div id="patrolFormTable">
             <h3 class="barBlue">External Corrosion
-                 <asp:button id="btnImport" runat="server" text="Import Data" onclick="btnImport_Click" class="btn btn-info" />
+                
+                <asp:Button ID="btnImport" runat="server" Text="Import Data" OnClick="btnImport_Click" class="btn btn-info" />
 
             </h3>
             <div class="info_executive">
@@ -39,13 +41,13 @@
 
                     <table>
 
-                        
+
 
                         <tr>
-                            <td style="width:200px;">ผลการดำเนินงาน : </td>
+                            <td style="width: 200px;">ผลการดำเนินงาน : </td>
                             <td class="auto-style1">
 
-                                <asp:TextBox cols="20" rows="2" TextMode="MultiLine" runat="server" id="ECResultBox"></asp:TextBox>
+                                <asp:TextBox cols="20" Rows="2" TextMode="MultiLine" runat="server" ID="ECResultBox"></asp:TextBox>
 
                             </td>
                         </tr>
@@ -53,7 +55,7 @@
                             <td>P/S Potential Survey : </td>
                             <td class="auto-style1">
 
-                                <asp:textbox id="ECPSPercent" runat="server"></asp:textbox>
+                                <asp:TextBox ID="ECPSPercent" runat="server"></asp:TextBox>
                                 %
 
                             </td>
@@ -62,7 +64,7 @@
                             <td>Bond Box Inspection : </td>
                             <td class="auto-style1">
 
-                                <asp:textbox id="ECBBIPercent" runat="server"></asp:textbox>
+                                <asp:TextBox ID="ECBBIPercent" runat="server"></asp:TextBox>
                                 %
 
                             </td>
@@ -71,18 +73,19 @@
                             <td>Rectifier Inspection : </td>
                             <td class="auto-style1">
 
-                                <asp:textbox id="ECRIPercent" runat="server"></asp:textbox>
+                                <asp:TextBox ID="ECRIPercent" runat="server"></asp:TextBox>
                                 %
 
                             </td>
                         </tr>
                         <tr>
                             <td>Insulating Joint :
-                        <br />
+                       
+                                <br />
                                 or Flange Inspection </td>
                             <td class="auto-style1">
 
-                                <asp:textbox id="ECIJPercent" runat="server"></asp:textbox>
+                                <asp:TextBox ID="ECIJPercent" runat="server"></asp:TextBox>
                                 %
 
                             </td>
@@ -94,13 +97,13 @@
                                 <table class="table_da1">
                                     <tr>
                                         <td>
-                                            <asp:button id="ECCRCreate" runat="server" text="Create" class="btn btn-info" OnClick="ECCRCreate_Click"/>
+                                            <asp:Button ID="ECCRCreate" runat="server" Text="Create" class="btn btn-info" OnClick="ECCRCreate_Click" />
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
 
-                                            <asp:GridView Width="100%" DataKeyNames="id" AutoGenerateColumns="false" 
+                                            <asp:GridView Width="100%" DataKeyNames="id" AutoGenerateColumns="false"
                                                 runat="server" ID="gvCathodic" ShowFooter="false">
                                                 <Columns>
                                                     <asp:TemplateField HeaderText="Month">
@@ -126,7 +129,7 @@
                                                     </asp:TemplateField>
                                                     <asp:TemplateField HeaderText="Manage">
                                                         <ItemTemplate>
-                                                            <asp:Button ID="btndal" runat="server" Text="Delete" OnClick="btndal_Click" />
+                                                            <asp:Button ID="btndal1" runat="server" Text="Delete" OnClick="btndal1_Click" />
                                                         </ItemTemplate>
                                                     </asp:TemplateField>
                                                 </Columns>
@@ -134,7 +137,7 @@
 
                                         </td>
                                     </tr>
-                                    
+
                                 </table>
 
                             </td>
@@ -147,7 +150,7 @@
                                 <table class="table_da1">
                                     <tr>
                                         <td>
-                                            <asp:button id="ECCDSSCreate" runat="server" text="Create" class="btn btn-info" OnClick="ECCDSSCreate_Click" />
+                                            <asp:Button ID="ECCDSSCreate" runat="server" Text="Create" class="btn btn-info" OnClick="ECCDSSCreate_Click" />
                                         </td>
                                     </tr>
                                     <tr>
@@ -174,7 +177,7 @@
                                                     </asp:TemplateField>
                                                     <asp:TemplateField HeaderText="Manage">
                                                         <ItemTemplate>
-                                                            <asp:Button ID="btndal" runat="server" Text="Delete" OnClick="btndal_Click" />
+                                                            <asp:Button ID="btndal2" runat="server" Text="Delete" OnClick="btndal2_Click" />
                                                         </ItemTemplate>
                                                     </asp:TemplateField>
                                                 </Columns>
@@ -191,7 +194,7 @@
                             <td>External Corrosion Result : </td>
                             <td class="auto-style1">
 
-                                <asp:fileupload id="ECECRFileUpload" backcolor="#99ff99" runat="server" />
+                                <asp:FileUpload ID="ECECRFileUpload" BackColor="#99ff99" runat="server" />
 
                             </td>
                         </tr>
@@ -200,7 +203,7 @@
                             <td>Coating Defects Result : </td>
                             <td class="auto-style1">
 
-                                <asp:fileupload id="ECCDRFileUpload" backcolor="#99ff99" runat="server" />
+                                <asp:FileUpload ID="CCDRFileUpload" BackColor="#99ff99" runat="server" />
 
                             </td>
                         </tr>
@@ -209,7 +212,7 @@
                             <td>การดำเนินงานในอนาคต : </td>
                             <td class="auto-style1">
 
-                                <asp:TextBox cols="20" rows="2" TextMode="MultiLine" runat="server" id="ECFuturePlanBox"></asp:TextBox>
+                                <asp:TextBox cols="20" Rows="2" TextMode="MultiLine" runat="server" ID="ECFuturePlanBox"></asp:TextBox>
 
                             </td>
                         </tr>
@@ -221,13 +224,13 @@
                                 <table class="table_da1">
                                     <tr>
                                         <td>
-                                            <asp:button id="ECCDSS2Create" runat="server" text="Create" class="btn btn-info" OnClick="ECCDSS2Create_Click" />
+                                            <asp:Button ID="ECCDSS2Create" runat="server" Text="Create" class="btn btn-info" OnClick="ECCDSS2Create_Click" />
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
 
-                                            <asp:GridView Width="100%" DataKeyNames="id" AutoGenerateColumns="false" 
+                                            <asp:GridView Width="100%" DataKeyNames="id" AutoGenerateColumns="false"
                                                 runat="server" ID="gvCIPSStatusActivity" ShowFooter="false">
                                                 <Columns>
                                                     <asp:TemplateField HeaderText="Route Code">
@@ -264,20 +267,21 @@
                         <tr>
                             <td>ปัญหาอุปสรรค (ถ้ามี) : </td>
                             <td class="auto-style1">
-                                <asp:TextBox cols="20" rows="2" TextMode="MultiLine" runat="server" id="ECProblemBox"></asp:TextBox>
+                                <asp:TextBox cols="20" Rows="2" TextMode="MultiLine" runat="server" ID="ECProblemBox"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             <td>ความเห็น : </td>
                             <td class="auto-style1">
-                                <asp:TextBox cols="20" rows="2" TextMode="MultiLine" runat="server" id="ECFormFeedbackBox"></asp:TextBox>
+                                <asp:TextBox cols="20" Rows="2" TextMode="MultiLine" runat="server" ID="ECFormFeedbackBox"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
-                            <td>
-                                
+                            <td></td>
+                            <td class="auto-style1">
+                                <asp:Button ID="ECFormSaveSubmit" runat="server" Text="Save" OnClick="ECFormSaveSubmit_Click" class="btn" />
+                                <asp:Button ID="btnApprove" runat="server" Text="Approve Report" OnClick="btnApprove_Click1" CssClass="btn" />
                             </td>
-                            <td class="auto-style1"><asp:button id="ECFormSaveSubmit" runat="server" text="Save" onclick="ECFormSaveSubmit_Click" class="btn"/></td>
                         </tr>
 
                     </table>

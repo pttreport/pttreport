@@ -22,15 +22,6 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Label lbCustype;
         
         /// <summary>
-        /// btnExport control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnExport;
-        
-        /// <summary>
         /// btnSaveVer control.
         /// </summary>
         /// <remarks>
@@ -38,6 +29,15 @@ namespace ptt_report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSaveVer;
+        
+        /// <summary>
+        /// btnExport control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnExport;
         
         /// <summary>
         /// btnHistory control.
@@ -175,13 +175,13 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.FileUpload ECECRFileUpload;
         
         /// <summary>
-        /// ECCDRFileUpload control.
+        /// CCDRFileUpload control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload ECCDRFileUpload;
+        protected global::System.Web.UI.WebControls.FileUpload CCDRFileUpload;
         
         /// <summary>
         /// ECFuturePlanBox control.
@@ -236,5 +236,14 @@ namespace ptt_report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ECFormSaveSubmit;
+        
+        /// <summary>
+        /// btnApprove control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnApprove;
     }
 }

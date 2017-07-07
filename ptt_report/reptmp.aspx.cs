@@ -28,7 +28,9 @@ namespace ptt_report
                 {
                     ddlRepType.Items.Insert(0, new System.Web.UI.WebControls.ListItem("Quarterly Report", "1"));
                     ddlRepType.Items.Insert(1, new System.Web.UI.WebControls.ListItem("ธพ. Report", "2"));
-                    ddlRepType.Items.Insert(2, new System.Web.UI.WebControls.ListItem("Pipeline Integrity Report", "3"));
+                    ddlRepType.Items.Insert(2, new System.Web.UI.WebControls.ListItem("Pipeline Integrity Report - Onshore UNPIG", "3"));
+                    ddlRepType.Items.Insert(2, new System.Web.UI.WebControls.ListItem("Pipeline Integrity Report - Onshore PIG", "4"));
+                    ddlRepType.Items.Insert(2, new System.Web.UI.WebControls.ListItem("Pipeline Integrity Report - Offshore UNPIG", "5"));
 
                     bing_rep_tmp();
                 }
@@ -38,7 +40,7 @@ namespace ptt_report
         protected void bing_rep_tmp()
         {
             var x = Serv.GetRep_tmpALL(ddlRepType.SelectedValue);
-            if(x.Rows.Count != 0)
+            if (x.Rows.Count != 0)
             {
                 gridview_rep_tmp.DataSource = x;
                 gridview_rep_tmp.DataBind();
@@ -61,19 +63,18 @@ namespace ptt_report
             {
                 HiddenField hddflag_active = (HiddenField)(e.Row.FindControl("hddflag_active"));
 
-                Button Button2 = (Button)(e.Row.FindControl("Button2"));
-                Button Button1 = (Button)(e.Row.FindControl("Button1"));
+                //Button Button2 = (Button)(e.Row.FindControl("Button2"));
+                //Button Button1 = (Button)(e.Row.FindControl("Button1"));
+                Label StatusLabel = (Label)(e.Row.FindControl("statusLabel"));
 
                
                 if (hddflag_active.Value == "y")
                 {
-                    Button2.Visible = true;
-                    Button1.Visible = false;
+                    StatusLabel.Text = "Active";                    
                 }
                 else
                 {
-                    Button2.Visible = false;
-                    Button1.Visible = true;
+                    StatusLabel.Text = "In-Active";
                 }
             }
         }
@@ -90,6 +91,12 @@ namespace ptt_report
         protected void ddlRepType_SelectedIndexChanged(object sender, EventArgs e)
         {
             bing_rep_tmp();
+        }
+
+        protected void gridview_rep_tmp_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gridview_rep_tmp.PageIndex = e.NewPageIndex;
+            this.bing_rep_tmp();
         }
     }
 }

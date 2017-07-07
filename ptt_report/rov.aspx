@@ -12,9 +12,9 @@
     <div class="bar_qr">
         Customer Type :
         <asp:Label ID="lbCustype" runat="server" Text="-"></asp:Label>
-        <asp:Button ID="btnExport" runat="server" Text="Export Report" class="btn" />
-        <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" />
-        <asp:Button ID="btnHistory" runat="server" Text="History" class="btn" />
+        <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" OnClick="btnSaveVer_Click" />
+        <asp:Button ID="btnExport" runat="server" Text="Export Report" class="btn" OnClick="btnExport_Click" />
+        <asp:Button ID="btnHistory" runat="server" Text="History" class="btn" OnClick="btnHistory_Click" />
                     
         <asp:HiddenField ID="hddrov_id" runat="server" />
         <asp:HiddenField ID="hddmas_rep_id" runat="server" />
@@ -30,7 +30,6 @@
     <div id="thirdPartyInterfaceForm" style="background-color: #FFFFFF">
         <div id="patrolFormTable">
              <h3 class="barBlue">ROV
-                 <asp:Button ID="btnImport" runat="server" Text="Import Data" OnClick="btnImport_Click" class="btn btn-info" />
  
             </h3>
             <div class="info_executive">
@@ -83,7 +82,9 @@
                 <tr>
                     <td>
                        </td>
-                    <td class="auto-style1"> <asp:Button ID="ROVFormSaveSubmit" runat="server" Text="Save" OnClick="ROVFormSaveSubmit_Click" class="btn" /></td>
+                    <td class="auto-style1"> <asp:Button ID="ROVFormSaveSubmit" runat="server" Text="Save" OnClick="ROVFormSaveSubmit_Click" class="btn" />
+                        <asp:Button ID="btnApprove" runat="server" Text="Approve Report" OnClick="btnApprove_Click" CssClass="btn" />
+                    </td>
                 </tr>
 
             </table>

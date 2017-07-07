@@ -14,9 +14,9 @@
         Customer Type :
                    
         <asp:label id="lbCustype" runat="server" text="-"></asp:label>
-        <asp:button id="btnExport" runat="server" text="Export Report" class="btn" />
-        <asp:button id="btnSaveVer" runat="server" text="Save Version" class="btn" />
-        <asp:button id="btnHistory" runat="server" text="History" class="btn"/>
+        <asp:button id="btnSaveVer" runat="server" text="Save Version" class="btn" OnClick="btnSaveVer_Click" />
+        <asp:button id="btnExport" runat="server" text="Export Report" class="btn" OnClick="btnExport_Click" />
+        <asp:button id="btnHistory" runat="server" text="History" class="btn" OnClick="btnHistory_Click"/>
 
         <asp:HiddenField ID="hddss_id" runat="server" />
         <asp:HiddenField ID="hddmas_rep_id" runat="server" />
@@ -49,7 +49,7 @@
                                     <tr>
                                         <td>
 
-                                          <asp:GridView Width="100%" DataKeyNames="id" AutoGenerateColumns="false" runat="server" ID="gv" ShowFooter="false" OnSelectedIndexChanged="gv_SelectedIndexChanged">
+                                          <asp:GridView Width="100%" DataKeyNames="id" AutoGenerateColumns="false" runat="server" ID="gv" ShowFooter="false" >
                                                 <Columns>
                                                     <asp:TemplateField HeaderText="เขต">
                                                         <ItemTemplate>
@@ -127,7 +127,9 @@
                             <td>
                                
                             </td>
-                            <td class="auto-style1"> <asp:button id="SSFormSaveSubmit" runat="server" text="Save" onclick="SSFormSaveSubmit_Click" class="btn" /></td>
+                            <td class="auto-style1"> <asp:button id="SSFormSaveSubmit" runat="server" text="Save" onclick="SSFormSaveSubmit_Click" class="btn" />
+                                <asp:Button ID="btnApprove" runat="server" Text="Approve Report" OnClick="btnApprove_Click" CssClass="btn" />
+                            </td>
                         </tr>
 
                     </table>

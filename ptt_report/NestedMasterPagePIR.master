@@ -18,10 +18,10 @@
                         <li id="menuleft01">
                             <asp:LinkButton ID="lnkPIROnShoreUnpig" runat="server" Font-Underline="false" OnClick="lnkPIROnShoreUnpig_Click">On Shore Unpig</asp:LinkButton>
                         </li>
-                        <li>
+                        <li id="menuleft02">
                             <asp:LinkButton ID="lnkPIROnShorePig" runat="server" Font-Underline="false" OnClick="lnkPIROnShorePig_Click">On Shore Pig</asp:LinkButton>
                         </li>
-                        <li>
+                        <li id="menuleft03">
                             <asp:LinkButton ID="lnkPIROffShorePig" runat="server" Font-Underline="false" OnClick="lnkPIROffShorePig_Click">Off Shore Pig</asp:LinkButton>
                         </li>
                     </ul>

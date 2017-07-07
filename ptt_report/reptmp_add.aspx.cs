@@ -28,7 +28,9 @@ namespace ptt_report
                 {
                     ddlRepType.Items.Insert(0, new System.Web.UI.WebControls.ListItem("Quarterly Report", "1"));
                     ddlRepType.Items.Insert(1, new System.Web.UI.WebControls.ListItem("ธพ. Report", "2"));
-                    ddlRepType.Items.Insert(2, new System.Web.UI.WebControls.ListItem("Pipeline Integrity Report", "3"));
+                    ddlRepType.Items.Insert(2, new System.Web.UI.WebControls.ListItem("Pipeline Integrity Report - Onshore UNPIG", "3"));
+                    ddlRepType.Items.Insert(2, new System.Web.UI.WebControls.ListItem("Pipeline Integrity Report - Onshore PIG", "4"));
+                    ddlRepType.Items.Insert(2, new System.Web.UI.WebControls.ListItem("Pipeline Integrity Report - Offshore UNPIG", "5"));
 
                     bind_default();
                 }
@@ -44,6 +46,13 @@ namespace ptt_report
                 lbFileName.Text = x.Rows[0]["report_name"].ToString();
                 hddfile_path.Value = x.Rows[0]["file_path"].ToString();
             }
+            else
+            {
+                hddTmpid.Value = "";
+                lbFileName.Text = "";
+                hddfile_path.Value = "";
+            }
+
         }
 
         protected void btnSave_Click(object sender, EventArgs e)
@@ -65,7 +74,7 @@ namespace ptt_report
                 string filename = DateTime.Now.ToString("yyMMddHHsss") + Path.GetFileName(FileUpload1.FileName);
                 FileUpload1.SaveAs(Server.MapPath("~/tmp_rep/") + filename);
 
-                Serv.Update_TMP_REP();
+                Serv.Update_TMP_REP(ddlRepType.SelectedValue);
 
                 Serv.Insert_TMP_REP(ddlRepType.SelectedValue, ddlRepType.SelectedItem.Text + " Template V." + version, Server.MapPath("~/tmp_rep/") + filename, "~/tmp_rep/" + filename, HttpContext.Current.Session["assetusername"].ToString(),
                     DateTime.Now.ToString("yyyy-MM-dd", EngCI), HttpContext.Current.Session["assetusername"].ToString(), Convert.ToString(version), "y");
@@ -73,11 +82,20 @@ namespace ptt_report
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('บันทึกเรียบร้อย');window.location ='reptmp.aspx';", true);
 
             }
+
         }
 
         protected void btnDownload_Click(object sender, EventArgs e)
         {
-            Response.Redirect(hddfile_path.Value);
+            if (hddfile_path.Value != "")
+            {
+                Response.Redirect(hddfile_path.Value);
+            }
+        }
+
+        protected void ddlRepType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            bind_default();
         }
     }
 }

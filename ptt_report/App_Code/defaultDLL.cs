@@ -137,6 +137,36 @@ namespace ptt_report.App_Code
 
             return dt;
         }
+
+        public DataTable GetUserPTT_autho(string usercode)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " select * from tblpttAutho " +
+                        " where ptt_code = '" + usercode.Replace("sp", "") + "'  ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+        }
         public bool SetupSession(string username, string password)
         {
             string strUsername = "";

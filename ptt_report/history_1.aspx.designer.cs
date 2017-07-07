@@ -13,6 +13,15 @@ namespace ptt_report {
     public partial class history_1 {
         
         /// <summary>
+        /// hddrep_type control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hddrep_type;
+        
+        /// <summary>
         /// gridview_rep_tmp control.
         /// </summary>
         /// <remarks>

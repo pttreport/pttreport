@@ -9,10 +9,12 @@
     <div class="bar_qr">
         Customer Type :
                    
+       
+
         <asp:Label ID="lbCustype" runat="server" Text="-"></asp:Label>
-        <asp:Button ID="btnExport" runat="server" Text="Export Report" class="btn" />
-        <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" />
-        <asp:Button ID="btnHistory" runat="server" Text="History" class="btn" />
+        <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" OnClick="btnSaveVer_Click" />
+        <asp:Button ID="btnExport" runat="server" Text="Export Report" class="btn" OnClick="btnExport_Click" />
+        <asp:Button ID="btnHistory" runat="server" Text="History" class="btn" OnClick="btnHistory_Click" />
 
         <asp:HiddenField ID="hddcp_id" runat="server" />
         <asp:HiddenField ID="hddmas_rep_id" runat="server" />
@@ -22,7 +24,8 @@
 
     <div id="thirdPartyInterfaceForm" style="background-color: #FFFFFF">
         <h3 class="barBlue">Cleaning PIG
-        <asp:Button ID="btnImport" runat="server" Text="Import Data" OnClick="btnImport_Click" class="btn btn-info" />
+       
+            <asp:Button ID="btnImport" runat="server" Text="Import Data" OnClick="btnImport_Click" class="btn btn-info" />
 
 
         </h3>
@@ -35,7 +38,7 @@
 
                 <table>
                     <tr>
-                        <td style="width:165px;">แผนงาน :</td>
+                        <td style="width: 165px;">แผนงาน :</td>
                         <td>
                             <asp:TextBox ID="txtworkplan" runat="server"></asp:TextBox>
                         </td>
@@ -72,7 +75,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="vertical-align:top">ผลการดำเนินงาน :</td>
+                        <td style="vertical-align: top">ผลการดำเนินงาน :</td>
                         <td>
                             <asp:TextBox ID="txtResult_work" TextMode="MultiLine" runat="server" BackColor="#99ff99"></asp:TextBox>
                         </td>
@@ -108,7 +111,7 @@
                                     </asp:TemplateField>
                                     <asp:TemplateField HeaderText="Manage">
                                         <ItemTemplate>
-                                            <asp:Button ID="btnDEl" runat="server" Text="Delete" OnClick="btnDEl_Click" />
+                                            <asp:Button ID="btnDEl1" runat="server" Text="Delete" OnClick="btnDEl1_Click" />
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                 </Columns>
@@ -173,23 +176,23 @@
 
                                     <asp:TemplateField HeaderText="Route Code">
                                         <ItemTemplate>
-                                            <asp:TextBox ID="txtGridRoute"  Text='<%# Eval("routecode") %>' runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="txtGridRoute" Text='<%# Eval("routecode") %>' runat="server"></asp:TextBox>
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                     <asp:TemplateField HeaderText="Re-Plan">
                                         <ItemTemplate>
-                                            <asp:TextBox ID="txtReplan" Text='<%# Eval("replan") %>'  runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="txtReplan" Text='<%# Eval("replan") %>' runat="server"></asp:TextBox>
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                     <asp:TemplateField HeaderText="Detail">
                                         <ItemTemplate>
-                                            <asp:TextBox ID="txtGridStatus" runat="server"  Text='<%# Eval("detail") %>'  TextMode="MultiLine"></asp:TextBox>
+                                            <asp:TextBox ID="txtGridStatus" runat="server" Text='<%# Eval("detail") %>' TextMode="MultiLine"></asp:TextBox>
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                     <asp:TemplateField HeaderText="Manage">
                                         <ItemTemplate>
                                             <asp:HiddenField ID="hddreplanid" runat="server" Value='<%# Eval("id") %>' />
-                                            <asp:Button ID="btnDEl" runat="server" Text="Delete" OnClick="btnDEl_Click" />
+                                            <asp:Button ID="btnDEl2" runat="server" Text="Delete" OnClick="btnDEl2_Click" />
                                         </ItemTemplate>
                                     </asp:TemplateField>
                                 </Columns>
@@ -206,6 +209,7 @@
                         <td></td>
                         <td>
                             <asp:Button ID="btnSave" runat="server" Text="Save" class="btn" OnClick="btnSave_Click" />
+                            <asp:Button ID="btnApprove" runat="server" Text="Approve Report" OnClick="btnApprove_Click" CssClass="btn" />
                         </td>
                     </tr>
                 </table>

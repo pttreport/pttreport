@@ -116,7 +116,7 @@ namespace ptt_report
                     var result = Serv.SetupSession(txtusername.Text, txtpassword.Text);
                     if (result)
                     {
-                        var user = Serv.GetUserPTT_info("sp570059");
+                        var user = Serv.GetUserPTT_info(txtusername.Text);
                         if (user.Rows.Count != 0)
                         {
                             HttpContext.Current.Session["assetuserid"] = user.Rows[0]["CODE"].ToString();
@@ -128,8 +128,55 @@ namespace ptt_report
 
                             HttpContext.Current.Session["assetrole"] = "";// user.Rows[0]["unitname"].ToString();
 
-                            Response.Redirect("~/home.aspx");
+                            var autho = Serv.GetUserPTT_autho(txtusername.Text);
+                            if (autho.Rows.Count != 0)
+                            {
+                                if (autho.Rows[0]["authorize1"].ToString() == "y" || autho.Rows[0]["authorize2"].ToString() == "y" || autho.Rows[0]["authorize3"].ToString() == "y" || autho.Rows[0]["authorize4"].ToString() == "y")
+                                {
+                                    HttpContext.Current.Session["assetdownload"] = "y";
+                                }
+                                else
+                                {
+                                    HttpContext.Current.Session["assetdownload"] = "n";
+                                }
+
+                                if (autho.Rows[0]["authorize2"].ToString() == "y" || autho.Rows[0]["authorize3"].ToString() == "y" || autho.Rows[0]["authorize4"].ToString() == "y")
+                                {
+                                    HttpContext.Current.Session["assetmanagement"] = "y";
+                                }
+                                else
+                                {
+                                    HttpContext.Current.Session["assetmanagement"] = "n";
+                                }
+
+                                if (autho.Rows[0]["authorize3"].ToString() == "y" || autho.Rows[0]["authorize4"].ToString() == "y")
+                                {
+                                    HttpContext.Current.Session["assetapprove"] = "y";
+                                }
+                                else
+                                {
+                                    HttpContext.Current.Session["assetapprove"] = "n";
+                                }
+
+                                if (autho.Rows[0]["authorize4"].ToString() == "y")
+                                {
+                                    HttpContext.Current.Session["assetsysmanage"] = "y";
+                                }
+                                else
+                                {
+                                    HttpContext.Current.Session["assetsysmanage"] = "n";
+                                }
+
+
+                                Response.Redirect("~/home.aspx");
+                            }
+                            else
+                            {
+                                POPUPMSG("Username ยังไม่ถูกตั้งสิทธิ์ในระบบ");
+                                return;
+                            }
                         }
+
                     }
                     else
                     {

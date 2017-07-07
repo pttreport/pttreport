@@ -25,6 +25,15 @@ namespace ptt_report
                 }
                 else
                 {
+                    if (!string.IsNullOrEmpty(Request.QueryString["param"]))
+                    {
+                        hddrep_type.Value = Request.QueryString["param"].ToString();
+                    }
+                    else
+                    {
+                        hddrep_type.Value = "";
+                    }
+
                     bing_rep_tmp();
                 }
             }
@@ -32,7 +41,7 @@ namespace ptt_report
 
         protected void bing_rep_tmp()
         {
-            var x = Serv.GetRep_HisALL();
+            var x = Serv.GetRep_HisALL(hddrep_type.Value);
             if (x.Rows.Count != 0)
             {
                 gridview_rep_tmp.DataSource = x;
@@ -52,6 +61,13 @@ namespace ptt_report
             HiddenField hddfile_path = (HiddenField)row.FindControl("hddfile_path");
 
             Response.Redirect(hddfile_path.Value);
+        }
+
+        protected void gridview_rep_tmp_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+
+            gridview_rep_tmp.PageIndex = e.NewPageIndex;
+            this.bing_rep_tmp();
         }
     }
 }

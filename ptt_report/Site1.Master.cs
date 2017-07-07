@@ -19,8 +19,24 @@ namespace ptt_report
             else
             {
                 lbname.Text = HttpContext.Current.Session["assetfname"].ToString() + " " + HttpContext.Current.Session["assetlname"].ToString();
-                lbposision.Text = HttpContext.Current.Session["assetposision"].ToString();
-                lbrole.Text = HttpContext.Current.Session["assetrole"].ToString();
+
+                if (HttpContext.Current.Session["assetposision"].ToString() != "")
+                {
+                    lbposision.Text = " Position : " + HttpContext.Current.Session["assetposision"].ToString();
+                }
+                else
+                {
+                    lbposision.Text = "";
+                }
+
+                if (HttpContext.Current.Session["assetrole"].ToString() != "")
+                {
+                    lbrole.Text = " Role : " + HttpContext.Current.Session["assetrole"].ToString();
+                }
+                else
+                {
+                    lbrole.Text = "";
+                }
 
                 if (HttpContext.Current.Session["asset_who"].ToString() == "ptt")
                 {
@@ -74,7 +90,12 @@ namespace ptt_report
 
         protected void btnTPReport_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/permit.aspx");
+            Response.Redirect("~/t_p_rep.aspx");
+        }
+
+        protected void btnPIReport_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/pipeline_report.aspx");
         }
     }
 }

@@ -7,30 +7,32 @@
         Quarterly Report
     </h3>
     <div class="serchRed">
-        <table >
+        <table style="width:100%">
             <tr>
-                <td>Year : 
+                <td style="width:4%">Year : 
                 </td>
-                <td>
+                <td style="width:6%">
                     <asp:DropDownList ID="ddlyear" runat="server" OnSelectedIndexChanged="ddlyear_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
                 </td>
-                <td>Quarter : 
+                <td style="width:6%">Quarter : 
                 </td>
-                <td>
+                <td style="width:3%">
                     <asp:DropDownList ID="ddlquarter" runat="server" OnSelectedIndexChanged="ddlquarter_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
                 </td>
-                <td>Customer Type : 
+                <td style="width:10%">Customer Type : 
                 </td>
-                <td>
+                <td style="width:10%">
                     <asp:DropDownList ID="ddlcustype" runat="server" OnSelectedIndexChanged="ddlcustype_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
                 </td>
-                <td>Status : 
+                <td style="width:5%">Status : 
                 </td>
-                <td>
+                <td style="width:6%">
                     <asp:DropDownList ID="ddlstatus" runat="server" OnSelectedIndexChanged="ddlstatus_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
                 </td>
+                <td style="width:46%">
+                </td>
                 <td>
-                    <asp:Button ID="btncreate" runat="server" Text="Create" OnClick="btncreate_Click" />
+                    <asp:Button ID="btncreate" runat="server" Text="Create" OnClick="btncreate_Click" class="btn btn-gray" />
                 </td>
             </tr>
         </table>
@@ -38,7 +40,7 @@
     <div>
         <asp:GridView ID="GridView_rep_list" runat="server" AutoGenerateColumns="false" AllowPaging="true"
             OnPageIndexChanging="GridView_rep_list_PageIndexChanging" OnRowDataBound="GridView_rep_list_RowDataBound"
-            ShowFooter="false" PageSize="3" class="tb_red">
+            ShowFooter="false" class="tb_red">
             <Columns>
 
                 <asp:BoundField DataField="year" HeaderText="Year" />
@@ -60,9 +62,9 @@
                         <asp:HiddenField ID="hddquarter" runat="server" Value='<%# Eval("quarter") %>' />
                         <asp:HiddenField ID="hddcustype" runat="server" Value='<%# Eval("cus_type") %>' />
 
-                        <asp:Button ID="btnmanage" runat="server" Text="Manage" OnClick="btnmanage_Click" Visible="false" />
-                        <asp:Button ID="btndownload" runat="server" Text="Download"  Visible="false"/>
-                        <asp:Button ID="btndelete" runat="server" Text="Delete" OnClick="btndelete_Click" Visible="false" />
+                        <asp:Button ID="btnmanage" runat="server" Text="Manage" OnClick="btnmanage_Click" Visible="false" CssClass="btn btn-info" />
+                        <asp:Button ID="btndownload" runat="server" Text="Download"  Visible="false" CssClass="btn btn-info"/>
+                        <asp:Button ID="btndelete" runat="server" Text="Delete" OnClick="btndelete_Click" Visible="false" CssClass="btn btn-danger"  />
                     </ItemTemplate>
                 </asp:TemplateField>
 

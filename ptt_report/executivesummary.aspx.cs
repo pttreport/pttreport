@@ -51,7 +51,7 @@ namespace ptt_report
         protected void bind_default()
         {
             var rep_doc = Serv.GetRep_HisALL();
-            if(rep_doc.Rows.Count != 0)
+            if (rep_doc.Rows.Count != 0)
             {
                 hddfile_path.Value = rep_doc.Rows[0]["uri"].ToString();
             }
@@ -576,7 +576,7 @@ namespace ptt_report
                         //=======================================================================================
 
                         sel.Find.Text = "[qa0]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["partolling_info1"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["partolling_info1"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -585,7 +585,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa1]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["partolling_info2"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["partolling_info2"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -594,7 +594,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa2]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["partolling_info3"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["partolling_info3"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -603,7 +603,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa3]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["rov_info1"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["rov_info1"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -612,7 +612,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa4]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["rov_info2"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["rov_info2"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -621,7 +621,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa5]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["rov_info3"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["rov_info3"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -630,7 +630,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa6]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["da_info1"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["da_info1"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -639,7 +639,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa7]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["da_info2"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["da_info2"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -648,7 +648,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa8]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["da_info3"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["da_info3"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -657,7 +657,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa9]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["erosion_info1"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["erosion_info1"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -666,7 +666,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa10]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["erosion_info2"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["erosion_info2"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -675,7 +675,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa11]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["erosion_info3"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["erosion_info3"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -684,7 +684,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa12]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["subsite_info1"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["subsite_info1"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -693,7 +693,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa13]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["subsite_info2"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["subsite_info2"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -702,7 +702,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa14]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["subsite_info3"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["subsite_info3"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -711,7 +711,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa15]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["exterCorr_info1"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["exterCorr_info1"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -720,7 +720,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa16]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["exterCorr_info2"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["exterCorr_info2"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -729,7 +729,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa17]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["exterCorr_info3"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["exterCorr_info3"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -738,7 +738,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa18]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["exterCorr_info4"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["exterCorr_info4"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -747,7 +747,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa19]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["interCorr_info1"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["interCorr_info1"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -756,7 +756,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa20]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["interCorr_info2"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["interCorr_info2"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -765,7 +765,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa21]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["interCorr_info3"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["interCorr_info3"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -774,7 +774,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa22]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["interCorr_info4"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["interCorr_info4"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -783,7 +783,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa23]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["da2_info1"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["da2_info1"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -792,7 +792,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa24]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["da2_info2"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["da2_info2"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -801,7 +801,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa25]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["da2_info3"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["da2_info3"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -810,7 +810,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa26]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["offshore_info1"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["offshore_info1"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -819,7 +819,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa27]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["offshore_info2"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["offshore_info2"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -828,7 +828,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa28]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["offshore_info3"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["offshore_info3"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -837,7 +837,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa29]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["offshore2_info1"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["offshore2_info1"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -846,7 +846,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa30]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["offshore2_info2"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["offshore2_info2"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -855,7 +855,7 @@ namespace ptt_report
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                         sel.Find.Text = "[qa31]";
-                        sel.Find.Replacement.Text = rep_a.Rows[0]["offshore2_info3"].ToString().Replace("\r\n","\v");
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["offshore2_info3"].ToString().Replace("\r\n", "\v");
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
                         sel.Find.Format = false;
@@ -869,7 +869,7 @@ namespace ptt_report
                             if (executive.Rows.Count == 5)
                             {
                                 sel.Find.Text = "[qa32]";
-                                sel.Find.Replacement.Text = executive.Rows[0]["project_name"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[0]["project_name"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -878,7 +878,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa33]";
-                                sel.Find.Replacement.Text = executive.Rows[0]["other_info1"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[0]["other_info1"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -887,7 +887,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa34]";
-                                sel.Find.Replacement.Text = executive.Rows[0]["other_info2"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[0]["other_info2"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -896,7 +896,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa35]";
-                                sel.Find.Replacement.Text = executive.Rows[0]["other_info3"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[0]["other_info3"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -905,7 +905,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa36]";
-                                sel.Find.Replacement.Text = executive.Rows[1]["other_info1"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[1]["other_info1"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -914,7 +914,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa37]";
-                                sel.Find.Replacement.Text = executive.Rows[1]["other_info2"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[1]["other_info2"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -923,7 +923,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa38]";
-                                sel.Find.Replacement.Text = executive.Rows[1]["other_info3"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[1]["other_info3"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -932,7 +932,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa39]";
-                                sel.Find.Replacement.Text = executive.Rows[2]["other_info1"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[2]["other_info1"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -941,7 +941,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa40]";
-                                sel.Find.Replacement.Text = executive.Rows[2]["other_info2"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[2]["other_info2"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -950,7 +950,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa41]";
-                                sel.Find.Replacement.Text = executive.Rows[2]["other_info3"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[2]["other_info3"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -964,7 +964,7 @@ namespace ptt_report
                             else if (executive.Rows.Count == 4)
                             {
                                 sel.Find.Text = "[qa32]";
-                                sel.Find.Replacement.Text = executive.Rows[0]["project_name"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[0]["project_name"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -973,7 +973,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa33]";
-                                sel.Find.Replacement.Text = executive.Rows[0]["other_info1"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[0]["other_info1"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -982,7 +982,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa34]";
-                                sel.Find.Replacement.Text = executive.Rows[0]["other_info2"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[0]["other_info2"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -991,7 +991,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa35]";
-                                sel.Find.Replacement.Text = executive.Rows[0]["other_info3"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[0]["other_info3"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -1000,7 +1000,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa36]";
-                                sel.Find.Replacement.Text = executive.Rows[1]["other_info1"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[1]["other_info1"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -1009,7 +1009,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa37]";
-                                sel.Find.Replacement.Text = executive.Rows[1]["other_info2"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[1]["other_info2"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -1018,7 +1018,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa38]";
-                                sel.Find.Replacement.Text = executive.Rows[1]["other_info3"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[1]["other_info3"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -1027,7 +1027,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa39]";
-                                sel.Find.Replacement.Text = executive.Rows[2]["other_info1"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[2]["other_info1"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -1036,7 +1036,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa40]";
-                                sel.Find.Replacement.Text = executive.Rows[2]["other_info2"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[2]["other_info2"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -1045,7 +1045,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa41]";
-                                sel.Find.Replacement.Text = executive.Rows[2]["other_info3"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[2]["other_info3"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -1057,7 +1057,7 @@ namespace ptt_report
                             else if (executive.Rows.Count == 3)
                             {
                                 sel.Find.Text = "[qa32]";
-                                sel.Find.Replacement.Text = executive.Rows[0]["project_name"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[0]["project_name"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -1066,7 +1066,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa33]";
-                                sel.Find.Replacement.Text = executive.Rows[0]["other_info1"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[0]["other_info1"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -1075,7 +1075,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa34]";
-                                sel.Find.Replacement.Text = executive.Rows[0]["other_info2"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[0]["other_info2"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -1084,7 +1084,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa35]";
-                                sel.Find.Replacement.Text = executive.Rows[0]["other_info3"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[0]["other_info3"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -1093,7 +1093,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa36]";
-                                sel.Find.Replacement.Text = executive.Rows[1]["other_info1"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[1]["other_info1"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -1102,7 +1102,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa37]";
-                                sel.Find.Replacement.Text = executive.Rows[1]["other_info2"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[1]["other_info2"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -1111,7 +1111,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa38]";
-                                sel.Find.Replacement.Text = executive.Rows[1]["other_info3"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[1]["other_info3"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -1120,7 +1120,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa39]";
-                                sel.Find.Replacement.Text = executive.Rows[2]["other_info1"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[2]["other_info1"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -1129,7 +1129,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa40]";
-                                sel.Find.Replacement.Text = executive.Rows[2]["other_info2"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[2]["other_info2"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -1138,7 +1138,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa41]";
-                                sel.Find.Replacement.Text = executive.Rows[2]["other_info3"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[2]["other_info3"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -1151,7 +1151,7 @@ namespace ptt_report
                             else if (executive.Rows.Count == 2)
                             {
                                 sel.Find.Text = "[qa32]";
-                                sel.Find.Replacement.Text = executive.Rows[0]["project_name"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[0]["project_name"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -1160,7 +1160,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa33]";
-                                sel.Find.Replacement.Text = executive.Rows[0]["other_info1"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[0]["other_info1"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -1169,7 +1169,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa34]";
-                                sel.Find.Replacement.Text = executive.Rows[0]["other_info2"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[0]["other_info2"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -1178,7 +1178,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa35]";
-                                sel.Find.Replacement.Text = executive.Rows[0]["other_info3"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[0]["other_info3"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -1187,7 +1187,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa36]";
-                                sel.Find.Replacement.Text = executive.Rows[1]["other_info1"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[1]["other_info1"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -1196,7 +1196,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa37]";
-                                sel.Find.Replacement.Text = executive.Rows[1]["other_info2"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[1]["other_info2"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -1205,7 +1205,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa38]";
-                                sel.Find.Replacement.Text = executive.Rows[1]["other_info3"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[1]["other_info3"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -1244,7 +1244,7 @@ namespace ptt_report
                             else if (executive.Rows.Count == 1)
                             {
                                 sel.Find.Text = "[qa32]";
-                                sel.Find.Replacement.Text = executive.Rows[0]["project_name"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[0]["project_name"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -1253,7 +1253,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa33]";
-                                sel.Find.Replacement.Text = executive.Rows[0]["other_info1"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[0]["other_info1"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -1262,7 +1262,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa34]";
-                                sel.Find.Replacement.Text = executive.Rows[0]["other_info2"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[0]["other_info2"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -1271,7 +1271,7 @@ namespace ptt_report
                                 sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
                                 sel.Find.Text = "[qa35]";
-                                sel.Find.Replacement.Text = executive.Rows[0]["other_info3"].ToString().Replace("\r\n","\v");
+                                sel.Find.Replacement.Text = executive.Rows[0]["other_info3"].ToString().Replace("\r\n", "\v");
                                 sel.Find.Wrap = WdFindWrap.wdFindContinue;
                                 sel.Find.Forward = true;
                                 sel.Find.Format = false;
@@ -1341,15 +1341,18 @@ namespace ptt_report
                     if (rep_b.Rows.Count != 0)
                     {
                         var img = Server.MapPath(rep_b.Rows[0]["groung_img_path"].ToString());
+                        if (rep_b.Rows[0]["groung_img_path"].ToString() != "")
+                        {
+                            sel.Find.Text = "[imgb1]";
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceNone);
+                            sel.Range.Select();
+                            sel.InlineShapes.AddPicture(
+                                FileName: img,
+                                LinkToFile: false,
+                                SaveWithDocument: true
+                                );
+                        }
 
-                        sel.Find.Text = "[imgb1]";
-                        sel.Find.Execute(Replace: WdReplace.wdReplaceNone);
-                        sel.Range.Select();
-                        sel.InlineShapes.AddPicture(
-                            FileName: img,
-                            LinkToFile: false,
-                            SaveWithDocument: true
-                            );
 
                         sel.Find.Text = "[b2]";
                         sel.Find.Replacement.Text = rep_b.Rows[0]["aerial_result"].ToString().Replace("\r\n", "\v");
@@ -1466,47 +1469,50 @@ namespace ptt_report
                         sel.Find.MatchCase = false;
                         sel.Find.MatchWholeWord = false;
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+                        
 
-                    }
-
-                    var sub_da = Serv.GetDARep_sub(da.Rows[0]["id"].ToString());
-                    if (sub_da.Rows.Count != 0)
-                    {
-                        Microsoft.Office.Interop.Word.Table axTable;
-
-                        sel.Find.Text = "[table1]";
-                        sel.Find.Execute(Replace: WdReplace.wdReplaceNone);
-                        sel.Range.Select();
-                        axTable = sel.Tables.Add(app.Selection.Range, sub_da.Rows.Count, 6);
-
-                        axTable.Borders.InsideLineStyle = WdLineStyle.wdLineStyleSingle;
-                        axTable.Borders.OutsideLineStyle = WdLineStyle.wdLineStyleSingle;
-                        // This is For Header columns
-                        for (int j = 1; j <= sub_da.Rows.Count; j++)
+                        var sub_da = Serv.GetDARep_sub(da.Rows[0]["id"].ToString());
+                        if (sub_da.Rows.Count != 0)
                         {
-                            if (j == 1)
+                            Microsoft.Office.Interop.Word.Table axTable;
+
+                            sel.Find.Text = "[table1]";
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceNone);
+                            sel.Range.Select();
+                            axTable = sel.Tables.Add(app.Selection.Range, sub_da.Rows.Count + 1, 6);
+
+                            axTable.Borders.InsideLineStyle = WdLineStyle.wdLineStyleSingle;
+                            axTable.Borders.OutsideLineStyle = WdLineStyle.wdLineStyleSingle;
+
+                            axTable.Cell(1, 1).Range.Text = "เขต";
+                            axTable.Cell(1, 2).Range.Text = "เส้นท่อ,ตำแหน่ง";
+                            axTable.Cell(1, 3).Range.Text = "ขุดซ่อมเนื่องจาก";
+                            axTable.Cell(1, 4).Range.Text = "Length(m)";
+                            axTable.Cell(1, 5).Range.Text = "% Actual";
+                            axTable.Cell(1, 6).Range.Text = "Plan/Status";
+
+                            int start_row = 2;
+                            // This is For Header columns
+                            for (int j = 0; j <= sub_da.Rows.Count - 1; j++)
                             {
-                                axTable.Cell(j, 1).Range.Text = "เขต";
-                                axTable.Cell(j, 2).Range.Text = "เส้นท่อ,ตำแหน่ง";
-                                axTable.Cell(j, 3).Range.Text = "ขุดซ่อมเนื่องจาก";
-                                axTable.Cell(j, 4).Range.Text = "Length(m)";
-                                axTable.Cell(j, 5).Range.Text = "% Actual";
-                                axTable.Cell(j, 6).Range.Text = "Plan/Status";
+                                axTable.Cell(start_row, 1).Range.Text = sub_da.Rows[j]["dainfo1"].ToString();
+                                axTable.Cell(start_row, 2).Range.Text = sub_da.Rows[j]["dainfo2"].ToString();
+                                axTable.Cell(start_row, 3).Range.Text = sub_da.Rows[j]["dainfo3"].ToString();
+                                axTable.Cell(start_row, 4).Range.Text = sub_da.Rows[j]["dainfo4"].ToString();
+                                axTable.Cell(start_row, 5).Range.Text = sub_da.Rows[j]["dainfo5"].ToString();
+                                axTable.Cell(start_row, 6).Range.Text = sub_da.Rows[j]["dainfo6"].ToString();
+
+                                start_row++;
                             }
-                            else
-                            {
-                                axTable.Cell(j, 1).Range.Text = sub_da.Rows[j - 1]["dainfo1"].ToString();
-                                axTable.Cell(j, 2).Range.Text = sub_da.Rows[j - 1]["dainfo2"].ToString();
-                                axTable.Cell(j, 3).Range.Text = sub_da.Rows[j - 1]["dainfo3"].ToString();
-                                axTable.Cell(j, 4).Range.Text = sub_da.Rows[j - 1]["dainfo4"].ToString();
-                                axTable.Cell(j, 5).Range.Text = sub_da.Rows[j - 1]["dainfo5"].ToString();
-                                axTable.Cell(j, 6).Range.Text = sub_da.Rows[j - 1]["dainfo6"].ToString();
-                            }
+
                         }
 
                     }
 
+
+
                     //=================================================================================
+
                     //============================= Soil =============================================
 
                     var soil = Serv.GetExistRep3(hddmas_rep_id.Value);
@@ -1560,35 +1566,1253 @@ namespace ptt_report
                         var soil_sub = Serv.GetExistRep3_sub(soil.Rows[0]["id"].ToString());
                         if (soil_sub.Rows.Count != 0)
                         {
-                            Microsoft.Office.Interop.Word.Table axTable;
+                            Microsoft.Office.Interop.Word.Table axTable2;
 
                             sel.Find.Text = "[table2]";
                             sel.Find.Execute(Replace: WdReplace.wdReplaceNone);
                             sel.Range.Select();
-                            axTable = sel.Tables.Add(app.Selection.Range, soil_sub.Rows.Count, 4);
+                            axTable2 = sel.Tables.Add(app.Selection.Range, soil_sub.Rows.Count + 1, 4);
 
-                            axTable.Borders.InsideLineStyle = WdLineStyle.wdLineStyleSingle;
-                            axTable.Borders.OutsideLineStyle = WdLineStyle.wdLineStyleSingle;
+                            axTable2.Borders.InsideLineStyle = WdLineStyle.wdLineStyleSingle;
+                            axTable2.Borders.OutsideLineStyle = WdLineStyle.wdLineStyleSingle;
 
-                            for (int j = 1; j <= soil_sub.Rows.Count; j++)
+                            axTable2.Cell(1, 1).Range.Text = "Region";
+                            axTable2.Cell(1, 2).Range.Text = "เส้นท่อ,ตำแหน่ง";
+                            axTable2.Cell(1, 3).Range.Text = "Progress";
+                            axTable2.Cell(1, 4).Range.Text = "ผลการดำเนินงาน/สิ่งที่ไม่เป็นไปตามแผน/ปัญหาอุปสรรค/แนวทางแก้ไข";
+
+                            int start_row = 2;
+
+                            for (int j = 0; j <= soil_sub.Rows.Count - 1; j++)
                             {
-                                if (j == 1)
-                                {
-                                    axTable.Cell(j, 1).Range.Text = "Region";
-                                    axTable.Cell(j, 2).Range.Text = "เส้นท่อ,ตำแหน่ง";
-                                    axTable.Cell(j, 3).Range.Text = "Progress";
-                                    axTable.Cell(j, 4).Range.Text = "ผลการดำเนินงาน/สิ่งที่ไม่เป็นไปตามแผน/ปัญหาอุปสรรค/แนวทางแก้ไข";
-                                }
-                                else
-                                {
-                                    axTable.Cell(j, 1).Range.Text = soil_sub.Rows[j - 1]["d3"].ToString();
-                                    axTable.Cell(j, 2).Range.Text = soil_sub.Rows[j - 1]["d4"].ToString();
-                                    axTable.Cell(j, 3).Range.Text = soil_sub.Rows[j - 1]["d7"].ToString();
-                                    axTable.Cell(j, 4).Range.Text = soil_sub.Rows[j - 1]["d8"].ToString();
-                                }
+                                axTable2.Cell(start_row, 1).Range.Text = soil_sub.Rows[j]["d3"].ToString();
+                                axTable2.Cell(start_row, 2).Range.Text = soil_sub.Rows[j]["d4"].ToString();
+                                axTable2.Cell(start_row, 3).Range.Text = soil_sub.Rows[j]["d7"].ToString();
+                                axTable2.Cell(start_row, 4).Range.Text = soil_sub.Rows[j]["d8"].ToString();
+
+                                start_row = start_row + 1;
+
                             }
                         }
                     }
+
+                    #region E
+                    ///=========================== E ==============================
+                    ///
+                    var exist = Serv.GetExistRep4(hddmas_rep_id.Value);
+                    if (exist.Rows.Count != 0)
+                    {
+
+                        sel.Find.Text = "[e7]";
+                        sel.Find.Replacement.Text = exist.Rows[0]["progressresult"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[e8]";
+                        sel.Find.Replacement.Text = exist.Rows[0]["futureplan"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+
+                        sel.Find.Text = "[e9]";
+                        sel.Find.Replacement.Text = exist.Rows[0]["problem"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        var sub = Serv.GetExistRep4_sub(soil.Rows[0]["id"].ToString());
+                        if (sub.Rows.Count != 0)
+                        {
+
+                            Microsoft.Office.Interop.Word.Table axTable2;
+
+                            sel.Find.Text = "[table3]";
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceNone);
+                            sel.Range.Select();
+                            axTable2 = sel.Tables.Add(app.Selection.Range, sub.Rows.Count + 1, 5);
+
+                            axTable2.Borders.InsideLineStyle = WdLineStyle.wdLineStyleSingle;
+                            axTable2.Borders.OutsideLineStyle = WdLineStyle.wdLineStyleSingle;
+
+                            axTable2.Cell(1, 1).Range.Text = "Region";
+                            axTable2.Cell(1, 2).Range.Text = "Station";
+                            axTable2.Cell(1, 3).Range.Text = "Action";
+                            axTable2.Cell(1, 4).Range.Text = "Progress";
+                            axTable2.Cell(1, 5).Range.Text = "ผลการดำเนินงาน/สิ่งที่ไม่เป็นไปตามแผน/ปัญหาอุปสรรค/แนวทางแก้ไข";
+
+                            int start_row = 2;
+
+                            for (int j = 0; j <= sub.Rows.Count - 1; j++)
+                            {
+                                axTable2.Cell(start_row, 1).Range.Text = sub.Rows[j]["area"].ToString();
+                                axTable2.Cell(start_row, 2).Range.Text = sub.Rows[j]["station"].ToString() + " " + sub.Rows[j]["pipe"].ToString();
+                                axTable2.Cell(start_row, 3).Range.Text = sub.Rows[j]["action"].ToString();
+                                axTable2.Cell(start_row, 4).Range.Text = sub.Rows[j]["progress"].ToString();
+                                axTable2.Cell(start_row, 5).Range.Text = sub.Rows[j]["remark"].ToString();
+                                start_row = start_row + 1;
+
+                            }
+                        }
+                    }
+                    #endregion
+                    #region F
+                    var rov = Serv.GetExistRep5(hddmas_rep_id.Value);
+                    if (rov.Rows.Count != 0)
+                    {
+                        sel.Find.Text = "[f1]";
+                        sel.Find.Replacement.Text = rov.Rows[0]["planwork"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[f2]";
+                        sel.Find.Replacement.Text = rov.Rows[0]["workresult"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[f3]";
+                        sel.Find.Replacement.Text = rov.Rows[0]["planworkfuture"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[f4]";
+                        sel.Find.Replacement.Text = rov.Rows[0]["problem"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                    }
+                    #endregion
+
+                    #region G
+                    var exist_g = Serv.GetExistRep6(hddmas_rep_id.Value);
+                    if (exist_g.Rows.Count != 0)
+                    {
+                        sel.Find.Text = "[g1]";
+                        sel.Find.Replacement.Text = exist_g.Rows[0]["planwork"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[g2]";
+                        sel.Find.Replacement.Text = exist_g.Rows[0]["workresult"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[g3]";
+                        sel.Find.Replacement.Text = exist_g.Rows[0]["planworkfuture"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[g4]";
+                        sel.Find.Replacement.Text = exist_g.Rows[0]["problem"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                    }
+                    #endregion
+
+                    #region h
+                    var exist_h = Serv.GetExistRep_h(hddmas_rep_id.Value);
+                    if (exist_h.Rows.Count != 0)
+                    {
+                        sel.Find.Text = "[h1]";
+                        sel.Find.Replacement.Text = exist_h.Rows[0]["workresult"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[h2]";
+                        sel.Find.Replacement.Text = exist_h.Rows[0]["pspotentialsurvey"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[h3]";
+                        sel.Find.Replacement.Text = exist_h.Rows[0]["bondboxinspection"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[h4]";
+                        sel.Find.Replacement.Text = exist_h.Rows[0]["rectifierispection"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[h5]";
+                        sel.Find.Replacement.Text = exist_h.Rows[0]["insulatingjoint"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+
+                        var subCIPSStatus = Serv.GetExistRep_sub_cipsstatus(exist_h.Rows[0]["id"].ToString());
+
+                        if (subCIPSStatus.Rows.Count != 0)
+                        {
+                            Microsoft.Office.Interop.Word.Table axTable2;
+
+                            sel.Find.Text = "[table4]";
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceNone);
+                            sel.Range.Select();
+                            sel.Find.Forward = true;
+                            axTable2 = sel.Tables.Add(app.Selection.Range, subCIPSStatus.Rows.Count + 1, 3);
+
+                            axTable2.Borders.InsideLineStyle = WdLineStyle.wdLineStyleSingle;
+                            axTable2.Borders.OutsideLineStyle = WdLineStyle.wdLineStyleSingle;
+
+                            axTable2.Cell(1, 1).Range.Text = "Route Code";
+                            axTable2.Cell(1, 2).Range.Text = "Pipeline name";
+                            axTable2.Cell(1, 3).Range.Text = "สถานะ";
+
+                            int start_row = 2;
+
+                            for (int j = 0; j <= subCIPSStatus.Rows.Count - 1; j++)
+                            {
+                                axTable2.Cell(start_row, 1).Range.Text = subCIPSStatus.Rows[j]["routecode"].ToString();
+                                axTable2.Cell(start_row, 2).Range.Text = subCIPSStatus.Rows[j]["pipelinename"].ToString();
+                                axTable2.Cell(start_row, 3).Range.Text = subCIPSStatus.Rows[j]["status"].ToString();
+
+                                start_row = start_row + 1;
+                            }
+                        }
+
+                        var image_h13 = Server.MapPath(exist_h.Rows[0]["ecresultfilepath"].ToString());
+                        if (exist_h.Rows[0]["ecresultfilepath"].ToString() != "")
+                        {
+                            sel.Find.Text = "[h13]";
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceNone);
+                            sel.Range.Select();
+                            sel.Find.Forward = true;
+                            sel.InlineShapes.AddPicture(
+                                FileName: image_h13,
+                                LinkToFile: false,
+                                SaveWithDocument: true
+                                );
+                        }
+
+
+                        var image_h14 = Server.MapPath(exist_h.Rows[0]["cdresultfilepath"].ToString());
+                        if (exist_h.Rows[0]["cdresultfilepath"].ToString() != "")
+                        {
+                            sel.Find.Text = "[h14]";
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceNone);
+                            sel.Range.Select();
+                            sel.Find.Forward = true;
+                            sel.InlineShapes.AddPicture(
+                                FileName: image_h14,
+                                LinkToFile: false,
+                                SaveWithDocument: true
+                                );
+                        }
+
+
+
+                        var subCIPSStatusActivity = Serv.GetExistRep_sub_cipsstatus_activity(exist_h.Rows[0]["id"].ToString());
+
+                        if (subCIPSStatusActivity.Rows.Count != 0)
+                        {
+                            Microsoft.Office.Interop.Word.Table axTable3;
+
+                            sel.Find.Text = "[table5]";
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceNone);
+                            sel.Range.Select();
+                            sel.Find.Forward = true;
+                            axTable3 = sel.Tables.Add(app.Selection.Range, subCIPSStatusActivity.Rows.Count + 1, 3);
+
+                            axTable3.Borders.InsideLineStyle = WdLineStyle.wdLineStyleSingle;
+                            axTable3.Borders.OutsideLineStyle = WdLineStyle.wdLineStyleSingle;
+
+                            axTable3.Cell(1, 1).Range.Text = "Active";
+                            axTable3.Cell(1, 2).Range.Text = "แผนดำเนินการ";
+                            axTable3.Cell(1, 3).Range.Text = "คาดการเสร็จสิ้น";
+
+                            int start_row = 2;
+
+                            for (int j = 0; j <= subCIPSStatusActivity.Rows.Count - 1; j++)
+                            {
+                                axTable3.Cell(start_row, 1).Range.Text = subCIPSStatusActivity.Rows[j]["activity"].ToString();
+                                axTable3.Cell(start_row, 2).Range.Text = subCIPSStatusActivity.Rows[j]["progress"].ToString();
+                                axTable3.Cell(start_row, 3).Range.Text = subCIPSStatusActivity.Rows[j]["estimateplan"].ToString();
+
+                                start_row = start_row + 1;
+                            }
+                        }
+
+
+                        sel.Find.Text = "[h15]";
+                        sel.Find.Replacement.Text = exist_h.Rows[0]["planworkfuture"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[h19]";
+                        sel.Find.Replacement.Text = exist_h.Rows[0]["problem"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        //var subCathodic = Serv.GetExistRep_sub_cathodicresult(exist_h.Rows[0]["id"].ToString());
+
+                        //if (subCathodic.Rows.Count != 0)
+                        //{
+                        //    gvCathodic.DataSource = subCathodic;
+                        //    gvCathodic.DataBind();
+                        //}
+                    }
+
+
+                    #endregion
+
+                    #region i
+                    var exist_i = Serv.GetExistRep_i(hddmas_rep_id.Value);
+                    if (exist_i.Rows.Count != 0)
+                    {
+                        sel.Find.Text = "[i1]";
+                        sel.Find.Replacement.Text = exist_i.Rows[0]["planwork"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        //txtRoutecode.Text = exist_i.Rows[0]["pwroutecode"].ToString();
+                        //txtDimeter.Text = exist_i.Rows[0]["pwdimeter"].ToString();
+                        //txtPipeline.Text = exist_i.Rows[0]["pwpipelinesection"].ToString();
+                        //txtNumberOfPig.Text = exist_i.Rows[0]["pwnumberpig"].ToString();
+                        //txtPlanning.Text = exist_i.Rows[0]["pwplaning"].ToString();
+
+                        sel.Find.Text = "[i7]";
+                        sel.Find.Replacement.Text = exist_i.Rows[0]["planwork"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        var subPig = Serv.GetExistRep_sub_pigresult(exist_i.Rows[0]["id"].ToString());
+
+                        if (subPig.Rows.Count != 0)
+                        {
+                            Microsoft.Office.Interop.Word.Table axTable2;
+
+                            sel.Find.Text = "[table6]";
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceNone);
+                            sel.Range.Select();
+                            axTable2 = sel.Tables.Add(app.Selection.Range, subPig.Rows.Count + 1, 2);
+
+
+                            int start_row = 1;
+
+                            for (int j = 0; j <= subPig.Rows.Count - 1; j++)
+                            {
+                                axTable2.Cell(start_row, 1).Range.Text = subPig.Rows[j]["routecode"].ToString() + " " + subPig.Rows[j]["sectionlength"].ToString();
+                                axTable2.Cell(start_row, 2).Range.Text = subPig.Rows[j]["status"].ToString();
+
+                                start_row = start_row + 1;
+                            }
+                        }
+
+
+                        sel.Find.Text = "[i11]";
+                        sel.Find.Replacement.Text = exist_i.Rows[0]["notethat"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[i12]";
+                        sel.Find.Replacement.Text = exist_i.Rows[0]["froutecode"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[i13]";
+                        sel.Find.Replacement.Text = exist_i.Rows[0]["fdimeter"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[i14]";
+                        sel.Find.Replacement.Text = exist_i.Rows[0]["fpipelinesection"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[i15]";
+                        sel.Find.Replacement.Text = exist_i.Rows[0]["fnumberpig"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[i16]";
+                        sel.Find.Replacement.Text = exist_i.Rows[0]["fplaning"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[i17]";
+                        sel.Find.Replacement.Text = exist_i.Rows[0]["problem"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+
+
+                        var subReplan = Serv.GetExistRep_sub_replan(exist_i.Rows[0]["id"].ToString());
+
+                        if (subReplan.Rows.Count != 0)
+                        {
+                            Microsoft.Office.Interop.Word.Table axTable2;
+
+                            sel.Find.Text = "[table8]";
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceNone);
+                            sel.Range.Select();
+                            axTable2 = sel.Tables.Add(app.Selection.Range, subReplan.Rows.Count + 1, 3);
+
+                            axTable2.Borders.InsideLineStyle = WdLineStyle.wdLineStyleSingle;
+                            axTable2.Borders.OutsideLineStyle = WdLineStyle.wdLineStyleSingle;
+
+                            axTable2.Cell(1, 1).Range.Text = "เส้นท่อ";
+                            axTable2.Cell(1, 2).Range.Text = "ปรับแผน";
+                            axTable2.Cell(1, 3).Range.Text = "รายละเอียด";
+
+                            int start_row = 2;
+
+                            for (int j = 0; j <= subReplan.Rows.Count - 1; j++)
+                            {
+                                axTable2.Cell(start_row, 1).Range.Text = subReplan.Rows[j]["routecode"].ToString();
+                                axTable2.Cell(start_row, 2).Range.Text = subReplan.Rows[j]["replan"].ToString();
+                                axTable2.Cell(start_row, 3).Range.Text = subReplan.Rows[j]["detail"].ToString();
+
+                                start_row = start_row + 1;
+                            }
+                        }
+
+                    }
+                    #endregion
+
+                    #region j
+                    var exist_j = Serv.GetExistRep_j(hddmas_rep_id.Value);
+
+                    if (exist_j.Rows.Count != 0)
+                    {
+                        Microsoft.Office.Interop.Word.Table axTable2;
+
+                        sel.Find.Text = "[table9]";
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceNone);
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Range.Select();
+                        axTable2 = sel.Tables.Add(app.Selection.Range, 3, 18);
+
+                        axTable2.Borders.InsideLineStyle = WdLineStyle.wdLineStyleSingle;
+                        axTable2.Borders.OutsideLineStyle = WdLineStyle.wdLineStyleSingle;
+
+                        axTable2.Cell(1, 1).Merge(axTable2.Cell(2, 1));
+                        axTable2.Cell(1, 2).Merge(axTable2.Cell(2, 2));
+                        axTable2.Cell(1, 3).Merge(axTable2.Cell(2, 3));
+                        axTable2.Cell(1, 4).Merge(axTable2.Cell(2, 4));
+                        axTable2.Cell(1, 5).Merge(axTable2.Cell(2, 5));
+
+                        axTable2.Cell(1, 6).Merge(axTable2.Cell(1, 7));
+                        axTable2.Cell(1, 6).Merge(axTable2.Cell(1, 8));
+                        axTable2.Cell(1, 6).Merge(axTable2.Cell(1, 9));
+                        axTable2.Cell(1, 6).Merge(axTable2.Cell(1, 10));
+                        axTable2.Cell(1, 6).Merge(axTable2.Cell(1, 7));
+
+                        axTable2.Cell(1, 7).Merge(axTable2.Cell(2, 18));
+
+
+                        axTable2.Cell(1, 1).Range.Text = "No.";
+                        axTable2.Cell(1, 2).Range.Text = "Route Code";
+                        axTable2.Cell(1, 3).Range.Text = "ID";
+                        axTable2.Cell(1, 4).Range.Text = "Pipeline Section";
+                        axTable2.Cell(1, 5).Range.Text = "Launch";
+                        axTable2.Cell(1, 6).Range.Text = "ปี " + DateTime.Now.ToString("yyyy", EngCI);
+
+                        axTable2.Cell(1, 7).Range.Text = "Actual จำนวนลูก";
+
+                        axTable2.Cell(2, 6).Range.Text = "Jan";
+                        axTable2.Cell(2, 7).Range.Text = "Feb";
+                        axTable2.Cell(2, 8).Range.Text = "Mar";
+                        axTable2.Cell(2, 9).Range.Text = "Apr";
+                        axTable2.Cell(2, 10).Range.Text = "May";
+                        axTable2.Cell(2, 11).Range.Text = "Jun";
+                        axTable2.Cell(2, 12).Range.Text = "Jul";
+                        axTable2.Cell(2, 13).Range.Text = "Aug";
+                        axTable2.Cell(2, 14).Range.Text = "Sep";
+                        axTable2.Cell(2, 15).Range.Text = "Oct";
+                        axTable2.Cell(2, 16).Range.Text = "Nov";
+                        axTable2.Cell(2, 17).Range.Text = "Dec";
+
+                        axTable2.Cell(3, 1).Range.Text = "1";
+                        axTable2.Cell(3, 2).Range.Text = exist_j.Rows[0]["pwroutecode"].ToString();
+                        axTable2.Cell(3, 3).Range.Text = exist_j.Rows[0]["pwdimeter"].ToString();
+                        axTable2.Cell(3, 4).Range.Text = exist_j.Rows[0]["pwpipelinesection"].ToString();
+                        axTable2.Cell(3, 18).Range.Text = exist_j.Rows[0]["pwnumberpig"].ToString();
+
+                        if (exist_j.Rows[0]["pwplaning"].ToString().Contains("มกราคม"))
+                        {
+                            axTable2.Cell(3, 6).Range.Shading.BackgroundPatternColor = WdColor.wdColorPink;
+                        }
+                        else if (exist_j.Rows[0]["pwplaning"].ToString().Contains("กุมภา"))
+                        {
+                            axTable2.Cell(3, 7).Range.Shading.BackgroundPatternColor = WdColor.wdColorPink;
+                        }
+                        else if (exist_j.Rows[0]["pwplaning"].ToString().Contains("มีนา"))
+                        {
+                            axTable2.Cell(3, 8).Range.Shading.BackgroundPatternColor = WdColor.wdColorPink;
+                        }
+                        else if (exist_j.Rows[0]["pwplaning"].ToString().Contains("เมษา"))
+                        {
+                            axTable2.Cell(3, 9).Range.Shading.BackgroundPatternColor = WdColor.wdColorPink;
+                        }
+                        else if (exist_j.Rows[0]["pwplaning"].ToString().Contains("พฤษภา"))
+                        {
+                            axTable2.Cell(3, 10).Range.Shading.BackgroundPatternColor = WdColor.wdColorPink;
+                        }
+                        else if (exist_j.Rows[0]["pwplaning"].ToString().Contains("มีนา"))
+                        {
+                            axTable2.Cell(3, 11).Range.Shading.BackgroundPatternColor = WdColor.wdColorPink;
+                        }
+                        else if (exist_j.Rows[0]["pwplaning"].ToString().Contains("กรก"))
+                        {
+                            axTable2.Cell(3, 12).Range.Shading.BackgroundPatternColor = WdColor.wdColorPink;
+                        }
+                        else if (exist_j.Rows[0]["pwplaning"].ToString().Contains("สิงหา"))
+                        {
+                            axTable2.Cell(3, 13).Range.Shading.BackgroundPatternColor = WdColor.wdColorPink;
+                        }
+                        else if (exist_j.Rows[0]["pwplaning"].ToString().Contains("กันยา"))
+                        {
+                            axTable2.Cell(3, 14).Range.Shading.BackgroundPatternColor = WdColor.wdColorPink;
+                        }
+                        else if (exist_j.Rows[0]["pwplaning"].ToString().Contains("ตุลา"))
+                        {
+                            axTable2.Cell(3, 15).Range.Shading.BackgroundPatternColor = WdColor.wdColorPink;
+                        }
+                        else if (exist_j.Rows[0]["pwplaning"].ToString().Contains("พฤศจิ"))
+                        {
+                            axTable2.Cell(3, 16).Range.Shading.BackgroundPatternColor = WdColor.wdColorPink;
+                        }
+                        else if (exist_j.Rows[0]["pwplaning"].ToString().Contains("ธันวา"))
+                        {
+                            axTable2.Cell(3, 17).Range.Shading.BackgroundPatternColor = WdColor.wdColorPink;
+                        }
+
+
+                        Microsoft.Office.Interop.Word.Table axTable3;
+
+                        sel.Find.Text = "[table10]";
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceNone);
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Range.Select();
+                        axTable3 = sel.Tables.Add(app.Selection.Range, 2, 2);
+
+                        axTable3.Borders.InsideLineStyle = WdLineStyle.wdLineStyleSingle;
+                        axTable3.Borders.OutsideLineStyle = WdLineStyle.wdLineStyleSingle;
+
+                        axTable3.Cell(1, 1).Range.Text = "เส้นท่อ";
+                        axTable3.Cell(1, 2).Range.Text = "ผลการดำเนินงาน";
+
+
+                        axTable3.Cell(2, 1).Range.Text = exist_j.Rows[0]["wroutecode"].ToString() + " " + exist_j.Rows[0]["wpipelinesection"].ToString();
+                        axTable3.Cell(2, 2).Range.Text = exist_j.Rows[0]["wresult"].ToString();
+
+
+                        sel.Find.Text = "[j9]";
+                        sel.Find.Replacement.Text = exist_j.Rows[0]["froutecode"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[j10]";
+                        sel.Find.Replacement.Text = exist_j.Rows[0]["fdimeter"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[j11]";
+                        sel.Find.Replacement.Text = exist_j.Rows[0]["fpipelinesection"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[j12]";
+                        sel.Find.Replacement.Text = exist_j.Rows[0]["fnumberpig"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[j13]";
+                        sel.Find.Replacement.Text = exist_j.Rows[0]["fplaning"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[j14]";
+                        sel.Find.Replacement.Text = exist_j.Rows[0]["problem"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                    }
+                    #endregion
+
+                    #region K
+                    var exist_k = Serv.GetExistRep_k(hddmas_rep_id.Value);
+
+                    if (exist_k.Rows.Count != 0)
+                    {
+                        sel.Find.Text = "[k1]";
+                        sel.Find.Replacement.Text = exist_k.Rows[0]["detail"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+                    }
+                    #endregion
+
+                    #region L
+                    var exist_L = Serv.GetExistRep_L(hddmas_rep_id.Value);
+                    if (exist_L.Rows.Count != 0)
+                    {
+                        var sub_piping1 = Serv.Get_tbl_piping_qurter_plan1(exist_L.Rows[0]["id"].ToString());
+                        if (sub_piping1.Rows.Count != 0)
+                        {
+                            sel.Find.Text = "[l1]";
+                            sel.Find.Replacement.Text = sub_piping1.Rows[0]["l1"].ToString().Replace("\r\n", "\v");
+                            sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                            sel.Find.Forward = true;
+                            sel.Find.Format = false;
+                            sel.Find.MatchCase = false;
+                            sel.Find.MatchWholeWord = false;
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                            sel.Find.Text = "[l21]";
+                            sel.Find.Replacement.Text = sub_piping1.Rows[0]["l2"].ToString().Replace("\r\n", "\v");
+                            sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                            sel.Find.Forward = true;
+                            sel.Find.Format = false;
+                            sel.Find.MatchCase = false;
+                            sel.Find.MatchWholeWord = false;
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                            sel.Find.Text = "[l22]";
+                            sel.Find.Replacement.Text = sub_piping1.Rows[1]["l2"].ToString().Replace("\r\n", "\v");
+                            sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                            sel.Find.Forward = true;
+                            sel.Find.Format = false;
+                            sel.Find.MatchCase = false;
+                            sel.Find.MatchWholeWord = false;
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                            sel.Find.Text = "[l23]";
+                            sel.Find.Replacement.Text = sub_piping1.Rows[2]["l2"].ToString().Replace("\r\n", "\v");
+                            sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                            sel.Find.Forward = true;
+                            sel.Find.Format = false;
+                            sel.Find.MatchCase = false;
+                            sel.Find.MatchWholeWord = false;
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                            sel.Find.Text = "[l331]";
+                            sel.Find.Replacement.Text = "18";
+                            sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                            sel.Find.Forward = true;
+                            sel.Find.Format = false;
+                            sel.Find.MatchCase = false;
+                            sel.Find.MatchWholeWord = false;
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                            sel.Find.Text = "[l332]";
+                            sel.Find.Replacement.Text = "18";
+                            sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                            sel.Find.Forward = true;
+                            sel.Find.Format = false;
+                            sel.Find.MatchCase = false;
+                            sel.Find.MatchWholeWord = false;
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                            string xl = "0";
+                            string wl = "0";
+
+                            xl = "3";
+                            wl = "3";
+
+                            for (int i = 0; i <= 9; i++)
+                            {
+                                if (Convert.ToString(i) != xl)
+                                {
+                                    sel.Find.Text = "[l" + wl + "" + i + "1]";
+                                    sel.Find.Replacement.Text = "";
+                                    sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                                    sel.Find.Forward = true;
+                                    sel.Find.Format = false;
+                                    sel.Find.MatchCase = false;
+                                    sel.Find.MatchWholeWord = false;
+                                    sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                                    sel.Find.Text = "[l" + wl + "" + i + "2]";
+                                    sel.Find.Replacement.Text = "";
+                                    sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                                    sel.Find.Forward = true;
+                                    sel.Find.Format = false;
+                                    sel.Find.MatchCase = false;
+                                    sel.Find.MatchWholeWord = false;
+                                    sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+                                }
+                            }
+
+                            sel.Find.Text = "[l421]";
+                            sel.Find.Replacement.Text = "2";
+                            sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                            sel.Find.Forward = true;
+                            sel.Find.Format = false;
+                            sel.Find.MatchCase = false;
+                            sel.Find.MatchWholeWord = false;
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                            sel.Find.Text = "[l422]";
+                            sel.Find.Replacement.Text = "2";
+                            sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                            sel.Find.Forward = true;
+                            sel.Find.Format = false;
+                            sel.Find.MatchCase = false;
+                            sel.Find.MatchWholeWord = false;
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                            xl = "2";
+                            wl = "4";
+
+                            for (int i = 0; i <= 9; i++)
+                            {
+                                if (Convert.ToString(i) != xl)
+                                {
+                                    sel.Find.Text = "[l" + wl + "" + i + "1]";
+                                    sel.Find.Replacement.Text = "";
+                                    sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                                    sel.Find.Forward = true;
+                                    sel.Find.Format = false;
+                                    sel.Find.MatchCase = false;
+                                    sel.Find.MatchWholeWord = false;
+                                    sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                                    sel.Find.Text = "[l" + wl + "" + i + "2]";
+                                    sel.Find.Replacement.Text = "";
+                                    sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                                    sel.Find.Forward = true;
+                                    sel.Find.Format = false;
+                                    sel.Find.MatchCase = false;
+                                    sel.Find.MatchWholeWord = false;
+                                    sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+                                }
+                            }
+
+                            sel.Find.Text = "[l511]";
+                            sel.Find.Replacement.Text = "2";
+                            sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                            sel.Find.Forward = true;
+                            sel.Find.Format = false;
+                            sel.Find.MatchCase = false;
+                            sel.Find.MatchWholeWord = false;
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                            sel.Find.Text = "[l512]";
+                            sel.Find.Replacement.Text = "2";
+                            sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                            sel.Find.Forward = true;
+                            sel.Find.Format = false;
+                            sel.Find.MatchCase = false;
+                            sel.Find.MatchWholeWord = false;
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                            xl = "1";
+                            wl = "5";
+
+                            for (int i = 0; i <= 9; i++)
+                            {
+                                if (Convert.ToString(i) != xl)
+                                {
+                                    sel.Find.Text = "[l" + wl + "" + i + "1]";
+                                    sel.Find.Replacement.Text = "";
+                                    sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                                    sel.Find.Forward = true;
+                                    sel.Find.Format = false;
+                                    sel.Find.MatchCase = false;
+                                    sel.Find.MatchWholeWord = false;
+                                    sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                                    sel.Find.Text = "[l" + wl + "" + i + "2]";
+                                    sel.Find.Replacement.Text = "";
+                                    sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                                    sel.Find.Forward = true;
+                                    sel.Find.Format = false;
+                                    sel.Find.MatchCase = false;
+                                    sel.Find.MatchWholeWord = false;
+                                    sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+                                }
+                            }
+
+                        }
+
+                        var sub_piping2 = Serv.Get_tbl_piping_qurter_plan2(exist_L.Rows[0]["id"].ToString());
+                        if (sub_piping2.Rows.Count != 0)
+                        {
+
+                            sel.Find.Text = "[l10]";
+                            sel.Find.Replacement.Text = sub_piping2.Rows[0]["l30"].ToString().Replace("\r\n", "\v");
+                            sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                            sel.Find.Forward = true;
+                            sel.Find.Format = false;
+                            sel.Find.MatchCase = false;
+                            sel.Find.MatchWholeWord = false;
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                            sel.Find.Text = "[l021]";
+                            sel.Find.Replacement.Text = sub_piping2.Rows[0]["l31"].ToString().Replace("\r\n", "\v");
+                            sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                            sel.Find.Forward = true;
+                            sel.Find.Format = false;
+                            sel.Find.MatchCase = false;
+                            sel.Find.MatchWholeWord = false;
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                            sel.Find.Text = "[l022]";
+                            sel.Find.Replacement.Text = sub_piping2.Rows[1]["l31"].ToString().Replace("\r\n", "\v");
+                            sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                            sel.Find.Forward = true;
+                            sel.Find.Format = false;
+                            sel.Find.MatchCase = false;
+                            sel.Find.MatchWholeWord = false;
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                            sel.Find.Text = "[l023]";
+                            sel.Find.Replacement.Text = sub_piping2.Rows[2]["l31"].ToString().Replace("\r\n", "\v");
+                            sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                            sel.Find.Forward = true;
+                            sel.Find.Format = false;
+                            sel.Find.MatchCase = false;
+                            sel.Find.MatchWholeWord = false;
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                            sel.Find.Text = "[l0331]";
+                            sel.Find.Replacement.Text = "18";
+                            sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                            sel.Find.Forward = true;
+                            sel.Find.Format = false;
+                            sel.Find.MatchCase = false;
+                            sel.Find.MatchWholeWord = false;
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                            sel.Find.Text = "[l0332]";
+                            sel.Find.Replacement.Text = "18";
+                            sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                            sel.Find.Forward = true;
+                            sel.Find.Format = false;
+                            sel.Find.MatchCase = false;
+                            sel.Find.MatchWholeWord = false;
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                            string xl = "0";
+                            string wl = "0";
+
+                            xl = "3";
+                            wl = "3";
+
+                            for (int i = 0; i <= 9; i++)
+                            {
+                                if (Convert.ToString(i) != xl)
+                                {
+                                    sel.Find.Text = "[l0" + wl + "" + i + "1]";
+                                    sel.Find.Replacement.Text = "";
+                                    sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                                    sel.Find.Forward = true;
+                                    sel.Find.Format = false;
+                                    sel.Find.MatchCase = false;
+                                    sel.Find.MatchWholeWord = false;
+                                    sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                                    sel.Find.Text = "[l0" + wl + "" + i + "2]";
+                                    sel.Find.Replacement.Text = "";
+                                    sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                                    sel.Find.Forward = true;
+                                    sel.Find.Format = false;
+                                    sel.Find.MatchCase = false;
+                                    sel.Find.MatchWholeWord = false;
+                                    sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+                                }
+                            }
+
+                            sel.Find.Text = "[l0421]";
+                            sel.Find.Replacement.Text = "2";
+                            sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                            sel.Find.Forward = true;
+                            sel.Find.Format = false;
+                            sel.Find.MatchCase = false;
+                            sel.Find.MatchWholeWord = false;
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                            sel.Find.Text = "[l0422]";
+                            sel.Find.Replacement.Text = "2";
+                            sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                            sel.Find.Forward = true;
+                            sel.Find.Format = false;
+                            sel.Find.MatchCase = false;
+                            sel.Find.MatchWholeWord = false;
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                            xl = "2";
+                            wl = "4";
+
+                            for (int i = 0; i <= 9; i++)
+                            {
+                                if (Convert.ToString(i) != xl)
+                                {
+                                    sel.Find.Text = "[l0" + wl + "" + i + "1]";
+                                    sel.Find.Replacement.Text = "";
+                                    sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                                    sel.Find.Forward = true;
+                                    sel.Find.Format = false;
+                                    sel.Find.MatchCase = false;
+                                    sel.Find.MatchWholeWord = false;
+                                    sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                                    sel.Find.Text = "[l0" + wl + "" + i + "2]";
+                                    sel.Find.Replacement.Text = "";
+                                    sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                                    sel.Find.Forward = true;
+                                    sel.Find.Format = false;
+                                    sel.Find.MatchCase = false;
+                                    sel.Find.MatchWholeWord = false;
+                                    sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+                                }
+                            }
+
+                            sel.Find.Text = "[l0511]";
+                            sel.Find.Replacement.Text = "2";
+                            sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                            sel.Find.Forward = true;
+                            sel.Find.Format = false;
+                            sel.Find.MatchCase = false;
+                            sel.Find.MatchWholeWord = false;
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                            sel.Find.Text = "[l0512]";
+                            sel.Find.Replacement.Text = "2";
+                            sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                            sel.Find.Forward = true;
+                            sel.Find.Format = false;
+                            sel.Find.MatchCase = false;
+                            sel.Find.MatchWholeWord = false;
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                            xl = "1";
+                            wl = "5";
+
+                            for (int i = 0; i <= 9; i++)
+                            {
+                                if (Convert.ToString(i) != xl)
+                                {
+                                    sel.Find.Text = "[l0" + wl + "" + i + "1]";
+                                    sel.Find.Replacement.Text = "";
+                                    sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                                    sel.Find.Forward = true;
+                                    sel.Find.Format = false;
+                                    sel.Find.MatchCase = false;
+                                    sel.Find.MatchWholeWord = false;
+                                    sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                                    sel.Find.Text = "[l0" + wl + "" + i + "2]";
+                                    sel.Find.Replacement.Text = "";
+                                    sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                                    sel.Find.Forward = true;
+                                    sel.Find.Format = false;
+                                    sel.Find.MatchCase = false;
+                                    sel.Find.MatchWholeWord = false;
+                                    sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+                                }
+                            }
+                        }
+
+                        var sub6 = Serv.GetSub6(exist_L.Rows[0]["id"].ToString());
+                        if (sub6.Rows.Count != 0)
+                        {
+                            Microsoft.Office.Interop.Word.Table axTable2;
+
+                            sel.Find.Text = "[table11]";
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceNone);
+                            sel.Range.Select();
+                            axTable2 = sel.Tables.Add(app.Selection.Range, sub6.Rows.Count + 1, 4);
+
+                            axTable2.Borders.InsideLineStyle = WdLineStyle.wdLineStyleSingle;
+                            axTable2.Borders.OutsideLineStyle = WdLineStyle.wdLineStyleSingle;
+
+                            axTable2.Cell(1, 1).Range.Text = "Region";
+                            axTable2.Cell(1, 2).Range.Text = "Inspection";
+                            axTable2.Cell(1, 3).Range.Text = "CM Sattion";
+                            axTable2.Cell(1, 4).Range.Text = "Date";
+
+                            int start_row = 2;
+
+                            for (int j = 0; j <= sub6.Rows.Count - 1; j++)
+                            {
+                                axTable2.Cell(start_row, 1).Range.Text = sub6.Rows[j]["l26"].ToString();
+                                axTable2.Cell(start_row, 2).Range.Text = sub6.Rows[j]["l27"].ToString();
+                                axTable2.Cell(start_row, 3).Range.Text = sub6.Rows[j]["l28"].ToString();
+                                axTable2.Cell(start_row, 3).Range.Text = sub6.Rows[j]["l29"].ToString();
+
+                                start_row = start_row + 1;
+                            }
+
+                        }
+                    }
+                    #endregion
+
+                    #region M
+                    var exist_M = Serv.GetExistRep_M(hddmas_rep_id.Value);
+
+                    if (exist_M.Rows.Count != 0)
+                    {
+                        sel.Find.Text = "[M1]";
+                        sel.Find.Replacement.Text = exist_M.Rows[0]["cplanwork"].ToString();
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[M2]";
+                        sel.Find.Replacement.Text = exist_M.Rows[0]["cprogressresult"].ToString();
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[M3]";
+                        sel.Find.Replacement.Text = exist_M.Rows[0]["cfutureplan"].ToString();
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[M4]";
+                        sel.Find.Replacement.Text = exist_M.Rows[0]["cproblem"].ToString();
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[M5]";
+                        sel.Find.Replacement.Text = exist_M.Rows[0]["mplanwork"].ToString();
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[M6]";
+                        sel.Find.Replacement.Text = exist_M.Rows[0]["mprogressresult"].ToString();
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[M7]";
+                        sel.Find.Replacement.Text = exist_M.Rows[0]["mfutureplan"].ToString();
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[M8]";
+                        sel.Find.Replacement.Text = exist_M.Rows[0]["mproblem"].ToString();
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+
+                    }
+                    #endregion
+
+                    #region G
+                    var exist_G = Serv.GetExistRep_G(hddmas_rep_id.Value);
+                    if (exist_G.Rows.Count != 0)
+                    {
+                        var sub_other = Serv.GetExistRep_sub_G(exist_G.Rows[0]["id"].ToString());
+                        if (sub_other.Rows.Count != 0)
+                        {
+                            Microsoft.Office.Interop.Word.Table axTable2;
+
+                            sel.Find.Text = "[table12]";
+                            sel.Find.Execute(Replace: WdReplace.wdReplaceNone);
+                            sel.Range.Select();
+                            axTable2 = sel.Tables.Add(app.Selection.Range, sub_other.Rows.Count * 10, 1);
+
+
+                            int start_row = 1;
+
+                            for (int j = 0; j <= sub_other.Rows.Count - 1; j++)
+                            {
+                                axTable2.Cell(start_row, 1).Range.Text = "1.7." + (j + 2);
+                                axTable2.Cell(start_row, 1).Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                start_row = start_row + 1;
+                                axTable2.Cell(start_row, 1).Range.Text = "\t" + sub_other.Rows[j]["projectname"].ToString();
+                                axTable2.Cell(start_row, 1).Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+
+                                start_row = start_row + 1;
+                                axTable2.Cell(start_row, 1).Range.Text = "1.7." + (j + 2) + ".1 แผนงาน";
+                                axTable2.Cell(start_row, 1).Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                start_row = start_row + 1;
+                                axTable2.Cell(start_row, 1).Range.Text = "\t" + sub_other.Rows[j]["planwork"].ToString();
+                                axTable2.Cell(start_row, 1).Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+
+                                start_row = start_row + 1;
+                                axTable2.Cell(start_row, 1).Range.Text = "1.7." + (j + 2) + ".2 ผลการดำเนินงาน";
+                                axTable2.Cell(start_row, 1).Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                start_row = start_row + 1;
+                                axTable2.Cell(start_row, 1).Range.Text = "\t" + sub_other.Rows[j]["workresult"].ToString();
+                                axTable2.Cell(start_row, 1).Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+
+                                start_row = start_row + 1;
+                                axTable2.Cell(start_row, 1).Range.Text = "1.7." + (j + 2) + ".3 การดำเนินงานในอนาคต";
+                                axTable2.Cell(start_row, 1).Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                start_row = start_row + 1;
+                                axTable2.Cell(start_row, 1).Range.Text = "\t" + sub_other.Rows[j]["futureplan"].ToString();
+                                axTable2.Cell(start_row, 1).Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+
+                                start_row = start_row + 1;
+                                axTable2.Cell(start_row, 1).Range.Text = "1.7." + (j + 2) + ".4 ปัญหาอุปสรรค์ (ถ้ามี)";
+                                axTable2.Cell(start_row, 1).Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+                                start_row = start_row + 1;
+                                axTable2.Cell(start_row, 1).Range.Text = "\t" + sub_other.Rows[j]["problem"].ToString();
+                                axTable2.Cell(start_row, 1).Range.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphLeft;
+
+
+                                start_row = start_row + 1;
+                            }
+                        }
+                    }
+                    #endregion
 
                     string time = DateTime.Now.ToString("yyyy-MM-ddHHmmss", EngCI);
 
@@ -1619,7 +2843,7 @@ namespace ptt_report
 
         protected void btnHistory_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/history_1.aspx");
+            Response.Redirect("~/history_1.aspx?param=1");
         }
 
         protected void btnExport_Click(object sender, EventArgs e)

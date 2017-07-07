@@ -22,13 +22,13 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.HiddenField hddusername;
         
         /// <summary>
-        /// LinkButton1 control.
+        /// lbtitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        protected global::System.Web.UI.WebControls.Label lbtitle;
         
         /// <summary>
         /// txtfname control.
@@ -58,6 +58,15 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.TextBox txtusername;
         
         /// <summary>
+        /// txtemail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtemail;
+        
+        /// <summary>
         /// txtpassword control.
         /// </summary>
         /// <remarks>
@@ -65,6 +74,15 @@ namespace ptt_report {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtpassword;
+        
+        /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
         /// txtconpassword control.
@@ -76,13 +94,13 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.TextBox txtconpassword;
         
         /// <summary>
-        /// txtemail control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtemail;
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
         /// CheckBox1 control.
@@ -91,7 +109,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox1;
+        protected global::System.Web.UI.WebControls.RadioButton CheckBox1;
         
         /// <summary>
         /// CheckBox2 control.
@@ -100,7 +118,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox2;
+        protected global::System.Web.UI.WebControls.RadioButton CheckBox2;
         
         /// <summary>
         /// CheckBox3 control.
@@ -109,7 +127,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox3;
+        protected global::System.Web.UI.WebControls.RadioButton CheckBox3;
         
         /// <summary>
         /// CheckBox4 control.
@@ -118,7 +136,7 @@ namespace ptt_report {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox CheckBox4;
+        protected global::System.Web.UI.WebControls.RadioButton CheckBox4;
         
         /// <summary>
         /// RadioButton1 control.

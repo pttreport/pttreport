@@ -3,7 +3,7 @@
 
 <asp:Content ID="es_form" ContentPlaceHolderID="ChildContent2" runat="server">
     <style>
-        #menuleft02 {
+        #menuleft03 {
             background: #0c7fd2;
         }
         .auto-style1 {
@@ -20,8 +20,8 @@
         Customer Type :
                    
         <asp:Label ID="lbCustype" runat="server" Text="-"></asp:Label>
-        <asp:Button ID="btnExport" runat="server" Text="Export Report" CssClass="btn" OnClick="btnExport_Click" />
         <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" CssClass="btn" OnClick="btnSaveVer_Click" />
+        <asp:Button ID="btnExport" runat="server" Text="Export Report" CssClass="btn" OnClick="btnExport_Click" />
         <asp:Button ID="btnHistory" runat="server" Text="History" CssClass="btn"  OnClick="btnHistory_Click"/>
 
         <asp:HiddenField ID="hddpiroffsp_id" runat="server" />
@@ -33,12 +33,13 @@
     <div id="thirdPartyInterfaceForm" style="background-color: #FFFFFF">
         <div id="patrolFormTable">
             <h3 class="barBlue">
+                Off Shore Pig
                  <asp:Button ID="btnImport" runat="server" Text="Import Data" OnClick="btnImport_Click" CssClass="btn btn-info" /></h3>
             <div class="info_executive">
                 <h3>PIPELINE</h3>
                 <asp:HiddenField ID="pipeline_id" runat="server" />
                 <div class="info_executive_in">
-                    <table>
+                    <table class="col4">
 
                         <tr>
                             <td>Startup year: </td>
@@ -116,7 +117,7 @@
                     </table>
                 
                 
-                    <table>
+                    <table class="col4">
                         <tr>
                             <th colspan="2">
                                 PIPELINE OPERATING DATA
@@ -153,9 +154,9 @@
 
 
 
-                    <table>
+                    <table class="col4">
                         <tr>
-                            <th colspan="2">
+                            <th colspan="4">
                                 INTEGRITY ASSESSMENT RESULTS
                             </th>
                         </tr>
@@ -204,13 +205,13 @@
 
                         <tr>
                             <td class="auto-style1">ความเห็น</td>
-                            <td class="auto-style1"><asp:TextBox cols="20" rows="2" TextMode="MultiLine" runat="server" id="TextBox25"></asp:TextBox></td>
+                            <td class="auto-style1" colspan="3"><asp:TextBox cols="20" rows="2" TextMode="MultiLine" runat="server" id="TextBox25"></asp:TextBox></td>
                         </tr>
 
                         <tr>
                             <td></td>
-                            <td>
-                                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+                            <td colspan="3">
+                                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Save"  class="btn btn-gray" />
                             </td>
                         </tr>
 
@@ -329,7 +330,7 @@
 
                         <tr>
                             <td></td>
-                            <td><asp:Button ID="Button2" runat="server" Text="Button" OnClick="Button2_Click" /></td>
+                            <td><asp:Button ID="Button2" runat="server" Text="Save" OnClick="Button2_Click"  class="btn btn-gray"/></td>
                         </tr>
 
                     </table>
@@ -369,7 +370,7 @@
 
                         <tr>
                             <td></td>
-                            <td><asp:Button ID="Button3" runat="server" Text="Button" OnClick="Button3_Click" /></td>
+                            <td><asp:Button ID="Button3" runat="server" Text="Save" OnClick="Button3_Click" /></td>
                         </tr>
 
                     </table>
@@ -534,7 +535,7 @@
 
                         <tr>
                             <td></td>
-                            <td><asp:Button ID="Button4" runat="server" Text="Button" OnClick="Button4_Click" /></td>
+                            <td><asp:Button ID="Button4" runat="server" Text="Save" OnClick="Button4_Click" CssClass="btn btn-gray" /></td>
                         </tr>
 
                     </table>
@@ -691,7 +692,7 @@
 
                         <tr>
                             <td></td>
-                            <td><asp:Button ID="Button5" runat="server" Text="Button" OnClick="Button5_Click" /></td>
+                            <td><asp:Button ID="Button5" runat="server" Text="Save" OnClick="Button5_Click" class="btn btn-gray"  /></td>
                         </tr>
 
                     </table>
@@ -799,7 +800,7 @@
 
                         <tr>
                             <td></td>
-                            <td><asp:Button ID="Button6" runat="server" Text="Button" OnClick="Button6_Click" /></td>
+                            <td><asp:Button ID="Button6" runat="server" Text="Save" OnClick="Button6_Click" class="btn btn-gray" /></td>
                         </tr>
 
                     </table>
@@ -850,7 +851,7 @@
 
                         <tr>
                             <td></td>
-                            <td><asp:Button ID="Button7" runat="server" Text="Button" OnClick="Button7_Click" /></td>
+                            <td><asp:Button ID="Button7" runat="server" Text="Save" OnClick="Button7_Click" class="btn btn-gray" /></td>
                         </tr>
 
                     </table>
@@ -1003,7 +1004,7 @@
 
                         <tr>
                             <td></td>
-                            <td><asp:Button ID="Button8" runat="server" Text="Button" OnClick="Button8_Click" /></td>
+                            <td><asp:Button ID="Button8" runat="server" Text="Save" OnClick="Button8_Click" class="btn btn-gray" /></td>
                         </tr>
 
                     </table>
@@ -1054,7 +1055,7 @@
 
                         <tr>
                             <td></td>
-                            <td><asp:Button ID="Button9" runat="server" Text="Button" OnClick="Button9_Click" /></td>
+                            <td><asp:Button ID="Button9" runat="server" Text="Save" OnClick="Button9_Click" class="btn btn-gray" /></td>
                         </tr>
 
                     </table>
@@ -1083,7 +1084,7 @@
 
                         <tr>
                             <td></td>
-                            <td><asp:Button ID="Button10" runat="server" Text="Button" OnClick="Button10_Click"/></td>
+                            <td><asp:Button ID="Button10" runat="server" Text="Save" OnClick="Button10_Click" class="btn btn-gray"/></td>
                         </tr>
 
                     </table>

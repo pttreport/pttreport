@@ -11,7 +11,16 @@ namespace ptt_report
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Object objUserTheme = HttpContext.Current.Session["assetuserid"];
+            if (objUserTheme == null)
+            {
+                Response.Redirect("~/default.aspx");
+            }
+            else
+            {
+                lbYear.Text = HttpContext.Current.Session["repYear"].ToString();
+                lbPermit.Text = HttpContext.Current.Session["repPermit"].ToString();
+            }
         }
 
         protected void lnkPIROnShoreUnpig_Click(object sender, EventArgs e)

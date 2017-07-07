@@ -26,19 +26,29 @@
             </table>
         </div>
     </div>
-    <div id="divRep_listfull" runat="server" visible="false">
+    <div id="divRep_listfull" runat="server" style="background-color: #FFFFFF;" visible="false">
         <asp:Label ID="lbno" runat="server" Text="-" ForeColor="Red"></asp:Label>
         <asp:Button ID="btncancel" runat="server" Text="Cancel" OnClick="btncancel_Click" />
     </div>
-    <div id="divRep_list" runat="server" visible="false">
-        <table>
+    <div id="divRep_list" runat="server" style="background-color: #FFFFFF;" visible="false">
+        <table style="background-color: #FFFFFF;">
+            <tr style="background-color:deepskyblue">
+                <th>
+                    Type
+                </th>
+                <th>
+                    Detail
+                </th>
+            </tr>
             <tr>
-                <td>Customer Type:
+                
+                <td>
+                    Customer Type:
                 </td>
                 <td>
-                    <asp:Label ID="lbrep1" runat="server" Text=""></asp:Label><br />
-                    <asp:Label ID="lbrep2" runat="server" Text=""></asp:Label><br />
-                    <asp:Label ID="lbrep3" runat="server" Text=""></asp:Label>
+                    - <asp:Label ID="lbrep1" runat="server" Text=""></asp:Label><br />
+                    - <asp:Label ID="lbrep2" runat="server" Text=""></asp:Label><br />
+                    - <asp:Label ID="lbrep3" runat="server" Text=""></asp:Label>
                 </td>
             </tr>
             <tr>

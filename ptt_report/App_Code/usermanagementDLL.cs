@@ -298,7 +298,7 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = " select unitcode,unitcode + ' ' +unitname +' '+ unitabbr as department from unit_key order by unitcode, unitname, unitabbr ";
+            strSQL = " select unitcode,unitcode + ' ' +unitname +' ('+ unitabbr +')' as department from unit_key order by unitcode, unitname, unitabbr ";
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbpttConnectionString"].ConnectionString;
             var _with1 = objCmd;
@@ -326,7 +326,7 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = " select u.unitname,p.code,'พนักงาน '+p.FNAME+' นามสกุล '+p.LNAME as name, po.t_name as POSNAME " +
+            strSQL = " select u.unitname,p.code,p.FNAME+' '+p.LNAME as name, po.t_name as POSNAME " +
                     " from personel_info p inner " +
                     " join unit_key u on p.UNITCODE = u.unitcode " +
                     " inner join position po on p.POSCODE = po.poscode  ";

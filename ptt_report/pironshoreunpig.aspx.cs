@@ -29,8 +29,8 @@ namespace ptt_report
                 }
                 else
                 {
-                    //lbCustype.Text = HttpContext.Current.Session["repCustype"].ToString();
-                    hddmas_rep_id.Value = "99";
+                    lbCustype.Text = HttpContext.Current.Session["repPermit"].ToString();
+                    hddmas_rep_id.Value = HttpContext.Current.Session["repid"].ToString();
 
                     bind_default();
                 }
@@ -39,6 +39,12 @@ namespace ptt_report
 
         protected void bind_default()
         {
+            var rep_doc = Serv.GetRep_HisALL();
+            if (rep_doc.Rows.Count != 0)
+            {
+                hddfile_path.Value = rep_doc.Rows[0]["uri"].ToString();
+            }
+
             var pipeline = Serv.GetPIROnSUPipeline(hddmas_rep_id.Value);
             if (pipeline.Rows.Count != 0)
             {
@@ -46,6 +52,7 @@ namespace ptt_report
                 TextBox1.Text = pipeline.Rows[0]["startupyear"].ToString();
                 TextBox2.Text = pipeline.Rows[0]["designpresure"].ToString();
                 TextBox3.Text = pipeline.Rows[0]["station"].ToString();
+                TextBox14.Text = pipeline.Rows[0]["length"].ToString();
                 TextBox4.Text = pipeline.Rows[0]["maop"].ToString();
                 TextBox5.Text = pipeline.Rows[0]["wallthickness"].ToString();
                 TextBox6.Text = pipeline.Rows[0]["materialspec"].ToString();
@@ -61,15 +68,11 @@ namespace ptt_report
             }
             else
             {
-                Serv.Insertpironsu_pipeline(hddmas_rep_id.Value, "", "", "", "", "", "", "", "", "", "", "", "", "", "");
+                var x = Serv.Insertpironsu_pipeline(hddmas_rep_id.Value, "", "", "", "", "", "", "", "", "", "", "", "", "", "");
 
-
-                var pipelineNew = Serv.GetPIROnSUPipeline(hddmas_rep_id.Value);
-
-                if (pipelineNew.Rows.Count != 0)
+                if (x.Rows.Count != 0)
                 {
-                    pipeline_id.Value = pipelineNew.Rows[0]["id"].ToString();
-
+                    pipeline_id.Value = x.Rows[0]["id"].ToString();
                 }
             }
 
@@ -144,12 +147,12 @@ namespace ptt_report
             }
             else
             {
-                Serv.Insertpironsu_ecra(hddmas_rep_id.Value, "", "", "", "", "", "", "");
+                var x = Serv.Insertpironsu_ecra(hddmas_rep_id.Value, "", "", "", "", "", "", "");
 
-                var ecraNew = Serv.GetPIROnSUExternalCorrosionRiskAssessment(hddmas_rep_id.Value);
-
-                if (ecraNew.Rows.Count != 0)
-                    ecra_id.Value = ecraNew.Rows[0]["id"].ToString();
+                if (x.Rows.Count != 0)
+                {
+                    ecra_id.Value = x.Rows[0]["id"].ToString();
+                }
 
             }
 
@@ -204,12 +207,12 @@ namespace ptt_report
             }
             else
             {
-                Serv.Insertpironsu_icra(hddmas_rep_id.Value, "", "", "", "", "", "", "");
+                var x = Serv.Insertpironsu_icra(hddmas_rep_id.Value, "", "", "", "", "", "", "");
 
-                var icraNew = Serv.GetPIROnSUInternalCorrosionRiskAssessment(hddmas_rep_id.Value);
-
-                if (icraNew.Rows.Count != 0)
-                    icra_id.Value = icraNew.Rows[0]["id"].ToString();
+                if (x.Rows.Count != 0)
+                {
+                    icra_id.Value = x.Rows[0]["id"].ToString();
+                }
             }
 
             var md = Serv.GetPIROnSUMechanical(hddmas_rep_id.Value);
@@ -249,12 +252,11 @@ namespace ptt_report
             }
             else
             {
-                Serv.Insertpironsu_md(hddmas_rep_id.Value, "", "", "", "", "");
-
-                var mdNew = Serv.GetPIROnSUMechanical(hddmas_rep_id.Value);
-
-                if (mdNew.Rows.Count != 0)
-                    md_id.Value = mdNew.Rows[0]["id"].ToString();
+                var x = Serv.Insertpironsu_md(hddmas_rep_id.Value, "", "", "", "", "");
+                if (x.Rows.Count != 0)
+                {
+                    md_id.Value = x.Rows[0]["id"].ToString();
+                }
             }
 
             var lgs = Serv.GetPIROnSUlgs(hddmas_rep_id.Value);
@@ -291,13 +293,10 @@ namespace ptt_report
             }
             else
             {
-                Serv.Insertpironsu_lgs(hddmas_rep_id.Value, "", "", "", "");
-
-                var lgsNew = Serv.GetPIROnSUlgs(hddmas_rep_id.Value);
-
-                if (lgsNew.Rows.Count != 0)
+                var x = Serv.Insertpironsu_lgs(hddmas_rep_id.Value, "", "", "", "");
+                if (x.Rows.Count != 0)
                 {
-                    lgs_id.Value = lgsNew.Rows[0]["id"].ToString();
+                    lgs_id.Value = x.Rows[0]["id"].ToString();
                 }
 
             }
@@ -321,12 +320,10 @@ namespace ptt_report
             }
             else
             {
-                Serv.Insertpironsu_prh(hddmas_rep_id.Value, "", "", "");
+                var x = Serv.Insertpironsu_prh(hddmas_rep_id.Value, "", "", "");
 
-                var prhNew = Serv.GetPIROnSUprh(hddmas_rep_id.Value);
-
-                if (prhNew.Rows.Count != 0)
-                    prh_id.Value = prhNew.Rows[0]["id"].ToString();
+                if (x.Rows.Count != 0)
+                    prh_id.Value = x.Rows[0]["id"].ToString();
 
             }
 
@@ -340,12 +337,10 @@ namespace ptt_report
             }
             else
             {
-                Serv.Insertpironsu_comment(hddmas_rep_id.Value, "", "");
+                var x = Serv.Insertpironsu_comment(hddmas_rep_id.Value, "", "");
 
-                var commentNew = Serv.GetPIROnSURecommedation(hddmas_rep_id.Value);
-
-                if (commentNew.Rows.Count != 0)
-                    rc_id.Value = commentNew.Rows[0]["id"].ToString();
+                if (x.Rows.Count != 0)
+                    rc_id.Value = x.Rows[0]["id"].ToString();
 
             }
 
@@ -369,7 +364,7 @@ namespace ptt_report
 
         protected void btnImport_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         protected void btnExport_Click(object sender, EventArgs e)
@@ -383,17 +378,17 @@ namespace ptt_report
 
         protected void btnHistory_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/history_1.aspx");
+            Response.Redirect("~/history_3.aspx?param=3");
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Serv.Updatepironsu_pipeline(hddmas_rep_id.Value, TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, "", TextBox5.Text, TextBox6.Text, TextBox7.Text, TextBox8.Text, TextBox9.Text, TextBox10.Text, TextBox11.Text, TextBox12.Text, TextBox13.Text, pipeline_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
+            Serv.Updatepironsu_pipeline(hddmas_rep_id.Value, TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text, TextBox14.Text, TextBox5.Text, TextBox6.Text, TextBox7.Text, TextBox8.Text, TextBox9.Text, TextBox10.Text, TextBox11.Text, TextBox12.Text, TextBox13.Text, pipeline_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            Serv.Updatepironsu_ecra(hddmas_rep_id.Value, ecrasumValue.Value,cplevelValue.Value,nscpValue.Value,cdsValue.Value,acValue.Value,ecraDetail.Text, ecraOpinion.Text,ecra_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
+            Serv.Updatepironsu_ecra(hddmas_rep_id.Value, ecrasumValue.Value, cplevelValue.Value, nscpValue.Value, cdsValue.Value, acValue.Value, ecraDetail.Text, ecraOpinion.Text, ecra_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
         }
 
         protected void summaryLow_CheckedChanged(object sender, EventArgs e)
@@ -490,7 +485,7 @@ namespace ptt_report
 
         protected void Button3_Click(object sender, EventArgs e)
         {
-            Serv.Updatepironsu_icra(hddmas_rep_id.Value, sumicraValue.Value,wcmValue.Value,dpuValue.Value,coValue.Value,h2sValue.Value,icradetail.Text, icraopinion.Text, icra_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
+            Serv.Updatepironsu_icra(hddmas_rep_id.Value, sumicraValue.Value, wcmValue.Value, dpuValue.Value, coValue.Value, h2sValue.Value, icradetail.Text, icraopinion.Text, icra_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
         }
 
         protected void lowicra_CheckedChanged(object sender, EventArgs e)
@@ -590,7 +585,7 @@ namespace ptt_report
 
         protected void Button4_Click(object sender, EventArgs e)
         {
-            Serv.Updatepironsu_md(hddmas_rep_id.Value,summdValue.Value,ccdValue.Value,alValue.Value,detailmd.Text,opinionmd.Text, md_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
+            Serv.Updatepironsu_md(hddmas_rep_id.Value, summdValue.Value, ccdValue.Value, alValue.Value, detailmd.Text, opinionmd.Text, md_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
         }
 
         protected void lgsyes_CheckedChanged(object sender, EventArgs e)
@@ -625,12 +620,12 @@ namespace ptt_report
 
         protected void Button5_Click(object sender, EventArgs e)
         {
-            Serv.Updatepironsu_lgs(hddmas_rep_id.Value,sumlgsValue.Value, epsValue.Value, detaillgs.Text, opinionlgs.Text, lgs_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
+            Serv.Updatepironsu_lgs(hddmas_rep_id.Value, sumlgsValue.Value, epsValue.Value, detaillgs.Text, opinionlgs.Text, lgs_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
         }
 
         protected void Button7_Click(object sender, EventArgs e)
         {
-            Serv.Updatepironsu_comment(hddmas_rep_id.Value,detailrc.Text,opinionrc.Text, rc_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
+            Serv.Updatepironsu_comment(hddmas_rep_id.Value, detailrc.Text, opinionrc.Text, rc_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
         }
 
         protected void Button6_Click(object sender, EventArgs e)
@@ -646,6 +641,175 @@ namespace ptt_report
         protected void prhno_CheckedChanged(object sender, EventArgs e)
         {
             prhsumValue.Value = "2";
+        }
+
+        protected void btnSaveVer_Click(object sender, EventArgs e)
+        {
+            var app = new Application();
+            try
+            {
+                var rep_tmp = Serv.GetTempRep();
+                if (rep_tmp.Rows.Count != 0)
+                {
+                    //This code creates a document based on the specified template.
+                    var doc = app.Documents.Add(Server.MapPath(rep_tmp.Rows[0]["file_path"].ToString()), Visible: false);
+                    doc.Activate();
+
+                    var sel = app.Selection;
+
+                    #region A
+                    var rep_a = Serv.GetPIROnSUPipeline(hddmas_rep_id.Value);
+                    if (rep_a.Rows.Count != 0)
+                    {
+                        sel.Find.Text = "[a1]";
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["startupyear"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[a2]";
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["designpresure"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[a3]";
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["station"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[a4]";
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["maop"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[a5]";
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["length"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[a6]";
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["wallthickness"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+                        
+                        sel.Find.Text = "[a7]";
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["materialspec"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+                        
+                        sel.Find.Text = "[a8]";
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["designlife"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+                        
+                        sel.Find.Text = "[a9]";
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["externalcoating"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+                        
+                        sel.Find.Text = "[a10]";
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["cathodicprotection"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[a11]";
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["op"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[a12]";
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["ot"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[a13]";
+                        sel.Find.Replacement.Text = rep_a.Rows[0]["gfr"].ToString().Replace("\r\n", "\v");
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+                        
+
+                    }
+                    #endregion
+
+
+
+
+                    string time = DateTime.Now.ToString("yyyy-MM-ddHHmmss", EngCI);
+
+                    //************************************************
+
+                    doc.SaveAs(Server.MapPath("~/gen_1/pipeline_report_" + time + ".docx"));
+                    doc.Close();
+
+                    var x = Serv.InsertHistory(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss", EngCI), HttpContext.Current.Session["assetusername"].ToString(), "Pipeline_report",
+                        "~/gen_1/pipeline_report_" + time + ".docx", "3", "");
+
+                    hddfile_path.Value = "~/gen_1/pipeline_report_" + time + ".docx";
+
+                    if (x.Rows.Count != 0)
+                    {
+                        Serv.UpdateHistory(x.Rows[0]["id"].ToString(), "Pipeline_report_V" + x.Rows[0]["id"].ToString(), x.Rows[0]["id"].ToString());
+                    }
+
+                    POPUPMSG("บันทึกเรียบร้อย");
+                }
+
+            }
+            finally
+            {
+                app.Quit();
+            }
         }
     }
 }

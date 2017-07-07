@@ -13,9 +13,9 @@
         Customer Type :
                    
         <asp:Label ID="lbCustype" runat="server" Text="-"></asp:Label>
-        <asp:Button ID="btnExport" runat="server" Text="Export Report" class="btn" />
-        <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" />
-        <asp:Button ID="btnHistory" runat="server" Text="History" class="btn" />
+        <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" OnClick="btnSaveVer_Click" />
+        <asp:Button ID="btnExport" runat="server" Text="Export Report" class="btn" OnClick="btnExport_Click" />
+        <asp:Button ID="btnHistory" runat="server" Text="History" class="btn" OnClick="btnHistory_Click" />
 
 
         <asp:HiddenField ID="hddrbi_id" runat="server" />
@@ -30,7 +30,6 @@
 
     <div id="thirdPartyInterfaceForm" style="background-color: #FFFFFF">
         <h3 class="barBlue">RBI
-           <asp:Button ID="btnImport" runat="server" Text="Import Data" OnClick="btnImport_Click" class="btn btn-info" />
 
 
 
@@ -115,6 +114,11 @@
                                 <td></td>
                                 <td>
                                     <asp:Button ID="btnsave2" runat="server" Text="Save" OnClick="btnsave2_Click" class="btn" /></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                     <asp:Button ID="btnApprove" runat="server" Text="Approve Report" OnClick="btnApprove_Click" CssClass="btn" /></td>
                             </tr>
                         </table>
 

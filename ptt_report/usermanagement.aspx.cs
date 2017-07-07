@@ -235,6 +235,9 @@ namespace ptt_report
                 CheckBox chkAutho3 = (CheckBox)(e.Row.FindControl("chkAutho3"));
                 CheckBox chkAutho4 = (CheckBox)(e.Row.FindControl("chkAutho4"));
 
+
+                Button btndelbas = (Button)(e.Row.FindControl("btndelbas"));
+
                 if (hddauthorize1.Value == "y")
                 {
                     chkAutho1.Checked = true;
@@ -252,6 +255,7 @@ namespace ptt_report
                     chkAutho4.Checked = true;
                 }
 
+                btndelbas.Attributes.Add("onclick", "return confirm('!!! ท่านต้องการลบหรือไม่ !!!');");
             }
         }
 

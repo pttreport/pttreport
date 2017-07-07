@@ -4,7 +4,7 @@
 
 <asp:Content ID="es_form" ContentPlaceHolderID="ChildContent2" runat="server">
       <style>
-        #menuleft06 {
+        #menuleft04 {
             background: #0c7fd2;
         }
           .auto-style1 {
@@ -24,20 +24,16 @@
         Year: 2559  Permit: กท2310027
                    
         <asp:Label ID="lbCustype" runat="server" Text="-"></asp:Label>
-        <asp:Button ID="btnExport" runat="server" Text="Export Report" class="btn" />
         <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" />
+        <asp:Button ID="btnExport" runat="server" Text="Export Report" class="btn" />
         <asp:Button ID="Button1" runat="server" Text="History" class="btn" />
-
-        <asp:HiddenField ID="hddtpilipig_id" runat="server" />
-        <asp:HiddenField ID="hddfile_path" runat="server" />
-        <asp:HiddenField ID="hddmas_rep_id" runat="server" />
         
     </div>
 
     <div id="thirdPartyInterfaceForm" style="background-color: #FFFFFF">
         <div id="patrolFormTable">
              <h3 class="barBlue">
-
+                 ILI PIG
                  <asp:Button ID="btnImport" runat="server" Text="Import Data" OnClick="btnImport_Click" class="btn btn-info" />
  
             </h3>
@@ -78,7 +74,7 @@
                             <td>Remark : </td>
                             <td class="auto-style1">
 
-                                <asp:TextBox ID="PermitILIPigRemark" runat="server" Columns="60"></asp:TextBox>
+                                <asp:TextBox ID="PermitCerfNumber" runat="server" Columns="60"></asp:TextBox>
 
                             </td>
                         </tr>
@@ -94,7 +90,7 @@
                 </div>
             </div>
             <div>
-                <asp:Button ID="PermitILIPigFormSaveSubmit" runat="server" Text="Save" class="btn" OnClick="PermitILIPigFormSaveSubmit_Click" />
+                <asp:Button ID="PermitILIPigFormSaveSubmit" runat="server" Text="Save" class="btn" />
             </div>
         </div>
     </div>

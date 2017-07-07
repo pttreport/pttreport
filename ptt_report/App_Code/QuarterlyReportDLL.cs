@@ -132,7 +132,8 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = " select * from tblquarter_rep where cus_type like '%" + cus_type + "%' ";
+            strSQL = " select * from tblquarter_rep where cus_type like '%" + cus_type + "%' " 
+                + "ORDER BY year, quarter DESC";
 
             if (year != "")
             {

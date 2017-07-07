@@ -16,35 +16,6 @@ namespace ptt_report.App_Code
             return null;
         }
 
-        public DataTable GetPIROnSUPipeline(string pir_id)
-        {
-            SqlConnection objConn = new SqlConnection();
-            SqlCommand objCmd = new SqlCommand();
-            SqlDataAdapter dtAdapter = new SqlDataAdapter();
-
-            DataSet ds = new DataSet();
-            DataTable dt = null;
-            string strSQL = null;
-
-            strSQL = " select * from pironsu_pipeline where pir_id =  '" + pir_id + "' ";
-
-            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
-            var _with1 = objCmd;
-            _with1.Connection = objConn;
-            _with1.CommandText = strSQL;
-            _with1.CommandType = CommandType.Text;
-            dtAdapter.SelectCommand = objCmd;
-
-            dtAdapter.Fill(ds);
-            dt = ds.Tables[0];
-
-            dtAdapter = null;
-            objConn.Close();
-            objConn = null;
-
-            return dt;
-        }
-
         public DataTable Insertpironsu_pipeline(string pir_id, string startupyear, string designpresure, string station, string maop, string length, string wallthickness, string materialspec, string designlife, string externalcoating, string cathodicprotection, string op, string ot, string gfr, string opinion)
         {
             SqlConnection objConn = new SqlConnection();
@@ -765,6 +736,152 @@ namespace ptt_report.App_Code
 
         }
 
+        public DataTable GetRep_HisALL()
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " select top(1) * from tbl_history_rep where rep_type ='3' order by version desc  ; ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+        }
+
+
+        ///////////// save version //////////////
+        public DataTable GetTempRep()
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " select * from tbl_tem_file where flag_active =  'y' and report_type = '3' ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+        }
+
+        public DataTable GetPIROnSUPipeline(string pir_id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " select * from pironsu_pipeline where pir_id =  '" + pir_id + "' ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+        }
+
+        public DataTable InsertHistory(string last_update, string createid, string filename, string uri, string rep_type, string version)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " Insert into tbl_history_rep(last_update,createid,filename,uri,rep_type,version) " +
+                    " values('" + last_update + "', '" + createid + "', '" + filename + "', '" + uri + "', '" + rep_type + "', '" + version + "'); select @@IDENTITY as id; ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+        }
+
+        public void UpdateHistory(string version, string filename, string id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " Update tbl_history_rep set version = '" + version + "',filename = '" + filename + "' " +
+                    " where id = '" + id + "' ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            objConn.Open();
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+
+            objCmd.ExecuteNonQuery();
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+        }
 
     }
 }

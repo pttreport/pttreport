@@ -131,6 +131,38 @@ namespace ptt_report.App_Code
             return dt;
         }
 
+        public DataTable GetExistRep_k(string master_rep_id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " select * from tblchemical_treatment where quarter_rep_id = '"
+                + master_rep_id + "' ";
+
+            objConn.ConnectionString = ConfigurationManager
+                .ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+        }
+
         public DataTable InsertHistory(string last_update, string createid, string filename, string uri, string rep_type, string version)
         {
             SqlConnection objConn = new SqlConnection();
@@ -145,6 +177,153 @@ namespace ptt_report.App_Code
                     " values('" + last_update + "', '" + createid + "', '" + filename + "', '" + uri + "', '" + rep_type + "', '" + version + "'); select @@IDENTITY as id; ";
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+        }
+
+        public DataTable GetExistRep_L(string master_rep_id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " select * from tbl_piping where quarter_rep_id = '" + master_rep_id + "' ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+        }
+
+        public DataTable Get_tbl_piping_qurter_plan1(string piping_id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " select * from tbl_piping_qurter_plan1 where pipg_id = '" + piping_id + "' ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+        }
+
+        public DataTable Get_tbl_piping_qurter_plan2(string piping_id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " select * from tbl_piping_qurter_plan2 where pipg_id = '" + piping_id + "' ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+        }
+
+        public DataTable GetSub6(string piping_id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " select * from tbl_piping_sub6 where pipg_id = '" + piping_id + "' ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+        }
+        public DataTable GetExistRep_j(string master_rep_id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " select * from tblili_pig where quarter_rep_id = '"
+                + master_rep_id + "' ";
+
+            objConn.ConnectionString = ConfigurationManager
+                .ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+
             var _with1 = objCmd;
             _with1.Connection = objConn;
             _with1.CommandText = strSQL;
@@ -448,15 +627,439 @@ namespace ptt_report.App_Code
 
             return dt;
         }
+        public DataTable GetExistRep4(string master_rep_id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " select * from tblsettlement_survey where quarter_rep_id = '" + master_rep_id + "' ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+        }
+
+        public DataTable GetExistRep4_sub(string ss_id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " select * from tblsettlement_survey_sub where ss_id = '" + ss_id + "' ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+        }
+
+        public DataTable GetExistRep5(string master_rep_id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " select * from tblrov where quarter_rep_id = '" + master_rep_id + "' ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+        }
+
+        public DataTable GetExistRep6(string master_rep_id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " select * from tblfreespan where quarter_rep_id = '" + master_rep_id + "' ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+        }
+        public DataTable GetExistRep(string master_rep_id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " select * from tblexternal_corrosion where quarter_rep_id = '"
+                + master_rep_id + "' ";
+
+            objConn.ConnectionString = ConfigurationManager
+                .ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+        }
+
+        public DataTable GetExistRep_sub_cathodicresult(string ec_id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " select * from tblexternalcorrosion_sub_cathodicresult where ec_id = '"
+                + ec_id + "' ";
+
+            objConn.ConnectionString = ConfigurationManager
+                .ConnectionStrings["dbptt_repConnectionString"]
+                .ConnectionString;
+
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+        }
+
+        public DataTable GetExistRep_sub_cipsstatus(string ec_id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " select * from tblexternalcorrosion_sub_cipsstatus where ec_id = '"
+                + ec_id + "' ";
+
+            objConn.ConnectionString = ConfigurationManager
+                .ConnectionStrings["dbptt_repConnectionString"]
+                .ConnectionString;
+
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+        }
+
+        public DataTable GetExistRep_sub_cipsstatus_activity(string ec_id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " select * from tblexternalcorrosion_sub_cipsstatus_activity where ec_id = '"
+                + ec_id + "' ";
+
+            objConn.ConnectionString = ConfigurationManager
+                .ConnectionStrings["dbptt_repConnectionString"]
+                .ConnectionString;
+
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+        }
 
 
+        public DataTable GetExistRep_i(string master_rep_id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
 
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
 
+            strSQL = " select * from tblcleaning_pig where quarter_rep_id = '"
+                + master_rep_id + "' ";
 
+            objConn.ConnectionString = ConfigurationManager
+                .ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
 
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
 
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
 
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
 
+            return dt;
+        }
+
+        public DataTable GetExistRep_sub_pigresult(string cp_id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " select * from tblcleaningpig_sub_pigresult where cp_id = '"
+                + cp_id + "' ";
+
+            objConn.ConnectionString = ConfigurationManager
+                .ConnectionStrings["dbptt_repConnectionString"]
+                .ConnectionString;
+
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+        }
+
+        public DataTable GetExistRep_sub_replan(string cp_id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " select * from tblcleaningpig_sub_replan where cp_id = '"
+                + cp_id + "' ";
+
+            objConn.ConnectionString = ConfigurationManager
+                .ConnectionStrings["dbptt_repConnectionString"]
+                .ConnectionString;
+
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+        }
+        public DataTable GetExistRep_M(string master_rep_id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " select * from tblrbi where quarter_rep_id = '"
+                + master_rep_id + "' ";
+
+            objConn.ConnectionString = ConfigurationManager
+                .ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+        }
+
+        public DataTable GetExistRep_G(string master_rep_id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " select * from tblother_projects where quarter_rep_id = '" + master_rep_id + "' ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+        }
+
+        public DataTable GetExistRep_sub_G(string op_id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " select * from tblother_project_sub where op_id = '" + op_id + "'  ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+        }
 
 
 

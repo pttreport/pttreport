@@ -4,11 +4,17 @@
 
 <asp:Content ID="es_form" ContentPlaceHolderID="ChildContent2" runat="server">
       <style>
-        #menuleft06 {
+        #menuleft10 {
             background: #0c7fd2;
         }
           .auto-style1 {
               height: 20px;
+          }
+          input[type="text" i] {
+              width:120px;
+          }
+          #ContentPlaceHolder1_ChildContent2_PermitCerfNumber {
+              width:100%;
           }
     </style>
 
@@ -24,8 +30,8 @@
         Year: 2559  Permit: กท2310027
                    
         <asp:Label ID="lbCustype" runat="server" Text="-"></asp:Label>
-        <asp:Button ID="btnExport" runat="server" Text="Export Report" class="btn" />
         <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" />
+        <asp:Button ID="btnExport" runat="server" Text="Export Report" class="btn" />
         <asp:Button ID="Button1" runat="server" Text="History" class="btn" />
         
     </div>
@@ -33,7 +39,7 @@
     <div id="thirdPartyInterfaceForm" style="background-color: #FFFFFF">
         <div id="patrolFormTable">
              <h3 class="barBlue">
-
+                 ภาคผนวก ฉ.
                  <asp:Button ID="btnImport" runat="server" Text="Import Data" OnClick="btnImport_Click" class="btn btn-info" />
  
             </h3>
@@ -46,7 +52,7 @@
                                 <table>
                                     <tr>
                                         <td class="auto-style1" style="text-align:right;" colspan="2">
-                                            <asp:Button ID="Button3" runat="server" Text="Create" />
+                                            <asp:Button ID="Button3" runat="server" Text="Create" CssClass="btn" />
                                         </td>
                                     </tr>
                                     <tr>

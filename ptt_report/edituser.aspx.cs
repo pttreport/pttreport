@@ -37,6 +37,7 @@ namespace ptt_report
                     if (!string.IsNullOrEmpty(Request.QueryString["param"]))
                     {
                         hddusername.Value = Request.QueryString["param"].ToString();
+                        lbtitle.Text = "Edit User";
                     }
                     else
                     {

@@ -42,6 +42,7 @@
             }
         }
     </script>
+    <link rel="stylesheet" href="Style/chosen.css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -55,8 +56,8 @@
         <br />
         <asp:Button ID="btndepartment" runat="server" Text="Department" OnClick="btndepartment_Click" />
     </div>
-    <div style="width: 720px" class="barinfo">
-        <h2 class="page_header">User Management</h2>
+    <div style="width: 861px; min-height: 132px;" class="barinfo">
+        <h2 class="page_header">Account Management</h2>
 
         <div id="divbsa" runat="server" visible="false">
             <table>
@@ -64,7 +65,7 @@
                     <td>
                         <asp:TextBox ID="txtsearch" runat="server" class="form-control"></asp:TextBox>
 
-                        <asp:Button ID="btnsearch" runat="server" OnClick="btnsearch_Click" Text="ค้นหา" class="btn btn-info" />
+                        <asp:Button ID="btnsearch" runat="server" OnClick="btnsearch_Click" Text="Search" class="btn btn-info" />
 
                         <asp:Button ID="btnadd" runat="server" Text="Add" OnClick="btnadd_Click" class="btn btn-info" /></td>
 
@@ -78,13 +79,23 @@
                 <tr>
                     <td style="width: 100px;">Department: </td>
                     <td>
-                        <asp:DropDownList ID="ddldepartment" runat="server" class="form-control" AutoPostBack="true" OnSelectedIndexChanged="ddldepartment_SelectedIndexChanged"></asp:DropDownList></td>
+                        <div class="side-by-side clearfix">
+
+                            <div>
+                                <asp:DropDownList ID="ddldepartment" runat="server" class="chzn-select"  AutoPostBack="true" OnSelectedIndexChanged="ddldepartment_SelectedIndexChanged"></asp:DropDownList>
+
+                            </div>
+                        </div>
+                        <script src="Scripts/jquery.min.js" type="text/javascript"></script>
+                        <script src="Scripts/chosen.jquery.js" type="text/javascript"></script>
+                        <script type="text/javascript"> $(".chzn-select").chosen(); $(".chzn-select-deselect").chosen({ allow_single_deselect: true }); </script>
+                    </td>
                 </tr>
                 <tr>
                     <td style="width: 100px;">Employee: </td>
                     <td>
                         <asp:TextBox ID="txtsearch2" runat="server" class="form-control"></asp:TextBox>
-                        <asp:Button ID="btnSearch2" runat="server" OnClick="btnSearch2_Click" Text="ค้นหา" class="btn btn-info" /></td>
+                        <asp:Button ID="btnSearch2" runat="server" OnClick="btnSearch2_Click" Text="Search" class="btn btn-info" /></td>
                 </tr>
 
             </table>
@@ -162,25 +173,25 @@
 
             <asp:TemplateField HeaderText="Visitor">
                 <ItemTemplate>
-                    <asp:CheckBox ID="chkAutho1" runat="server" />
+                    <asp:RadioButton ID="chkAutho1" runat="server" GroupName="autho" Enabled="false" />
                 </ItemTemplate>
             </asp:TemplateField>
 
             <asp:TemplateField HeaderText="Reporter">
                 <ItemTemplate>
-                    <asp:CheckBox ID="chkAutho2" runat="server" />
+                    <asp:RadioButton ID="chkAutho2" runat="server" GroupName="autho" Enabled="false" />
                 </ItemTemplate>
             </asp:TemplateField>
 
             <asp:TemplateField HeaderText="Approver">
                 <ItemTemplate>
-                    <asp:CheckBox ID="chkAutho3" runat="server" />
+                    <asp:RadioButton ID="chkAutho3" runat="server" GroupName="autho" Enabled="false" />
                 </ItemTemplate>
             </asp:TemplateField>
 
             <asp:TemplateField HeaderText="Admin">
                 <ItemTemplate>
-                    <asp:CheckBox ID="chkAutho4" runat="server" />
+                    <asp:RadioButton ID="chkAutho4" runat="server" GroupName="autho" Enabled="false" />
                 </ItemTemplate>
             </asp:TemplateField>
 

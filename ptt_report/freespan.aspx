@@ -13,8 +13,8 @@
     <div class="bar_qr">
         Customer Type :
         <asp:label id="lbCustype" runat="server" text="-"></asp:label>
-        <asp:button id="btnExport" runat="server" text="Export Report" class="btn" />
-        <asp:button id="btnSaveVer" runat="server" text="Save Version" class="btn" />
+        <asp:button id="btnSaveVer" runat="server" text="Save Version" class="btn" OnClick="btnSaveVer_Click" />
+        <asp:button id="btnExport" runat="server" text="Export Report" class="btn" OnClick="btnExport_Click" />
         <asp:button id="btnHistory" runat="server" text="History" class="btn" />
 
         <asp:HiddenField ID="hddfreespan_id" runat="server" />
@@ -26,7 +26,7 @@
     <div id="thirdPartyInterfaceForm" style="background-color: #FFFFFF">
         <div id="patrolFormTable">
             <h3 class="barBlue">Free Span
-                 <asp:Button ID="btnImport" runat="server" Text="Import Data" OnClick="btnImport_Click" class="btn btn-info" />
+                 
  
             </h3>
             <div class="info_executive">
@@ -72,7 +72,9 @@
                     <td>
                         
                     </td>
-                    <td class="auto-style1"><asp:button id="FSFormSaveSubmit" runat="server" text="Save" onclick="FSFormSaveSubmit_Click"  class="btn"/></td>
+                    <td class="auto-style1"><asp:button id="FSFormSaveSubmit" runat="server" text="Save" onclick="FSFormSaveSubmit_Click"  class="btn"/>
+                          <asp:Button ID="btnApprove" runat="server" Text="Approve Report" OnClick="btnApprove_Click1" CssClass="btn" />
+                    </td>
                 </tr>
 
             </table>
