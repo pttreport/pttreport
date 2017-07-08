@@ -132,8 +132,8 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = " select * from tblquarter_rep where cus_type like '%" + cus_type + "%' " 
-                + "ORDER BY year, quarter DESC";
+            strSQL = " select * from tblquarter_rep where cus_type like '%" + cus_type + "%' ";
+               
 
             if (year != "")
             {
@@ -148,7 +148,7 @@ namespace ptt_report.App_Code
                 strSQL += " and status = '" + status + "'  ";
             }
 
-
+            strSQL +=  " ORDER BY year, quarter DESC";
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
             var _with1 = objCmd;
