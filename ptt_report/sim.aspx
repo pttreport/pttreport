@@ -14,9 +14,9 @@
         Customer Type :
                    
         <asp:Label ID="lbCustype" runat="server" Text="-"></asp:Label>
-        <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" />
+        <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" OnClick="btnSaveVer_Click" />
         <asp:Button ID="btnExport" runat="server" Text="Export Report" class="btn" />
-        <asp:Button ID="btnHistory" runat="server" Text="History" class="btn" />
+        <asp:Button ID="btnHistory" runat="server" Text="History" class="btn" OnClick="btnHistory_Click" />
 
         <asp:HiddenField ID="hddsim_id" runat="server" />
         <asp:HiddenField ID="hddmas_rep_id" runat="server" />

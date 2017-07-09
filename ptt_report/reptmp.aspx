@@ -18,7 +18,7 @@
         <asp:GridView ID="gridview_rep_tmp" runat="server" AutoGenerateColumns="false" AllowPaging="true" ShowFooter="false" OnRowDataBound="gridview_rep_tmp_RowDataBound" OnPageIndexChanging="gridview_rep_tmp_PageIndexChanging">
             <Columns>
 
-                <asp:BoundField DataField="lastupdate" HeaderText="Last Update (YYYY/MM/DD)" />
+                <asp:BoundField DataField="lastupdate" HeaderText="Last Update" />
                 <asp:BoundField DataField="report_name" HeaderText="Doc file" />
                 <asp:BoundField DataField="updateby" HeaderText="Update By" />
 

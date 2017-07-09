@@ -125,7 +125,7 @@ namespace ptt_report
 
         protected void btnHistory_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/history_1.aspx?param=1");
+            Response.Redirect("~/history_1.aspx?param=1&quarterrepid=" + hddmas_rep_id.Value);
         }
 
         protected void btnExport_Click(object sender, EventArgs e)
@@ -2419,13 +2419,13 @@ namespace ptt_report
                     doc.Close();
 
                     var x = Serv.InsertHistory(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss", EngCI), HttpContext.Current.Session["assetusername"].ToString(), "Quaterly_report",
-                        "~/gen_1/Quaterly_report_" + time + ".docx", "1", "");
+                        "~/gen_1/Quaterly_report_" + time + ".docx", "1", "", hddmas_rep_id.Value);
 
                     hddfile_path.Value = "~/gen_1/Quaterly_report_" + time + ".docx";
 
                     if (x.Rows.Count != 0)
                     {
-                        Serv.UpdateHistory(x.Rows[0]["id"].ToString(), "Quaterly_report_V" + x.Rows[0]["id"].ToString(), x.Rows[0]["id"].ToString());
+                        Serv.UpdateHistory(x.Rows[0]["id"].ToString(), "Quaterly_report_V" + x.Rows[0]["id"].ToString(), x.Rows[0]["id"].ToString(), hddmas_rep_id.Value);
                     }
 
                     POPUPMSG("บันทึกเรียบร้อย");

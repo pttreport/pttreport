@@ -262,6 +262,39 @@ namespace ptt_report.App_Code
 
         }
 
+        public void Delete_tblother_projects_sub(string orderSubId, string update_id, string quarter_rep_id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " DELETE FROM tblother_project_sub WHERE id = "+ orderSubId + ";  " +
+
+                  " update tblquarter_rep set status = 'In Process', other_pro = 'In Process',update_date = getdate(),update_id = '" + update_id + "' where id = '" + quarter_rep_id + "';  "; ;
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            objConn.Open();
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+
+            objCmd.ExecuteNonQuery();
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+        }
+
+
+
+
+
         //// =========================================== Save Version ==========================================
 
         public DataTable GetTempRep()
@@ -527,7 +560,8 @@ namespace ptt_report.App_Code
             objConn = null;
 
         }
-        public void UpdateHistory(string version, string filename, string id)
+
+        public void UpdateExeStatusInProgress_rep(string mas_rep_id, string update_id)
         {
             SqlConnection objConn = new SqlConnection();
             SqlCommand objCmd = new SqlCommand();
@@ -537,7 +571,36 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = " Update tbl_history_rep set version = '" + version + "',filename = '" + filename + "' " +
+            strSQL = "  update tblquarter_rep set exe_status = 'In Progress',update_date = getdate(),update_id = '" + update_id + "' where id = '" + mas_rep_id + "';  ";
+
+                
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            objConn.Open();
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+
+            objCmd.ExecuteNonQuery();
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+        }
+
+        public void UpdateHistory(string version, string filename, string id, string quarter_rep_id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " Update tbl_history_rep set version = '" + version + "',filename = '" + filename + "' ,quarter_rep_id = '" + quarter_rep_id + "' " +
                     " where id = '" + id + "' ";
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;

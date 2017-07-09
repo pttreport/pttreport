@@ -41,7 +41,7 @@ namespace ptt_report
 
         protected void bing_rep_tmp()
         {
-            var x = Serv.GetRep_HisALL(hddrep_type.Value);
+            var x = Serv.GetRep_HisALL(hddrep_type.Value, Request.QueryString["quarterrepid"]);
             if (x.Rows.Count != 0)
             {
                 gridview_rep_tmp.DataSource = x;

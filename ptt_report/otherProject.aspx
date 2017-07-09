@@ -35,7 +35,8 @@
 
                 <asp:TemplateField HeaderText="Other Project">
                     <ItemTemplate>
-                        <asp:HiddenField ID="hddother_id" runat="server" Value='<%# Eval("id") %>' />
+                        <asp:HiddenField ID="hddother_sub_id" runat="server" Value='<%# Eval("id") %>' />
+                        <asp:HiddenField ID="hddotherorderNumber" runat="server" Value='<%# Eval("ordernumber") %>' />
 
                         <div id="divOther1" runat="server" visible="true">
                             <div class="info_executive">
@@ -84,7 +85,9 @@
                                         <tr>
                                             <td></td>
                                             <td>
-                                                <asp:Button ID="btnsave1" runat="server" Text="Save" OnClick="btnsave1_Click" /></td>
+                                                <asp:Button ID="btnsave1" runat="server" Text="Save" OnClick="btnsave1_Click" />
+                                                <asp:Button ID="btndelete" runat="server" Text="Delete" OnClick="btnDelete_Click" />
+                                            </td>
                                         </tr>
                                     </table>
                                 </div>

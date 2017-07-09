@@ -1,8 +1,24 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="QuarterlyReport.aspx.cs" Inherits="ptt_report.QuarterlyReport" %>
 
+
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <script language="javascript">
+        function Confim() {
+            var result = window.confirm('คุณต้องการลบใช่หรือไม่ ?');
+               if (result == true)
+                return true;
+            else
+                return false;
+        }
+    </script>
+
+    <asp:HiddenField ID="hddfile_path" runat="server" />
+
     <h3 class="mini_head2">
         Quarterly Report
     </h3>
@@ -63,8 +79,8 @@
                         <asp:HiddenField ID="hddcustype" runat="server" Value='<%# Eval("cus_type") %>' />
 
                         <asp:Button ID="btnmanage" runat="server" Text="Manage" OnClick="btnmanage_Click" Visible="false" CssClass="btn btn-info" />
-                        <asp:Button ID="btndownload" runat="server" Text="Download"  Visible="false" CssClass="btn btn-info"/>
-                        <asp:Button ID="btndelete" runat="server" Text="Delete" OnClick="btndelete_Click" Visible="false" CssClass="btn btn-danger"  />
+                        <asp:Button ID="btndownload" runat="server" Text="Download"  Visible="false" CssClass="btn btn-info" OnClick="btnDownload_Click"/>
+                        <asp:Button ID="btndelete" runat="server" Text="Delete" OnClientClick="return Confim();" OnClick="btndelete_Click" Visible="false" CssClass="btn btn-danger"  />
                     </ItemTemplate>
                 </asp:TemplateField>
 

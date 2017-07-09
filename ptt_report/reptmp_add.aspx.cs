@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -71,18 +72,38 @@ namespace ptt_report
 
             if (FileUpload1.HasFile)
             {
-                string filename = DateTime.Now.ToString("yyMMddHHsss") + Path.GetFileName(FileUpload1.FileName);
-                FileUpload1.SaveAs(Server.MapPath("~/tmp_rep/") + filename);
+                string[] segments = FileUpload1.FileName.Split('.');
+                string fileExt = segments[segments.Length - 1];
 
-                Serv.Update_TMP_REP(ddlRepType.SelectedValue);
+                if(fileExt == "dotx")
+                {
+                    string filename = DateTime.Now.ToString("yyMMddHHsss") + Path.GetFileName(FileUpload1.FileName);
+                    FileUpload1.SaveAs(Server.MapPath("~/tmp_rep/") + filename);
 
-                Serv.Insert_TMP_REP(ddlRepType.SelectedValue, ddlRepType.SelectedItem.Text + " Template V." + version, Server.MapPath("~/tmp_rep/") + filename, "~/tmp_rep/" + filename, HttpContext.Current.Session["assetusername"].ToString(),
-                    DateTime.Now.ToString("yyyy-MM-dd", EngCI), HttpContext.Current.Session["assetusername"].ToString(), Convert.ToString(version), "y");
+                    Serv.Update_TMP_REP(ddlRepType.SelectedValue);
 
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('บันทึกเรียบร้อย');window.location ='reptmp.aspx';", true);
+                    Serv.Insert_TMP_REP(ddlRepType.SelectedValue, ddlRepType.SelectedItem.Text + " Template V." + version, Server.MapPath("~/tmp_rep/") + filename, "~/tmp_rep/" + filename, HttpContext.Current.Session["assetusername"].ToString(),
+                        DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss", EngCI), HttpContext.Current.Session["assetusername"].ToString(), Convert.ToString(version), "y");
+
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('บันทึกเรียบร้อย');window.location ='reptmp.aspx';", true);
+                }
+                else
+                {
+                    POPUPMSG("กรุณา Import File (dotx) เท่านั้น");
+                    return;
+                }
 
             }
 
+        }
+
+        private void POPUPMSG(string msg)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("alert(\'");
+            sb.Append(msg.Replace("\n", "\\n").Replace("\r", "").Replace("\'", "\\\'"));
+            sb.Append("\');");
+            ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "showalert", sb.ToString(), true);
         }
 
         protected void btnDownload_Click(object sender, EventArgs e)

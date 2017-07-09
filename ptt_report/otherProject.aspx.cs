@@ -119,7 +119,7 @@ namespace ptt_report
         {
             Button btn = sender as Button;
             GridViewRow row = (GridViewRow)btn.NamingContainer;
-            HiddenField hddother_id = (HiddenField)row.FindControl("hddother_id");
+            HiddenField hddother_id = (HiddenField)row.FindControl("hddother_sub_id");
             TextBox txtProjectName1 = (TextBox)row.FindControl("txtProjectName1");
             TextBox txtProjectPlan1 = (TextBox)row.FindControl("txtProjectPlan1");
             TextBox txtProjectResult1 = (TextBox)row.FindControl("txtProjectResult1");
@@ -142,6 +142,11 @@ namespace ptt_report
                 gvPigResult.DataSource = null;
                 gvPigResult.DataBind();
             }
+
+
+            Serv.UpdateExeStatusInProgress_rep(hddmas_rep_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
+
+            POPUPMSG("บันทึกเรียบร้อย");
         }
 
         protected void btnSave_Click(object sender, EventArgs e)
@@ -177,12 +182,16 @@ namespace ptt_report
                 gvPigResult.DataBind();
             }
 
+            // added
+
+            Serv.UpdateExeStatusInProgress_rep(hddmas_rep_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
+
             POPUPMSG("บันทึกเรียบร้อย");
         }
 
         protected void btnHistory_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/history_1.aspx?param=1");
+            Response.Redirect("~/history_1.aspx?param=1&quarterrepid=" + hddmas_rep_id.Value);
         }
 
         protected void btnExport_Click(object sender, EventArgs e)
@@ -2481,7 +2490,7 @@ namespace ptt_report
 
                     if (x.Rows.Count != 0)
                     {
-                        Serv.UpdateHistory(x.Rows[0]["id"].ToString(), "Quaterly_report_V" + x.Rows[0]["id"].ToString(), x.Rows[0]["id"].ToString());
+                        Serv.UpdateHistory(x.Rows[0]["id"].ToString(), "Quaterly_report_V" + x.Rows[0]["id"].ToString(), x.Rows[0]["id"].ToString(), hddmas_rep_id.Value);
                     }
 
                     POPUPMSG("บันทึกเรียบร้อย");
@@ -2498,5 +2507,29 @@ namespace ptt_report
         {
             Serv.UpdateStatus_rep(hddmas_rep_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
         }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            GridViewRow row = (GridViewRow)btn.NamingContainer;
+            HiddenField hddother_sub_id = (HiddenField)row.FindControl("hddother_sub_id");
+
+            Serv.Delete_tblother_projects_sub(hddother_sub_id.Value, HttpContext.Current.Session["assetuserid"].ToString(), hddmas_rep_id.Value);
+
+            var sub_other = Serv.GetExistRep_sub(hddop_id.Value);
+            if (sub_other.Rows.Count != 0)
+            {
+                gvPigResult.DataSource = sub_other;
+                gvPigResult.DataBind();
+            }
+            else
+            {
+                gvPigResult.DataSource = null;
+                gvPigResult.DataBind();
+            }
+
+            //Serv.UpdateStatus_rep(hddmas_rep_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
+        }
+
     }
 }
