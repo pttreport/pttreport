@@ -2198,7 +2198,7 @@ namespace ptt_report
 
                     if (exist_M.Rows.Count != 0)
                     {
-                        sel.Find.Text = "[M1]";
+                        sel.Find.Text = "[m1]";
                         sel.Find.Replacement.Text = exist_M.Rows[0]["cplanwork"].ToString();
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
@@ -2207,7 +2207,7 @@ namespace ptt_report
                         sel.Find.MatchWholeWord = false;
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
-                        sel.Find.Text = "[M2]";
+                        sel.Find.Text = "[m2]";
                         sel.Find.Replacement.Text = exist_M.Rows[0]["cprogressresult"].ToString();
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
@@ -2216,7 +2216,7 @@ namespace ptt_report
                         sel.Find.MatchWholeWord = false;
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
-                        sel.Find.Text = "[M3]";
+                        sel.Find.Text = "[m3]";
                         sel.Find.Replacement.Text = exist_M.Rows[0]["cfutureplan"].ToString();
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
@@ -2225,7 +2225,7 @@ namespace ptt_report
                         sel.Find.MatchWholeWord = false;
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
-                        sel.Find.Text = "[M4]";
+                        sel.Find.Text = "[m4]";
                         sel.Find.Replacement.Text = exist_M.Rows[0]["cproblem"].ToString();
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
@@ -2234,7 +2234,7 @@ namespace ptt_report
                         sel.Find.MatchWholeWord = false;
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
-                        sel.Find.Text = "[M5]";
+                        sel.Find.Text = "[m5]";
                         sel.Find.Replacement.Text = exist_M.Rows[0]["mplanwork"].ToString();
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
@@ -2243,7 +2243,7 @@ namespace ptt_report
                         sel.Find.MatchWholeWord = false;
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
-                        sel.Find.Text = "[M6]";
+                        sel.Find.Text = "[m6]";
                         sel.Find.Replacement.Text = exist_M.Rows[0]["mprogressresult"].ToString();
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
@@ -2252,7 +2252,7 @@ namespace ptt_report
                         sel.Find.MatchWholeWord = false;
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
-                        sel.Find.Text = "[M7]";
+                        sel.Find.Text = "[m7]";
                         sel.Find.Replacement.Text = exist_M.Rows[0]["mfutureplan"].ToString();
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;
@@ -2261,7 +2261,7 @@ namespace ptt_report
                         sel.Find.MatchWholeWord = false;
                         sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
 
-                        sel.Find.Text = "[M8]";
+                        sel.Find.Text = "[m8]";
                         sel.Find.Replacement.Text = exist_M.Rows[0]["mproblem"].ToString();
                         sel.Find.Wrap = WdFindWrap.wdFindContinue;
                         sel.Find.Forward = true;

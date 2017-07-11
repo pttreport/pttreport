@@ -39,7 +39,7 @@
                     <tr>
                         <td>Detail :</td>
                         <td>
-                            <asp:TextBox ID="txtdetail" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtdetail" TextMode="MultiLine" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
