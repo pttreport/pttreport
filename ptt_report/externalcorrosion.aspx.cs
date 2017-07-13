@@ -1781,6 +1781,8 @@ namespace ptt_report
 
 
                     #endregion
+
+
                     #region i
                     var exist_i = Serv.GetExistRep_i(hddmas_rep_id.Value);
                     if (exist_i.Rows.Count != 0)
@@ -1818,15 +1820,22 @@ namespace ptt_report
                             sel.Find.Text = "[table6]";
                             sel.Find.Execute(Replace: WdReplace.wdReplaceNone);
                             sel.Range.Select();
-                            axTable2 = sel.Tables.Add(app.Selection.Range, subPig.Rows.Count + 1, 2);
+                            axTable2 = sel.Tables.Add(app.Selection.Range, subPig.Rows.Count + 1, 3);
 
+                            axTable2.Borders.InsideLineStyle = WdLineStyle.wdLineStyleSingle;
+                            axTable2.Borders.OutsideLineStyle = WdLineStyle.wdLineStyleSingle;
 
-                            int start_row = 1;
+                            axTable2.Cell(1, 1).Range.Text = "Route Code";
+                            axTable2.Cell(1, 2).Range.Text = "Section - Length";
+                            axTable2.Cell(1, 3).Range.Text = "Status";
+
+                            int start_row = 2;
 
                             for (int j = 0; j <= subPig.Rows.Count - 1; j++)
                             {
-                                axTable2.Cell(start_row, 1).Range.Text = subPig.Rows[j]["routecode"].ToString() + " " + subPig.Rows[j]["sectionlength"].ToString();
-                                axTable2.Cell(start_row, 2).Range.Text = subPig.Rows[j]["status"].ToString();
+                                axTable2.Cell(start_row, 1).Range.Text = subPig.Rows[j]["routecode"].ToString();
+                                axTable2.Cell(start_row, 2).Range.Text = subPig.Rows[j]["sectionlength"].ToString();
+                                axTable2.Cell(start_row, 3).Range.Text = subPig.Rows[j]["status"].ToString();
 
                                 start_row = start_row + 1;
                             }
