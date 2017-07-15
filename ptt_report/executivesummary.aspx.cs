@@ -18,6 +18,7 @@ namespace ptt_report
         CultureInfo ThCI = new System.Globalization.CultureInfo("th-TH");
         CultureInfo EngCI = new System.Globalization.CultureInfo("en-US");
         executivesummaryDLL Serv = new executivesummaryDLL();
+        QuarterlyReportDLL QServ = new QuarterlyReportDLL();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -2855,10 +2856,18 @@ namespace ptt_report
 
         protected void btnExport_Click(object sender, EventArgs e)
         {
-            if (hddfile_path.Value != "")
+            //if (hddfile_path.Value != "")
+            //{
+            //    Response.Redirect(hddfile_path.Value);
+            //}
+
+            var historyObj = QServ.GetHistoryLinkById(hddmas_rep_id.Value);
+
+            if (historyObj.Rows.Count != 0)
             {
-                Response.Redirect(hddfile_path.Value);
+                Response.Redirect(historyObj.Rows[0]["uri"].ToString());
             }
+
         }
 
         protected void btnApprove_Click(object sender, EventArgs e)

@@ -120,6 +120,7 @@
     <Compile Include="App_Code\chemicaltreatmentDLL.cs" />
     <Compile Include="App_Code\cleaningPigDLL.cs" />
     <Compile Include="App_Code\create_quar_repDLL.cs" />
+    <Content Include="App_Code\DBUtil.cs" />
     <Compile Include="App_Code\defaultDLL.cs" />
     <Compile Include="App_Code\directassessmentDLL.cs" />
     <Compile Include="App_Code\executivesummaryDLL.cs" />

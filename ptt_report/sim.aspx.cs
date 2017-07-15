@@ -18,6 +18,7 @@ namespace ptt_report
         CultureInfo ThCI = new System.Globalization.CultureInfo("th-TH");
         CultureInfo EngCI = new System.Globalization.CultureInfo("en-US");
         simDLL Serv = new simDLL();
+        QuarterlyReportDLL QServ = new QuarterlyReportDLL();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -2396,6 +2397,16 @@ namespace ptt_report
         {
             Serv.Updatetblsim_repair(hddmas_rep_id.Value, txtplanwork2.Text, txtplanresult2.Text, txtfuturePlan2.Text, txtproblem2.Text, txtRemark2.Text, hddsim_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
             POPUPMSG("บันทึกเรียบร้อย");
+        }
+
+        protected void btnExport_Click(object sender, EventArgs e)
+        {
+            var historyObj = QServ.GetHistoryLinkById(hddmas_rep_id.Value);
+
+            if (historyObj.Rows.Count != 0)
+            {
+                Response.Redirect(historyObj.Rows[0]["uri"].ToString());
+            }
         }
 
         private void POPUPMSG(string msg)
