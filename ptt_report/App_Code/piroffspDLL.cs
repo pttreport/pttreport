@@ -45,7 +45,7 @@ namespace ptt_report.App_Code
             return dt;
         }
 
-        public DataTable Insertpiroffsp_pipeline(string pir_id, string startupyear, string designpresure, string station, string maop, string length , string maopdesign, string wallthickness, string olc, string materialspec, string designlife, string externalcoating, string cathodicprotection, string op, string ot, string gfr, string lastilipig, string crusedforrem, string proboffailure, string assessmentdate, string overallremainlife, string remainlife, string overalldesignlife, string inspectionyear, string b31gpsi, string burstpressure, string erf, string opinion)
+        public DataTable Insertpiroffsp_pipeline(string pir_id, string startupyear, string designpresure, string station, string maop, string length, string maopdesign, string wallthickness, string olc, string materialspec, string designlife, string externalcoating, string cathodicprotection, string op, string ot, string gfr, string lastilipig, string crusedforrem, string proboffailure, string assessmentdate, string overallremainlife, string remainlife, string overalldesignlife, string inspectionyear, string b31gpsi, string burstpressure, string erf, string opinion)
         {
             SqlConnection objConn = new SqlConnection();
             SqlCommand objCmd = new SqlCommand();
@@ -847,9 +847,9 @@ namespace ptt_report.App_Code
 
                                  pir_id + "','"
                                  + sumresult + "','"
-                                 +lsp + "','"
-                                 +lplem + "','"
-                                 +llr + "','"
+                                 + lsp + "','"
+                                 + lplem + "','"
+                                 + llr + "','"
                                  + detail + "','"
                                  + opinion +
 
@@ -939,7 +939,7 @@ namespace ptt_report.App_Code
         }
 
 
-        public DataTable Insertpiroffsp_prh(string pir_id, string sumresult,string detail, string opinion)
+        public DataTable Insertpiroffsp_prh(string pir_id, string sumresult, string detail, string opinion)
         {
             SqlConnection objConn = new SqlConnection();
             SqlCommand objCmd = new SqlCommand();
@@ -1166,7 +1166,7 @@ namespace ptt_report.App_Code
             return dt;
         }
 
-        public DataTable InsertHistory(string last_update, string createid, string filename, string uri, string rep_type, string version)
+        public DataTable InsertHistory(string last_update, string createid, string filename, string uri, string rep_type, string version,string quarter_rep_id)
         {
             SqlConnection objConn = new SqlConnection();
             SqlCommand objCmd = new SqlCommand();
@@ -1176,8 +1176,8 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = " Insert into tbl_history_rep(last_update,createid,filename,uri,rep_type,version) " +
-                    " values('" + last_update + "', '" + createid + "', '" + filename + "', '" + uri + "', '" + rep_type + "', '" + version + "'); select @@IDENTITY as id; ";
+            strSQL = " Insert into tbl_history_rep(last_update,createid,filename,uri,rep_type,version,quarter_rep_id) " +
+                    " values('" + last_update + "', '" + createid + "', '" + filename + "', '" + uri + "', '" + rep_type + "', '" + version + "','" + quarter_rep_id + "'); select @@IDENTITY as id; ";
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
             var _with1 = objCmd;

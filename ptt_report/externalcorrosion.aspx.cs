@@ -17,7 +17,6 @@ namespace ptt_report
         CultureInfo ThCI = new System.Globalization.CultureInfo("th-TH");
         CultureInfo EngCI = new System.Globalization.CultureInfo("en-US");
         externalcorrosionDLL Serv = new externalcorrosionDLL();
-        QuarterlyReportDLL QServ = new QuarterlyReportDLL();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -249,9 +248,10 @@ namespace ptt_report
                     TextBox gvCIPSStatusActivityActivity = (TextBox)row.FindControl("gvCIPSStatusActivityActivity");
                     TextBox gvCIPSStatusActivityProgress = (TextBox)row.FindControl("gvCIPSStatusActivityProgress");
                     TextBox gvCIPSStatusActivityEstimatePlan = (TextBox)row.FindControl("gvCIPSStatusActivityEstimatePlan");
-                    TextBox gvCIPSStatusActivityManage = (TextBox)row.FindControl("gvCIPSStatusActivityManage");
+                    //TextBox gvCIPSStatusActivityManage = (TextBox)row.FindControl("gvCIPSStatusActivityManage");
 
-                    Serv.Updatetblexternalcorrosion_sub_cipsstatus_activity(hddec_id.Value, gvCIPSStatusActivityActivity.Text, gvCIPSStatusActivityProgress.Text, gvCIPSStatusActivityEstimatePlan.Text, gvCIPSStatusActivityManage.Text, HddCIPSStatusActivityId.Value);
+                    Serv.Updatetblexternalcorrosion_sub_cipsstatus_activity(hddec_id.Value, gvCIPSStatusActivityActivity.Text, gvCIPSStatusActivityProgress.Text, gvCIPSStatusActivityEstimatePlan.Text,
+                        "", HddCIPSStatusActivityId.Value);
                 }
             }
 
@@ -382,11 +382,9 @@ namespace ptt_report
 
         protected void btnExport_Click(object sender, EventArgs e)
         {
-            var historyObj = QServ.GetHistoryLinkById(hddmas_rep_id.Value);
-
-            if (historyObj.Rows.Count != 0)
+            if (hddfile_path.Value != "")
             {
-                Response.Redirect(historyObj.Rows[0]["uri"].ToString());
+                Response.Redirect(hddfile_path.Value);
             }
         }
 
@@ -1784,8 +1782,6 @@ namespace ptt_report
 
 
                     #endregion
-
-
                     #region i
                     var exist_i = Serv.GetExistRep_i(hddmas_rep_id.Value);
                     if (exist_i.Rows.Count != 0)
@@ -1823,22 +1819,15 @@ namespace ptt_report
                             sel.Find.Text = "[table6]";
                             sel.Find.Execute(Replace: WdReplace.wdReplaceNone);
                             sel.Range.Select();
-                            axTable2 = sel.Tables.Add(app.Selection.Range, subPig.Rows.Count + 1, 3);
+                            axTable2 = sel.Tables.Add(app.Selection.Range, subPig.Rows.Count + 1, 2);
 
-                            axTable2.Borders.InsideLineStyle = WdLineStyle.wdLineStyleSingle;
-                            axTable2.Borders.OutsideLineStyle = WdLineStyle.wdLineStyleSingle;
 
-                            axTable2.Cell(1, 1).Range.Text = "Route Code";
-                            axTable2.Cell(1, 2).Range.Text = "Section - Length";
-                            axTable2.Cell(1, 3).Range.Text = "Status";
-
-                            int start_row = 2;
+                            int start_row = 1;
 
                             for (int j = 0; j <= subPig.Rows.Count - 1; j++)
                             {
-                                axTable2.Cell(start_row, 1).Range.Text = subPig.Rows[j]["routecode"].ToString();
-                                axTable2.Cell(start_row, 2).Range.Text = subPig.Rows[j]["sectionlength"].ToString();
-                                axTable2.Cell(start_row, 3).Range.Text = subPig.Rows[j]["status"].ToString();
+                                axTable2.Cell(start_row, 1).Range.Text = subPig.Rows[j]["routecode"].ToString() + " " + subPig.Rows[j]["sectionlength"].ToString();
+                                axTable2.Cell(start_row, 2).Range.Text = subPig.Rows[j]["status"].ToString();
 
                                 start_row = start_row + 1;
                             }
@@ -2705,6 +2694,28 @@ namespace ptt_report
             finally
             {
                 app.Quit();
+            }
+        }
+
+        protected void btndal3_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            GridViewRow row = (GridViewRow)btn.NamingContainer;
+            HiddenField hddrepid = (HiddenField)row.FindControl("HddCIPSStatusActivityId");
+
+            Serv.Deletetblexternalcorrosion_sub_cipsstatus_activity(hddrepid.Value);
+            
+            var subCIPSStatusActivity = Serv.GetExistRep_sub_cipsstatus_activity(hddec_id.Value);
+
+            if (subCIPSStatusActivity.Rows.Count != 0)
+            {
+                gvCIPSStatusActivity.DataSource = subCIPSStatusActivity;
+                gvCIPSStatusActivity.DataBind();
+            }
+            else
+            {
+                gvCIPSStatusActivity.DataSource = null;
+                gvCIPSStatusActivity.DataBind();
             }
         }
     }

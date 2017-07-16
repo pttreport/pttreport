@@ -17,7 +17,7 @@ namespace ptt_report
         CultureInfo ThCI = new System.Globalization.CultureInfo("th-TH");
         CultureInfo EngCI = new System.Globalization.CultureInfo("en-US");
         settlementsurveyDLL Serv = new settlementsurveyDLL();
-        QuarterlyReportDLL QServ = new QuarterlyReportDLL();
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -206,11 +206,9 @@ namespace ptt_report
 
         protected void btnExport_Click(object sender, EventArgs e)
         {
-            var historyObj = QServ.GetHistoryLinkById(hddmas_rep_id.Value);
-
-            if (historyObj.Rows.Count != 0)
+            if (hddfile_path.Value != "")
             {
-                Response.Redirect(historyObj.Rows[0]["uri"].ToString());
+                Response.Redirect(hddfile_path.Value);
             }
         }
 
@@ -1597,165 +1595,6 @@ namespace ptt_report
 
 
                     #endregion
-
-
-                    #region i
-                    var exist_i = Serv.GetExistRep_i(hddmas_rep_id.Value);
-                    if (exist_i.Rows.Count != 0)
-                    {
-                        sel.Find.Text = "[i1]";
-                        sel.Find.Replacement.Text = exist_i.Rows[0]["planwork"].ToString().Replace("\r\n", "\v");
-                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
-                        sel.Find.Forward = true;
-                        sel.Find.Format = false;
-                        sel.Find.MatchCase = false;
-                        sel.Find.MatchWholeWord = false;
-                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
-
-                        //txtRoutecode.Text = exist_i.Rows[0]["pwroutecode"].ToString();
-                        //txtDimeter.Text = exist_i.Rows[0]["pwdimeter"].ToString();
-                        //txtPipeline.Text = exist_i.Rows[0]["pwpipelinesection"].ToString();
-                        //txtNumberOfPig.Text = exist_i.Rows[0]["pwnumberpig"].ToString();
-                        //txtPlanning.Text = exist_i.Rows[0]["pwplaning"].ToString();
-
-                        sel.Find.Text = "[i7]";
-                        sel.Find.Replacement.Text = exist_i.Rows[0]["planwork"].ToString().Replace("\r\n", "\v");
-                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
-                        sel.Find.Forward = true;
-                        sel.Find.Format = false;
-                        sel.Find.MatchCase = false;
-                        sel.Find.MatchWholeWord = false;
-                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
-
-                        var subPig = Serv.GetExistRep_sub_pigresult(exist_i.Rows[0]["id"].ToString());
-
-                        if (subPig.Rows.Count != 0)
-                        {
-                            Microsoft.Office.Interop.Word.Table axTable2;
-
-                            sel.Find.Text = "[table6]";
-                            sel.Find.Execute(Replace: WdReplace.wdReplaceNone);
-                            sel.Range.Select();
-                            axTable2 = sel.Tables.Add(app.Selection.Range, subPig.Rows.Count + 1, 3);
-
-                            axTable2.Borders.InsideLineStyle = WdLineStyle.wdLineStyleSingle;
-                            axTable2.Borders.OutsideLineStyle = WdLineStyle.wdLineStyleSingle;
-
-                            axTable2.Cell(1, 1).Range.Text = "Route Code";
-                            axTable2.Cell(1, 2).Range.Text = "Section - Length";
-                            axTable2.Cell(1, 3).Range.Text = "Status";
-
-                            int start_row = 2;
-
-                            for (int j = 0; j <= subPig.Rows.Count - 1; j++)
-                            {
-                                axTable2.Cell(start_row, 1).Range.Text = subPig.Rows[j]["routecode"].ToString();
-                                axTable2.Cell(start_row, 2).Range.Text = subPig.Rows[j]["sectionlength"].ToString();
-                                axTable2.Cell(start_row, 3).Range.Text = subPig.Rows[j]["status"].ToString();
-
-                                start_row = start_row + 1;
-                            }
-                        }
-
-
-                        sel.Find.Text = "[i11]";
-                        sel.Find.Replacement.Text = exist_i.Rows[0]["notethat"].ToString().Replace("\r\n", "\v");
-                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
-                        sel.Find.Forward = true;
-                        sel.Find.Format = false;
-                        sel.Find.MatchCase = false;
-                        sel.Find.MatchWholeWord = false;
-                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
-
-                        sel.Find.Text = "[i12]";
-                        sel.Find.Replacement.Text = exist_i.Rows[0]["froutecode"].ToString().Replace("\r\n", "\v");
-                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
-                        sel.Find.Forward = true;
-                        sel.Find.Format = false;
-                        sel.Find.MatchCase = false;
-                        sel.Find.MatchWholeWord = false;
-                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
-
-                        sel.Find.Text = "[i13]";
-                        sel.Find.Replacement.Text = exist_i.Rows[0]["fdimeter"].ToString().Replace("\r\n", "\v");
-                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
-                        sel.Find.Forward = true;
-                        sel.Find.Format = false;
-                        sel.Find.MatchCase = false;
-                        sel.Find.MatchWholeWord = false;
-                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
-
-                        sel.Find.Text = "[i14]";
-                        sel.Find.Replacement.Text = exist_i.Rows[0]["fpipelinesection"].ToString().Replace("\r\n", "\v");
-                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
-                        sel.Find.Forward = true;
-                        sel.Find.Format = false;
-                        sel.Find.MatchCase = false;
-                        sel.Find.MatchWholeWord = false;
-                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
-
-                        sel.Find.Text = "[i15]";
-                        sel.Find.Replacement.Text = exist_i.Rows[0]["fnumberpig"].ToString().Replace("\r\n", "\v");
-                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
-                        sel.Find.Forward = true;
-                        sel.Find.Format = false;
-                        sel.Find.MatchCase = false;
-                        sel.Find.MatchWholeWord = false;
-                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
-
-                        sel.Find.Text = "[i16]";
-                        sel.Find.Replacement.Text = exist_i.Rows[0]["fplaning"].ToString().Replace("\r\n", "\v");
-                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
-                        sel.Find.Forward = true;
-                        sel.Find.Format = false;
-                        sel.Find.MatchCase = false;
-                        sel.Find.MatchWholeWord = false;
-                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
-
-                        sel.Find.Text = "[i17]";
-                        sel.Find.Replacement.Text = exist_i.Rows[0]["problem"].ToString().Replace("\r\n", "\v");
-                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
-                        sel.Find.Forward = true;
-                        sel.Find.Format = false;
-                        sel.Find.MatchCase = false;
-                        sel.Find.MatchWholeWord = false;
-                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
-
-
-
-                        var subReplan = Serv.GetExistRep_sub_replan(exist_i.Rows[0]["id"].ToString());
-
-                        if (subReplan.Rows.Count != 0)
-                        {
-                            Microsoft.Office.Interop.Word.Table axTable2;
-
-                            sel.Find.Text = "[table8]";
-                            sel.Find.Execute(Replace: WdReplace.wdReplaceNone);
-                            sel.Range.Select();
-                            axTable2 = sel.Tables.Add(app.Selection.Range, subReplan.Rows.Count + 1, 3);
-
-                            axTable2.Borders.InsideLineStyle = WdLineStyle.wdLineStyleSingle;
-                            axTable2.Borders.OutsideLineStyle = WdLineStyle.wdLineStyleSingle;
-
-                            axTable2.Cell(1, 1).Range.Text = "เส้นท่อ";
-                            axTable2.Cell(1, 2).Range.Text = "ปรับแผน";
-                            axTable2.Cell(1, 3).Range.Text = "รายละเอียด";
-
-                            int start_row = 2;
-
-                            for (int j = 0; j <= subReplan.Rows.Count - 1; j++)
-                            {
-                                axTable2.Cell(start_row, 1).Range.Text = subReplan.Rows[j]["routecode"].ToString();
-                                axTable2.Cell(start_row, 2).Range.Text = subReplan.Rows[j]["replan"].ToString();
-                                axTable2.Cell(start_row, 3).Range.Text = subReplan.Rows[j]["detail"].ToString();
-
-                                start_row = start_row + 1;
-                            }
-                        }
-
-                    }
-                    #endregion
-
 
                     #region j
                     var exist_j = Serv.GetExistRep_j(hddmas_rep_id.Value);

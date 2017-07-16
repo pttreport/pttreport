@@ -7,12 +7,24 @@
             margin: 2px 0px;
         }
     </style>
+
+    <script src="Scripts/jquery.min.js" type="text/javascript"></script>
+
+    <script src="Scripts/jquery.searchabledropdown-1.0.8.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+     $(document).ready(function () {
+         $(".ddlpermit").searchable();
+    });
+    </script>
+
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h3 class="mini_head2">ธ.พ. Report
     </h3>
     <div class="serchRed">
-        <table>
+        <table style="width:100%">
             <tr>
                 <td>Year : 
                 </td>
@@ -23,10 +35,15 @@
                 <td>Permit : 
                 </td>
                 <td>
-                    <asp:DropDownList ID="ddlpermit" runat="server" OnSelectedIndexChanged="ddlpermit_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlpermit" CssClass="ddlpermit" runat="server" OnSelectedIndexChanged="ddlpermit_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
                 </td>
                 <td>
                     <asp:Button ID="btnsearch" runat="server" Text="Search" OnClick="btnsearch_Click" class="btn btn-gray" />
+                </td>
+                <td style="width:60%">
+                </td>
+                <td>
+                    <asp:Button ID="btncreate" runat="server" Text="Create" OnClick="btncreate_Click" class="btn btn-gray" />
                 </td>
             </tr>
         </table>

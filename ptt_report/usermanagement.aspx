@@ -43,6 +43,11 @@
         }
     </script>
     <link rel="stylesheet" href="Style/chosen.css" />
+    <style>
+        #ContentPlaceHolder1_gridview_user_ptt {
+            width:100%;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -63,11 +68,11 @@
             <table>
                 <tr>
                     <td>
-                        <asp:TextBox ID="txtsearch" runat="server" class="form-control"></asp:TextBox>
+                        <asp:TextBox ID="txtsearch" runat="server" class="form-control" placeholder="Username,Name,Last Name" style="    width: 300px;"></asp:TextBox>
 
                         <asp:Button ID="btnsearch" runat="server" OnClick="btnsearch_Click" Text="Search" class="btn btn-info" />
 
-                        <asp:Button ID="btnadd" runat="server" Text="Add" OnClick="btnadd_Click" class="btn btn-info" /></td>
+                        <asp:Button ID="btnadd" runat="server" Text="Add" OnClick="btnadd_Click" class="btn btn-info" style="    float: right;" /></td>
 
                 </tr>
             </table>
@@ -94,7 +99,7 @@
                 <tr>
                     <td style="width: 100px;">Employee: </td>
                     <td>
-                        <asp:TextBox ID="txtsearch2" runat="server" class="form-control"></asp:TextBox>
+                        <asp:TextBox ID="txtsearch2" runat="server" class="form-control" placeholder="Employee ID, Name, Last Name" style=" width: 300px;"></asp:TextBox>
                         <asp:Button ID="btnSearch2" runat="server" OnClick="btnSearch2_Click" Text="Search" class="btn btn-info" /></td>
                 </tr>
 

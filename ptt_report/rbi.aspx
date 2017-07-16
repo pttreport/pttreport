@@ -58,13 +58,13 @@
                     <tr>
                         <td>ปัญหาอุปสรรค (ถ้ามี) :</td>
                         <td>
-                            <asp:TextBox ID="txtproblem" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtproblem" TextMode="MultiLine" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
                         <td>ความเห็น :</td>
                         <td>
-                            <asp:TextBox ID="txtRemark" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtRemark" TextMode="MultiLine" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -99,13 +99,13 @@
                             <tr>
                                 <td>ปัญหาอุปสรรค (ถ้ามี) :</td>
                                 <td>
-                                    <asp:TextBox ID="txtproblem2" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="txtproblem2" TextMode="MultiLine" runat="server"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr>
                                 <td>ความเห็น :</td>
                                 <td>
-                                    <asp:TextBox ID="txtRemark2" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="txtRemark2" TextMode="MultiLine" runat="server"></asp:TextBox>
                                 </td>
                             </tr>
                             <tr>

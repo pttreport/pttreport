@@ -12,7 +12,7 @@
     <br clear="all">
     <h3 class="mini_head">
         <asp:DropDownList ID="ddlRepType" runat="server" OnSelectedIndexChanged="ddlRepType_SelectedIndexChanged"  AutoPostBack="true"></asp:DropDownList>
-        <asp:Button ID="btnAddTmp" runat="server" Text="Add Template" OnClick="btnAddTmp_Click" class="btn btn-gray btn-right" />
+        <asp:Button ID="btnAddTmp" runat="server" Text="Add Template" OnClick="btnAddTmp_Click" class="btn btn-gray" style="float: right;" />
     </h3>
     <div>
         <asp:GridView ID="gridview_rep_tmp" runat="server" AutoGenerateColumns="false" AllowPaging="true" ShowFooter="false" OnRowDataBound="gridview_rep_tmp_RowDataBound" OnPageIndexChanging="gridview_rep_tmp_PageIndexChanging">

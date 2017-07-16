@@ -18,7 +18,6 @@ namespace ptt_report
         CultureInfo ThCI = new System.Globalization.CultureInfo("th-TH");
         CultureInfo EngCI = new System.Globalization.CultureInfo("en-US");
         simDLL Serv = new simDLL();
-        QuarterlyReportDLL QServ = new QuarterlyReportDLL();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -1501,22 +1500,14 @@ namespace ptt_report
                             sel.Find.Text = "[table6]";
                             sel.Find.Execute(Replace: WdReplace.wdReplaceNone);
                             sel.Range.Select();
-                            axTable2 = sel.Tables.Add(app.Selection.Range, subPig.Rows.Count + 1, 3);
+                            axTable2 = sel.Tables.Add(app.Selection.Range, subPig.Rows.Count + 1, 2);
 
-                            axTable2.Borders.InsideLineStyle = WdLineStyle.wdLineStyleSingle;
-                            axTable2.Borders.OutsideLineStyle = WdLineStyle.wdLineStyleSingle;
-
-                            axTable2.Cell(1, 1).Range.Text = "Route Code";
-                            axTable2.Cell(1, 2).Range.Text = "Section - Length";
-                            axTable2.Cell(1, 3).Range.Text = "Status";
-
-                            int start_row = 2;
+                            int start_row = 1;
 
                             for (int j = 0; j <= subPig.Rows.Count - 1; j++)
                             {
-                                axTable2.Cell(start_row, 1).Range.Text = subPig.Rows[j]["routecode"].ToString();
-                                axTable2.Cell(start_row, 2).Range.Text = subPig.Rows[j]["sectionlength"].ToString();
-                                axTable2.Cell(start_row, 3).Range.Text = subPig.Rows[j]["status"].ToString();
+                                axTable2.Cell(start_row, 1).Range.Text = subPig.Rows[j]["routecode"].ToString() + " " + subPig.Rows[j]["sectionlength"].ToString();
+                                axTable2.Cell(start_row, 2).Range.Text = subPig.Rows[j]["status"].ToString();
 
                                 start_row = start_row + 1;
                             }
@@ -2397,16 +2388,6 @@ namespace ptt_report
         {
             Serv.Updatetblsim_repair(hddmas_rep_id.Value, txtplanwork2.Text, txtplanresult2.Text, txtfuturePlan2.Text, txtproblem2.Text, txtRemark2.Text, hddsim_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
             POPUPMSG("บันทึกเรียบร้อย");
-        }
-
-        protected void btnExport_Click(object sender, EventArgs e)
-        {
-            var historyObj = QServ.GetHistoryLinkById(hddmas_rep_id.Value);
-
-            if (historyObj.Rows.Count != 0)
-            {
-                Response.Redirect(historyObj.Rows[0]["uri"].ToString());
-            }
         }
 
         private void POPUPMSG(string msg)

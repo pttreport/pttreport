@@ -45,7 +45,7 @@
                     <tr>
                         <td>ความเห็น :</td>
                         <td>
-                            <asp:TextBox ID="txtComment" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtComment" TextMode="MultiLine" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>

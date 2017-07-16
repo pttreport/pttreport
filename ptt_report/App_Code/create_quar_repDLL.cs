@@ -50,10 +50,10 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = " Insert Into tblquarter_rep(year,quarter,cus_type ,status, exe_status,pm_cm_status,external_status,internal_status,piping,offshore,other_pro,create_date,update_date,create_id,update_id) " +
+            strSQL = " Insert Into tblquarter_rep(year,quarter,cus_type ,status, exe_status,pm_cm_status,external_status,internal_status,piping,offshore,other_pro,create_date,update_date,create_id,update_id, active) " +
                     " values('" + year + "','" + quarter + "','" + cus_type + "', '" + status + "','" + exe_status + "','" + pm_cm_status + "', " +
                     " '" + external_status + "','" + internal_status + "','" + piping + "','"+offshore+"','"+other_pro+"', " + 
-                    " '" + create_date + "','" + update_date + "', '" + create_id + "','" + update_id + "') ";
+                    " '" + create_date + "','" + update_date + "', '" + create_id + "','" + update_id + "', 1) ";
 
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;

@@ -20,7 +20,7 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = " select distinct(year) from tblquarter_rep where active = 1 order by year desc ; ";
+            strSQL = " select distinct(year) from tblquarter_rep order by year desc ; ";
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
             var _with1 = objCmd;
@@ -48,7 +48,7 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = " select distinct(quarter) from tblquarter_rep where active = 1 order by quarter desc ; ";
+            strSQL = " select distinct(quarter) from tblquarter_rep order by quarter desc ; ";
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
             var _with1 = objCmd;
@@ -96,37 +96,6 @@ namespace ptt_report.App_Code
             return dt;
         }
 
-        public DataTable GetHistoryLinkById(string id)
-        {
-
-            SqlConnection objConn = new SqlConnection();
-            SqlCommand objCmd = new SqlCommand();
-            SqlDataAdapter dtAdapter = new SqlDataAdapter();
-
-            DataSet ds = new DataSet();
-            DataTable dt = null;
-            string strSQL = null;
-
-            strSQL = " select top(1) * from tbl_history_rep where id = "+id+" order by version desc  ; ";
-
-            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
-            var _with1 = objCmd;
-            _with1.Connection = objConn;
-            _with1.CommandText = strSQL;
-            _with1.CommandType = CommandType.Text;
-            dtAdapter.SelectCommand = objCmd;
-
-            dtAdapter.Fill(ds);
-            dt = ds.Tables[0];
-
-            dtAdapter = null;
-            objConn.Close();
-            objConn = null;
-
-            return dt;
-
-        }
-
 
         public DataTable GetRep_cus_type()
         {
@@ -138,7 +107,7 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = " select distinct(cus_type) from tblquarter_rep where active = 1; ";
+            strSQL = " select distinct(cus_type) from tblquarter_rep; ";
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
             var _with1 = objCmd;
@@ -166,7 +135,7 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = " select distinct(status) from tblquarter_rep where active = 1; ";
+            strSQL = " select distinct(status) from tblquarter_rep; ";
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
             var _with1 = objCmd;
@@ -194,7 +163,7 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = " select * from tblquarter_rep where active = 1 AND cus_type like '%" + cus_type + "%' ";
+            strSQL = " select * from tblquarter_rep where cus_type like '%" + cus_type + "%' ";
                
 
             if (year != "")
@@ -238,7 +207,8 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = "UPDATE dbo.tblquarter_rep SET active = 0 WHERE id = " + id;
+            strSQL = " delete tblquarter_rep where id = '" + id + "' ";
+
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
             objConn.Open();

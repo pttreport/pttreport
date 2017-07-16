@@ -13,6 +13,8 @@
     <div class="bar_qr">
         Customer Type :
                    
+       
+
         <asp:Label ID="lbCustype" runat="server" Text="-"></asp:Label>
         <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" OnClick="btnSaveVer_Click" />
         <asp:Button ID="btnExport" runat="server" Text="Export Report" class="btn" OnClick="btnExport_Click" />
@@ -32,6 +34,8 @@
         <div id="patrolFormTable">
             <h3 class="barBlue">External Corrosion
                 
+               
+
                 <asp:Button ID="btnImport" runat="server" Text="Import Data" OnClick="btnImport_Click" class="btn btn-info" />
 
             </h3>
@@ -81,6 +85,8 @@
                         <tr>
                             <td>Insulating Joint :
                        
+                               
+
                                 <br />
                                 or Flange Inspection </td>
                             <td class="auto-style1">
@@ -251,8 +257,11 @@
                                                     </asp:TemplateField>
                                                     <asp:TemplateField HeaderText="Manage">
                                                         <ItemTemplate>
-                                                            <asp:TextBox ID="gvCIPSStatusActivityManage" runat="server" Text='<%# Eval("manage") %>'></asp:TextBox>
+                                                            <asp:Button ID="btndal3" runat="server" Text="Delete" OnClick="btndal3_Click" />
                                                         </ItemTemplate>
+                                                        <%--<ItemTemplate>
+                                                            <asp:TextBox ID="gvCIPSStatusActivityManage" runat="server" Text='<%# Eval("manage") %>'></asp:TextBox>
+                                                        </ItemTemplate>--%>
                                                     </asp:TemplateField>
                                                 </Columns>
                                             </asp:GridView>

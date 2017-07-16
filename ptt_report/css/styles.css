@@ -269,7 +269,7 @@ li, a, p, div, input {
     border-color: #025a02;
 }
 .btn-right {
-    position: absolute;
+    float:right;
     right: 10px;
 }
 
@@ -363,7 +363,7 @@ li, a, p, div, input {
 
 .bar_qr {
      float: right;
-    margin-top: -39px;
+    margin-top: -29px;
 
 }
 
@@ -455,6 +455,39 @@ li, a, p, div, input {
     padding: 3px;
 }
 
+
+
+
+.table_pip td {
+    border:1px solid #e9e9e9;
+
+    padding:5px;
+    text-align:left !important;
+    font-weight:bold;
+    font-size:10px;
+}
+    .table_pip td + td + td + td {
+        text-align:center !important;
+    } 
+    .table_pip td + td + td + td input[type="submit"] {
+       float:none;
+    } 
+.table_pip tr:first-child td {
+    background:#ccc;
+    font-size:10pt;
+    text-align:center !important;
+}
+
+
+.table_pip tr:first-child {
+    text-align:center;
+    font-weight:bold;
+}
+
+
+.table_pip input[type="text" i] {
+    width:200px;
+}
 
 .table_da1 input[type="text" i],
 .table_da2 input[type="text" i],

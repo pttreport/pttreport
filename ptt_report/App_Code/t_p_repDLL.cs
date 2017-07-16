@@ -78,7 +78,7 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = " select * from tblt_p_rep where permit like '%" + permit + "%' ";
+            strSQL = " select * from tblt_p_rep where active = 1 and permit like '%" + permit + "%' ";
 
             if (year != "")
             {

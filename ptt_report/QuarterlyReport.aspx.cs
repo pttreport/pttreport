@@ -33,11 +33,14 @@ namespace ptt_report
 
         protected void bind_default()
         {
+
             var rep_doc = Serv.GetRep_HisALL();
             if (rep_doc.Rows.Count != 0)
             {
                 hddfile_path.Value = rep_doc.Rows[0]["uri"].ToString();
             }
+
+
 
             var year = Serv.GetRep_year();
             if (year.Rows.Count != 0)
@@ -182,25 +185,10 @@ namespace ptt_report
 
         protected void btnDownload_Click(object sender, EventArgs e)
         {
-            //if (hddfile_path.Value != "")
-            //{
-            //    Response.Redirect(hddfile_path.Value);
-            //}
-
-            // Fixed Bug Q20
-
-            Button btn = sender as Button;
-            GridViewRow row = (GridViewRow)btn.NamingContainer;
-            HiddenField hddrepid = (HiddenField)row.FindControl("hddrepid");
-
-            // Get Url from 
-            var rep_history = Serv.GetHistoryLinkById(hddrepid.Value);
-
-            if (rep_history.Rows.Count != 0)
+            if (hddfile_path.Value != "")
             {
-                Response.Redirect(rep_history.Rows[0]["uri"].ToString());
+                Response.Redirect(hddfile_path.Value);
             }
-            
         }
 
         protected void GridView_rep_list_RowDataBound(object sender, GridViewRowEventArgs e)

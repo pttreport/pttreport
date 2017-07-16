@@ -245,7 +245,7 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = " select * from tbl_tem_file where flag_active =  'y' ";
+            strSQL = " select * from tbl_tem_file where flag_active =  'y'  and report_type = '1' ";
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
             var _with1 = objCmd;

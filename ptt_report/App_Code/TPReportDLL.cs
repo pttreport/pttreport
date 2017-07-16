@@ -430,8 +430,8 @@ namespace ptt_report.App_Code
             string strSQL = null;
 
             strSQL = " insert into tppatrolling(tp_rep_id,gasdetector,gassiteamount,gassitedetail,labelandstealamount,labelandstealdetail,testpostdamageamount,testpostdamagedetail,scourareaamount,scourareadetail,buildingpipepathamount,buildingpipepathdetail,rovfreespanamount,rovfreespandetail,opinion) " +
-                    " values('" 
-                    
+                    " values('"
+
                     + tp_rep_id + "','"
                     + gasdetector + "','"
                     + gassiteamount + "','"
@@ -687,7 +687,7 @@ namespace ptt_report.App_Code
             return dt;
         }
 
-        public DataTable InsertHistory(string last_update, string createid, string filename, string uri, string rep_type, string version)
+        public DataTable InsertHistory(string last_update, string createid, string filename, string uri, string rep_type, string version,string quarter_rep_id)
         {
             SqlConnection objConn = new SqlConnection();
             SqlCommand objCmd = new SqlCommand();
@@ -697,8 +697,8 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = " Insert into tbl_history_rep(last_update,createid,filename,uri,rep_type,version) " +
-                    " values('" + last_update + "', '" + createid + "', '" + filename + "', '" + uri + "', '" + rep_type + "', '" + version + "'); select @@IDENTITY as id; ";
+            strSQL = " Insert into tbl_history_rep(last_update,createid,filename,uri,rep_type,version,quarter_rep_id) " +
+                    " values('" + last_update + "', '" + createid + "', '" + filename + "', '" + uri + "', '" + rep_type + "', '" + version + "','" + quarter_rep_id + "'); select @@IDENTITY as id; ";
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
             var _with1 = objCmd;

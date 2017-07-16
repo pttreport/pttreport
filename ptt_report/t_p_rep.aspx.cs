@@ -99,6 +99,11 @@ namespace ptt_report
 
         }
 
+        protected void btncreate_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/create_t_p_rep.aspx");
+        }
+
         protected void btnmanage_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;

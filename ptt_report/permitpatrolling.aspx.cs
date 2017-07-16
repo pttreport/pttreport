@@ -328,7 +328,7 @@ namespace ptt_report
                     doc.Close();
 
                     var x = Serv.InsertHistory(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss", EngCI), HttpContext.Current.Session["assetusername"].ToString(), "TP_report",
-                        "~/gen_1/TP_report_" + time + ".docx", "2", "");
+                        "~/gen_1/TP_report_" + time + ".docx", "2", "",hddmas_rep_id.Value);
 
                     hddfile_path.Value = "~/gen_1/TP_report_" + time + ".docx";
 
