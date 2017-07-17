@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Text;
 
 namespace ptt_report
 {
@@ -121,7 +122,43 @@ namespace ptt_report
 
         protected void btndelete_Click(object sender, EventArgs e)
         {
+            Button btn = sender as Button;
+            GridViewRow row = (GridViewRow)btn.NamingContainer;
+            HiddenField hddrepid = (HiddenField)row.FindControl("hddrepid");
 
+            Serv.delete_tblt_p_rep(hddrepid.Value);
+
+            bind_list();
+
+        }
+
+        protected void btndownload_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            GridViewRow row = (GridViewRow)btn.NamingContainer;
+            HiddenField hddrepid = (HiddenField)row.FindControl("hddrepid");
+
+            // Get Url from 
+            var rep_history = Serv.GetHistoryLinkById(hddrepid.Value);
+
+            if (rep_history.Rows.Count != 0)
+            {
+                Response.Redirect(rep_history.Rows[0]["uri"].ToString());
+            }
+            else
+            {
+                POPUPMSG("ไม่พบไฟล์ให้ดาวโหลด");
+            }
+
+        }
+
+        private void POPUPMSG(string msg)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("alert(\'");
+            sb.Append(msg.Replace("\n", "\\n").Replace("\r", "").Replace("\'", "\\\'"));
+            sb.Append("\');");
+            ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "showalert", sb.ToString(), true);
         }
 
         protected void GridView_rep_list_RowDataBound(object sender, GridViewRowEventArgs e)

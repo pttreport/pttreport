@@ -68,6 +68,7 @@
     <Content Include="ChemicalThreatment.aspx" />
     <Content Include="CleaningPIG.aspx" />
     <Content Include="create_quar_rep.aspx" />
+    <Content Include="create_t_p_rep.aspx" />
     <Content Include="default.aspx" />
     <Content Include="externalcorrosion.aspx" />
     <Content Include="freespan.aspx" />
@@ -120,6 +121,7 @@
     <Compile Include="App_Code\chemicaltreatmentDLL.cs" />
     <Compile Include="App_Code\cleaningPigDLL.cs" />
     <Compile Include="App_Code\create_quar_repDLL.cs" />
+    <Compile Include="App_Code\create_tp_repDLL.cs" />
     <Compile Include="App_Code\defaultDLL.cs" />
     <Compile Include="App_Code\directassessmentDLL.cs" />
     <Compile Include="App_Code\executivesummaryDLL.cs" />
@@ -173,6 +175,13 @@
     </Compile>
     <Compile Include="create_quar_rep.aspx.designer.cs">
       <DependentUpon>create_quar_rep.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="create_t_p_rep.aspx.cs">
+      <DependentUpon>create_t_p_rep.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="create_t_p_rep.aspx.designer.cs">
+      <DependentUpon>create_t_p_rep.aspx</DependentUpon>
     </Compile>
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>

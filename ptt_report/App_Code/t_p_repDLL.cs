@@ -68,6 +68,66 @@ namespace ptt_report.App_Code
             return dt;
         }
 
+
+        public DataTable GetHistoryLinkById(string id)
+        {
+
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " select top(1) * from tbl_history_rep where t_p_rep_id = " + id + " order by version desc  ; ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+
+        }
+
+        public void delete_tblt_p_rep(string id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = "UPDATE dbo.tblt_p_rep SET active = 0 WHERE id = " + id;
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            objConn.Open();
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+
+            objCmd.ExecuteNonQuery();
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+        }
+
+
         public DataTable GetRep_list(string year, string permit)
         {
             SqlConnection objConn = new SqlConnection();
