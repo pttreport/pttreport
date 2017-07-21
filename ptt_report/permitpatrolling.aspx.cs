@@ -102,7 +102,7 @@ namespace ptt_report
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/history_2.aspx?param=2");
+            Response.Redirect("~/history_2.aspx?param=2&tprepid=" + hddmas_rep_id.Value);
         }
 
         protected void btnExport_Click(object sender, EventArgs e)

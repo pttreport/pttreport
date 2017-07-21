@@ -30,10 +30,14 @@
         Year: 2559  Permit: กท2310027
                    
         <asp:Label ID="lbCustype" runat="server" Text="-"></asp:Label>
-        <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" />
-        <asp:Button ID="btnExport" runat="server" Text="Export Report" class="btn" />
+        <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" OnClick="btnSaveVer_Click" class="btn" />
+        <asp:Button ID="btnExport" runat="server" Text="Export Report" OnClick="btnExport_Click"  class="btn" />
         <asp:Button ID="Button1" runat="server" Text="History" class="btn" />
         
+        <asp:HiddenField ID="hddapdb_id" runat="server" />
+        <asp:HiddenField ID="hddmas_rep_id" runat="server" />
+        <asp:HiddenField ID="hddfile_path" runat="server" />
+
     </div>
 
     <div id="thirdPartyInterfaceForm" style="background-color: #FFFFFF">

@@ -27,39 +27,60 @@
         Year: 2559  Permit: กท2310027
                    
         <asp:Label ID="lbCustype" runat="server" Text="-"></asp:Label>
-        <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" />
-        <asp:Button ID="btnExport" runat="server" Text="Export Report" class="btn" />
-        <asp:Button ID="Button1" runat="server" Text="History" class="btn" />
+        <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" OnClick="btnSaveVer_Click" class="btn" />
+        <asp:Button ID="btnExport" runat="server" Text="Export Report" OnClick="btnExport_Click"  class="btn" />
+        <asp:Button ID="Button1" runat="server" Text="History" class="btn" OnClick="Button1_Click" />
+
+        <asp:HiddenField ID="hddapdd_id" runat="server" />
+        <asp:HiddenField ID="hddmas_rep_id" runat="server" />
+        <asp:HiddenField ID="hddfile_path" runat="server" />
         
     </div>
 
     <div id="thirdPartyInterfaceForm" style="background-color: #FFFFFF">
         <div id="patrolFormTable">
              <h3 class="barBlue">
-                 ภาคผนวก ง.
+
                  <asp:Button ID="btnImport" runat="server" Text="Import Data" OnClick="btnImport_Click" class="btn btn-info" />
  
             </h3>
             <div class="info_executive">
                 <h3>ผลการลาดตระเวนตรวจแนวท่อส่งก๊าซธรรมชาติ</h3>
                 <div class="info_executive_in">
-                    <table class="col6">
+                    <table>
                         <tr>
                             <td class="auto-style1" colspan="2">
-                                <asp:Button ID="Button3" runat="server" Text="Create" class="btn"/>
-                         
                                 <table>
                                     <tr>
-                                        <td>Route Code : </td>
-                                        
-                                        <td><asp:TextBox ID="PermitAppendixDRouteCode" runat="server" BackColor="#99FF99"></asp:TextBox></td>
-                                        <td>CIPS and DCVG Survey :</td>
-                                        <td>
-                                            <asp:FileUpload ID="PermitAppendixDFileUpload1" runat="server" BackColor="#99FF99" />
+                                        <td class="auto-style1" style="text-align:right;" colspan="3">
+                                            <asp:Button ID="Button3" runat="server" Text="Create" OnClick="Button3_Click" />
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td colspan="4"><asp:Button ID="Button2" runat="server" Text="Delete"  class="btn btn-danger" /></td>
+                                        <td>
+
+                                            <asp:GridView Width="100%" DataKeyNames="id" AutoGenerateColumns="false" runat="server" ID="gv" ShowFooter="false" >
+                                                <Columns>
+                                                    <asp:TemplateField HeaderText="Route Code">
+                                                        <ItemTemplate>
+                                                            <asp:HiddenField ID="hddid" runat="server" Value='<%# Eval("id") %>' />
+                                                            <asp:TextBox ID="subroutecode" runat="server" Text='<%# Eval("routecode") %>'></asp:TextBox>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="CIPS and DCVG Survey">
+                                                        <ItemTemplate>
+                                                            <asp:FileUpload ID="subsurvey" runat="server" />
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField HeaderText="Manage">
+                                                        <ItemTemplate>
+                                                            <asp:Button ID="btndal" runat="server" Text="Delete" />
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                </Columns>
+                                            </asp:GridView>
+
+                                        </td>
                                     </tr>
                                 </table>
                             </td>
@@ -68,7 +89,7 @@
                             <td>ความเห็น : </td>
                             <td class="auto-style1">
 
-                                <asp:TextBox ID="PermitCerfNumber" runat="server" Columns="60"></asp:TextBox>
+                                <asp:TextBox ID="AdppOpinion" runat="server" Columns="60"></asp:TextBox>
 
                             </td>
                         </tr>
@@ -82,5 +103,6 @@
 
         </div>
     </div>
+
 
 </asp:Content>

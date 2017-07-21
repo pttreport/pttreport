@@ -16,6 +16,8 @@ namespace ptt_report
         CultureInfo ThCI = new System.Globalization.CultureInfo("th-TH");
         CultureInfo EngCI = new System.Globalization.CultureInfo("en-US");
         pipingDLL Serv = new pipingDLL();
+        QuarterlyReportDLL QServ = new QuarterlyReportDLL();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -407,63 +409,181 @@ namespace ptt_report
                     }
                 }
 
+
+
                 var sub1 = Serv.GetSub1(hddpiping_id.Value);
                 if (sub1.Rows.Count != 0)
                 {
-                    txtRegion.Text = sub1.Rows[0]["l5"].ToString();
-                    txtAVG.Text = sub1.Rows[0]["l6"].ToString();
-                    txtstation.Text = sub1.Rows[0]["l9"].ToString();
-                    txtmin.Text = sub1.Rows[0]["l7"].ToString();
-                    txtCorr.Text = sub1.Rows[0]["l8"].ToString();
+                    //txtRegion.Text = sub1.Rows[0]["l5"].ToString();
+                    //txtAVG.Text = sub1.Rows[0]["l6"].ToString();
+                    //txtstation.Text = sub1.Rows[0]["l9"].ToString();
+                    //txtmin.Text = sub1.Rows[0]["l7"].ToString();
+                    //txtCorr.Text = sub1.Rows[0]["l8"].ToString();
+                    pipingPM.DataSource = sub1;
+                    pipingPM.DataBind();
+                }
+                else
+                {
 
+                    Serv.Insert_tbl_piping_sub1(hddpiping_id.Value, "", "", "", "", "");
+
+                    var newSub1 = Serv.GetSub1(hddpiping_id.Value);
+
+                    if (newSub1.Rows.Count != 0)
+                    {
+                        pipingPM.DataSource = newSub1;
+                        pipingPM.DataBind();
+                    }
+                    else
+                    {
+                        pipingPM.DataSource = null;
+                        pipingPM.DataBind();
+                    }
+                    
                 }
 
                 var sub2 = Serv.GetSub2(hddpiping_id.Value);
                 if (sub2.Rows.Count != 0)
                 {
-                    txtRegion2.Text = sub2.Rows[0]["l10"].ToString();
-                    txtCoatingCondition.Text = sub2.Rows[0]["l11"].ToString();
-                    txtstation2.Text = sub2.Rows[0]["l13"].ToString();
-                    txtCorrosion.Text = sub2.Rows[0]["l12"].ToString();
+
+
+                    //txtRegion2.Text = sub2.Rows[0]["l10"].ToString();
+                    //txtCoatingCondition.Text = sub2.Rows[0]["l11"].ToString();
+                    //txtstation2.Text = sub2.Rows[0]["l13"].ToString();
+                    //txtCorrosion.Text = sub2.Rows[0]["l12"].ToString();
+                    pipingCI.DataSource = sub2;
+                    pipingCI.DataBind();
+                }
+                else
+                {
+
+                    Serv.Insert_tbl_piping_sub2(hddpiping_id.Value, "", "", "", "");
+
+                    var newSub2 = Serv.GetSub2(hddpiping_id.Value);
+
+                    if (newSub2.Rows.Count != 0)
+                    {
+                        pipingCI.DataSource = newSub2;
+                        pipingCI.DataBind();
+                    }
+                    else
+                    {
+                        pipingCI.DataSource = null;
+                        pipingCI.DataBind();
+                    }
                 }
 
                 var sub3 = Serv.GetSub3(hddpiping_id.Value);
                 if (sub3.Rows.Count != 0)
                 {
-                    txtRegion3.Text = sub3.Rows[0]["l14"].ToString();
-                    txtPipeSup.Text = sub3.Rows[0]["l15"].ToString();
-                    txtstation3.Text = sub3.Rows[0]["l17"].ToString();
-                    txtCorrosion2.Text = sub3.Rows[0]["l16"].ToString();
+                    //txtRegion3.Text = sub3.Rows[0]["l14"].ToString();
+                    //txtPipeSup.Text = sub3.Rows[0]["l15"].ToString();
+                    //txtstation3.Text = sub3.Rows[0]["l17"].ToString();
+                    //txtCorrosion2.Text = sub3.Rows[0]["l16"].ToString();
+                    pipingCUPS.DataSource = sub3;
+                    pipingCUPS.DataBind();
+                }
+                else
+                {
+                    Serv.Insert_tbl_piping_sub3(hddpiping_id.Value, "", "", "", "");
 
+                    var newSub3 = Serv.GetSub3(hddpiping_id.Value);
+
+                    if (newSub3.Rows.Count != 0)
+                    {
+                        pipingCUPS.DataSource = newSub3;
+                        pipingCUPS.DataBind();
+                    }
+                    else
+                    {
+                        pipingCUPS.DataSource = null;
+                        pipingCUPS.DataBind();
+                    }
                 }
 
                 var sub4 = Serv.GetSub4(hddpiping_id.Value);
                 if (sub4.Rows.Count != 0)
                 {
-                    txtRegion4.Text = sub4.Rows[0]["l18"].ToString();
-                    txtCoating4.Text = sub4.Rows[0]["l19"].ToString();
-                    txtstation4.Text = sub4.Rows[0]["l21"].ToString();
-                    txtCorrosion4.Text = sub4.Rows[0]["l20"].ToString();
+                    //txtRegion4.Text = sub4.Rows[0]["l18"].ToString();
+                    //txtCoating4.Text = sub4.Rows[0]["l19"].ToString();
+                    //txtstation4.Text = sub4.Rows[0]["l21"].ToString();
+                    //txtCorrosion4.Text = sub4.Rows[0]["l20"].ToString();
+                    pipingSAI.DataSource = sub4;
+                    pipingSAI.DataBind();
+
+                }
+                else
+                {
+                    Serv.Insert_tbl_piping_sub4(hddpiping_id.Value, "", "", "", "");
+
+                    var newSub4 = Serv.GetSub4(hddpiping_id.Value);
+
+                    if (newSub4.Rows.Count != 0)
+                    {
+                        pipingSAI.DataSource = newSub4;
+                        pipingSAI.DataBind();
+                    }
+                    else
+                    {
+                        pipingSAI.DataSource = null;
+                        pipingSAI.DataBind();
+                    }
                 }
 
                 var sub5 = Serv.GetSub5(hddpiping_id.Value);
                 if (sub5.Rows.Count != 0)
                 {
-                    txtRegion5.Text = sub5.Rows[0]["l22"].ToString();
-                    txtInsulation.Text = sub5.Rows[0]["l23"].ToString();
-                    txtstation5.Text = sub5.Rows[0]["l25"].ToString();
-                    txtCorrosion5.Text = sub5.Rows[0]["l24"].ToString();
+                    //txtRegion5.Text = sub5.Rows[0]["l22"].ToString();
+                    //txtInsulation.Text = sub5.Rows[0]["l23"].ToString();
+                    //txtstation5.Text = sub5.Rows[0]["l25"].ToString();
+                    //txtCorrosion5.Text = sub5.Rows[0]["l24"].ToString();
+                    pipeCUI.DataSource = sub5;
+                    pipeCUI.DataBind();
+                }
+                else
+                {
+                    Serv.Insert_tbl_piping_sub5(hddpiping_id.Value, "", "", "", "");
 
+                    var newSub5 = Serv.GetSub5(hddpiping_id.Value);
+
+                    if (newSub5.Rows.Count != 0)
+                    {
+                        pipeCUI.DataSource = newSub5;
+                        pipeCUI.DataBind();
+                    }
+                    else
+                    {
+                        pipeCUI.DataSource = null;
+                        pipeCUI.DataBind();
+                    }
                 }
 
                 var sub6 = Serv.GetSub6(hddpiping_id.Value);
                 if (sub6.Rows.Count != 0)
                 {
-                    txtRegion6.Text = sub6.Rows[0]["l26"].ToString();
-                    txtInspection.Text = sub6.Rows[0]["l27"].ToString();
-                    txtCMStation.Text = sub6.Rows[0]["l28"].ToString();
-                    txtdate.Text = sub6.Rows[0]["l29"].ToString();
+                    //txtRegion6.Text = sub6.Rows[0]["l26"].ToString();
+                    //txtInspection.Text = sub6.Rows[0]["l27"].ToString();
+                    //txtCMStation.Text = sub6.Rows[0]["l28"].ToString();
+                    //txtdate.Text = sub6.Rows[0]["l29"].ToString();
+                    pipingCMCM.DataSource = sub6;
+                    pipingCMCM.DataBind();
+                }
+                else
+                {
+                    Serv.Insert_tbl_piping_sub6(hddpiping_id.Value, "", "", "", "");
 
+                    var newSub6 = Serv.GetSub6(hddpiping_id.Value);
+
+                    if (newSub6.Rows.Count != 0)
+                    {
+                        pipingCMCM.DataSource = newSub6;
+                        pipingCMCM.DataBind();
+                    }
+                    else
+                    {
+                        pipingCMCM.DataSource = null;
+                        pipingCMCM.DataBind();
+                    }
                 }
             }
             else
@@ -479,33 +599,33 @@ namespace ptt_report
         protected void btnImport_Click(object sender, EventArgs e)
         {
 
-            txtRegion.Text = "1";
-            txtstation.Text = "BV3";
+            //txtRegion.Text = "1";
+            //txtstation.Text = "BV3";
 
-            txtRegion2.Text = "1";
-            txtCoatingCondition.Text = "Local Disbonding";
-            txtstation2.Text = "BV3";
-            txtCorrosion.Text = "No corrosion";
+            //txtRegion2.Text = "1";
+            //txtCoatingCondition.Text = "Local Disbonding";
+            //txtstation2.Text = "BV3";
+            //txtCorrosion.Text = "No corrosion";
 
-            txtRegion3.Text = "1";
-            txtPipeSup.Text = "Moderate";
-            txtstation3.Text = "BV3";
-            txtCorrosion2.Text = "No corrosion";
+            //txtRegion3.Text = "1";
+            //txtPipeSup.Text = "Moderate";
+            //txtstation3.Text = "BV3";
+            //txtCorrosion2.Text = "No corrosion";
 
-            txtRegion4.Text = "1";
-            txtCoating4.Text = "Moderate";
-            txtstation4.Text = "BV3";
-            txtCorrosion4.Text = "No corrosion";
+            //txtRegion4.Text = "1";
+            //txtCoating4.Text = "Moderate";
+            //txtstation4.Text = "BV3";
+            //txtCorrosion4.Text = "No corrosion";
 
-            txtRegion5.Text = "1";
-            txtInsulation.Text = "Moderate";
-            txtstation5.Text = "BV3";
-            txtCorrosion5.Text = "No corrosion";
+            //txtRegion5.Text = "1";
+            //txtInsulation.Text = "Moderate";
+            //txtstation5.Text = "BV3";
+            //txtCorrosion5.Text = "No corrosion";
 
-            txtRegion6.Text = "1";
-            txtInspection.Text = "Soil to Air";
-            txtCMStation.Text = "ABPR1";
-            txtdate.Text = "20/03/2017";
+            //txtRegion6.Text = "1";
+            //txtInspection.Text = "Soil to Air";
+            //txtCMStation.Text = "ABPR1";
+            //txtdate.Text = "20/03/2017";
 
             lbQuarter.Text = "Quarter 1";
             lbQuarter2.Text = "Quarter 2";
@@ -539,6 +659,8 @@ namespace ptt_report
             lbm311_.Text = "7";
             lbm312_.Text = "7";
         }
+
+
         private void POPUPMSG(string msg)
         {
             StringBuilder sb = new StringBuilder();
@@ -550,7 +672,7 @@ namespace ptt_report
         protected void btnSave_Click(object sender, EventArgs e)
         {
             Serv.Truncate_tbl_piping_qurter_plan();
-            Serv.Truncate_tbl_piping_sub();
+            //Serv.Truncate_tbl_piping_sub();
 
             Serv.Update_tbl_piping(txtComment.Text, hddpiping_id.Value, HttpContext.Current.Session["assetuserid"].ToString(), hddmas_rep_id.Value);
 
@@ -562,12 +684,123 @@ namespace ptt_report
             Serv.Insert_tbl_piping_qurter_plan2(hddpiping_id.Value, lbQuarter2.Text, lbM2_.Text, lbm221_.Text, lbm222_.Text, "2");
             Serv.Insert_tbl_piping_qurter_plan2(hddpiping_id.Value, lbQuarter2.Text, lbM3_.Text, lbm311_.Text, lbm312_.Text, "1");
 
-            Serv.Insert_tbl_piping_sub1(hddpiping_id.Value, txtRegion.Text, txtAVG.Text, txtmin.Text, txtCorr.Text, txtstation.Text);
-            Serv.Insert_tbl_piping_sub2(hddpiping_id.Value, txtRegion2.Text, txtCoatingCondition.Text, txtCorrosion.Text, txtstation.Text);
-            Serv.Insert_tbl_piping_sub3(hddpiping_id.Value, txtRegion3.Text, txtPipeSup.Text, txtCorrosion2.Text, txtstation3.Text);
-            Serv.Insert_tbl_piping_sub4(hddpiping_id.Value, txtRegion4.Text, txtCoating4.Text, txtCorrosion4.Text, txtstation4.Text);
-            Serv.Insert_tbl_piping_sub5(hddpiping_id.Value, txtRegion5.Text, txtInsulation.Text, txtCorrosion5.Text, txtstation5.Text);
-            Serv.Insert_tbl_piping_sub6(hddpiping_id.Value, txtRegion6.Text, txtInspection.Text, txtCMStation.Text, txtdate.Text);
+
+
+            // Loop save
+
+            var sub1 = Serv.GetSub1(hddpiping_id.Value);
+            if (sub1.Rows.Count != 0)
+            {
+
+                foreach (GridViewRow row in pipingPM.Rows)
+                {
+                    HiddenField id = (HiddenField)row.FindControl("pipingPMId");
+                    TextBox txtRegion = (TextBox)row.FindControl("pmRegion");
+                    TextBox txtAVG = (TextBox)row.FindControl("pmCAvg");
+                    TextBox txtmin = (TextBox)row.FindControl("pmCMin");
+                    TextBox txtCorr = (TextBox)row.FindControl("pmCorrRate");
+                    TextBox txtstation = (TextBox)row.FindControl("pmStatus");
+
+                    Serv.Update_tbl_piping_sub1(txtRegion.Text, txtAVG.Text, txtmin.Text, txtCorr.Text, txtstation.Text, id.Value);
+
+                }
+            }
+
+
+            var sub2 = Serv.GetSub2(hddpiping_id.Value);
+            if (sub2.Rows.Count != 0)
+            {
+
+                foreach (GridViewRow row in pipingCI.Rows)
+                {
+                    HiddenField id = (HiddenField)row.FindControl("pipingCIId");
+                    TextBox txtRegion = (TextBox)row.FindControl("ciRegion");
+                    TextBox txtCoat = (TextBox)row.FindControl("ciCoat");
+                    TextBox txtCorr = (TextBox)row.FindControl("ciCorr");
+                    TextBox txtstation = (TextBox)row.FindControl("ciStation");
+
+                    Serv.Update_tbl_piping_sub2(txtRegion.Text, txtCoat.Text, txtCorr.Text, txtstation.Text, id.Value);
+                }
+            }
+
+
+
+            var sub3 = Serv.GetSub3(hddpiping_id.Value);
+            if (sub3.Rows.Count != 0)
+            {
+                foreach (GridViewRow row in pipingCUPS.Rows)
+                {
+                    HiddenField id = (HiddenField)row.FindControl("pipingCUPSId");
+                    TextBox txtRegion = (TextBox)row.FindControl("cupsRegion");
+                    TextBox txtCoat = (TextBox)row.FindControl("cupsCoat");
+                    TextBox txtCorr = (TextBox)row.FindControl("cupsCorr");
+                    TextBox txtstation = (TextBox)row.FindControl("cupsStation");
+
+                    Serv.Update_tbl_piping_sub3(txtRegion.Text, txtCoat.Text, txtCorr.Text, txtstation.Text, id.Value);
+                }
+            }
+
+
+            var sub4 = Serv.GetSub4(hddpiping_id.Value);
+            if (sub4.Rows.Count != 0)
+            {
+                foreach (GridViewRow row in pipingSAI.Rows)
+                {
+                    HiddenField id = (HiddenField)row.FindControl("pipingSAIId");
+                    TextBox txtRegion = (TextBox)row.FindControl("saiRegion");
+                    TextBox txtCoat = (TextBox)row.FindControl("saiCoat");
+                    TextBox txtCorr = (TextBox)row.FindControl("saiCorr");
+                    TextBox txtstation = (TextBox)row.FindControl("saiStation");
+
+                    Serv.Update_tbl_piping_sub4(txtRegion.Text, txtCoat.Text, txtCorr.Text, txtstation.Text, id.Value);
+                }
+            }
+
+            var sub5 = Serv.GetSub5(hddpiping_id.Value);
+            if (sub5.Rows.Count != 0)
+            {
+                foreach (GridViewRow row in pipeCUI.Rows)
+                {
+                    HiddenField id = (HiddenField)row.FindControl("pipingCUIId");
+                    TextBox txtRegion = (TextBox)row.FindControl("cuiRegion");
+                    TextBox txtCoat = (TextBox)row.FindControl("cuiCoat");
+                    TextBox txtCorr = (TextBox)row.FindControl("cuiCorr");
+                    TextBox txtstation = (TextBox)row.FindControl("cuiStation");
+
+                    Serv.Update_tbl_piping_sub5(txtRegion.Text, txtCoat.Text, txtCorr.Text, txtstation.Text, id.Value);
+                }
+            }
+
+            var sub6 = Serv.GetSub6(hddpiping_id.Value);
+            if (sub6.Rows.Count != 0)
+            {
+                foreach (GridViewRow row in pipingCMCM.Rows)
+                {
+                    HiddenField id = (HiddenField)row.FindControl("pipingCMCMd");
+                    TextBox txtRegion = (TextBox)row.FindControl("cmcmRegion");
+                    TextBox txtInspection = (TextBox)row.FindControl("cmcmInspection");
+                    TextBox txtStation = (TextBox)row.FindControl("cmcmStation");
+                    TextBox txtDate = (TextBox)row.FindControl("cmcmDate");
+
+                    Serv.Update_tbl_piping_sub6(txtRegion.Text, txtInspection.Text, txtStation.Text, txtDate.Text, id.Value);
+                }
+            }
+
+            //Serv.Insert_tbl_piping_sub1(hddpiping_id.Value, txtRegion.Text, txtAVG.Text, txtmin.Text, txtCorr.Text, txtstation.Text);
+
+            //Serv.Insert_tbl_piping_sub2(hddpiping_id.Value, txtRegion2.Text, txtCoatingCondition.Text, txtCorrosion.Text, txtstation.Text);
+
+
+            //Serv.Insert_tbl_piping_sub3(hddpiping_id.Value, txtRegion3.Text, txtPipeSup.Text, txtCorrosion2.Text, txtstation3.Text);
+
+
+            //Serv.Insert_tbl_piping_sub4(hddpiping_id.Value, txtRegion4.Text, txtCoating4.Text, txtCorrosion4.Text, txtstation4.Text);
+
+
+            //Serv.Insert_tbl_piping_sub5(hddpiping_id.Value, txtRegion5.Text, txtInsulation.Text, txtCorrosion5.Text, txtstation5.Text);
+
+
+            //Serv.Insert_tbl_piping_sub6(hddpiping_id.Value, txtRegion6.Text, txtInspection.Text, txtCMStation.Text, txtdate.Text);
 
 
             POPUPMSG("บันทึกเรียบร้อย");
@@ -585,9 +818,11 @@ namespace ptt_report
 
         protected void btnExport_Click(object sender, EventArgs e)
         {
-            if (hddfile_path.Value != "")
+            var historyObj = QServ.GetHistoryLinkById(hddmas_rep_id.Value);
+
+            if (historyObj.Rows.Count != 0)
             {
-                Response.Redirect(hddfile_path.Value);
+                Response.Redirect(historyObj.Rows[0]["uri"].ToString());
             }
         }
 
@@ -2015,14 +2250,22 @@ namespace ptt_report
                             sel.Find.Text = "[table6]";
                             sel.Find.Execute(Replace: WdReplace.wdReplaceNone);
                             sel.Range.Select();
-                            axTable2 = sel.Tables.Add(app.Selection.Range, subPig.Rows.Count + 1, 2);
+                            axTable2 = sel.Tables.Add(app.Selection.Range, subPig.Rows.Count + 1, 3);
 
-                            int start_row = 1;
+                            axTable2.Borders.InsideLineStyle = WdLineStyle.wdLineStyleSingle;
+                            axTable2.Borders.OutsideLineStyle = WdLineStyle.wdLineStyleSingle;
+
+                            axTable2.Cell(1, 1).Range.Text = "Route Code";
+                            axTable2.Cell(1, 2).Range.Text = "Section - Length";
+                            axTable2.Cell(1, 3).Range.Text = "Status";
+
+                            int start_row = 2;
 
                             for (int j = 0; j <= subPig.Rows.Count - 1; j++)
                             {
-                                axTable2.Cell(start_row, 1).Range.Text = subPig.Rows[j]["routecode"].ToString() + " " + subPig.Rows[j]["sectionlength"].ToString();
-                                axTable2.Cell(start_row, 2).Range.Text = subPig.Rows[j]["status"].ToString();
+                                axTable2.Cell(start_row, 1).Range.Text = subPig.Rows[j]["routecode"].ToString();
+                                axTable2.Cell(start_row, 2).Range.Text = subPig.Rows[j]["sectionlength"].ToString();
+                                axTable2.Cell(start_row, 3).Range.Text = subPig.Rows[j]["status"].ToString();
 
                                 start_row = start_row + 1;
                             }
@@ -2892,7 +3135,248 @@ namespace ptt_report
             }
         }
 
+        protected void btnCreate1_Click(object sender, EventArgs e)
+        {
+            //Preventive maintenance PM
+            Serv.Insert_tbl_piping_sub1(hddpiping_id.Value, "", "", "", "", "");
 
+            var newSub1 = Serv.GetSub1(hddpiping_id.Value);
+
+            if (newSub1.Rows.Count != 0)
+            {
+                pipingPM.DataSource = newSub1;
+                pipingPM.DataBind();
+            }
+            else
+            {
+                pipingPM.DataSource = null;
+                pipingPM.DataBind();
+            }
+
+        }
+
+        protected void btnCreate2_Click(object sender, EventArgs e)
+        {
+            Serv.Insert_tbl_piping_sub2(hddpiping_id.Value,"","","","");
+
+            var newSub2 = Serv.GetSub2(hddpiping_id.Value);
+
+            if (newSub2.Rows.Count != 0)
+            {
+                pipingCI.DataSource = newSub2;
+                pipingCI.DataBind();
+            }
+            else
+            {
+                pipingCI.DataSource = null;
+                pipingCI.DataBind();
+            }
+        }
+
+        protected void btnCreate3_Click(object sender, EventArgs e)
+        {
+            Serv.Insert_tbl_piping_sub3(hddpiping_id.Value,"","","","");
+
+            var newSub3 = Serv.GetSub3(hddpiping_id.Value);
+
+            if (newSub3.Rows.Count != 0)
+            {
+                pipingCUPS.DataSource = newSub3;
+                pipingCUPS.DataBind();
+            }
+            else
+            {
+                pipingCUPS.DataSource = null;
+                pipingCUPS.DataBind();
+            }
+        }
+
+        protected void btnCreate4_Click(object sender, EventArgs e)
+        {
+            Serv.Insert_tbl_piping_sub4(hddpiping_id.Value,"","","","");
+
+            var newSub4 = Serv.GetSub4(hddpiping_id.Value);
+
+            if (newSub4.Rows.Count != 0)
+            {
+                pipingSAI.DataSource = newSub4;
+                pipingSAI.DataBind();
+            }
+            else
+            {
+                pipingSAI.DataSource = null;
+                pipingSAI.DataBind();
+            }
+        }
+
+        protected void btnCreate5_Click(object sender, EventArgs e)
+        {
+            Serv.Insert_tbl_piping_sub5(hddpiping_id.Value,"","","","");
+
+            var newSub5 = Serv.GetSub5(hddpiping_id.Value);
+
+            if (newSub5.Rows.Count != 0)
+            {
+                pipeCUI.DataSource = newSub5;
+                pipeCUI.DataBind();
+            }
+            else
+            {
+                pipeCUI.DataSource = null;
+                pipeCUI.DataBind();
+            }
+        }
+
+        protected void btnCreate6_Click(object sender, EventArgs e)
+        {
+            Serv.Insert_tbl_piping_sub6(hddpiping_id.Value,"","","","");
+
+            var newSub6 = Serv.GetSub6(hddpiping_id.Value);
+
+            if (newSub6.Rows.Count != 0)
+            {
+                pipingCMCM.DataSource = newSub6;
+                pipingCMCM.DataBind();
+            }
+            else
+            {
+                pipingCMCM.DataSource = null;
+                pipingCMCM.DataBind();
+            }
+        }
+
+        protected void btndel1_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            GridViewRow row = (GridViewRow)btn.NamingContainer;
+            HiddenField hddrepid = (HiddenField)row.FindControl("pipingPMId");
+
+            Serv.Deletetbl_piping_sub1(hddrepid.Value);
+
+            var newSub1 = Serv.GetSub1(hddpiping_id.Value);
+
+            if (newSub1.Rows.Count != 0)
+            {
+                pipingPM.DataSource = newSub1;
+                pipingPM.DataBind();
+            }
+            else
+            {
+                pipingPM.DataSource = null;
+                pipingPM.DataBind();
+            }
+
+        }
+
+        protected void btndel2_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            GridViewRow row = (GridViewRow)btn.NamingContainer;
+            HiddenField hddrepid = (HiddenField)row.FindControl("pipingCIId");
+
+            Serv.Deletetbl_piping_sub2(hddrepid.Value);
+
+            var newSub2 = Serv.GetSub2(hddpiping_id.Value);
+
+            if (newSub2.Rows.Count != 0)
+            {
+                pipingCI.DataSource = newSub2;
+                pipingCI.DataBind();
+            }
+            else
+            {
+                pipingCI.DataSource = null;
+                pipingCI.DataBind();
+            }
+        }
+
+        protected void btndel3_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            GridViewRow row = (GridViewRow)btn.NamingContainer;
+            HiddenField hddrepid = (HiddenField)row.FindControl("pipingCUPSId");
+
+            Serv.Deletetbl_piping_sub3(hddrepid.Value);
+
+            var newSub3 = Serv.GetSub3(hddpiping_id.Value);
+
+            if (newSub3.Rows.Count != 0)
+            {
+                pipingCUPS.DataSource = newSub3;
+                pipingCUPS.DataBind();
+            }
+            else
+            {
+                pipingCUPS.DataSource = null;
+                pipingCUPS.DataBind();
+            }
+        }
+
+        protected void btndel4_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            GridViewRow row = (GridViewRow)btn.NamingContainer;
+            HiddenField hddrepid = (HiddenField)row.FindControl("pipingSAIId");
+
+            Serv.Deletetbl_piping_sub4(hddrepid.Value);
+
+            var newSub4 = Serv.GetSub4(hddpiping_id.Value);
+
+            if (newSub4.Rows.Count != 0)
+            {
+                pipingSAI.DataSource = newSub4;
+                pipingSAI.DataBind();
+            }
+            else
+            {
+                pipingSAI.DataSource = null;
+                pipingSAI.DataBind();
+            }
+        }
+
+        protected void btndel5_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            GridViewRow row = (GridViewRow)btn.NamingContainer;
+            HiddenField hddrepid = (HiddenField)row.FindControl("pipingCUIId");
+
+            Serv.Deletetbl_piping_sub5(hddrepid.Value);
+
+            var newSub5 = Serv.GetSub5(hddpiping_id.Value);
+
+            if (newSub5.Rows.Count != 0)
+            {
+                pipeCUI.DataSource = newSub5;
+                pipeCUI.DataBind();
+            }
+            else
+            {
+                pipeCUI.DataSource = null;
+                pipeCUI.DataBind();
+            }
+        }
+
+        protected void btndel6_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            GridViewRow row = (GridViewRow)btn.NamingContainer;
+            HiddenField hddrepid = (HiddenField)row.FindControl("pipingCMCMd");
+
+            Serv.Deletetbl_piping_sub6(hddrepid.Value);
+
+            var newSub6 = Serv.GetSub6(hddpiping_id.Value);
+
+            if (newSub6.Rows.Count != 0)
+            {
+                pipingCMCM.DataSource = newSub6;
+                pipingCMCM.DataBind();
+            }
+            else
+            {
+                pipingCMCM.DataSource = null;
+                pipingCMCM.DataBind();
+            }
+        }
 
     }
 }

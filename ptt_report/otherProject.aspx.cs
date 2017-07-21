@@ -17,6 +17,7 @@ namespace ptt_report
         CultureInfo ThCI = new System.Globalization.CultureInfo("th-TH");
         CultureInfo EngCI = new System.Globalization.CultureInfo("en-US");
         otherprojectsDLL Serv = new otherprojectsDLL();
+        QuarterlyReportDLL QServ = new QuarterlyReportDLL();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -151,42 +152,42 @@ namespace ptt_report
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            foreach (GridViewRow row in gvPigResult.Rows)
-            {
-                if (row.RowType == DataControlRowType.DataRow)
-                {
-                    HiddenField hddother_id = (HiddenField)row.FindControl("hddother_id");
-                    TextBox txtProjectName1 = (TextBox)row.FindControl("txtProjectName1");
-                    TextBox txtProjectPlan1 = (TextBox)row.FindControl("txtProjectPlan1");
-                    TextBox txtProjectResult1 = (TextBox)row.FindControl("txtProjectResult1");
-                    TextBox txtProjectPlan_future1 = (TextBox)row.FindControl("txtProjectPlan_future1");
-                    TextBox txtProject_problem1 = (TextBox)row.FindControl("txtProject_problem1");
-                    TextBox txtremark1 = (TextBox)row.FindControl("txtremark1");
+            //foreach (GridViewRow row in gvPigResult.Rows)
+            //{
+            //    if (row.RowType == DataControlRowType.DataRow)
+            //    {
+            //        HiddenField hddother_id = (HiddenField)row.FindControl("hddother_id");
+            //        TextBox txtProjectName1 = (TextBox)row.FindControl("txtProjectName1");
+            //        TextBox txtProjectPlan1 = (TextBox)row.FindControl("txtProjectPlan1");
+            //        TextBox txtProjectResult1 = (TextBox)row.FindControl("txtProjectResult1");
+            //        TextBox txtProjectPlan_future1 = (TextBox)row.FindControl("txtProjectPlan_future1");
+            //        TextBox txtProject_problem1 = (TextBox)row.FindControl("txtProject_problem1");
+            //        TextBox txtremark1 = (TextBox)row.FindControl("txtremark1");
 
 
-                    Serv.Update_tblother_projects_sub(txtProjectName1.Text, txtProjectPlan1.Text, txtProjectResult1.Text,
-                        txtProjectPlan_future1.Text, txtProject_problem1.Text, txtremark1.Text, hddother_id.Value, HttpContext.Current.Session["assetuserid"].ToString(), hddmas_rep_id.Value);
+            //        Serv.Update_tblother_projects_sub(txtProjectName1.Text, txtProjectPlan1.Text, txtProjectResult1.Text,
+            //            txtProjectPlan_future1.Text, txtProject_problem1.Text, txtremark1.Text, hddother_id.Value, HttpContext.Current.Session["assetuserid"].ToString(), hddmas_rep_id.Value);
 
-                }
-            }
+            //    }
+            //}
 
-            var sub_other = Serv.GetExistRep_sub(hddop_id.Value);
-            if (sub_other.Rows.Count != 0)
-            {
-                gvPigResult.DataSource = sub_other;
-                gvPigResult.DataBind();
-            }
-            else
-            {
-                gvPigResult.DataSource = null;
-                gvPigResult.DataBind();
-            }
+            //var sub_other = Serv.GetExistRep_sub(hddop_id.Value);
+            //if (sub_other.Rows.Count != 0)
+            //{
+            //    gvPigResult.DataSource = sub_other;
+            //    gvPigResult.DataBind();
+            //}
+            //else
+            //{
+            //    gvPigResult.DataSource = null;
+            //    gvPigResult.DataBind();
+            //}
 
-            // added
+            //// added
 
-            Serv.UpdateExeStatusInProgress_rep(hddmas_rep_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
+            //Serv.UpdateExeStatusInProgress_rep(hddmas_rep_id.Value, HttpContext.Current.Session["assetuserid"].ToString());
 
-            POPUPMSG("บันทึกเรียบร้อย");
+            //POPUPMSG("บันทึกเรียบร้อย");
         }
 
         protected void btnHistory_Click(object sender, EventArgs e)
@@ -196,9 +197,11 @@ namespace ptt_report
 
         protected void btnExport_Click(object sender, EventArgs e)
         {
-            if (hddfile_path.Value != "")
+            var historyObj = QServ.GetHistoryLinkById(hddmas_rep_id.Value);
+
+            if (historyObj.Rows.Count != 0)
             {
-                Response.Redirect(hddfile_path.Value);
+                Response.Redirect(historyObj.Rows[0]["uri"].ToString());
             }
         }
 
@@ -1626,14 +1629,22 @@ namespace ptt_report
                             sel.Find.Text = "[table6]";
                             sel.Find.Execute(Replace: WdReplace.wdReplaceNone);
                             sel.Range.Select();
-                            axTable2 = sel.Tables.Add(app.Selection.Range, subPig.Rows.Count + 1, 2);
+                            axTable2 = sel.Tables.Add(app.Selection.Range, subPig.Rows.Count + 1, 3);
 
-                            int start_row = 1;
+                            axTable2.Borders.InsideLineStyle = WdLineStyle.wdLineStyleSingle;
+                            axTable2.Borders.OutsideLineStyle = WdLineStyle.wdLineStyleSingle;
+
+                            axTable2.Cell(1, 1).Range.Text = "Route Code";
+                            axTable2.Cell(1, 2).Range.Text = "Section - Length";
+                            axTable2.Cell(1, 3).Range.Text = "Status";
+
+                            int start_row = 2;
 
                             for (int j = 0; j <= subPig.Rows.Count - 1; j++)
                             {
-                                axTable2.Cell(start_row, 1).Range.Text = subPig.Rows[j]["routecode"].ToString() + " " + subPig.Rows[j]["sectionlength"].ToString();
-                                axTable2.Cell(start_row, 2).Range.Text = subPig.Rows[j]["status"].ToString();
+                                axTable2.Cell(start_row, 1).Range.Text = subPig.Rows[j]["routecode"].ToString();
+                                axTable2.Cell(start_row, 2).Range.Text = subPig.Rows[j]["sectionlength"].ToString();
+                                axTable2.Cell(start_row, 3).Range.Text = subPig.Rows[j]["status"].ToString();
 
                                 start_row = start_row + 1;
                             }
@@ -2484,7 +2495,7 @@ namespace ptt_report
                     doc.Close();
 
                     var x = Serv.InsertHistory(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss", EngCI), HttpContext.Current.Session["assetusername"].ToString(), "Quaterly_report",
-                        "~/gen_1/Quaterly_report_" + time + ".docx", "1", "",hddmas_rep_id.Value);
+                        "~/gen_1/Quaterly_report_" + time + ".docx", "1", "");
 
                     hddfile_path.Value = "~/gen_1/Quaterly_report_" + time + ".docx";
 

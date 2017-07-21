@@ -304,6 +304,212 @@ namespace ptt_report.App_Code
 
         }
 
+        public void Update_tbl_piping_sub1(string l5, string l6, string l7, string l8, string l9, string id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " update tbl_piping_sub1 set "
+                + " l5 = '" + l5 + "', "
+                + " l6 = '" + l6 + "', "
+                + " l7 = '" + l7 + "', "
+                + " l8 = '" + l8 + "', "
+                + " l9 = '" + l9 + "' "
+                + " where id = '" + id + "';"
+                ;
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            objConn.Open();
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+
+            objCmd.ExecuteNonQuery();
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+        }
+
+
+        public void Update_tbl_piping_sub2(string l10, string l11, string l12, string l13, string id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " update tbl_piping_sub2 set "
+                + " l10 = '" + l10 + "', "
+                + " l11 = '" + l11 + "', "
+                + " l12 = '" + l12 + "', "
+                + " l13 = '" + l13 + "' "
+                + " where id = '" + id + "';"
+                ;
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            objConn.Open();
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+
+            objCmd.ExecuteNonQuery();
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+        }
+
+
+        public void Update_tbl_piping_sub3(string l14, string l15, string l16, string l17, string id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " update tbl_piping_sub3 set "
+                + " l14 = '" + l14 + "', "
+                + " l15 = '" + l15 + "', "
+                + " l16 = '" + l16 + "', "
+                + " l17 = '" + l17 + "' "
+                + " where id = '" + id + "';"
+                ;
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            objConn.Open();
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+
+            objCmd.ExecuteNonQuery();
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+        }
+
+
+        public void Update_tbl_piping_sub4(string l18, string l19, string l20, string l21, string id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " update tbl_piping_sub4 set "
+                + " l18 = '" + l18 + "', "
+                + " l19 = '" + l19 + "', "
+                + " l20 = '" + l20 + "', "
+                + " l21 = '" + l21 + "' "
+                + " where id = '" + id + "';"
+                ;
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            objConn.Open();
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+
+            objCmd.ExecuteNonQuery();
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+        }
+
+
+
+        public void Update_tbl_piping_sub5(string l22, string l23, string l24, string l25, string id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " update tbl_piping_sub5 set "
+                + " l22 = '" + l22 + "', "
+                + " l23 = '" + l23 + "', "
+                + " l24 = '" + l24 + "', "
+                + " l25 = '" + l25 + "' "
+                + " where id = '" + id + "';"
+                ;
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            objConn.Open();
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+
+            objCmd.ExecuteNonQuery();
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+        }
+
+
+        public void Update_tbl_piping_sub6(string l26, string l27, string l28, string l29, string id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " update tbl_piping_sub6 set "
+                + " l26 = '" + l26 + "', "
+                + " l27 = '" + l27 + "', "
+                + " l28 = '" + l28 + "', "
+                + " l29 = '" + l29 + "' "
+                + " where id = '" + id + "';"
+                ;
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            objConn.Open();
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+
+            objCmd.ExecuteNonQuery();
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+        }
+
+
         public void Insert_tbl_piping_sub2(string pipg_id, string l10, string l11, string l12, string l13)
         {
             SqlConnection objConn = new SqlConnection();
@@ -687,7 +893,7 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = " select * from tbl_tem_file where flag_active =  'y' and report_type = '1'  ";
+            strSQL = " select * from tbl_tem_file where flag_active =  'y' ";
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
             var _with1 = objCmd;
@@ -891,7 +1097,7 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = " Insert into tbl_history_rep(last_update,createid,filename,uri,rep_type,version,quarter_rep_id) " +
+            strSQL = " Insert into tbl_history_rep(last_update,createid,filename,uri,rep_type,version) " +
                     " values('" + last_update + "', '" + createid + "', '" + filename + "', '" + uri + "', '" + rep_type + "', '" + version + "', '"+ quarter_rep_id + "'); select @@IDENTITY as id; ";
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
@@ -1472,6 +1678,168 @@ namespace ptt_report.App_Code
         //=============================================================================================================
 
 
+        public void Deletetbl_piping_sub1(string id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " delete tbl_piping_sub1 where id = '" + id + "' ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            objConn.Open();
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+
+            objCmd.ExecuteNonQuery();
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+        }
+
+        public void Deletetbl_piping_sub2(string id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " delete tbl_piping_sub2 where id = '" + id + "' ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            objConn.Open();
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+
+            objCmd.ExecuteNonQuery();
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+        }
+
+        public void Deletetbl_piping_sub3(string id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " delete tbl_piping_sub3 where id = '" + id + "' ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            objConn.Open();
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+
+            objCmd.ExecuteNonQuery();
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+        }
+
+        public void Deletetbl_piping_sub4(string id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " delete tbl_piping_sub4 where id = '" + id + "' ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            objConn.Open();
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+
+            objCmd.ExecuteNonQuery();
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+        }
+
+
+        public void Deletetbl_piping_sub5(string id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " delete tbl_piping_sub5 where id = '" + id + "' ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            objConn.Open();
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+
+            objCmd.ExecuteNonQuery();
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+        }
+
+        public void Deletetbl_piping_sub6(string id)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " delete tbl_piping_sub6 where id = '" + id + "' ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            objConn.Open();
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+
+            objCmd.ExecuteNonQuery();
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+        }
 
     }
 }

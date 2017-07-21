@@ -90,14 +90,16 @@ namespace ptt_report
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/history_2.aspx?param=2");
+            Response.Redirect("~/history_2.aspx?param=2&tprepid=" + hddmas_rep_id.Value);
         }
 
         protected void btnExport_Click(object sender, EventArgs e)
         {
-            if (hddfile_path.Value != "")
+            var historyObj = Serv.GetHistoryLinkById(hddmas_rep_id.Value);
+
+            if (historyObj.Rows.Count != 0)
             {
-                Response.Redirect(hddfile_path.Value);
+                Response.Redirect(historyObj.Rows[0]["uri"].ToString());
             }
         }
 

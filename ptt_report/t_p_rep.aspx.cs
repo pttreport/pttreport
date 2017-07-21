@@ -132,7 +132,7 @@ namespace ptt_report
 
         }
 
-        protected void btndownload_Click(object sender, EventArgs e)
+        protected void btndownloadTP_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
             GridViewRow row = (GridViewRow)btn.NamingContainer;

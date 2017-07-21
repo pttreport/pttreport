@@ -89,7 +89,7 @@
 
                         <asp:Button ID="btnEditPremit" runat="server" Text="Edit Premit" OnClick="btnEditPremit_Click" Visible="false" class="btn btn-info" />
                         <asp:Button ID="btnmanage" runat="server" Text="Manage" OnClick="btnmanage_Click" Visible="false" class="btn btn-info" />
-                        <asp:Button ID="btndownload" runat="server" Text="Download" Visible="false" OnClick="btndownload_Click" class="btn btn-info" />
+                        <asp:Button ID="btndownload" runat="server" Text="Download" Visible="false" OnClick="btndownloadTP_Click" class="btn btn-info" />
                         <asp:Button ID="btndelete" runat="server" Text="Delete" OnClick="btndelete_Click" OnClientClick="return Confim();" Visible="false" class="btn btn-danger" />
                     </ItemTemplate>
                 </asp:TemplateField>

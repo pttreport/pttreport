@@ -10,7 +10,7 @@ namespace ptt_report.App_Code
 {
     public class history_2DLL
     {
-        public DataTable GetRep_HisALL(string rep_type)
+        public DataTable GetRep_HisALL(string rep_type, string t_p_rep_id)
         {
             SqlConnection objConn = new SqlConnection();
             SqlCommand objCmd = new SqlCommand();
@@ -20,7 +20,7 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = " select * from tbl_history_rep where rep_type ='" + rep_type + "' order by version desc  ; ";
+            strSQL = " select * from tbl_history_rep where t_p_rep_id = '"+ t_p_rep_id + "' AND  rep_type ='" + rep_type + "' order by version desc  ; ";
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
             var _with1 = objCmd;

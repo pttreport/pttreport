@@ -670,58 +670,13 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button btnCreate1;
         
         /// <summary>
-        /// txtRegion control.
+        /// pipingPM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRegion;
-        
-        /// <summary>
-        /// txtAVG control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAVG;
-        
-        /// <summary>
-        /// txtstation control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtstation;
-        
-        /// <summary>
-        /// btnDel1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDel1;
-        
-        /// <summary>
-        /// txtmin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtmin;
-        
-        /// <summary>
-        /// txtCorr control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCorr;
+        protected global::System.Web.UI.WebControls.GridView pipingPM;
         
         /// <summary>
         /// btnCreate2 control.
@@ -733,49 +688,13 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button btnCreate2;
         
         /// <summary>
-        /// txtRegion2 control.
+        /// pipingCI control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRegion2;
-        
-        /// <summary>
-        /// txtCoatingCondition control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCoatingCondition;
-        
-        /// <summary>
-        /// txtstation2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtstation2;
-        
-        /// <summary>
-        /// btnDel2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDel2;
-        
-        /// <summary>
-        /// txtCorrosion control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCorrosion;
+        protected global::System.Web.UI.WebControls.GridView pipingCI;
         
         /// <summary>
         /// btnCreate3 control.
@@ -787,49 +706,13 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button btnCreate3;
         
         /// <summary>
-        /// txtRegion3 control.
+        /// pipingCUPS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRegion3;
-        
-        /// <summary>
-        /// txtPipeSup control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPipeSup;
-        
-        /// <summary>
-        /// txtstation3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtstation3;
-        
-        /// <summary>
-        /// btnDel3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDel3;
-        
-        /// <summary>
-        /// txtCorrosion2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCorrosion2;
+        protected global::System.Web.UI.WebControls.GridView pipingCUPS;
         
         /// <summary>
         /// btnCreate4 control.
@@ -841,49 +724,13 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button btnCreate4;
         
         /// <summary>
-        /// txtRegion4 control.
+        /// pipingSAI control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRegion4;
-        
-        /// <summary>
-        /// txtCoating4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCoating4;
-        
-        /// <summary>
-        /// txtstation4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtstation4;
-        
-        /// <summary>
-        /// btnDel4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDel4;
-        
-        /// <summary>
-        /// txtCorrosion4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCorrosion4;
+        protected global::System.Web.UI.WebControls.GridView pipingSAI;
         
         /// <summary>
         /// btnCreate5 control.
@@ -895,49 +742,13 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button btnCreate5;
         
         /// <summary>
-        /// txtRegion5 control.
+        /// pipeCUI control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRegion5;
-        
-        /// <summary>
-        /// txtInsulation control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtInsulation;
-        
-        /// <summary>
-        /// txtstation5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtstation5;
-        
-        /// <summary>
-        /// btnDel5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDel5;
-        
-        /// <summary>
-        /// txtCorrosion5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCorrosion5;
+        protected global::System.Web.UI.WebControls.GridView pipeCUI;
         
         /// <summary>
         /// btnCreate6 control.
@@ -949,49 +760,13 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button btnCreate6;
         
         /// <summary>
-        /// txtRegion6 control.
+        /// pipingCMCM control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRegion6;
-        
-        /// <summary>
-        /// txtInspection control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtInspection;
-        
-        /// <summary>
-        /// txtCMStation control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCMStation;
-        
-        /// <summary>
-        /// txtdate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtdate;
-        
-        /// <summary>
-        /// btnDel6 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDel6;
+        protected global::System.Web.UI.WebControls.GridView pipingCMCM;
         
         /// <summary>
         /// lbQuarter2 control.

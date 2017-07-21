@@ -24,9 +24,13 @@
         Year: 2559  Permit: กท2310027
                    
         <asp:Label ID="lbCustype" runat="server" Text="-"></asp:Label>
-        <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" class="btn" />
-        <asp:Button ID="btnExport" runat="server" Text="Export Report" class="btn" />
-        <asp:Button ID="Button1" runat="server" Text="History" class="btn" />
+        <asp:Button ID="btnSaveVer" runat="server" Text="Save Version" OnClick="btnSaveVer_Click" class="btn" />
+        <asp:Button ID="btnExport" runat="server" Text="Export Report" OnClick="btnExport_Click" class="btn" />
+        <asp:Button ID="Button1" runat="server" Text="History" class="btn" OnClick="Button1_Click" />
+
+        <asp:HiddenField ID="hddtpcp_id" runat="server" />
+        <asp:HiddenField ID="hddfile_path" runat="server" />
+        <asp:HiddenField ID="hddmas_rep_id" runat="server" />
         
     </div>
 
@@ -43,15 +47,14 @@
                         <tr>
                             <td>รายละเอียด: </td>
                             <td class="auto-style1">
-
-                                <textarea id="PermitCPCIPSDetail" runat="server" cols="20" rows="60"></textarea>
+                                <asp:TextBox TextMode="MultiLine" runat="server" id="PermitCPCIPSDetailBox"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             <td class="auto-style1">ความเห็น : </td>
                             <td class="auto-style1">
+                                <asp:TextBox TextMode="MultiLine" runat="server" id="PermitCPCIPSNoteBox"></asp:TextBox>
 
-                                <textarea id="PermitCPCIPSNote" runat="server" cols="20" rows="3"></textarea>
 
                             </td>
                         </tr>
@@ -66,15 +69,15 @@
                         <tr>
                             <td>รายละเอียด: </td>
                             <td class="auto-style1">
+                                <asp:TextBox TextMode="MultiLine" runat="server" id="PermitCPDCVGDetailBox"></asp:TextBox>
 
-                                <textarea id="PermitCPDCVGDetail" runat="server" cols="20" rows="60"></textarea>
                             </td>
                         </tr>
                         <tr>
                             <td class="auto-style1">ความเห็น : </td>
                             <td class="auto-style1">
+                                <asp:TextBox TextMode="MultiLine" runat="server" id="PermitCPDCVGNoteBox"></asp:TextBox>
 
-                                <textarea id="PermitCPDCVGNote" runat="server" cols="20" rows="3"></textarea>
 
                             </td>
                         </tr>
@@ -89,15 +92,14 @@
                         <tr>
                             <td>รายละเอียด: </td>
                             <td class="auto-style1">
-
-                                <textarea id="PermitCPPTSDetail" runat="server" cols="20" rows="60"></textarea>
+                                <asp:TextBox TextMode="MultiLine" runat="server" id="PermitCPPTSDetailBox"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             <td class="auto-style1">ความเห็น : </td>
                             <td class="auto-style1">
+                                <asp:TextBox TextMode="MultiLine" runat="server" id="PermitCPPTSNoteBox"></asp:TextBox>
 
-                                <textarea id="PermitCPPTSNote" runat="server" cols="20" rows="3"></textarea>
 
                             </td>
                         </tr>
@@ -112,15 +114,13 @@
                         <tr>
                             <td>รายละเอียด: </td>
                             <td class="auto-style1">
-
-                                <textarea id="PermitCPROVDetail" runat="server" cols="20" rows="60"></textarea>
+                                <asp:TextBox TextMode="MultiLine" runat="server" id="PermitCPROVDetailBox"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
                             <td class="auto-style1">ความเห็น : </td>
                             <td class="auto-style1">
-
-                                <textarea id="PermitCPROVNote" runat="server" cols="20" rows="3"></textarea>
+                                <asp:TextBox TextMode="MultiLine" runat="server" id="PermitCPROVNoteBox"></asp:TextBox>
 
                             </td>
                         </tr>
@@ -131,7 +131,7 @@
 
 
             <div>
-                <asp:Button ID="PermitCPFormSaveSubmit" runat="server" Text="Save" class="btn" />
+                <asp:Button ID="PermitCPFormSaveSubmit" runat="server" Text="Save" OnClick="PermitCPFormSaveSubmit_Click" class="btn" />
             </div>
         </div>
     </div>

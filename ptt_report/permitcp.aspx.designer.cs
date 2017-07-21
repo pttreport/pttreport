@@ -49,6 +49,33 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
+        /// hddtpcp_id control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hddtpcp_id;
+        
+        /// <summary>
+        /// hddfile_path control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hddfile_path;
+        
+        /// <summary>
+        /// hddmas_rep_id control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hddmas_rep_id;
+        
+        /// <summary>
         /// btnImport control.
         /// </summary>
         /// <remarks>
@@ -58,76 +85,76 @@ namespace ptt_report {
         protected global::System.Web.UI.WebControls.Button btnImport;
         
         /// <summary>
-        /// PermitCPCIPSDetail control.
+        /// PermitCPCIPSDetailBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea PermitCPCIPSDetail;
+        protected global::System.Web.UI.WebControls.TextBox PermitCPCIPSDetailBox;
         
         /// <summary>
-        /// PermitCPCIPSNote control.
+        /// PermitCPCIPSNoteBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea PermitCPCIPSNote;
+        protected global::System.Web.UI.WebControls.TextBox PermitCPCIPSNoteBox;
         
         /// <summary>
-        /// PermitCPDCVGDetail control.
+        /// PermitCPDCVGDetailBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea PermitCPDCVGDetail;
+        protected global::System.Web.UI.WebControls.TextBox PermitCPDCVGDetailBox;
         
         /// <summary>
-        /// PermitCPDCVGNote control.
+        /// PermitCPDCVGNoteBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea PermitCPDCVGNote;
+        protected global::System.Web.UI.WebControls.TextBox PermitCPDCVGNoteBox;
         
         /// <summary>
-        /// PermitCPPTSDetail control.
+        /// PermitCPPTSDetailBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea PermitCPPTSDetail;
+        protected global::System.Web.UI.WebControls.TextBox PermitCPPTSDetailBox;
         
         /// <summary>
-        /// PermitCPPTSNote control.
+        /// PermitCPPTSNoteBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea PermitCPPTSNote;
+        protected global::System.Web.UI.WebControls.TextBox PermitCPPTSNoteBox;
         
         /// <summary>
-        /// PermitCPROVDetail control.
+        /// PermitCPROVDetailBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea PermitCPROVDetail;
+        protected global::System.Web.UI.WebControls.TextBox PermitCPROVDetailBox;
         
         /// <summary>
-        /// PermitCPROVNote control.
+        /// PermitCPROVNoteBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea PermitCPROVNote;
+        protected global::System.Web.UI.WebControls.TextBox PermitCPROVNoteBox;
         
         /// <summary>
         /// PermitCPFormSaveSubmit control.

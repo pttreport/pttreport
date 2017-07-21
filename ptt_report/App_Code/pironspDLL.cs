@@ -1383,7 +1383,7 @@ namespace ptt_report.App_Code
             return dt;
         }
 
-        public DataTable InsertHistory(string last_update, string createid, string filename, string uri, string rep_type, string version,string  quarter_rep_id)
+        public DataTable InsertHistory(string last_update, string createid, string filename, string uri, string rep_type, string version, string quarter_rep_id)
         {
             SqlConnection objConn = new SqlConnection();
             SqlCommand objCmd = new SqlCommand();
@@ -1394,7 +1394,7 @@ namespace ptt_report.App_Code
             string strSQL = null;
 
             strSQL = " Insert into tbl_history_rep(last_update,createid,filename,uri,rep_type,version,quarter_rep_id) " +
-                    " values('" + last_update + "', '" + createid + "', '" + filename + "', '" + uri + "', '" + rep_type + "', '" + version + "','"+ quarter_rep_id + "'); select @@IDENTITY as id; ";
+                    " values('" + last_update + "', '" + createid + "', '" + filename + "', '" + uri + "', '" + rep_type + "', '" + version + "', '"+ quarter_rep_id + "'); select @@IDENTITY as id; ";
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
             var _with1 = objCmd;

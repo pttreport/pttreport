@@ -35,14 +35,6 @@ namespace ptt_report
         protected void bind_default()
         {
 
-            var rep_doc = Serv.GetRep_HisALL();
-            if (rep_doc.Rows.Count != 0)
-            {
-                hddfile_path.Value = rep_doc.Rows[0]["uri"].ToString();
-            }
-
-
-
             var year = Serv.GetRep_year();
             if (year.Rows.Count != 0)
             {

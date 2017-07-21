@@ -101,7 +101,6 @@
 
 
         <asp:Button ID="btnAddOtherPro" runat="server" Text="Add Other Project" OnClick="btnAddOtherPro_Click" />
-        <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" />
          <asp:Button ID="btnApprove" runat="server" Text="Approve Report" OnClick="btnApprove_Click" CssClass="btn" />
     </div>
 

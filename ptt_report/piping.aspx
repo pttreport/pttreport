@@ -19,9 +19,6 @@
 
     <div class="bar_qr">
         Customer Type :
-                   
-                   
-
         <asp:label id="lbCustype" runat="server" text="-"></asp:label>
         <asp:button id="btnSaveVer" runat="server" text="Save Version" onclick="btnSaveVer_Click" class="btn" />
         <asp:button id="btnExport" runat="server" text="Export Report" onclick="btnExport_Click" class="btn" />
@@ -300,109 +297,92 @@
 
             <div class="info_executive">
                 <h3>Preventive maintenance PM
-                    <asp:button id="btnCreate1" runat="server" text="Create" class="btn btn btn-gray btn-right" />
+                    <asp:button id="btnCreate1" runat="server" text="Create" class="btn btn btn-gray btn-right" OnClick="btnCreate1_Click" />
                 </h3>
                 <div class="info_executive_in">
 
-                    <table class="table_pip">
-                        <tr>
-                            <td>Region</td>
-                            <td>Criteria</td>
-                            <td>Status</td>
-                            <td>Management</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:textbox id="txtRegion" runat="server"></asp:textbox>
-                            </td>
-                            <td>Avg<br />
-                                       
-                                       
-                                               
+                    <asp:GridView Width="100%" DataKeyNames="id" AutoGenerateColumns="false" runat="server" ID="pipingPM" ShowFooter="false">
+                        <Columns>
+                            <asp:TemplateField HeaderText="Region">
+                                <ItemTemplate>
+                                    <asp:HiddenField ID="pipingPMId" runat="server" Value='<%# Eval("id") %>' />
+                                    <asp:TextBox ID="pmRegion" runat="server" Text='<%# Eval("l5") %>'></asp:TextBox>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Criteria">
+                                <ItemTemplate>
+                                    <label>Avg</label>
+                                    <br />
+                                    <asp:TextBox ID="pmCAvg" runat="server" Text='<%# Eval("l6") %>'></asp:TextBox>
+                                    <br />
+                                    <label>Min</label>
+                                    <br />
+                                    <asp:TextBox ID="pmCMin" runat="server" Text='<%# Eval("l7") %>'></asp:TextBox>
+                                    <br />
+                                    <label>CorrRate(mm/yr)</label>
+                                    <br />
+                                    <asp:TextBox ID="pmCorrRate" runat="server" Text='<%# Eval("l8") %>'></asp:TextBox>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Status">
+                                <ItemTemplate>
+                                    <asp:TextBox ID="pmStatus" runat="server" Text='<%# Eval("l9") %>'></asp:TextBox>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Manage">
+                                <ItemTemplate>
+                                    <asp:Button ID="btndal1" runat="server" Text="Delete" OnClick="btndel1_Click" />
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+                    </asp:GridView>
 
 
-                                                        <asp:textbox id="txtAVG" runat="server"></asp:textbox>
-                            </td>
-                            <td>
-                                <asp:textbox id="txtstation" runat="server"></asp:textbox>
-                            </td>
-                            <td>
-                                <asp:button id="btnDel1" runat="server" text="Delete" class="btn btn-danger" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>Min<br />
-                                       
-                               
-                                               
-
-
-                                                        <asp:textbox id="txtmin" runat="server"></asp:textbox>
-                            </td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>CorrRate(mm/yr)
-                                       
-                                       
-
-                                                        <br />
-                                <asp:textbox id="txtCorr" runat="server"></asp:textbox>
-                            </td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </table>
 
                 </div>
             </div>
 
+
             <div class="info_executive">
                 <h3>Coating Inspection
-                    <asp:button id="btnCreate2" runat="server" text="Create" class="btn btn btn-gray btn-right" />
+                    <asp:button id="btnCreate2" runat="server" text="Create" class="btn btn btn-gray btn-right" OnClick="btnCreate2_Click" />
                 </h3>
                 <div class="info_executive_in">
-                    <table class="table_pip">
-                        <tr>
-                            <td>Region</td>
-                            <td>Criteria</td>
-                            <td>Station</td>
-                            <td>Management</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:textbox id="txtRegion2" runat="server"></asp:textbox>
-                            </td>
-                            <td>Coating condition / สภาพ Coating
-                                       
-                                       
+                    
+                    <asp:GridView Width="100%" DataKeyNames="id" AutoGenerateColumns="false" runat="server" ID="pipingCI" ShowFooter="false">
+                        <Columns>
+                            <asp:TemplateField HeaderText="Region">
+                                <ItemTemplate>
+                                    <asp:HiddenField ID="pipingCIId" runat="server" Value='<%# Eval("id") %>' />
+                                    <asp:TextBox ID="ciRegion" runat="server" Text='<%# Eval("l10") %>'></asp:TextBox>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Criteria">
+                                <ItemTemplate>
+                                    <label>Pipe support condition / สภาพท่อใต้ Support </label>
+                                    <br />
+                                    <asp:TextBox ID="ciCoat" runat="server" Text='<%# Eval("l11") %>'></asp:TextBox>
+                                    <br />
+                                    <label>Corrosion condition / สภาพการเกิด Corrosion </label>
+                                    <br />
+                                    <asp:TextBox ID="ciCorr" runat="server" Text='<%# Eval("l12") %>'></asp:TextBox>
+                                    
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Station">
+                                <ItemTemplate>
+                                    <asp:TextBox ID="ciStation" runat="server" Text='<%# Eval("l13") %>'></asp:TextBox>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Manage">
+                                <ItemTemplate>
+                                    <asp:Button ID="btndal1" runat="server" Text="Delete" OnClick="btndel2_Click" />
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+                    </asp:GridView>
 
-                                                        <br />
-                                <asp:textbox id="txtCoatingCondition" runat="server"></asp:textbox>
-                            </td>
-                            <td>
-                                <asp:textbox id="txtstation2" runat="server"></asp:textbox>
-                            </td>
-                            <td>
-                                <asp:button id="btnDel2" runat="server" text="Delete" class="btn btn-danger"/>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>Corrosion condition / สภาพการเกิด Corrosion
-                                       
-                                       
 
-                                                        <br />
-                                <asp:textbox id="txtCorrosion" runat="server"></asp:textbox>
-                            </td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </table>
 
                 </div>
 
@@ -411,144 +391,132 @@
             <div class="info_executive">
                 <h3>Corrosion Under Pipe Support
                    
-                    <asp:button id="btnCreate3" runat="server" text="Create" class="btn btn btn-gray btn-right" />
+                    <asp:button id="btnCreate3" runat="server" text="Create" class="btn btn btn-gray btn-right" OnClick="btnCreate3_Click" />
                 </h3>
                 <div class="info_executive_in">
-                    <table class="table_pip">
-                        <tr>
-                            <td>Region</td>
-                            <td>Criteria</td>
-                            <td>Station</td>
-                            <td>Management</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:textbox id="txtRegion3" runat="server"></asp:textbox>
-                            </td>
-                            <td>Pipe support condition / สภาพท่อใต้ Support
-                                       
-                                       
+                    
+                    <asp:GridView Width="100%" DataKeyNames="id" AutoGenerateColumns="false" runat="server" ID="pipingCUPS" ShowFooter="false">
+                        <Columns>
+                            <asp:TemplateField HeaderText="Region">
+                                <ItemTemplate>
+                                    <asp:HiddenField ID="pipingCUPSId" runat="server" Value='<%# Eval("id") %>' />
+                                    <asp:TextBox ID="cupsRegion" runat="server" Text='<%# Eval("l14") %>'></asp:TextBox>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Criteria">
+                                <ItemTemplate>
+                                    <label>Pipe support condition / สภาพท่อใต้ Support </label>
+                                    <br />
+                                    <asp:TextBox ID="cupsCoat" runat="server" Text='<%# Eval("l15") %>'></asp:TextBox>
+                                    <br />
+                                    <label>Corrosion condition / สภาพการเกิด Corrosion </label>
+                                    <br />
+                                    <asp:TextBox ID="cupsCorr" runat="server" Text='<%# Eval("l16") %>'></asp:TextBox>
+                                    
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Station">
+                                <ItemTemplate>
+                                    <asp:TextBox ID="cupsStation" runat="server" Text='<%# Eval("l17") %>'></asp:TextBox>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Manage">
+                                <ItemTemplate>
+                                    <asp:Button ID="btndal1" runat="server" Text="Delete" OnClick="btndel3_Click" />
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+                    </asp:GridView>
 
-                                                        <br />
-                                <asp:textbox id="txtPipeSup" runat="server"></asp:textbox>
-                            </td>
-                            <td>
-                                <asp:textbox id="txtstation3" runat="server"></asp:textbox>
-                            </td>
-                            <td>
-                                <asp:button id="btnDel3" runat="server" text="Delete" class="btn btn-danger" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>Corrosion condition / สภาพการเกิด Corrosion
-                                       
-                                       
 
-                                                        <br />
-                                <asp:textbox id="txtCorrosion2" runat="server"></asp:textbox>
-                            </td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </table>
 
                 </div>
             </div>
 
             <div class="info_executive">
                 <h3>Soil to Air Inspection
-                   <asp:button id="btnCreate4" runat="server" text="Create" class="btn btn btn-gray btn-right" />
+                   <asp:button id="btnCreate4" runat="server" text="Create" class="btn btn btn-gray btn-right" OnClick="btnCreate4_Click" />
 
                 </h3>
                 <div class="info_executive_in">
 
-                    <table class="table_pip">
-                        <tr>
-                            <td>Region</td>
-                            <td>Criteria</td>
-                            <td>Station</td>
-                            <td>Management</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:textbox id="txtRegion4" runat="server"></asp:textbox>
-                            </td>
-                            <td>Coating condition / สภาพ Coating
-                                       
-                                       
-
-                                                        <br />
-                                <asp:textbox id="txtCoating4" runat="server"></asp:textbox>
-                            </td>
-                            <td>
-                                <asp:textbox id="txtstation4" runat="server"></asp:textbox>
-                            </td>
-                            <td>
-                                <asp:button id="btnDel4" runat="server" text="Delete" class="btn btn-danger" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>Corrosion condition / สภาพการเกิด Corrosion
-                                       
-                                       
-
-                                                        <br />
-                                <asp:textbox id="txtCorrosion4" runat="server"></asp:textbox>
-                            </td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </table>
+                    <asp:GridView Width="100%" DataKeyNames="id" AutoGenerateColumns="false" runat="server" ID="pipingSAI" ShowFooter="false">
+                        <Columns>
+                            <asp:TemplateField HeaderText="Region">
+                                <ItemTemplate>
+                                    <asp:HiddenField ID="pipingSAIId" runat="server" Value='<%# Eval("id") %>' />
+                                    <asp:TextBox ID="saiRegion" runat="server" Text='<%# Eval("l18") %>'></asp:TextBox>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Criteria">
+                                <ItemTemplate>
+                                    <label>Pipe support condition / สภาพท่อใต้ Support </label>
+                                    <br />
+                                    <asp:TextBox ID="saiCoat" runat="server" Text='<%# Eval("l19") %>'></asp:TextBox>
+                                    <br />
+                                    <label>Corrosion condition / สภาพการเกิด Corrosion </label>
+                                    <br />
+                                    <asp:TextBox ID="saiCorr" runat="server" Text='<%# Eval("l20") %>'></asp:TextBox>
+                                    
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Station">
+                                <ItemTemplate>
+                                    <asp:TextBox ID="saiStation" runat="server" Text='<%# Eval("l21") %>'></asp:TextBox>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Manage">
+                                <ItemTemplate>
+                                    <asp:Button ID="btndal1" runat="server" Text="Delete" OnClick="btndel4_Click" />
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+                    </asp:GridView>
 
                 </div>
             </div>
 
             <div class="info_executive">
                 <h3>Corrosion Under Insulation
-                   <asp:button id="btnCreate5" runat="server" text="Create" class="btn btn btn-gray btn-right" />
+                   <asp:button id="btnCreate5" runat="server" text="Create" class="btn btn btn-gray btn-right" OnClick="btnCreate5_Click" />
 
                 </h3>
                 <div class="info_executive_in">
-                    <table class="table_pip">
-                        <tr>
-                            <td>Region</td>
-                            <td>Criteria</td>
-                            <td>Station</td>
-                            <td>Management</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:textbox id="txtRegion5" runat="server"></asp:textbox>
-                            </td>
-                            <td>Insulation condition / สภาพ Insulation
-                                       
-                                       
+                    
 
-                                                        <br />
-                                <asp:textbox id="txtInsulation" runat="server"></asp:textbox>
-                            </td>
-                            <td>
-                                <asp:textbox id="txtstation5" runat="server"></asp:textbox>
-                            </td>
-                            <td>
-                                <asp:button id="btnDel5" runat="server" text="Delete" class="btn btn-danger" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>Corrosion condition / สภาพการเกิด Corrosion
-                                       
-                                       
+                    <asp:GridView Width="100%" DataKeyNames="id" AutoGenerateColumns="false" runat="server" ID="pipeCUI" ShowFooter="false">
+                        <Columns>
+                            <asp:TemplateField HeaderText="Region">
+                                <ItemTemplate>
+                                    <asp:HiddenField ID="pipingCUIId" runat="server" Value='<%# Eval("id") %>' />
+                                    <asp:TextBox ID="cuiRegion" runat="server" Text='<%# Eval("l22") %>'></asp:TextBox>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Criteria">
+                                <ItemTemplate>
+                                    <label>Pipe support condition / สภาพท่อใต้ Support </label>
+                                    <br />
+                                    <asp:TextBox ID="cuiCoat" runat="server" Text='<%# Eval("l23") %>'></asp:TextBox>
+                                    <br />
+                                    <label>Corrosion condition / สภาพการเกิด Corrosion </label>
+                                    <br />
+                                    <asp:TextBox ID="cuiCorr" runat="server" Text='<%# Eval("l24") %>'></asp:TextBox>
+                                    
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Station">
+                                <ItemTemplate>
+                                    <asp:TextBox ID="cuiStation" runat="server" Text='<%# Eval("l25") %>'></asp:TextBox>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Manage">
+                                <ItemTemplate>
+                                    <asp:Button ID="btndal1" runat="server" Text="Delete" OnClick="btndel5_Click" />
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+                    </asp:GridView>
 
-                                                        <br />
-                                <asp:textbox id="txtCorrosion5" runat="server"></asp:textbox>
-                            </td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </table>
 
                 </div>
             </div>
@@ -556,36 +524,41 @@
             <div class="info_executive">
                 <h3>Corrective maintenance CM
           
-                     <asp:button id="btnCreate6" runat="server" text="Create" class="btn btn btn-gray btn-right" />
+                     <asp:button id="btnCreate6" runat="server" text="Create" class="btn btn btn-gray btn-right" OnClick="btnCreate6_Click" />
 
                 </h3>
                 <div class="info_executive_in">
-                    <table class="table_pip">
-                        <tr>
-                            <td>Region</td>
-                            <td>Inspection</td>
-                            <td>CM Station</td>
-                            <td>Date</td>
-                            <td>Management</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <asp:textbox id="txtRegion6" runat="server"></asp:textbox>
-                            </td>
-                            <td>
-                                <asp:textbox id="txtInspection" runat="server"></asp:textbox>
-                            </td>
-                            <td>
-                                <asp:textbox id="txtCMStation" runat="server"></asp:textbox>
-                            </td>
-                            <td>
-                                <asp:textbox id="txtdate" runat="server"></asp:textbox>
-                            </td>
-                            <td>
-                                <asp:button id="btnDel6" runat="server" text="Delete" class="btn btn-danger" />
-                            </td>
-                        </tr>
-                    </table>
+                    
+                    <asp:GridView Width="100%" DataKeyNames="id" AutoGenerateColumns="false" runat="server" ID="pipingCMCM" ShowFooter="false">
+                        <Columns>
+                            <asp:TemplateField HeaderText="Region">
+                                <ItemTemplate>
+                                    <asp:HiddenField ID="pipingCMCMd" runat="server" Value='<%# Eval("id") %>' />
+                                    <asp:TextBox ID="cmcmRegion" runat="server" Text='<%# Eval("l26") %>'></asp:TextBox>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Inspection">
+                                <ItemTemplate>
+                                    <asp:TextBox ID="cmcmInspection" runat="server" Text='<%# Eval("l27") %>'></asp:TextBox>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="CM Station">
+                                <ItemTemplate>
+                                    <asp:TextBox ID="cmcmStation" runat="server" Text='<%# Eval("l28") %>'></asp:TextBox>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Date">
+                                <ItemTemplate>
+                                    <asp:TextBox ID="cmcmDate" runat="server" Text='<%# Eval("l29") %>'></asp:TextBox>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Manage">
+                                <ItemTemplate>
+                                    <asp:Button ID="btndal1" runat="server" Text="Delete" OnClick="btndel6_Click" />
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+                    </asp:GridView>
 
                 </div>
             </div>
