@@ -40,31 +40,31 @@
                     <tr>
                         <td style="width:165px;">แผนงาน :</td>
                         <td>
-                            <asp:TextBox ID="txtplanwork" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtplanwork" TextMode="MultiLine" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
                         <td>ผลการดำเนินงาน :</td>
                         <td>
-                            <asp:TextBox ID="txtplanresult" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtplanresult" TextMode="MultiLine" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
                         <td>การดำเนินงานในอนาคต :</td>
                         <td>
-                            <asp:TextBox ID="txtfuturePlan" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtfuturePlan" TextMode="MultiLine" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
                         <td>ปัญหาอุปสรรค (ถ้ามี) :</td>
                         <td>
-                            <asp:TextBox ID="txtproblem" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtproblem" TextMode="MultiLine" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
                         <td>ความเห็น :</td>
                         <td>
-                            <asp:TextBox ID="txtRemark" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtRemark" TextMode="MultiLine" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
@@ -82,31 +82,31 @@
                     <tr>
                         <td style="width:165px;">แผนงาน :</td>
                         <td>
-                            <asp:TextBox ID="txtplanwork2" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtplanwork2" TextMode="MultiLine" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
                         <td>ผลการดำเนินงาน :</td>
                         <td>
-                            <asp:TextBox ID="txtplanresult2" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtplanresult2" TextMode="MultiLine" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
                         <td>การดำเนินงานในอนาคต :</td>
                         <td>
-                            <asp:TextBox ID="txtfuturePlan2" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtfuturePlan2" TextMode="MultiLine" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
                         <td>ปัญหาอุปสรรค (ถ้ามี) :</td>
                         <td>
-                            <asp:TextBox ID="txtproblem2" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtproblem2" TextMode="MultiLine" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
                         <td>ความเห็น :</td>
                         <td>
-                            <asp:TextBox ID="txtRemark2" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtRemark2" TextMode="MultiLine" runat="server"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>

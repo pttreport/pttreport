@@ -162,6 +162,7 @@
 
             <asp:TemplateField HeaderText="Username">
                 <ItemTemplate>
+                    <asp:HiddenField ID="hdduserid" Value='<%# Eval("userid") %>' runat="server" />
                     <asp:HiddenField ID="hddauthorize1" Value='<%# Eval("authorize1") %>' runat="server" />
                     <asp:HiddenField ID="hddauthorize2" Value='<%# Eval("authorize2") %>' runat="server" />
                     <asp:HiddenField ID="hddauthorize3" Value='<%# Eval("authorize3") %>' runat="server" />

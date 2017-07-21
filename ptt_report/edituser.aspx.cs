@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -36,12 +37,12 @@ namespace ptt_report
                 {
                     if (!string.IsNullOrEmpty(Request.QueryString["param"]))
                     {
-                        hddusername.Value = Request.QueryString["param"].ToString();
+                        hdduserid.Value = Request.QueryString["param"].ToString();
                         lbtitle.Text = "Edit User";
                     }
                     else
                     {
-                        hddusername.Value = "";
+                        hdduserid.Value = "";
                     }
 
                     bind_data();
@@ -51,10 +52,10 @@ namespace ptt_report
 
         protected void bind_data()
         {
-            if (hddusername.Value != "")
+            if (hdduserid.Value != "")
             {
                 txtusername.Enabled = false;
-                var u = Serv.GetUserBASByUsername2(hddusername.Value);
+                var u = Serv.GetUserBASByUsername2(hdduserid.Value);
                 if (u.Rows.Count != 0)
                 {
                     txtemail.Text = u.Rows[0]["email"].ToString();
@@ -93,7 +94,7 @@ namespace ptt_report
                 }
                 else
                 {
-                    hddusername.Value = "";
+                    hdduserid.Value = "";
                 }
             }
         }
@@ -111,7 +112,7 @@ namespace ptt_report
 
         protected void btnsave_Click(object sender, EventArgs e)
         {
-            if (hddusername.Value != "")
+            if (hdduserid.Value != "")
             {
                 string status = "";
                 string au1 = "";
@@ -177,16 +178,22 @@ namespace ptt_report
                     au4 = "n";
                 }
 
-                var du = Serv.GetDelUserByUsername(hddusername.Value);
+                if (au1 == "n" && au2 == "n" && au3 == "n" && au4 == "n")
+                {
+                    POPUPMSG("กรุณาเลือก Authorization");
+                    return;
+                }
+
+                var du = Serv.GetDelUserByUsername(hdduserid.Value);
                 if (du.Rows.Count != 0)
                 {
                     Serv.UpdateDelUserAll(au1, au2, au3, au4, status, DateTime.Now.ToString("yyyy-MM-dd HH:mm:dd", EngCI), HttpContext.Current.Session["assetuserid"].ToString(),
-                        hddusername.Value);
+                        hdduserid.Value);
                 }
                 else
                 {
-                    Serv.InsertDelUser(hddusername.Value, au1, au2, au3, au4, status, DateTime.Now.ToString("yyyy-MM-dd HH:mm:dd", EngCI), HttpContext.Current.Session["assetuserid"].ToString(),
-                        DateTime.Now.ToString("yyyy-MM-dd HH:mm:dd", EngCI), HttpContext.Current.Session["assetuserid"].ToString());
+                    Serv.InsertDelUser(txtusername.Text, au1, au2, au3, au4, status, DateTime.Now.ToString("yyyy-MM-dd HH:mm:dd", EngCI), HttpContext.Current.Session["assetuserid"].ToString(),
+                        DateTime.Now.ToString("yyyy-MM-dd HH:mm:dd", EngCI), HttpContext.Current.Session["assetuserid"].ToString(), hdduserid.Value);
                 }
                 bind_data();
 
@@ -199,7 +206,7 @@ namespace ptt_report
                     }
                     else
                     {
-                        Serv.UpdatePassword(txtpassword.Text, hddusername.Value);
+                        Serv.UpdatePassword(txtpassword.Text, hdduserid.Value);
                     }
                 }
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('บันทึกเรียบร้อย');window.location ='usermanagement.aspx';", true);
@@ -207,6 +214,11 @@ namespace ptt_report
             }
             else
             {
+                Regex pattern1 = new Regex(@"\W|_");
+                Regex pattern2 = new Regex(@"[0-9]");
+                Regex pattern3 = new Regex(@"[A-Z]");
+                Regex pattern4 = new Regex(@"[a-z]");
+
                 string status = "";
                 string au1 = "";
                 string au2 = "";
@@ -233,6 +245,31 @@ namespace ptt_report
                     POPUPMSG("กรุณากรอก Password");
                     return;
                 }
+                else if (txtpassword.Text.Length < 8)
+                {
+                    POPUPMSG(" กรุณาใส่ Password มากกว่า 8 ตัวอักษร ");
+                    return;
+                }
+                else if (pattern2.IsMatch(txtpassword.Text) == false)
+                {
+                    POPUPMSG(" Password ต้องประกอบด้วยตัวเลข 0-9 ");
+                    return;
+                }
+                else if (pattern3.IsMatch(txtpassword.Text) == false)
+                {
+                    POPUPMSG(" Password ต้องประกอบด้วยตัวอักษรตัวใหญ่ A-Z ");
+                    return;
+                }
+                else if (pattern4.IsMatch(txtpassword.Text) == false)
+                {
+                    POPUPMSG(" Password ต้องประกอบด้วยตัวอักษรตัวเล็ก a-z ");
+                    return;
+                }
+                else if (pattern1.IsMatch(txtpassword.Text) == false)
+                {
+                    POPUPMSG(" Password ต้องประกอบด้วยสัญลักษณ์ !@#$% อย่างน้อย 1 ตัว ");
+                    return;
+                }
                 else if (txtconpassword.Text == "")
                 {
                     POPUPMSG("กรุณากรอก Re-password");
@@ -243,6 +280,7 @@ namespace ptt_report
                     POPUPMSG("Password และ Re-password ไม่ตรงกัน");
                     return;
                 }
+
                 else
                 {
                     if (RadioButton1.Checked == true)
@@ -287,12 +325,25 @@ namespace ptt_report
                         au4 = "n";
                     }
 
-                    Serv.InsertUser(txtfname.Text, txtlastname.Text, txtusername.Text, txtpassword.Text, txtemail.Text,
-                       "", DateTime.Now.ToString("yyyy-MM-dd HH:mm:dd", EngCI), HttpContext.Current.Session["assetuserid"].ToString(),
-                        DateTime.Now.ToString("yyyy-MM-dd HH:mm:dd", EngCI), HttpContext.Current.Session["assetuserid"].ToString());
+                    if (au1 == "n" && au2 == "n" && au3 == "n" && au4 == "n")
+                    {
+                        POPUPMSG("กรุณาเลือก Authorization");
+                        return;
+                    }
+
+                    var u_email = Serv.GetUserBASByEmail(txtemail.Text);
+                    if (u_email.Rows.Count != 0)
+                    {
+                        POPUPMSG("Email ที่กรอกซ้ำในระบบ");
+                        return;
+                    }
+
+                    var user = Serv.InsertUser(txtfname.Text, txtlastname.Text, txtusername.Text, txtpassword.Text, txtemail.Text,
+                        "", DateTime.Now.ToString("yyyy-MM-dd HH:mm:dd", EngCI), HttpContext.Current.Session["assetuserid"].ToString(),
+                         DateTime.Now.ToString("yyyy-MM-dd HH:mm:dd", EngCI), HttpContext.Current.Session["assetuserid"].ToString());
 
                     Serv.InsertDelUser(txtusername.Text, au1, au2, au3, au4, status, DateTime.Now.ToString("yyyy-MM-dd HH:mm:dd", EngCI), HttpContext.Current.Session["assetuserid"].ToString(),
-                     DateTime.Now.ToString("yyyy-MM-dd HH:mm:dd", EngCI), HttpContext.Current.Session["assetuserid"].ToString());
+                     DateTime.Now.ToString("yyyy-MM-dd HH:mm:dd", EngCI), HttpContext.Current.Session["assetuserid"].ToString(), user.Rows[0]["id"].ToString());
 
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('บันทึกเรียบร้อย');window.location ='usermanagement.aspx';", true);
 

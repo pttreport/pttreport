@@ -27,9 +27,8 @@ namespace ptt_report.App_Code
                     " case when d.authorize3 is null then 'n' else d.authorize3 end authorize3, " +
                     " case when d.authorize4 is null then 'n' else d.authorize4 end authorize4, " +
                     " case when d.flag_active is null then 'y' else d.flag_active end flag_active, " +
-                    " u.*,r.rolename " +
-                    " from tbluser as u left join tbldelete_user as d on u.username = d.username " +
-                    " inner join tblrole as r on u.roleid = r.roleid " +
+                    " u.* " +
+                    " from tbluser as u left join tbldelete_user as d on u.userid = d.userid " +
                     " where u.username = '" + username + "' and password = '" + password + "'  ";
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;

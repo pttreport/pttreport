@@ -13,6 +13,15 @@ namespace ptt_report {
     public partial class edituser {
         
         /// <summary>
+        /// hdduserid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hdduserid;
+        
+        /// <summary>
         /// hddusername control.
         /// </summary>
         /// <remarks>

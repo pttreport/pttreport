@@ -58,8 +58,23 @@ namespace ptt_report
                             HttpContext.Current.Session["asset_who"] = "local";
 
                             HttpContext.Current.Session["assetposision"] = "";
-
-                            HttpContext.Current.Session["assetrole"] = user.Rows[0]["rolename"].ToString();
+                            
+                            if(user.Rows[0]["authorize1"].ToString() == "y")
+                            {
+                                HttpContext.Current.Session["assetrole"] = "Visitor";
+                            }
+                            else if (user.Rows[0]["authorize2"].ToString() == "y")
+                            {
+                                HttpContext.Current.Session["assetrole"] = "Reporter";
+                            }
+                            else if (user.Rows[0]["authorize3"].ToString() == "y")
+                            {
+                                HttpContext.Current.Session["assetrole"] = "Approver";
+                            }
+                            else if (user.Rows[0]["authorize4"].ToString() == "y")
+                            {
+                                HttpContext.Current.Session["assetrole"] = "Admin";
+                            }
 
                             if (user.Rows[0]["authorize1"].ToString() == "y" || user.Rows[0]["authorize2"].ToString() == "y" || user.Rows[0]["authorize3"].ToString() == "y" || user.Rows[0]["authorize4"].ToString() == "y")
                             {

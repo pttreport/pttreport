@@ -175,16 +175,17 @@ namespace ptt_report
             Button btn = sender as Button;
             GridViewRow row = (GridViewRow)btn.NamingContainer;
             HiddenField hddusername = (HiddenField)row.FindControl("hddusername");
+            HiddenField hdduserid = (HiddenField)row.FindControl("hdduserid");
 
-            var du = Serv.GetDelUserByUsername(hddusername.Value);
+            var du = Serv.GetDelUserByUserid(hdduserid.Value);
             if (du.Rows.Count != 0)
             {
-                Serv.UpdateDelUser(hddusername.Value);
+                Serv.UpdateDelUser(hdduserid.Value);
             }
             else
             {
                 Serv.InsertDelUser(hddusername.Value, "n", "n", "n", "n", "n", DateTime.Now.ToString("yyyy-MM-dd HH:mm:dd", EngCI), HttpContext.Current.Session["assetuserid"].ToString(),
-                    DateTime.Now.ToString("yyyy-MM-dd HH:mm:dd", EngCI), HttpContext.Current.Session["assetuserid"].ToString());
+                    DateTime.Now.ToString("yyyy-MM-dd HH:mm:dd", EngCI), HttpContext.Current.Session["assetuserid"].ToString(),hdduserid.Value);
             }
             bind_data();
         }
@@ -207,8 +208,9 @@ namespace ptt_report
             LinkButton btn = sender as LinkButton;
             GridViewRow row = (GridViewRow)btn.NamingContainer;
             HiddenField hddusername = (HiddenField)row.FindControl("hddusername");
+            HiddenField hdduserid = (HiddenField)row.FindControl("hdduserid");
 
-            Response.Redirect("~/edituser.aspx?param=" + hddusername.Value);
+            Response.Redirect("~/edituser.aspx?param=" + hdduserid.Value);
         }
 
         protected void lnkusername_Click(object sender, EventArgs e)
@@ -216,8 +218,9 @@ namespace ptt_report
             LinkButton btn = sender as LinkButton;
             GridViewRow row = (GridViewRow)btn.NamingContainer;
             HiddenField hddusername = (HiddenField)row.FindControl("hddusername");
+            HiddenField hdduserid = (HiddenField)row.FindControl("hdduserid");
 
-            Response.Redirect("~/edituser.aspx?param=" + hddusername.Value);
+            Response.Redirect("~/edituser.aspx?param=" + hdduserid.Value);
         }
 
         protected void gridview_user_bas_RowDataBound(object sender, GridViewRowEventArgs e)

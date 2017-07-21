@@ -408,7 +408,7 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = " Insert into tbl_history_rep(last_update,createid,filename,uri,rep_type,version,quarter_red_id) " +
+            strSQL = " Insert into tbl_history_rep(last_update,createid,filename,uri,rep_type,version,quarter_rep_id) " +
                     " values('" + last_update + "', '" + createid + "', '" + filename + "', '" + uri + "', '" + rep_type + "', '" + version + "', '"+ quarter_red_id + "'); select @@IDENTITY as id; ";
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
@@ -585,7 +585,7 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = " Update tbl_history_rep set version = '" + version + "',filename = '" + filename + "', quarter_red_id = '" + quarter_red_id + "'" +
+            strSQL = " Update tbl_history_rep set version = '" + version + "',filename = '" + filename + "', quarter_rep_id = '" + quarter_red_id + "'" +
                     " where id = '" + id + "' ";
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;

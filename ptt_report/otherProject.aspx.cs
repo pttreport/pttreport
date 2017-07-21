@@ -1631,6 +1631,7 @@ namespace ptt_report
                             sel.Range.Select();
                             axTable2 = sel.Tables.Add(app.Selection.Range, subPig.Rows.Count + 1, 3);
 
+
                             axTable2.Borders.InsideLineStyle = WdLineStyle.wdLineStyleSingle;
                             axTable2.Borders.OutsideLineStyle = WdLineStyle.wdLineStyleSingle;
 
@@ -2427,6 +2428,116 @@ namespace ptt_report
                     }
                     #endregion
 
+
+
+                    #region SIM
+
+                    var exist_sim = QServ.GetExistRep_Sim(hddmas_rep_id.Value);
+
+                    if (exist_sim.Rows.Count != 0)
+                    {
+
+                        sel.Find.Text = "[sim1]";
+                        sel.Find.Replacement.Text = exist_sim.Rows[0]["aplanwork"].ToString();
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[sim2]";
+                        sel.Find.Replacement.Text = exist_sim.Rows[0]["aprogressresult"].ToString();
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[sim3]";
+                        sel.Find.Replacement.Text = exist_sim.Rows[0]["afutureplan"].ToString();
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[sim4]";
+                        sel.Find.Replacement.Text = exist_sim.Rows[0]["aproblem"].ToString();
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[sim5]";
+                        sel.Find.Replacement.Text = exist_sim.Rows[0]["aopinion"].ToString();
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[sim6]";
+                        sel.Find.Replacement.Text = exist_sim.Rows[0]["mplanwork"].ToString();
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[sim7]";
+                        sel.Find.Replacement.Text = exist_sim.Rows[0]["mprogressresult"].ToString();
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[sim8]";
+                        sel.Find.Replacement.Text = exist_sim.Rows[0]["mfutureplan"].ToString();
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+
+                        sel.Find.Text = "[sim9]";
+                        sel.Find.Replacement.Text = exist_sim.Rows[0]["mproblem"].ToString();
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                        sel.Find.Text = "[sim10]";
+                        sel.Find.Replacement.Text = exist_sim.Rows[0]["mopinion"].ToString();
+                        sel.Find.Wrap = WdFindWrap.wdFindContinue;
+                        sel.Find.Forward = true;
+                        sel.Find.Format = false;
+                        sel.Find.MatchCase = false;
+                        sel.Find.MatchWholeWord = false;
+                        sel.Find.Execute(Replace: WdReplace.wdReplaceAll);
+
+                    }
+
+
+
+                    #endregion
+
+
+
+
+
                     #region G
                     var exist_G = Serv.GetExistRep_G(hddmas_rep_id.Value);
                     if (exist_G.Rows.Count != 0)
@@ -2486,6 +2597,14 @@ namespace ptt_report
                         }
                     }
                     #endregion
+
+
+
+
+
+
+
+
 
                     string time = DateTime.Now.ToString("yyyy-MM-ddHHmmss", EngCI);
 

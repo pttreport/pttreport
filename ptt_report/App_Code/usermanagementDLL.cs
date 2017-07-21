@@ -26,7 +26,7 @@ namespace ptt_report.App_Code
                     " case when d.authorize4 is null then 'n' else d.authorize4 end authorize4, " +
                     " case when d.flag_active is null then 'y' else d.flag_active end flag_active, " +
                     " u.*,u.fname+' '+u.lname as employee " +
-                    " from tbluser as u left join tbldelete_user as d on u.username = d.username " +
+                    " from tbluser as u inner join tbldelete_user as d on u.userid = d.userid  " +
                     " where(d.flag_active <> 'n' or d.flag_active is null) and (u.username like '%" + username + "%' or u.fname like '%" + username + "%' or u.lname like '%" + username + "%' ) ";
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
@@ -46,7 +46,7 @@ namespace ptt_report.App_Code
             return dt;
         }
 
-        public DataTable GetUserBASByUsername2(string username)
+        public DataTable GetUserBASByUsername2(string userid)
         {
             SqlConnection objConn = new SqlConnection();
             SqlCommand objCmd = new SqlCommand();
@@ -62,8 +62,8 @@ namespace ptt_report.App_Code
                     " case when d.authorize4 is null then 'n' else d.authorize4 end authorize4, " +
                     " case when d.flag_active is null then 'y' else d.flag_active end flag_active, " +
                     " u.*,u.fname+' '+u.lname as employee " +
-                    " from tbluser as u left join tbldelete_user as d on u.username = d.username " +
-                    " where  (u.username = '" + username + "') ";
+                    " from tbluser as u left join tbldelete_user as d on u.userid = d.userid " +
+                    " where  (u.userid = '" + userid + "') ";
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
             var _with1 = objCmd;
@@ -82,7 +82,7 @@ namespace ptt_report.App_Code
             return dt;
         }
 
-        public DataTable GetDelUserByUsername(string username)
+        public DataTable GetDelUserByUsername(string userid)
         {
             SqlConnection objConn = new SqlConnection();
             SqlCommand objCmd = new SqlCommand();
@@ -92,7 +92,7 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = " select * from tbldelete_user where username = '" + username + "' ";
+            strSQL = " select * from tbldelete_user where userid = '" + userid + "' ";
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
             var _with1 = objCmd;
@@ -110,7 +110,8 @@ namespace ptt_report.App_Code
 
             return dt;
         }
-        public void UpdateDelUser(string username)
+
+        public DataTable GetDelUserByUserid(string userid)
         {
             SqlConnection objConn = new SqlConnection();
             SqlCommand objCmd = new SqlCommand();
@@ -120,7 +121,35 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = " update tbldelete_user set flag_active = 'n' where username = '" + username + "'";
+            strSQL = " select * from tbldelete_user where userid = '" + userid + "' ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+        }
+        public void UpdateDelUser(string userid)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " update tbldelete_user set flag_active = 'n' where userid = '" + userid + "'";
 
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
@@ -138,7 +167,7 @@ namespace ptt_report.App_Code
 
         }
 
-        public void UpdateDelUserAll(string authorize1, string authorize2, string authorize3, string authorize4, string flag_active, string update_date, string update_id, string username)
+        public void UpdateDelUserAll(string authorize1, string authorize2, string authorize3, string authorize4, string flag_active, string update_date, string update_id, string userid)
         {
             SqlConnection objConn = new SqlConnection();
             SqlCommand objCmd = new SqlCommand();
@@ -151,7 +180,7 @@ namespace ptt_report.App_Code
             strSQL = " update tbldelete_user set authorize1='" + authorize1 + "',authorize2 = '" + authorize2 + "', " +
                     " authorize3 = '" + authorize3 + "',authorize4 = '" + authorize4 + "',flag_active = '" + flag_active + "', " +
                     " update_date = '" + update_date + "',update_id = '" + update_id + "' " +
-                    " where username = '" + username + "' ";
+                    " where userid = '" + userid + "' ";
 
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
@@ -169,7 +198,7 @@ namespace ptt_report.App_Code
 
         }
 
-        public void UpdatePassword(string password, string username)
+        public void UpdatePassword(string password, string userid)
         {
             SqlConnection objConn = new SqlConnection();
             SqlCommand objCmd = new SqlCommand();
@@ -179,7 +208,7 @@ namespace ptt_report.App_Code
             DataTable dt = null;
             string strSQL = null;
 
-            strSQL = " update tbluser set password = '" + password + "' where username = '" + username + "' ";
+            strSQL = " update tbluser set password = '" + password + "' where userid = '" + userid + "' ";
 
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
@@ -197,7 +226,7 @@ namespace ptt_report.App_Code
 
         }
 
-        public void InsertUser(string fname, string lname, string username, string password, string email, string roleid, string create_date, string create_id,
+        public DataTable InsertUser(string fname, string lname, string username, string password, string email, string roleid, string create_date, string create_id,
             string update_date, string update_id)
         {
             SqlConnection objConn = new SqlConnection();
@@ -210,26 +239,28 @@ namespace ptt_report.App_Code
 
             strSQL = " insert into tbluser(fname,lname,username,password,email,roleid,create_date,create_id,update_date,update_id) " +
                 " values('" + fname + "','" + lname + "','" + username + "','" + password + "','" + email + "','" + roleid + "', " +
-                " '" + create_date + "','" + create_id + "','" + update_date + "','" + update_id + "') ";
-
+                " '" + create_date + "','" + create_id + "','" + update_date + "','" + update_id + "') ; select @@IDENTITY as id;  ";
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
-            objConn.Open();
             var _with1 = objCmd;
             _with1.Connection = objConn;
             _with1.CommandText = strSQL;
             _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
 
-            objCmd.ExecuteNonQuery();
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
 
             dtAdapter = null;
             objConn.Close();
             objConn = null;
 
+            return dt;
+
         }
 
         public void InsertDelUser(string username, string authorize1, string authorize2, string authorize3, string authorize4, string flag_active,
-            string create_date, string create_id, string update_date, string update_id)
+            string create_date, string create_id, string update_date, string update_id, string userid)
         {
             SqlConnection objConn = new SqlConnection();
             SqlCommand objCmd = new SqlCommand();
@@ -240,9 +271,9 @@ namespace ptt_report.App_Code
             string strSQL = null;
 
             strSQL = " Insert into tbldelete_user(username,authorize1,authorize2,authorize3,authorize4,flag_active,create_date,create_id, " +
-                    " update_date,update_id) " +
+                    " update_date,update_id,userid) " +
                     " values('" + username + "','" + authorize1 + "','" + authorize2 + "','" + authorize3 + "','" + authorize4 + "','" + flag_active + "','" + create_date + "','" + create_id + "', " +
-                    " '" + update_date + "','" + update_id + "') ";
+                    " '" + update_date + "','" + update_id + "','" + userid + "') ";
 
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
@@ -430,9 +461,9 @@ namespace ptt_report.App_Code
             string strSQL = null;
 
             strSQL = " Update tblpttAutho " +
-                " set authorize1 = '"+authorize1+"', authorize2 = '"+authorize2+"', " +
-                " authorize3 = '" + authorize3+"', authorize4 = '"+authorize4+"', updateid = '"+updateid+"' " +
-                " where ptt_code = '"+ptt_code+"' ";
+                " set authorize1 = '" + authorize1 + "', authorize2 = '" + authorize2 + "', " +
+                " authorize3 = '" + authorize3 + "', authorize4 = '" + authorize4 + "', updateid = '" + updateid + "' " +
+                " where ptt_code = '" + ptt_code + "' ";
 
 
             objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
@@ -449,6 +480,37 @@ namespace ptt_report.App_Code
             objConn = null;
 
         }
+
+        public DataTable GetUserBASByEmail(string Email)
+        {
+            SqlConnection objConn = new SqlConnection();
+            SqlCommand objCmd = new SqlCommand();
+            SqlDataAdapter dtAdapter = new SqlDataAdapter();
+
+            DataSet ds = new DataSet();
+            DataTable dt = null;
+            string strSQL = null;
+
+            strSQL = " select top(1) * from tbluser where email = '" + Email + "' ";
+
+            objConn.ConnectionString = ConfigurationManager.ConnectionStrings["dbptt_repConnectionString"].ConnectionString;
+            var _with1 = objCmd;
+            _with1.Connection = objConn;
+            _with1.CommandText = strSQL;
+            _with1.CommandType = CommandType.Text;
+            dtAdapter.SelectCommand = objCmd;
+
+            dtAdapter.Fill(ds);
+            dt = ds.Tables[0];
+
+            dtAdapter = null;
+            objConn.Close();
+            objConn = null;
+
+            return dt;
+        }
+
+
 
     }
 }

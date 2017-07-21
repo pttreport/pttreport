@@ -52,6 +52,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <asp:HiddenField ID="hdduserid" runat="server" />
     <asp:HiddenField ID="hddusername" runat="server" />
 
     <h2 class="page_header" style="width: 1050px; background-color: #bee9f7; padding: 11px 50px;">Account Management</h2>
@@ -106,13 +107,13 @@
                 <tr>
                     <td>*Authorization</td>
                     <td colspan="3">
-                        <asp:RadioButton ID="CheckBox1" runat="server" />
+                        <asp:RadioButton ID="CheckBox1" runat="server" GroupName="author" />
                         Visitor
-                    <asp:RadioButton ID="CheckBox2" runat="server" />
+                    <asp:RadioButton ID="CheckBox2" runat="server" GroupName="author"/>
                         Reporter
-                    <asp:RadioButton ID="CheckBox3" runat="server" />
+                    <asp:RadioButton ID="CheckBox3" runat="server" GroupName="author" />
                         Approver
-                    <asp:RadioButton ID="CheckBox4" runat="server" />
+                    <asp:RadioButton ID="CheckBox4" runat="server" GroupName="author"/>
                         Admin
 
 
